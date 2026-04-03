@@ -1,0 +1,89 @@
+<?php
+
+declare(strict_types=1);
+
+use App\Models\CombatLog;
+use Illuminate\Http\UploadedFile;
+
+test('the upload page renders', function () {
+    $this->get('/')->assertStatus(200);
+});
+
+test('a combat log can be uploaded and redirects to show page', function () {
+    $file = UploadedFile::fake()->createWithContent(
+        'combat.txt',
+        file_get_contents(storage_path('app/private/testlog.txt')),
+    );
+
+    $response = $this->post('/analyze', [
+        'log_file' => $file,
+    ]);
+
+    $combatLog = CombatLog::first();
+
+    expect($combatLog)->not->toBeNull();
+    expect($combatLog->listener)->toBe('Nicolas Kion');
+    expect($combatLog->events)->not->toBeEmpty();
+
+    $response->assertRedirect("/logs/{$combatLog->uuid}");
+});
+
+test('the show page renders with analysis data', function () {
+    $file = UploadedFile::fake()->createWithContent(
+        'combat.txt',
+        file_get_contents(storage_path('app/private/testlog.txt')),
+    );
+
+    $this->post('/analyze', ['log_file' => $file]);
+
+    $combatLog = CombatLog::first();
+
+    $this->get("/logs/{$combatLog->uuid}")
+        ->assertStatus(200)
+        ->assertInertia(fn ($page) => $page
+            ->component('Analysis')
+            ->has('analysis.listener')
+            ->has('analysis.events')
+            ->has('uuid')
+        );
+});
+
+test('uploading without a file returns validation error', function () {
+    $this->post('/analyze', [])
+        ->assertSessionHasErrors('log_file');
+});
+
+test('uploading an oversized file returns validation error', function () {
+    $file = UploadedFile::fake()->create('huge.txt', 6000);
+
+    $this->post('/analyze', ['log_file' => $file])
+        ->assertSessionHasErrors('log_file');
+});
+
+test('combat events are stored as individual rows', function () {
+    $file = UploadedFile::fake()->createWithContent(
+        'combat.txt',
+        file_get_contents(storage_path('app/private/testlog.txt')),
+    );
+
+    $this->post('/analyze', ['log_file' => $file]);
+
+    $combatLog = CombatLog::first();
+    $eventCount = $combatLog->events()->count();
+
+    expect($eventCount)->toBeGreaterThan(0);
+});
+
+test('the log is shareable via uuid url', function () {
+    $file = UploadedFile::fake()->createWithContent(
+        'combat.txt',
+        file_get_contents(storage_path('app/private/testlog.txt')),
+    );
+
+    $this->post('/analyze', ['log_file' => $file]);
+
+    $combatLog = CombatLog::first();
+
+    $this->get("/logs/{$combatLog->uuid}")
+        ->assertStatus(200);
+});
