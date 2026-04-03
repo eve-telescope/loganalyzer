@@ -11,7 +11,11 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.ts'],
             refresh: true,
         }),
-        inertia(),
+        inertia({
+            ssr: {
+                port: parseInt(process.env.VITE_SSR_PORT ?? '13714'),
+            },
+        }),
         tailwindcss(),
         vue({
             template: {
