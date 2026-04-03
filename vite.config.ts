@@ -13,7 +13,7 @@ export default defineConfig({
         }),
         inertia({
             ssr: {
-                port: parseInt(process.env.VITE_SSR_PORT ?? '13714'),
+                port: parseInt(process.env.SSR_PORT ?? process.env.VITE_SSR_PORT ?? '13714'),
             },
         }),
         tailwindcss(),
