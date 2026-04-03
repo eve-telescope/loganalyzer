@@ -1,0 +1,144 @@
+<?php
+
+declare(strict_types=1);
+
+use App\Enums\EventDirection;
+use App\Enums\EventType;
+use App\Services\CombatLogParser;
+
+beforeEach(function () {
+    $this->parser = new CombatLogParser;
+    $this->logContents = file_get_contents(storage_path('app/private/testlog.txt'));
+});
+
+test('it extracts the listener name from the header', function () {
+    $result = $this->parser->parse($this->logContents);
+
+    expect($result['listener'])->toBe('Nicolas Kion');
+});
+
+test('it extracts the session start time', function () {
+    $result = $this->parser->parse($this->logContents);
+
+    expect($result['sessionStarted'])->toBe('2026.02.12 09:41:44');
+});
+
+test('it parses combat events', function () {
+    $result = $this->parser->parse($this->logContents);
+
+    expect($result['events'])->toBeArray()->not->toBeEmpty();
+});
+
+test('it parses outgoing damage hits correctly', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:05 ] (combat) <color=0xff00ffff><b>500</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Enemy Pilot[CORP](Drake)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->damage)->toBe(500);
+    expect($event->direction)->toBe(EventDirection::Outgoing);
+    expect($event->playerName)->toBe('Enemy Pilot');
+    expect($event->shipName)->toBe('Drake');
+    expect($event->weapon)->toBe('Heavy Missile');
+    expect($event->type)->toBe(EventType::Damage);
+});
+
+test('it parses incoming miss lines', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:05 ] (combat) Hammerhead II belonging to Enemy Pilot misses you completely - Hammerhead II
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->damage)->toBe(0);
+    expect($event->direction)->toBe(EventDirection::Incoming);
+    expect($event->quality)->toBe('Misses');
+});
+
+test('it parses outgoing miss lines', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:05 ] (combat) Your Heavy Missile misses Enemy Pilot completely - Heavy Missile
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    $event = $result['events'][0];
+    expect($event->direction)->toBe(EventDirection::Outgoing);
+    expect($event->quality)->toBe('Misses');
+});
+
+test('it handles empty combat logs gracefully', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:05 ] (notify) Ship stopping
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toBeEmpty();
+});
+
+test('it parses logistics received events', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:05 ] (combat) <color=0xffccff66><b>575</b><color=0x77ffffff><font size=10> remote shield boosted by </font><b><color=0xffffffff><font size=10><color=0xFFFF7040><b>Basilisk</b></color></font> <font size=10>Logi Pilot</font></b><color=0x77ffffff><font size=10> - Large Remote Shield Booster</font>
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->damage)->toBe(575);
+    expect($event->direction)->toBe(EventDirection::Incoming);
+    expect($event->type)->toBe(EventType::Logistics);
+    expect($event->playerName)->toBe('Logi Pilot');
+    expect($event->shipName)->toBe('Basilisk');
+    expect($event->weapon)->toBe('Large Remote Shield Booster');
+});
+
+test('it parses logi events from the test log file', function () {
+    $result = $this->parser->parse($this->logContents);
+
+    $logiEvents = array_filter($result['events'], fn ($e) => $e->type === EventType::Logistics);
+    expect(count($logiEvents))->toBeGreaterThan(0);
+});
+
+test('events use enums for direction and type', function () {
+    $result = $this->parser->parse($this->logContents);
+
+    foreach ($result['events'] as $event) {
+        expect($event->direction)->toBeInstanceOf(EventDirection::class);
+        expect($event->type)->toBeInstanceOf(EventType::class);
+    }
+});
