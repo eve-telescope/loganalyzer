@@ -20,8 +20,10 @@ final class StoreCombatLogRequest extends FormRequest
      */
     public function rules(): array
     {
+        $maxSizeMb = (int) config('loganalyzer.upload.max_size_mb');
+
         return [
-            'log_file' => ['required', File::default()->extensions(['txt', 'log'])->max('5mb')],
+            'log_file' => ['required', File::default()->extensions(['txt', 'log'])->max($maxSizeMb * 1024)],
         ];
     }
 }

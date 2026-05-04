@@ -5,8 +5,15 @@ declare(strict_types=1);
 use App\Models\CombatLog;
 use Illuminate\Http\UploadedFile;
 
-test('the upload page renders', function () {
-    $this->get('/')->assertStatus(200);
+test('the upload page renders with the configured max upload size', function () {
+    config()->set('loganalyzer.upload.max_size_mb', 7);
+
+    $this->get('/')
+        ->assertStatus(200)
+        ->assertInertia(fn ($page) => $page
+            ->component('Upload')
+            ->where('maxUploadSizeMb', 7)
+        );
 });
 
 test('a combat log can be uploaded and redirects to show page', function () {
@@ -54,7 +61,8 @@ test('uploading without a file returns validation error', function () {
 });
 
 test('uploading an oversized file returns validation error', function () {
-    $file = UploadedFile::fake()->create('huge.txt', 6000);
+    $maxKb = (int) config('loganalyzer.upload.max_size_mb') * 1024;
+    $file = UploadedFile::fake()->create('huge.txt', $maxKb + 1);
 
     $this->post('/analyze', ['log_file' => $file])
         ->assertSessionHasErrors('log_file');

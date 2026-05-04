@@ -4,12 +4,22 @@ import { store } from '@/actions/App/Http/Controllers/CombatLogController';
 
 import FileDropZone from '@/components/ui/FileDropZone.vue';
 
+defineProps<{
+    maxUploadSizeMb: number;
+}>();
+
 const form = useForm({
     log_file: null as File | null,
 });
 
 function onFileSelected(file: File) {
+    form.clearErrors('log_file');
     form.log_file = file;
+}
+
+function onFileError(message: string) {
+    form.log_file = null;
+    form.setError('log_file', message);
 }
 
 function submit() {
@@ -75,8 +85,10 @@ function submit() {
             <form @submit.prevent="submit">
                 <FileDropZone
                     accept=".txt,.log"
+                    :max-size-mb="maxUploadSizeMb"
                     :error="form.errors.log_file"
                     @file="onFileSelected"
+                    @error="onFileError"
                 />
 
                 <div v-if="form.progress" class="mt-4">

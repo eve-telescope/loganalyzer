@@ -17,7 +17,9 @@ final class CombatLogController extends Controller
 {
     public function create(): Response
     {
-        return Inertia::render('Upload');
+        return Inertia::render('Upload', [
+            'maxUploadSizeMb' => (int) config('loganalyzer.upload.max_size_mb'),
+        ]);
     }
 
     public function store(StoreCombatLogRequest $request, CombatLogParser $parser): RedirectResponse

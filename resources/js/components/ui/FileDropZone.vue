@@ -3,23 +3,37 @@ import { ref } from 'vue';
 
 const emit = defineEmits<{
     file: [file: File];
+    error: [message: string];
 }>();
 
-defineProps<{
+const props = defineProps<{
     accept?: string;
     error?: string;
+    maxSizeMb: number;
 }>();
 
 const isDragging = ref(false);
 const fileName = ref<string | null>(null);
+
+function processFile(file: File) {
+    const maxBytes = props.maxSizeMb * 1024 * 1024;
+
+    if (file.size > maxBytes) {
+        fileName.value = null;
+        emit('error', `File is too large. Maximum size is ${props.maxSizeMb}MB.`);
+        return;
+    }
+
+    fileName.value = file.name;
+    emit('file', file);
+}
 
 function handleDrop(event: DragEvent) {
     isDragging.value = false;
     const file = event.dataTransfer?.files[0];
 
     if (file) {
-        fileName.value = file.name;
-        emit('file', file);
+        processFile(file);
     }
 }
 
@@ -28,8 +42,7 @@ function handleFileInput(event: Event) {
     const file = target.files?.[0];
 
     if (file) {
-        fileName.value = file.name;
-        emit('file', file);
+        processFile(file);
     }
 }
 </script>
@@ -76,7 +89,7 @@ function handleFileInput(event: Event) {
                         <span class="text-cyan-400">browse</span>
                     </p>
                     <p class="mt-1 text-xs text-slate-500">
-                        .txt or .log files up to 5MB
+                        .txt or .log files up to {{ maxSizeMb }}MB
                     </p>
                 </template>
             </div>
