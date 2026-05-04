@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { Head, Link } from '@inertiajs/vue3';
-import { computed, ref } from 'vue';
+import { Head, Link, router } from '@inertiajs/vue3';
+import { computed, ref, watch } from 'vue';
 import { create } from '@/actions/App/Http/Controllers/CombatLogController';
+
 
 import DamageBarChart from '@/components/charts/DamageBarChart.vue';
 import DamageDoughnutChart from '@/components/charts/DamageDoughnutChart.vue';
@@ -10,25 +11,41 @@ import DataTable from '@/components/ui/DataTable.vue';
 
 import type { Column } from '@/components/ui/DataTable.vue';
 import StatCard from '@/components/ui/StatCard.vue';
+import { eveTimestampToIso, formatDateTime, formatTime } from '@/lib/dates';
 import type {
     CombatAnalysis,
     CombatEventData,
+    DateTimeRange,
     DpsDataPoint,
-    TimeRange,
+    SeriesKey,
     TargetDamage,
     WeaponDamage,
 } from '@/types';
+
+const ALL_SERIES_KEYS: ReadonlyArray<SeriesKey> = [
+    'dpsDealt',
+    'dpsReceived',
+    'logiReceived',
+    'logiDealt',
+    'neutIn',
+    'neutOut',
+];
 
 const BUCKET_SECONDS = 5;
 
 const props = defineProps<{
     analysis: CombatAnalysis;
     uuid?: string;
+    filters: {
+        from: string | null;
+        to: string | null;
+        hide: string[];
+    };
 }>();
 
-const ogTitle = computed(
-    () => `${props.analysis.listener} — Combat Analysis`,
-);
+const VALID_SERIES_KEYS = new Set<SeriesKey>(ALL_SERIES_KEYS);
+
+const ogTitle = computed(() => `${props.analysis.listener} — Combat Analysis`);
 
 const ogDescription = computed(() => {
     const s = summary.value;
@@ -36,9 +53,32 @@ const ogDescription = computed(() => {
     return `${formatNumber(s.totalDamageDealt)} damage dealt / ${formatNumber(s.totalDamageReceived)} received — ${formatNumber(Math.round(s.dpsDealt))} DPS avg — ${formatDuration(s.combatDurationSeconds)} combat`;
 });
 
-const selection = ref<TimeRange | null>(null);
+const selection = ref<DateTimeRange | null>(
+    props.filters.from &&
+        props.filters.to &&
+        props.filters.from !== props.filters.to
+        ? { start: props.filters.from, end: props.filters.to }
+        : null,
+);
+const hiddenSeries = ref<Set<SeriesKey>>(
+    new Set(
+        props.filters.hide.filter((k): k is SeriesKey =>
+            VALID_SERIES_KEYS.has(k as SeriesKey),
+        ),
+    ),
+);
 
-const isFiltered = computed(() => selection.value !== null);
+function toggleSeries(key: SeriesKey) {
+    const next = new Set(hiddenSeries.value);
+
+    if (next.has(key)) {
+        next.delete(key);
+    } else {
+        next.add(key);
+    }
+
+    hiddenSeries.value = next;
+}
 
 const dpsOverTime = computed((): DpsDataPoint[] => {
     const events = props.analysis.events;
@@ -57,15 +97,25 @@ const dpsOverTime = computed((): DpsDataPoint[] => {
         received: number;
         logiIn: number;
         logiOut: number;
+        neutIn: number;
+        neutOut: number;
+        datetime: string;
         label: string;
     }[] = [];
 
     for (let i = 0; i < bucketCount; i++) {
         const bucketMs = firstMs + i * BUCKET_SECONDS * 1000;
-        const d = new Date(bucketMs);
-        const label = `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}:${String(d.getSeconds()).padStart(2, '0')}`;
 
-        buckets.push({ dealt: 0, received: 0, logiIn: 0, logiOut: 0, label });
+        buckets.push({
+            dealt: 0,
+            received: 0,
+            logiIn: 0,
+            logiOut: 0,
+            neutIn: 0,
+            neutOut: 0,
+            datetime: formatDateTime(bucketMs),
+            label: formatTime(bucketMs),
+        });
     }
 
     for (const e of events) {
@@ -81,6 +131,12 @@ const dpsOverTime = computed((): DpsDataPoint[] => {
             } else {
                 buckets[idx].logiOut += e.damage;
             }
+        } else if (e.type === 'neutralization') {
+            if (e.direction === 'incoming') {
+                buckets[idx].neutIn += e.damage;
+            } else {
+                buckets[idx].neutOut += e.damage;
+            }
         } else if (e.direction === 'outgoing') {
             buckets[idx].dealt += e.damage;
         } else {
@@ -89,41 +145,28 @@ const dpsOverTime = computed((): DpsDataPoint[] => {
     }
 
     return buckets.map((b) => ({
-        timestamp: b.label,
+        datetime: b.datetime,
+        label: b.label,
         dpsDealt: Math.round((b.dealt / BUCKET_SECONDS) * 100) / 100,
         dpsReceived: Math.round((b.received / BUCKET_SECONDS) * 100) / 100,
         logiReceived: Math.round((b.logiIn / BUCKET_SECONDS) * 100) / 100,
         logiDealt: Math.round((b.logiOut / BUCKET_SECONDS) * 100) / 100,
+        neutIn: Math.round((b.neutIn / BUCKET_SECONDS) * 100) / 100,
+        neutOut: Math.round((b.neutOut / BUCKET_SECONDS) * 100) / 100,
     }));
 });
 
-const selectedTimestamps = computed(() => {
-    if (!selection.value) {
-        return null;
-    }
-
-    const dps = dpsOverTime.value;
-    const start = dps[selection.value.startIndex]?.timestamp;
-    const end = dps[selection.value.endIndex]?.timestamp;
-
-    if (!start || !end) {
-        return null;
-    }
-
-    return { start, end };
-});
-
 const filteredEvents = computed((): CombatEventData[] => {
-    if (!selectedTimestamps.value) {
+    if (!selection.value) {
         return props.analysis.events;
     }
 
-    const { start, end } = selectedTimestamps.value;
+    const { start, end } = selection.value;
 
     return props.analysis.events.filter((e) => {
-        const time = e.timestamp.split(' ')[1];
+        const dt = eveTimestampToIso(e.timestamp);
 
-        return time >= start && time <= end;
+        return dt >= start && dt <= end;
     });
 });
 
@@ -167,6 +210,10 @@ function buildSummary(events: CombatEventData[]) {
                 logiDealt += e.damage;
             }
 
+            continue;
+        }
+
+        if (e.type !== 'damage') {
             continue;
         }
 
@@ -457,14 +504,51 @@ const incomingByWeaponItems = computed(() =>
 );
 
 const selectionLabel = computed(() => {
-    if (!selectedTimestamps.value) {
+    if (!selection.value) {
         return null;
     }
 
-    return `${selectedTimestamps.value.start} - ${selectedTimestamps.value.end}`;
+    const start = selection.value.start.split('T')[1] ?? selection.value.start;
+    const end = selection.value.end.split('T')[1] ?? selection.value.end;
+
+    return `${start} - ${end}`;
 });
 
 const activeTab = ref<'outgoing' | 'incoming' | 'logistics'>('outgoing');
+
+watch(
+    [selection, hiddenSeries],
+    ([sel, hidden]) => {
+        const query: Record<string, string> = {};
+
+        if (sel) {
+            query.from = sel.start;
+            query.to = sel.end;
+        }
+
+        if (hidden.size > 0) {
+            query.hide = ALL_SERIES_KEYS.filter((k) => hidden.has(k)).join(',');
+        }
+
+        const current = new URLSearchParams(window.location.search);
+
+        if (
+            current.get('from') === (query.from ?? null) &&
+            current.get('to') === (query.to ?? null) &&
+            current.get('hide') === (query.hide ?? null)
+        ) {
+            return;
+        }
+
+        router.get(window.location.pathname, query, {
+            preserveState: true,
+            preserveScroll: true,
+            replace: true,
+            only: ['filters'],
+        });
+    },
+    { deep: true },
+);
 </script>
 
 <template>
@@ -552,7 +636,7 @@ const activeTab = ref<'outgoing' | 'incoming' | 'logistics'>('outgoing');
 
             <!-- Filter indicator -->
             <div
-                v-if="isFiltered"
+                v-if="selection"
                 class="mb-4 flex items-center gap-2 border-l-2 border-cyan-500 bg-cyan-950/10 px-3 py-1.5 font-mono text-[10px] tracking-wider text-cyan-500 uppercase"
             >
                 <svg
@@ -615,7 +699,7 @@ const activeTab = ref<'outgoing' | 'incoming' | 'logistics'>('outgoing');
                 <StatCard
                     label="Duration"
                     :value="formatDuration(summary.combatDurationSeconds)"
-                    :subtitle="isFiltered ? 'selected' : 'total'"
+                    :subtitle="selection ? 'selected' : 'total'"
                 />
             </div>
 
@@ -648,7 +732,9 @@ const activeTab = ref<'outgoing' | 'incoming' | 'logistics'>('outgoing');
                     <DpsLineChart
                         :data="dpsOverTime"
                         :selection="selection"
+                        :hidden-series="hiddenSeries"
                         @update:selection="selection = $event"
+                        @toggle-series="toggleSeries"
                     />
                 </div>
             </section>

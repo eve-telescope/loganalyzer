@@ -9,6 +9,7 @@ use App\Models\CombatEvent;
 use App\Models\CombatLog;
 use App\Services\CombatLogParser;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -54,7 +55,7 @@ final class CombatLogController extends Controller
         return redirect()->route('combat-log.show', $combatLog);
     }
 
-    public function show(CombatLog $combatLog): Response
+    public function show(CombatLog $combatLog, Request $request): Response
     {
         $events = $combatLog->events()
             ->select(['timestamp', 'damage', 'direction', 'player_name', 'corporation', 'ship_name', 'weapon', 'quality', 'type'])
@@ -72,6 +73,8 @@ final class CombatLogController extends Controller
             'type' => $e->getRawOriginal('type'),
         ]);
 
+        $hide = (string) $request->query('hide', '');
+
         return Inertia::render('Analysis', [
             'analysis' => [
                 'listener' => $combatLog->listener,
@@ -79,6 +82,13 @@ final class CombatLogController extends Controller
                 'events' => $mappedEvents,
             ],
             'uuid' => $combatLog->uuid,
+            'filters' => [
+                'from' => $request->query('from'),
+                'to' => $request->query('to'),
+                'hide' => $hide === ''
+                    ? []
+                    : array_values(array_filter(array_map(trim(...), explode(',', $hide)))),
+            ],
         ]);
     }
 }

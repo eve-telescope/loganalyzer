@@ -35,6 +35,47 @@ test('a combat log can be uploaded and redirects to show page', function () {
     $response->assertRedirect("/logs/{$combatLog->uuid}");
 });
 
+test('the show page passes URL filters as a prop', function () {
+    $file = UploadedFile::fake()->createWithContent(
+        'combat.txt',
+        file_get_contents(storage_path('app/private/testlog.txt')),
+    );
+
+    $this->post('/analyze', ['log_file' => $file]);
+
+    $combatLog = CombatLog::first();
+
+    $this->get("/logs/{$combatLog->uuid}?from=2026-02-12T10:20:00&to=2026-02-12T10:25:00&hide=logiDealt,neutOut")
+        ->assertStatus(200)
+        ->assertInertia(fn ($page) => $page
+            ->component('Analysis')
+            ->where('filters.from', '2026-02-12T10:20:00')
+            ->where('filters.to', '2026-02-12T10:25:00')
+            ->where('filters.hide', ['logiDealt', 'neutOut'])
+            ->etc()
+        );
+});
+
+test('the show page returns empty filters when no query params are present', function () {
+    $file = UploadedFile::fake()->createWithContent(
+        'combat.txt',
+        file_get_contents(storage_path('app/private/testlog.txt')),
+    );
+
+    $this->post('/analyze', ['log_file' => $file]);
+
+    $combatLog = CombatLog::first();
+
+    $this->get("/logs/{$combatLog->uuid}")
+        ->assertStatus(200)
+        ->assertInertia(fn ($page) => $page
+            ->where('filters.from', null)
+            ->where('filters.to', null)
+            ->where('filters.hide', [])
+            ->etc()
+        );
+});
+
 test('the show page renders with analysis data', function () {
     $file = UploadedFile::fake()->createWithContent(
         'combat.txt',

@@ -13,12 +13,30 @@ export interface CombatSummary {
 }
 
 export interface DpsDataPoint {
-    timestamp: string;
+    /** ISO datetime: YYYY-MM-DDTHH:MM:SS — primary identifier, also used in URL state. */
+    datetime: string;
+    /** HH:MM:SS — display label for the chart x-axis. */
+    label: string;
     dpsDealt: number;
     dpsReceived: number;
     logiReceived: number;
     logiDealt: number;
+    neutIn: number;
+    neutOut: number;
 }
+
+export interface DateTimeRange {
+    start: string;
+    end: string;
+}
+
+export type SeriesKey =
+    | 'dpsDealt'
+    | 'dpsReceived'
+    | 'logiReceived'
+    | 'logiDealt'
+    | 'neutIn'
+    | 'neutOut';
 
 export interface TargetDamage {
     damage: number;
@@ -41,16 +59,11 @@ export interface CombatEventData {
     shipName: string | null;
     weapon: string;
     quality: string;
-    type: 'damage' | 'logistics';
+    type: 'damage' | 'logistics' | 'neutralization';
 }
 
 export interface CombatAnalysis {
     listener: string;
     sessionStarted: string;
     events: CombatEventData[];
-}
-
-export interface TimeRange {
-    startIndex: number;
-    endIndex: number;
 }

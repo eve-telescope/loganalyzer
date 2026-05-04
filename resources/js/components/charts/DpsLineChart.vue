@@ -11,10 +11,10 @@ import {
     Filler,
 } from 'chart.js';
 import type { Chart, Plugin } from 'chart.js';
-import { computed, ref, shallowRef } from 'vue';
+import { computed, ref, shallowRef, watch } from 'vue';
 import { Line } from 'vue-chartjs';
 
-import type { DpsDataPoint, TimeRange } from '@/types';
+import type { DateTimeRange, DpsDataPoint, SeriesKey } from '@/types';
 
 ChartJS.register(
     CategoryScale,
@@ -29,17 +29,27 @@ ChartJS.register(
 
 const props = defineProps<{
     data: DpsDataPoint[];
-    selection?: TimeRange | null;
+    selection?: DateTimeRange | null;
+    hiddenSeries?: Set<SeriesKey>;
 }>();
 
 const emit = defineEmits<{
-    'update:selection': [range: TimeRange | null];
+    'update:selection': [range: DateTimeRange | null];
+    'toggle-series': [key: SeriesKey];
 }>();
 
 const chartRef = shallowRef<{ chart: Chart } | null>(null);
 const dragStart = ref<number | null>(null);
 const dragEnd = ref<number | null>(null);
 const isDragging = ref(false);
+
+watch(
+    () => props.selection,
+    () => {
+        chartRef.value?.chart?.update('none');
+    },
+    { flush: 'post', immediate: true },
+);
 
 function getIndexAtEvent(chart: Chart, clientX: number): number {
     const xScale = chart.scales['x'];
@@ -107,10 +117,17 @@ function onMouseUp() {
         const startIndex = Math.min(dragStart.value, dragEnd.value);
         const endIndex = Math.max(dragStart.value, dragEnd.value);
 
-        if (startIndex === endIndex) {
+        if (
+            startIndex === endIndex ||
+            !props.data[startIndex] ||
+            !props.data[endIndex]
+        ) {
             emit('update:selection', null);
         } else {
-            emit('update:selection', { startIndex, endIndex });
+            emit('update:selection', {
+                start: props.data[startIndex].datetime,
+                end: props.data[endIndex].datetime,
+            });
         }
     }
 }
@@ -124,14 +141,26 @@ function clearSelection() {
 const selectionPlugin: Plugin = {
     id: 'rangeSelection',
     beforeDraw(chart: Chart) {
-        const startIdx = isDragging.value
-            ? Math.min(dragStart.value ?? 0, dragEnd.value ?? 0)
-            : (props.selection?.startIndex ?? null);
-        const endIdx = isDragging.value
-            ? Math.max(dragStart.value ?? 0, dragEnd.value ?? 0)
-            : (props.selection?.endIndex ?? null);
+        let startIdx: number | null = null;
+        let endIdx: number | null = null;
 
-        if (startIdx === null || endIdx === null || startIdx === endIdx) {
+        if (isDragging.value) {
+            startIdx = Math.min(dragStart.value ?? 0, dragEnd.value ?? 0);
+            endIdx = Math.max(dragStart.value ?? 0, dragEnd.value ?? 0);
+        } else if (props.selection) {
+            const start = props.selection.start;
+            const end = props.selection.end;
+            startIdx = props.data.findIndex((d) => d.datetime === start);
+            endIdx = props.data.findIndex((d) => d.datetime === end);
+        }
+
+        if (
+            startIdx === null ||
+            endIdx === null ||
+            startIdx < 0 ||
+            endIdx < 0 ||
+            startIdx === endIdx
+        ) {
             return;
         }
 
@@ -163,55 +192,76 @@ const selectionPlugin: Plugin = {
     },
 };
 
-const chartData = computed(() => ({
-    labels: props.data.map((d) => d.timestamp),
-    datasets: [
-        {
-            label: 'DPS Dealt',
-            data: props.data.map((d) => d.dpsDealt),
-            borderColor: 'rgb(34, 211, 238)',
-            backgroundColor: 'rgba(34, 211, 238, 0.05)',
+const SERIES: ReadonlyArray<{
+    key: SeriesKey;
+    label: string;
+    color: string;
+    bg: string;
+    pick: (d: DpsDataPoint) => number;
+}> = [
+    {
+        key: 'dpsDealt',
+        label: 'DPS Dealt',
+        color: 'rgb(34, 211, 238)',
+        bg: 'rgba(34, 211, 238, 0.05)',
+        pick: (d) => d.dpsDealt,
+    },
+    {
+        key: 'dpsReceived',
+        label: 'DPS Received',
+        color: 'rgb(239, 68, 68)',
+        bg: 'rgba(239, 68, 68, 0.05)',
+        pick: (d) => d.dpsReceived,
+    },
+    {
+        key: 'logiReceived',
+        label: 'Logi Received',
+        color: 'rgb(52, 211, 153)',
+        bg: 'rgba(52, 211, 153, 0.05)',
+        pick: (d) => d.logiReceived,
+    },
+    {
+        key: 'logiDealt',
+        label: 'Logi Dealt',
+        color: 'rgb(251, 191, 36)',
+        bg: 'rgba(251, 191, 36, 0.05)',
+        pick: (d) => d.logiDealt,
+    },
+    {
+        key: 'neutIn',
+        label: 'Energy Neut In',
+        color: 'rgb(168, 85, 247)',
+        bg: 'rgba(168, 85, 247, 0.05)',
+        pick: (d) => d.neutIn,
+    },
+    {
+        key: 'neutOut',
+        label: 'Energy Neut Out',
+        color: 'rgb(217, 70, 239)',
+        bg: 'rgba(217, 70, 239, 0.05)',
+        pick: (d) => d.neutOut,
+    },
+];
+
+const chartData = computed(() => {
+    const hidden = props.hiddenSeries ?? new Set<SeriesKey>();
+
+    return {
+        labels: props.data.map((d) => d.label),
+        datasets: SERIES.map((s) => ({
+            label: s.label,
+            data: props.data.map(s.pick),
+            borderColor: s.color,
+            backgroundColor: s.bg,
             fill: true,
             tension: 0.3,
             pointRadius: 0,
             pointHitRadius: 10,
             borderWidth: 1.5,
-        },
-        {
-            label: 'DPS Received',
-            data: props.data.map((d) => d.dpsReceived),
-            borderColor: 'rgb(239, 68, 68)',
-            backgroundColor: 'rgba(239, 68, 68, 0.05)',
-            fill: true,
-            tension: 0.3,
-            pointRadius: 0,
-            pointHitRadius: 10,
-            borderWidth: 1.5,
-        },
-        {
-            label: 'Logi Received',
-            data: props.data.map((d) => d.logiReceived),
-            borderColor: 'rgb(52, 211, 153)',
-            backgroundColor: 'rgba(52, 211, 153, 0.05)',
-            fill: true,
-            tension: 0.3,
-            pointRadius: 0,
-            pointHitRadius: 10,
-            borderWidth: 1.5,
-        },
-        {
-            label: 'Logi Dealt',
-            data: props.data.map((d) => d.logiDealt),
-            borderColor: 'rgb(251, 191, 36)',
-            backgroundColor: 'rgba(251, 191, 36, 0.05)',
-            fill: true,
-            tension: 0.3,
-            pointRadius: 0,
-            pointHitRadius: 10,
-            borderWidth: 1.5,
-        },
-    ],
-}));
+            hidden: hidden.has(s.key),
+        })),
+    };
+});
 
 const chartOptions = computed(() => ({
     responsive: true,
@@ -229,6 +279,15 @@ const chartOptions = computed(() => ({
                 padding: 16,
                 color: '#94a3b8',
                 font: { family: 'monospace', size: 11 },
+            },
+            onClick: (_e: unknown, legendItem: { datasetIndex?: number }) => {
+                const idx = legendItem.datasetIndex;
+
+                if (idx === undefined || idx < 0 || idx >= SERIES.length) {
+                    return;
+                }
+
+                emit('toggle-series', SERIES[idx].key);
             },
         },
         tooltip: {
