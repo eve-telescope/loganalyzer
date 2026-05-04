@@ -6,5 +6,6 @@ createInertiaApp({
     title: (title) => (title ? `${title} - ${appName}` : appName),
     progress: {
         color: '#4B5563',
+        delay: 1000,
     },
 });
