@@ -8,4 +8,5 @@ enum EventType: string
 {
     case Damage = 'damage';
     case Logistics = 'logistics';
+    case Neutralization = 'neutralization';
 }

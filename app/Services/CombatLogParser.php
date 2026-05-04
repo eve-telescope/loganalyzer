@@ -100,6 +100,34 @@ final class CombatLogParser
             );
         }
 
+        // Energy neutralization / nosferatu. Direction depends on (verb, preposition):
+        //   "neutralized {ship}"       → incoming neut (verified)
+        //   "drained to {ship}"        → incoming nos (verified, negative GJ)
+        //   "neutralized to {ship}"    → outgoing neut (best-effort, no fixture)
+        //   "drained from {ship}"      → outgoing nos (best-effort, no fixture)
+        if (preg_match('/<b>-?(\d+) GJ<\/b>.*?energy (neutralized|drained)(?: (to|from))? .*?<b>([^<]+)<\/b>.*? - (.+?)<\/font>/u', $content, $match)) {
+            $verb = $match[2];
+            $preposition = $match[3] ?? '';
+
+            $direction = match (true) {
+                $preposition === 'from' => EventDirection::Outgoing,
+                $verb === 'neutralized' && $preposition === 'to' => EventDirection::Outgoing,
+                default => EventDirection::Incoming,
+            };
+
+            return new CombatEvent(
+                timestamp: $timestamp,
+                damage: (int) $match[1],
+                direction: $direction,
+                playerName: mb_trim($match[4]),
+                corporation: null,
+                shipName: mb_trim($match[4]),
+                weapon: mb_trim($match[5]),
+                quality: $verb === 'neutralized' ? 'Neutralized' : 'Drained',
+                type: EventType::Neutralization,
+            );
+        }
+
         // Damage hit
         if (preg_match('/<b>(\d+)<\/b>.*?<font size=10>(to|from)<\/font>.*?<b><color=0xffffffff>(.+?)<\/b>.*? - (.+?) - (Hits|Penetrates|Glances Off|Grazes|Smashes|Wrecks)/u', $content, $match)) {
             $target = $this->parseTarget($match[3]);

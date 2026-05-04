@@ -134,6 +134,64 @@ test('it parses logi events from the test log file', function () {
     expect(count($logiEvents))->toBeGreaterThan(0);
 });
 
+test('it parses incoming energy neutralization events', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:05 ] (combat) <color=0xff7fffff><b>522 GJ</b><color=0x77ffffff><font size=10> energy neutralized </font><b><color=0xffffffff><fontsize=12><color=0xFF2ecc71><b>Sabre</b></color></fontsize></b><color=0x77ffffff><font size=10> - True Sansha Heavy Energy Neutralizer</font>
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->damage)->toBe(522);
+    expect($event->direction)->toBe(EventDirection::Incoming);
+    expect($event->type)->toBe(EventType::Neutralization);
+    expect($event->shipName)->toBe('Sabre');
+    expect($event->weapon)->toBe('True Sansha Heavy Energy Neutralizer');
+    expect($event->quality)->toBe('Neutralized');
+});
+
+test('it parses incoming energy nosferatu events with negative GJ', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:05 ] (combat) <color=0xffe57f7f><b>-2 GJ</b><color=0x77ffffff><font size=10> energy drained to </font><b><color=0xffffffff><fontsize=12><color=0xFF2ecc71><b>Stiletto</b></color></fontsize></b><color=0x77ffffff><font size=10> - Small Ghoul Compact Energy Nosferatu</font>
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->damage)->toBe(2);
+    expect($event->direction)->toBe(EventDirection::Incoming);
+    expect($event->type)->toBe(EventType::Neutralization);
+    expect($event->shipName)->toBe('Stiletto');
+    expect($event->weapon)->toBe('Small Ghoul Compact Energy Nosferatu');
+    expect($event->quality)->toBe('Drained');
+});
+
+test('it parses neutralization events from the testlog2 fixture', function () {
+    $contents = file_get_contents(storage_path('app/private/testlog2.txt'));
+    $result = $this->parser->parse($contents);
+
+    $neutEvents = array_filter(
+        $result['events'],
+        fn ($e) => $e->type === EventType::Neutralization,
+    );
+
+    expect(count($neutEvents))->toBeGreaterThan(800);
+});
+
 test('events use enums for direction and type', function () {
     $result = $this->parser->parse($this->logContents);
 
