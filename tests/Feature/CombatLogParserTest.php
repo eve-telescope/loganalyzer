@@ -8,7 +8,7 @@ use App\Services\CombatLogParser;
 
 beforeEach(function () {
     $this->parser = new CombatLogParser;
-    $this->logContents = file_get_contents(storage_path('app/private/testlog.txt'));
+    $this->logContents = file_get_contents(base_path('tests/Fixtures/testlog.txt'));
 });
 
 test('it extracts the listener name from the header', function () {
@@ -181,7 +181,7 @@ test('it parses incoming energy nosferatu events with negative GJ', function () 
 });
 
 test('it parses neutralization events from the testlog2 fixture', function () {
-    $contents = file_get_contents(storage_path('app/private/testlog2.txt'));
+    $contents = file_get_contents(base_path('tests/Fixtures/testlog2.txt'));
     $result = $this->parser->parse($contents);
 
     $neutEvents = array_filter(

@@ -3,7 +3,6 @@ import { Head, Link, router } from '@inertiajs/vue3';
 import { computed, ref, watch } from 'vue';
 import { create } from '@/actions/App/Http/Controllers/CombatLogController';
 
-
 import DamageBarChart from '@/components/charts/DamageBarChart.vue';
 import DamageDoughnutChart from '@/components/charts/DamageDoughnutChart.vue';
 import DpsLineChart from '@/components/charts/DpsLineChart.vue';
@@ -172,24 +171,20 @@ const filteredEvents = computed((): CombatEventData[] => {
 
 const summary = computed(() => buildSummary(filteredEvents.value));
 
-const damageByTarget = computed(
-    (): Record<string, TargetDamage> =>
-        buildDamageByEntity(filteredEvents.value, 'outgoing'),
+const damageByTarget = computed((): Record<string, TargetDamage> =>
+    buildDamageByEntity(filteredEvents.value, 'outgoing'),
 );
 
-const damageByWeapon = computed(
-    (): Record<string, WeaponDamage> =>
-        buildWeaponBreakdown(filteredEvents.value, 'outgoing'),
+const damageByWeapon = computed((): Record<string, WeaponDamage> =>
+    buildWeaponBreakdown(filteredEvents.value, 'outgoing'),
 );
 
-const incomingBySource = computed(
-    (): Record<string, TargetDamage> =>
-        buildDamageByEntity(filteredEvents.value, 'incoming'),
+const incomingBySource = computed((): Record<string, TargetDamage> =>
+    buildDamageByEntity(filteredEvents.value, 'incoming'),
 );
 
-const incomingByWeapon = computed(
-    (): Record<string, WeaponDamage> =>
-        buildWeaponBreakdown(filteredEvents.value, 'incoming'),
+const incomingByWeapon = computed((): Record<string, WeaponDamage> =>
+    buildWeaponBreakdown(filteredEvents.value, 'incoming'),
 );
 
 function buildSummary(events: CombatEventData[]) {

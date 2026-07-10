@@ -107,7 +107,7 @@ final class CombatLogParser
         //   "drained from {ship}"      → outgoing nos (best-effort, no fixture)
         if (preg_match('/<b>-?(\d+) GJ<\/b>.*?energy (neutralized|drained)(?: (to|from))? .*?<b>([^<]+)<\/b>.*? - (.+?)<\/font>/u', $content, $match)) {
             $verb = $match[2];
-            $preposition = $match[3] ?? '';
+            $preposition = $match[3];
 
             $direction = match (true) {
                 $preposition === 'from' => EventDirection::Outgoing,

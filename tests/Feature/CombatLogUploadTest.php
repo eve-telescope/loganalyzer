@@ -19,7 +19,7 @@ test('the upload page renders with the configured max upload size', function () 
 test('a combat log can be uploaded and redirects to show page', function () {
     $file = UploadedFile::fake()->createWithContent(
         'combat.txt',
-        file_get_contents(storage_path('app/private/testlog.txt')),
+        file_get_contents(base_path('tests/Fixtures/testlog.txt')),
     );
 
     $response = $this->post('/analyze', [
@@ -38,7 +38,7 @@ test('a combat log can be uploaded and redirects to show page', function () {
 test('the show page passes URL filters as a prop', function () {
     $file = UploadedFile::fake()->createWithContent(
         'combat.txt',
-        file_get_contents(storage_path('app/private/testlog.txt')),
+        file_get_contents(base_path('tests/Fixtures/testlog.txt')),
     );
 
     $this->post('/analyze', ['log_file' => $file]);
@@ -59,7 +59,7 @@ test('the show page passes URL filters as a prop', function () {
 test('the show page returns empty filters when no query params are present', function () {
     $file = UploadedFile::fake()->createWithContent(
         'combat.txt',
-        file_get_contents(storage_path('app/private/testlog.txt')),
+        file_get_contents(base_path('tests/Fixtures/testlog.txt')),
     );
 
     $this->post('/analyze', ['log_file' => $file]);
@@ -79,7 +79,7 @@ test('the show page returns empty filters when no query params are present', fun
 test('the show page renders with analysis data', function () {
     $file = UploadedFile::fake()->createWithContent(
         'combat.txt',
-        file_get_contents(storage_path('app/private/testlog.txt')),
+        file_get_contents(base_path('tests/Fixtures/testlog.txt')),
     );
 
     $this->post('/analyze', ['log_file' => $file]);
@@ -112,7 +112,7 @@ test('uploading an oversized file returns validation error', function () {
 test('combat events are stored as individual rows', function () {
     $file = UploadedFile::fake()->createWithContent(
         'combat.txt',
-        file_get_contents(storage_path('app/private/testlog.txt')),
+        file_get_contents(base_path('tests/Fixtures/testlog.txt')),
     );
 
     $this->post('/analyze', ['log_file' => $file]);
@@ -126,7 +126,7 @@ test('combat events are stored as individual rows', function () {
 test('the log is shareable via uuid url', function () {
     $file = UploadedFile::fake()->createWithContent(
         'combat.txt',
-        file_get_contents(storage_path('app/private/testlog.txt')),
+        file_get_contents(base_path('tests/Fixtures/testlog.txt')),
     );
 
     $this->post('/analyze', ['log_file' => $file]);
