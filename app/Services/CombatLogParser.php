@@ -98,11 +98,11 @@ final class CombatLogParser
         $sessionStarted = '';
 
         if (preg_match('/^\s*Listener:\s*(.+)$/mu', $contents, $match)) {
-            $listener = mb_trim($match[1]);
+            $listener = $this->clean($match[1]);
         }
 
         if (preg_match('/^\s*Session Started:\s*(.+)$/mu', $contents, $match)) {
-            $sessionStarted = mb_trim($match[1]);
+            $sessionStarted = $this->clean($match[1]);
         }
 
         return [
@@ -144,11 +144,11 @@ final class CombatLogParser
                 timestamp: $timestamp,
                 damage: (int) $match[1],
                 direction: EventDirection::Incoming,
-                playerName: mb_trim($match[5]),
+                playerName: $this->clean($match[5]),
                 corporation: null,
-                shipName: mb_trim($match[4]),
-                weapon: mb_trim($match[6]),
-                quality: mb_trim($match[2]).' '.mb_trim($match[3]),
+                shipName: $this->clean($match[4]),
+                weapon: $this->clean($match[6]),
+                quality: $this->clean($match[2]).' '.$this->clean($match[3]),
                 type: EventType::Logistics,
             );
         }
@@ -159,11 +159,11 @@ final class CombatLogParser
                 timestamp: $timestamp,
                 damage: (int) $match[1],
                 direction: EventDirection::Outgoing,
-                playerName: mb_trim($match[4]),
+                playerName: $this->clean($match[4]),
                 corporation: null,
                 shipName: null,
-                weapon: mb_trim($match[5]),
-                quality: mb_trim($match[2]).' '.mb_trim($match[3]),
+                weapon: $this->clean($match[5]),
+                quality: $this->clean($match[2]).' '.$this->clean($match[3]),
                 type: EventType::Logistics,
             );
         }
@@ -187,10 +187,10 @@ final class CombatLogParser
                 timestamp: $timestamp,
                 damage: (int) $match[1],
                 direction: $direction,
-                playerName: mb_trim($match[4]),
+                playerName: $this->clean($match[4]),
                 corporation: null,
-                shipName: mb_trim($match[4]),
-                weapon: mb_trim($match[5]),
+                shipName: $this->clean($match[4]),
+                weapon: $this->clean($match[5]),
                 quality: $verb === 'neutralized' ? 'Neutralized' : 'Drained',
                 type: EventType::Neutralization,
             );
@@ -207,7 +207,7 @@ final class CombatLogParser
                 playerName: $target['name'],
                 corporation: $target['corporation'],
                 shipName: $target['ship'],
-                weapon: mb_trim($match[4]),
+                weapon: $this->clean($match[4]),
                 quality: $match[5],
             );
         }
@@ -218,10 +218,10 @@ final class CombatLogParser
                 timestamp: $timestamp,
                 damage: 0,
                 direction: EventDirection::Incoming,
-                playerName: mb_trim($match[2]),
+                playerName: $this->clean($match[2]),
                 corporation: null,
                 shipName: null,
-                weapon: mb_trim($match[1]),
+                weapon: $this->clean($match[1]),
                 quality: 'Misses',
             );
         }
@@ -232,15 +232,25 @@ final class CombatLogParser
                 timestamp: $timestamp,
                 damage: 0,
                 direction: EventDirection::Outgoing,
-                playerName: mb_trim($match[2]),
+                playerName: $this->clean($match[2]),
                 corporation: null,
                 shipName: null,
-                weapon: mb_trim($match[1]),
+                weapon: $this->clean($match[1]),
                 quality: 'Misses',
             );
         }
 
         return null;
+    }
+
+    /**
+     * Captured log fragments can retain markup (e.g. a trailing </font>)
+     * depending on where a line's tag boundaries fall, so every captured
+     * field is stripped centrally instead of per-pattern.
+     */
+    private function clean(string $value): string
+    {
+        return mb_trim(strip_tags($value));
     }
 
     /**
@@ -250,14 +260,14 @@ final class CombatLogParser
     {
         if (preg_match('/^(.+?)\[([^\]]*)\]\(([^)]+)\)$/u', $raw, $match)) {
             return [
-                'name' => mb_trim($match[1]),
-                'corporation' => mb_trim($match[2]) ?: null,
-                'ship' => mb_trim($match[3]),
+                'name' => $this->clean($match[1]),
+                'corporation' => $this->clean($match[2]) ?: null,
+                'ship' => $this->clean($match[3]),
             ];
         }
 
         return [
-            'name' => mb_trim($raw),
+            'name' => $this->clean($raw),
             'corporation' => null,
             'ship' => null,
         ];

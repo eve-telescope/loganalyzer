@@ -239,3 +239,34 @@ test('it leaves drone damage unattributed when several pilots own that drone typ
     $droneHit = $result['events'][2];
     expect($droneHit->playerName)->toBe('Warrior II');
 });
+
+test('it strips markup from logistics dealt weapons', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:05 ] (combat) <color=0xffccff66><b>410</b><color=0x77ffffff><font size=10> remote shield boosted to </font><b><color=0xffffffff>Fleet Mate</b><color=0x77ffffff><font size=10> - Medium Remote Shield Booster</font>
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->weapon)->toBe('Medium Remote Shield Booster')
+        ->and($event->playerName)->toBe('Fleet Mate')
+        ->and($event->type)->toBe(EventType::Logistics);
+});
+
+test('no parsed field ever contains markup', function () {
+    $contents = file_get_contents(base_path('tests/Fixtures/testlog.txt'));
+    $result = $this->parser->parse($contents);
+
+    foreach ($result['events'] as $event) {
+        expect($event->playerName)->not->toContain('<')
+            ->and($event->weapon)->not->toContain('<')
+            ->and($event->shipName ?? '')->not->toContain('<');
+    }
+});
