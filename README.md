@@ -19,7 +19,7 @@ Upload and analyze **EVE Online** combat logs. Get DPS graphs, damage breakdowns
 
 | Layer | Technology |
 | --- | --- |
-| Backend | [Laravel 13](https://laravel.com) (PHP 8.3+) |
+| Backend | [Laravel 13](https://laravel.com) (PHP 8.4+) |
 | Frontend | [Vue 3](https://vuejs.org) + [Inertia.js v3](https://inertiajs.com) |
 | Styling | [Tailwind CSS 4](https://tailwindcss.com) |
 | Charts | [Chart.js](https://www.chartjs.org) via vue-chartjs |
@@ -31,7 +31,7 @@ Upload and analyze **EVE Online** combat logs. Get DPS graphs, damage breakdowns
 
 ### Requirements
 
-- PHP 8.3+ with Composer
+- PHP 8.4+ with Composer
 - Node.js 22+ with npm
 
 ### Setup
@@ -74,7 +74,7 @@ Test fixtures (synthetic gamelog files) live in `tests/Fixtures/`.
 
 GitHub Actions run on every push to `main` and on pull requests:
 
-- **Tests** (`tests.yml`) — full Pest suite against PHP 8.3, 8.4, and 8.5
+- **Tests** (`tests.yml`) — full Pest suite against PHP 8.4 and 8.5
 - **Code Quality** (`code-quality.yml`) — Pint, Larastan, Rector (dry run), ESLint, Prettier, and TypeScript checks
 
 [Dependabot](.github/dependabot.yml) opens weekly grouped update PRs for Composer, npm, and GitHub Actions dependencies.
