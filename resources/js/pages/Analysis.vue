@@ -16,6 +16,7 @@ import PilotAvatar from '@/components/ui/PilotAvatar.vue';
 import ShipIcon from '@/components/ui/ShipIcon.vue';
 import StatPanel from '@/components/ui/StatPanel.vue';
 import StatRow from '@/components/ui/StatRow.vue';
+import ZkillLink from '@/components/ui/ZkillLink.vue';
 import { eveTimestampToIso, formatDateTime, formatTime } from '@/lib/dates';
 import type {
     CombatAnalysis,
@@ -1327,11 +1328,25 @@ watch(
                     >
                         <template #cell-name="{ value }">
                             <span class="flex items-center gap-2">
+                                <ShipIcon
+                                    v-if="
+                                        pilotIds[value] == null &&
+                                        shipTypeIds[value] != null
+                                    "
+                                    :name="value"
+                                    :type-id="shipTypeIds[value]"
+                                />
                                 <PilotAvatar
+                                    v-else
                                     :name="value"
                                     :character-id="pilotIds[value] ?? null"
                                 />
                                 <span>{{ value }}</span>
+                                <ZkillLink
+                                    v-if="pilotIds[value] != null"
+                                    :character-id="pilotIds[value]"
+                                    :name="value"
+                                />
                             </span>
                         </template>
                         <template #cell-ship="{ value }">
@@ -1356,11 +1371,25 @@ watch(
                     >
                         <template #cell-name="{ value }">
                             <span class="flex items-center gap-2">
+                                <ShipIcon
+                                    v-if="
+                                        pilotIds[value] == null &&
+                                        shipTypeIds[value] != null
+                                    "
+                                    :name="value"
+                                    :type-id="shipTypeIds[value]"
+                                />
                                 <PilotAvatar
+                                    v-else
                                     :name="value"
                                     :character-id="pilotIds[value] ?? null"
                                 />
                                 <span>{{ value }}</span>
+                                <ZkillLink
+                                    v-if="pilotIds[value] != null"
+                                    :character-id="pilotIds[value]"
+                                    :name="value"
+                                />
                             </span>
                         </template>
                         <template #cell-ship="{ value }">
@@ -1385,11 +1414,25 @@ watch(
                     >
                         <template #cell-name="{ value }">
                             <span class="flex items-center gap-2">
+                                <ShipIcon
+                                    v-if="
+                                        pilotIds[value] == null &&
+                                        shipTypeIds[value] != null
+                                    "
+                                    :name="value"
+                                    :type-id="shipTypeIds[value]"
+                                />
                                 <PilotAvatar
+                                    v-else
                                     :name="value"
                                     :character-id="pilotIds[value] ?? null"
                                 />
                                 <span>{{ value }}</span>
+                                <ZkillLink
+                                    v-if="pilotIds[value] != null"
+                                    :character-id="pilotIds[value]"
+                                    :name="value"
+                                />
                             </span>
                         </template>
                         <template #cell-ship="{ value }">
@@ -1410,16 +1453,30 @@ watch(
                 <StatPanel :title="`Engagement — ${selectedPilot}`">
                     <div class="flex items-start justify-between gap-4">
                         <div class="flex items-center gap-3">
+                            <ShipIcon
+                                v-if="
+                                    pilotIds[selectedPilot] == null &&
+                                    shipTypeIds[selectedPilot] != null
+                                "
+                                :name="selectedPilot"
+                                :type-id="shipTypeIds[selectedPilot]"
+                            />
                             <PilotAvatar
+                                v-else
                                 :name="selectedPilot"
                                 :character-id="pilotIds[selectedPilot] ?? null"
                                 size="md"
                             />
                             <div>
                                 <p
-                                    class="font-mono text-lg font-semibold text-zinc-100"
+                                    class="flex items-center gap-2 font-mono text-lg font-semibold text-zinc-100"
                                 >
                                     {{ selectedPilot }}
+                                    <ZkillLink
+                                        v-if="pilotIds[selectedPilot] != null"
+                                        :character-id="pilotIds[selectedPilot]"
+                                        :name="selectedPilot"
+                                    />
                                 </p>
                                 <p
                                     v-if="engagement.ship"

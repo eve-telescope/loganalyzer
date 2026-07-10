@@ -17,8 +17,76 @@ final class CombatLogParser
     {
         return [
             ...$this->parseHeader($contents),
-            'events' => $this->parseEvents($contents),
+            'events' => $this->attributeDroneDamage($this->parseEvents($contents)),
         ];
+    }
+
+    /**
+     * Outgoing damage to a drone logs the drone itself as the target
+     * (e.g. "Hammerhead II[.BOP](Hammerhead II)"), so the pilot slot holds
+     * a type name. The owner is inferred from the rest of the log: pilots
+     * appear with the drone name as their weapon on other lines, narrowed
+     * by the corp ticker the drone entry carries. Ambiguous drones (several
+     * candidate owners) are left untouched.
+     *
+     * @param  list<CombatEvent>  $events
+     * @return list<CombatEvent>
+     */
+    private function attributeDroneDamage(array $events): array
+    {
+        $weaponUsers = [];
+        $corpPilots = [];
+
+        foreach ($events as $event) {
+            if ($event->shipName !== null && $event->playerName === $event->shipName) {
+                continue;
+            }
+
+            $weaponUsers[$event->weapon][$event->playerName] = true;
+
+            if ($event->corporation !== null) {
+                $corpPilots[$event->corporation][$event->playerName] = true;
+            }
+        }
+
+        return array_map(function (CombatEvent $event) use ($weaponUsers, $corpPilots): CombatEvent {
+            $isDroneTarget = $event->type === EventType::Damage
+                && $event->shipName !== null
+                && $event->playerName === $event->shipName;
+
+            if (! $isDroneTarget) {
+                return $event;
+            }
+
+            $candidates = array_keys($weaponUsers[$event->playerName] ?? []);
+
+            if ($event->corporation !== null && isset($corpPilots[$event->corporation])) {
+                $corpNames = array_keys($corpPilots[$event->corporation]);
+                $narrowed = array_values(array_intersect($candidates, $corpNames));
+
+                if ($narrowed !== []) {
+                    $candidates = $narrowed;
+                } elseif ($candidates === [] && count($corpNames) === 1) {
+                    $candidates = $corpNames;
+                }
+            }
+
+            if (count($candidates) !== 1) {
+                return $event;
+            }
+
+            return new CombatEvent(
+                timestamp: $event->timestamp,
+                damage: $event->damage,
+                direction: $event->direction,
+                playerName: $candidates[0],
+                corporation: $event->corporation,
+                shipName: $event->shipName,
+                weapon: $event->weapon,
+                quality: $event->quality,
+                type: $event->type,
+            );
+        }, $events);
     }
 
     /**

@@ -249,3 +249,46 @@ test('uploading still succeeds when ESI is unavailable', function () {
 
     expect(EveEntity::query()->count())->toBe(0);
 });
+
+test('names matching an item type are never treated as characters', function () {
+    // A drone in the pilot slot whose name also belongs to a real player.
+    Http::fake([
+        'esi.evetech.net/*' => Http::response([
+            'characters' => [
+                ['id' => 95194769, 'name' => 'Hammerhead II'],
+                ['id' => 93000001, 'name' => 'Aria Vex'],
+            ],
+            'inventory_types' => [
+                ['id' => 2185, 'name' => 'Hammerhead II'],
+            ],
+        ]),
+    ]);
+
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Nicolas Kion
+      Session Started: 2026.02.12 09:41:44
+    ------------------------------------------------------------
+    [ 2026.02.12 09:42:00 ] (combat) <color=0xff00ffff><b>120</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Hammerhead II</b><font size=10><color=0x77ffffff> - Light Neutron Blaster II - Hits
+    [ 2026.02.12 09:42:05 ] (combat) <color=0xff00ffff><b>340</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Aria Vex[RAZR](Drake)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+    LOG;
+
+    $file = UploadedFile::fake()->createWithContent('combat.txt', $log);
+
+    $this->post('/analyze', ['log_file' => $file]);
+
+    $combatLog = CombatLog::first();
+
+    expect(EveEntity::query()->where('kind', 'character')->where('name', 'Hammerhead II')->value('eve_id'))->toBeNull()
+        ->and(EveEntity::query()->where('kind', 'inventory_type')->where('name', 'Hammerhead II')->value('eve_id'))->toBe(2185);
+
+    $this->get("/logs/{$combatLog->uuid}")
+        ->assertStatus(200)
+        ->assertInertia(fn ($page) => $page
+            ->missing('pilotIds.Hammerhead II')
+            ->where('shipTypeIds.Hammerhead II', 2185)
+            ->where('pilotIds.Aria Vex', 93000001)
+            ->etc()
+        );
+});

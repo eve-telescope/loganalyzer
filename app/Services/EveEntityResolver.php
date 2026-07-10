@@ -64,29 +64,43 @@ final class EveEntityResolver
             $rows = [];
 
             foreach (array_intersect($characterNames, $chunk) as $name) {
-                $rows[] = [
+                // Drone and structure names occupy the pilot slot in the log.
+                // If ESI knows the name as an item type, that wins: a stray
+                // player who happens to share a drone's name must not get
+                // their portrait rendered on drone rows.
+                $isItemType = isset($resolvedTypes[$name]);
+
+                $rows[$name.'|character'] = [
                     'kind' => EveEntityKind::Character->value,
                     'name' => $name,
-                    'eve_id' => $resolvedCharacters[$name] ?? null,
+                    'eve_id' => $isItemType ? null : ($resolvedCharacters[$name] ?? null),
                 ];
+
+                if ($isItemType) {
+                    $rows[$name.'|type'] = [
+                        'kind' => EveEntityKind::InventoryType->value,
+                        'name' => $name,
+                        'eve_id' => $resolvedTypes[$name],
+                    ];
+                }
             }
 
             foreach (array_intersect($typeNames, $chunk) as $name) {
-                $rows[] = [
+                $rows[$name.'|type'] = [
                     'kind' => EveEntityKind::InventoryType->value,
                     'name' => $name,
                     'eve_id' => $resolvedTypes[$name] ?? null,
                 ];
             }
 
-            EveEntity::query()->upsert($rows, ['kind', 'name'], ['eve_id']);
+            EveEntity::query()->upsert(array_values($rows), ['kind', 'name'], ['eve_id']);
 
             $knownCharacters = [...$knownCharacters, ...array_intersect_key($resolvedCharacters, array_flip($characterNames))];
-            $knownTypes = [...$knownTypes, ...array_intersect_key($resolvedTypes, array_flip($typeNames))];
+            $knownTypes = [...$knownTypes, ...$resolvedTypes];
         }
 
         return [
-            'characters' => $this->buildMap($characterNames, $knownCharacters),
+            'characters' => $this->buildMap($characterNames, array_diff_key($knownCharacters, $knownTypes)),
             'types' => $this->buildMap($typeNames, $knownTypes),
         ];
     }

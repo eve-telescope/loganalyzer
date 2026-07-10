@@ -200,3 +200,42 @@ test('events use enums for direction and type', function () {
         expect($event->type)->toBeInstanceOf(EventType::class);
     }
 });
+
+test('it attributes outgoing drone damage to the sole owner', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:01 ] (combat) <color=0xffcc0000><b>88</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Tom DaNanRen[.BOP](Cenotaph)</b><font size=10><color=0x77ffffff> - Hammerhead II - Penetrates
+    [ 2026.01.01 12:00:05 ] (combat) <color=0xff00ffff><b>270</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Hammerhead II[.BOP](Hammerhead II)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(2);
+
+    $droneHit = $result['events'][1];
+    expect($droneHit->playerName)->toBe('Tom DaNanRen')
+        ->and($droneHit->shipName)->toBe('Hammerhead II')
+        ->and($droneHit->direction)->toBe(EventDirection::Outgoing);
+});
+
+test('it leaves drone damage unattributed when several pilots own that drone type', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:01 ] (combat) <color=0xffcc0000><b>88</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Pilot One[.BOP](Cenotaph)</b><font size=10><color=0x77ffffff> - Warrior II - Penetrates
+    [ 2026.01.01 12:00:02 ] (combat) <color=0xffcc0000><b>92</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Pilot Two[.BOP](Rupture)</b><font size=10><color=0x77ffffff> - Warrior II - Hits
+    [ 2026.01.01 12:00:05 ] (combat) <color=0xff00ffff><b>120</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Warrior II[.BOP](Warrior II)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    $droneHit = $result['events'][2];
+    expect($droneHit->playerName)->toBe('Warrior II');
+});
