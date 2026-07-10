@@ -1,15 +1,15 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="512" height="512" rx="96" fill="#0f172a"/>
+  <rect width="512" height="512" rx="96" fill="#09090b"/>
 
   <!-- Outer ring -->
-  <circle cx="256" cy="256" r="170" stroke="#22d3ee" stroke-width="20" fill="none"/>
+  <circle cx="256" cy="256" r="170" stroke="#fbbf24" stroke-width="20" fill="none"/>
 
   <!-- Crosshair lines with gap around center -->
-  <line x1="256" y1="46" x2="256" y2="176" stroke="#22d3ee" stroke-width="20" stroke-linecap="round"/>
-  <line x1="256" y1="336" x2="256" y2="466" stroke="#22d3ee" stroke-width="20" stroke-linecap="round"/>
-  <line x1="46" y1="256" x2="176" y2="256" stroke="#22d3ee" stroke-width="20" stroke-linecap="round"/>
-  <line x1="336" y1="256" x2="466" y2="256" stroke="#22d3ee" stroke-width="20" stroke-linecap="round"/>
+  <line x1="256" y1="46" x2="256" y2="176" stroke="#fbbf24" stroke-width="20" stroke-linecap="round"/>
+  <line x1="256" y1="336" x2="256" y2="466" stroke="#fbbf24" stroke-width="20" stroke-linecap="round"/>
+  <line x1="46" y1="256" x2="176" y2="256" stroke="#fbbf24" stroke-width="20" stroke-linecap="round"/>
+  <line x1="336" y1="256" x2="466" y2="256" stroke="#fbbf24" stroke-width="20" stroke-linecap="round"/>
 
   <!-- Center dot -->
-  <circle cx="256" cy="256" r="20" fill="#22d3ee"/>
+  <circle cx="256" cy="256" r="20" fill="#fbbf24"/>
 </svg>
