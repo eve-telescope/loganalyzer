@@ -6,10 +6,12 @@ import { create } from '@/actions/App/Http/Controllers/CombatLogController';
 import DamageBarChart from '@/components/charts/DamageBarChart.vue';
 import DamageDoughnutChart from '@/components/charts/DamageDoughnutChart.vue';
 import DpsLineChart from '@/components/charts/DpsLineChart.vue';
+import QualitySpectrum from '@/components/charts/QualitySpectrum.vue';
 import DataTable from '@/components/ui/DataTable.vue';
 
 import type { Column } from '@/components/ui/DataTable.vue';
-import StatCard from '@/components/ui/StatCard.vue';
+import StatPanel from '@/components/ui/StatPanel.vue';
+import StatRow from '@/components/ui/StatRow.vue';
 import { eveTimestampToIso, formatDateTime, formatTime } from '@/lib/dates';
 import type {
     CombatAnalysis,
@@ -170,6 +172,177 @@ const filteredEvents = computed((): CombatEventData[] => {
 });
 
 const summary = computed(() => buildSummary(filteredEvents.value));
+
+/** EVE hit qualities from best roll to worst, misses last. */
+const QUALITY_ORDER = [
+    'Wrecks',
+    'Smashes',
+    'Penetrates',
+    'Hits',
+    'Glances Off',
+    'Grazes',
+    'Misses',
+] as const;
+
+const PEAK_WINDOW_SECONDS = 10;
+
+interface BiggestHit {
+    damage: number;
+    weapon: string;
+    pilot: string;
+}
+
+function buildDetails(events: CombatEventData[]) {
+    const qualityOut: Record<string, number> = {};
+    const qualityIn: Record<string, number> = {};
+    const targets = new Set<string>();
+    const attackers = new Set<string>();
+    const pilots = new Set<string>();
+    let biggestHitOut: BiggestHit | null = null;
+    let biggestHitIn: BiggestHit | null = null;
+    let neutIn = 0;
+    let neutOut = 0;
+    let neutInEvents = 0;
+    let neutOutEvents = 0;
+    let logiInCycles = 0;
+    let logiOutCycles = 0;
+
+    for (const e of events) {
+        pilots.add(e.playerName);
+
+        if (e.type === 'damage') {
+            if (e.direction === 'outgoing') {
+                targets.add(e.playerName);
+                qualityOut[e.quality] = (qualityOut[e.quality] ?? 0) + 1;
+
+                if (e.damage > (biggestHitOut?.damage ?? 0)) {
+                    biggestHitOut = {
+                        damage: e.damage,
+                        weapon: e.weapon,
+                        pilot: e.playerName,
+                    };
+                }
+            } else {
+                attackers.add(e.playerName);
+                qualityIn[e.quality] = (qualityIn[e.quality] ?? 0) + 1;
+
+                if (e.damage > (biggestHitIn?.damage ?? 0)) {
+                    biggestHitIn = {
+                        damage: e.damage,
+                        weapon: e.weapon,
+                        pilot: e.playerName,
+                    };
+                }
+            }
+        } else if (e.type === 'neutralization') {
+            if (e.direction === 'incoming') {
+                neutIn += e.damage;
+                neutInEvents++;
+            } else {
+                neutOut += e.damage;
+                neutOutEvents++;
+            }
+        } else if (e.type === 'logistics') {
+            if (e.direction === 'incoming') {
+                logiInCycles++;
+            } else {
+                logiOutCycles++;
+            }
+        }
+    }
+
+    return {
+        qualityOut,
+        qualityIn,
+        biggestHitOut,
+        biggestHitIn,
+        uniqueTargets: targets.size,
+        uniqueAttackers: attackers.size,
+        pilotsInvolved: pilots.size,
+        neutIn,
+        neutOut,
+        neutInEvents,
+        neutOutEvents,
+        logiInCycles,
+        logiOutCycles,
+    };
+}
+
+const details = computed(() => buildDetails(filteredEvents.value));
+
+const peakDps = computed(() => {
+    const events = filteredEvents.value;
+
+    if (events.length === 0) {
+        return { dealt: 0, received: 0 };
+    }
+
+    const firstMs = parseTime(events[0].timestamp);
+    const dealtBuckets = new Map<number, number>();
+    const receivedBuckets = new Map<number, number>();
+
+    for (const e of events) {
+        if (e.type !== 'damage') {
+            continue;
+        }
+
+        const idx = Math.floor(
+            (parseTime(e.timestamp) - firstMs) / 1000 / PEAK_WINDOW_SECONDS,
+        );
+        const buckets =
+            e.direction === 'outgoing' ? dealtBuckets : receivedBuckets;
+
+        buckets.set(idx, (buckets.get(idx) ?? 0) + e.damage);
+    }
+
+    const peakOf = (buckets: Map<number, number>) =>
+        buckets.size > 0
+            ? Math.round(Math.max(...buckets.values()) / PEAK_WINDOW_SECONDS)
+            : 0;
+
+    return { dealt: peakOf(dealtBuckets), received: peakOf(receivedBuckets) };
+});
+
+/** Killboard-style damage efficiency: share of all damage that was dealt by the listener. */
+const efficiency = computed((): number | null => {
+    const total =
+        summary.value.totalDamageDealt + summary.value.totalDamageReceived;
+
+    return total > 0 ? (summary.value.totalDamageDealt / total) * 100 : null;
+});
+
+/** HP repaired onto the listener per HP of damage taken. */
+const tankSupportRatio = computed((): string => {
+    if (summary.value.totalDamageReceived === 0) {
+        return '—';
+    }
+
+    return `${Math.round((summary.value.totalLogiReceived / summary.value.totalDamageReceived) * 100)}%`;
+});
+
+const neutPressure = computed((): string => {
+    const duration = summary.value.combatDurationSeconds;
+
+    if (duration === 0 || details.value.neutIn === 0) {
+        return '—';
+    }
+
+    return `${(details.value.neutIn / duration).toFixed(1)} GJ/s`;
+});
+
+const qualitySegmentsOut = computed(() =>
+    QUALITY_ORDER.map((quality) => ({
+        label: quality,
+        count: details.value.qualityOut[quality] ?? 0,
+    })),
+);
+
+const qualitySegmentsIn = computed(() =>
+    QUALITY_ORDER.map((quality) => ({
+        label: quality,
+        count: details.value.qualityIn[quality] ?? 0,
+    })),
+);
 
 const damageByTarget = computed((): Record<string, TargetDamage> =>
     buildDamageByEntity(filteredEvents.value, 'outgoing'),
@@ -573,61 +746,98 @@ watch(
         />
 
         <div class="relative mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <!-- Top bar -->
-            <div
-                class="mb-6 flex items-center justify-between border-b border-slate-800 pb-4"
-            >
-                <div class="flex items-center gap-3">
-                    <!-- Crosshair icon -->
-                    <svg
-                        class="h-5 w-5 text-cyan-500"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                    >
-                        <circle cx="12" cy="12" r="10" />
-                        <line x1="12" y1="2" x2="12" y2="6" />
-                        <line x1="12" y1="18" x2="12" y2="22" />
-                        <line x1="2" y1="12" x2="6" y2="12" />
-                        <line x1="18" y1="12" x2="22" y2="12" />
-                        <circle cx="12" cy="12" r="3" />
-                    </svg>
-                    <div>
-                        <h1
-                            class="font-mono text-sm font-bold tracking-widest text-slate-100 uppercase"
+            <!-- After-action report header -->
+            <header class="mb-6 border-b border-slate-800 pb-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <!-- Crosshair icon -->
+                        <svg
+                            class="h-4 w-4 text-cyan-500"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
                         >
-                            Combat Analysis
-                        </h1>
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="2" x2="12" y2="6" />
+                            <line x1="12" y1="18" x2="12" y2="22" />
+                            <line x1="2" y1="12" x2="6" y2="12" />
+                            <line x1="18" y1="12" x2="22" y2="12" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
                         <p
-                            class="font-mono text-[10px] tracking-wider text-slate-600"
+                            class="font-mono text-[10px] tracking-widest text-slate-500 uppercase"
                         >
-                            {{ analysis.listener }} //
-                            {{ analysis.sessionStarted }}
+                            Combat Log Analyzer // After-Action Report
                         </p>
                     </div>
-                </div>
-                <Link
-                    :href="create.url()"
-                    class="flex items-center gap-1.5 font-mono text-[10px] tracking-wider text-slate-500 uppercase transition-colors hover:text-cyan-400"
-                >
-                    <!-- Upload icon -->
-                    <svg
-                        class="h-3.5 w-3.5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                    <Link
+                        :href="create.url()"
+                        class="flex items-center gap-1.5 font-mono text-[10px] tracking-wider text-slate-500 uppercase transition-colors hover:text-cyan-400"
                     >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+                        <!-- Upload icon -->
+                        <svg
+                            class="h-3.5 w-3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+                            />
+                        </svg>
+                        New Log
+                    </Link>
+                </div>
+
+                <h1
+                    class="mt-5 font-mono text-2xl font-bold tracking-tight text-slate-100 sm:text-3xl"
+                >
+                    {{ analysis.listener }}
+                </h1>
+                <p
+                    class="mt-1 font-mono text-[10px] tracking-wider text-slate-600 uppercase"
+                >
+                    {{ analysis.sessionStarted }} //
+                    {{ formatDuration(summary.combatDurationSeconds) }}
+                    {{ selection ? 'selected' : '' }} //
+                    {{ formatNumber(filteredEvents.length) }} events //
+                    {{ details.pilotsInvolved }} pilots
+                </p>
+
+                <!-- Damage balance verdict -->
+                <div v-if="efficiency !== null" class="mt-5 max-w-3xl">
+                    <div
+                        class="flex h-1.5 gap-0.5 overflow-hidden rounded-full"
+                    >
+                        <div
+                            class="bg-cyan-500"
+                            :style="{ width: `${efficiency}%` }"
                         />
-                    </svg>
-                    New Log
-                </Link>
-            </div>
+                        <div
+                            class="bg-red-500/80"
+                            :style="{ width: `${100 - efficiency}%` }"
+                        />
+                    </div>
+                    <div
+                        class="mt-1.5 flex items-baseline justify-between font-mono text-[10px] tracking-wider uppercase"
+                    >
+                        <span class="text-cyan-500">
+                            {{ formatNumber(summary.totalDamageDealt) }} dealt
+                        </span>
+                        <span class="text-slate-400">
+                            Efficiency {{ efficiency.toFixed(1) }}%
+                        </span>
+                        <span class="text-red-500">
+                            {{ formatNumber(summary.totalDamageReceived) }}
+                            received
+                        </span>
+                    </div>
+                </div>
+            </header>
 
             <!-- Filter indicator -->
             <div
@@ -650,53 +860,188 @@ watch(
                 Range: {{ selectionLabel }}
             </div>
 
-            <!-- Stats strip -->
-            <div
-                class="mb-6 flex flex-wrap items-start gap-6 border-b border-slate-800/50 pb-5 lg:gap-8"
-            >
-                <StatCard
-                    label="DMG Dealt"
-                    :value="formatNumber(summary.totalDamageDealt)"
-                    :subtitle="`${hitRate(summary.totalOutgoingHits, summary.totalOutgoingMisses)} accuracy`"
-                    accent="cyan"
-                />
-                <StatCard
-                    label="DMG Received"
-                    :value="formatNumber(summary.totalDamageReceived)"
-                    :subtitle="`${formatNumber(summary.totalIncomingHits + summary.totalIncomingMisses)} events`"
-                    accent="red"
-                />
-                <StatCard
-                    label="DPS Out"
-                    :value="formatNumber(Math.round(summary.dpsDealt))"
-                    subtitle="avg/s"
-                    accent="cyan"
-                />
-                <StatCard
-                    label="DPS In"
-                    :value="formatNumber(Math.round(summary.dpsReceived))"
-                    subtitle="avg/s"
-                    accent="red"
-                />
-                <StatCard
-                    label="Logi In"
-                    :value="formatNumber(summary.totalLogiReceived)"
-                    subtitle="HP repaired"
-                    accent="green"
-                />
-                <StatCard
-                    v-if="summary.totalLogiDealt > 0"
-                    label="Logi Out"
-                    :value="formatNumber(summary.totalLogiDealt)"
-                    subtitle="HP repaired"
-                    accent="orange"
-                />
-                <StatCard
-                    label="Duration"
-                    :value="formatDuration(summary.combatDurationSeconds)"
-                    :subtitle="selection ? 'selected' : 'total'"
-                />
-            </div>
+            <!-- Stat panels -->
+            <section class="mb-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                <StatPanel title="Offense" accent="cyan">
+                    <p
+                        class="font-mono text-2xl font-bold text-cyan-400 tabular-nums"
+                    >
+                        {{ formatNumber(summary.totalDamageDealt) }}
+                    </p>
+                    <p class="mb-3 text-[10px] text-slate-600">damage dealt</p>
+                    <dl class="space-y-1.5">
+                        <StatRow
+                            label="DPS avg"
+                            :value="formatNumber(Math.round(summary.dpsDealt))"
+                        />
+                        <StatRow
+                            label="DPS peak (10s)"
+                            :value="formatNumber(peakDps.dealt)"
+                        />
+                        <StatRow
+                            label="Accuracy"
+                            :value="
+                                hitRate(
+                                    summary.totalOutgoingHits,
+                                    summary.totalOutgoingMisses,
+                                )
+                            "
+                        />
+                        <StatRow
+                            label="Biggest hit"
+                            :value="
+                                details.biggestHitOut
+                                    ? formatNumber(details.biggestHitOut.damage)
+                                    : '—'
+                            "
+                            :hint="
+                                details.biggestHitOut
+                                    ? `${details.biggestHitOut.weapon} → ${details.biggestHitOut.pilot}`
+                                    : undefined
+                            "
+                        />
+                        <StatRow
+                            label="Targets engaged"
+                            :value="String(details.uniqueTargets)"
+                        />
+                    </dl>
+                </StatPanel>
+
+                <StatPanel title="Defense" accent="red">
+                    <p
+                        class="font-mono text-2xl font-bold text-red-400 tabular-nums"
+                    >
+                        {{ formatNumber(summary.totalDamageReceived) }}
+                    </p>
+                    <p class="mb-3 text-[10px] text-slate-600">
+                        damage received
+                    </p>
+                    <dl class="space-y-1.5">
+                        <StatRow
+                            label="DPS avg"
+                            :value="
+                                formatNumber(Math.round(summary.dpsReceived))
+                            "
+                        />
+                        <StatRow
+                            label="DPS peak (10s)"
+                            :value="formatNumber(peakDps.received)"
+                        />
+                        <StatRow
+                            label="Enemy accuracy"
+                            :value="
+                                hitRate(
+                                    summary.totalIncomingHits,
+                                    summary.totalIncomingMisses,
+                                )
+                            "
+                        />
+                        <StatRow
+                            label="Hardest hit taken"
+                            :value="
+                                details.biggestHitIn
+                                    ? formatNumber(details.biggestHitIn.damage)
+                                    : '—'
+                            "
+                            :hint="
+                                details.biggestHitIn
+                                    ? `${details.biggestHitIn.weapon} ← ${details.biggestHitIn.pilot}`
+                                    : undefined
+                            "
+                        />
+                        <StatRow
+                            label="Unique attackers"
+                            :value="String(details.uniqueAttackers)"
+                        />
+                    </dl>
+                </StatPanel>
+
+                <StatPanel title="Logistics" accent="green">
+                    <p
+                        class="font-mono text-2xl font-bold text-emerald-400 tabular-nums"
+                    >
+                        {{ formatNumber(summary.totalLogiReceived) }}
+                    </p>
+                    <p class="mb-3 text-[10px] text-slate-600">
+                        hp repaired onto you
+                    </p>
+                    <dl class="space-y-1.5">
+                        <StatRow
+                            label="Rep cycles received"
+                            :value="String(details.logiInCycles)"
+                        />
+                        <StatRow
+                            label="Tank support"
+                            :value="tankSupportRatio"
+                            hint="HP repaired onto you per HP of damage taken"
+                        />
+                        <StatRow
+                            label="HP repaired by you"
+                            :value="formatNumber(summary.totalLogiDealt)"
+                        />
+                        <StatRow
+                            label="Rep cycles dealt"
+                            :value="String(details.logiOutCycles)"
+                        />
+                    </dl>
+                </StatPanel>
+
+                <StatPanel title="Energy Warfare" accent="purple">
+                    <p
+                        class="font-mono text-2xl font-bold text-purple-400 tabular-nums"
+                    >
+                        {{ formatNumber(details.neutIn) }}
+                        <span class="text-sm font-medium text-purple-500/70">
+                            GJ
+                        </span>
+                    </p>
+                    <p class="mb-3 text-[10px] text-slate-600">
+                        drained from you
+                    </p>
+                    <dl class="space-y-1.5">
+                        <StatRow label="Neut pressure" :value="neutPressure" />
+                        <StatRow
+                            label="Neut events in"
+                            :value="String(details.neutInEvents)"
+                        />
+                        <StatRow
+                            label="Drained by you"
+                            :value="`${formatNumber(details.neutOut)} GJ`"
+                        />
+                        <StatRow
+                            label="Neut events out"
+                            :value="String(details.neutOutEvents)"
+                        />
+                    </dl>
+                </StatPanel>
+            </section>
+
+            <!-- Hit quality spectrums -->
+            <section class="mb-6 grid gap-4 lg:grid-cols-2">
+                <div
+                    class="rounded border border-slate-800/60 bg-slate-900/40 p-5"
+                >
+                    <h3
+                        class="mb-3 font-mono text-[10px] tracking-widest text-cyan-600 uppercase"
+                    >
+                        Outgoing Hit Quality
+                    </h3>
+                    <QualitySpectrum
+                        :segments="qualitySegmentsOut"
+                        hue="cyan"
+                    />
+                </div>
+                <div
+                    class="rounded border border-slate-800/60 bg-slate-900/40 p-5"
+                >
+                    <h3
+                        class="mb-3 font-mono text-[10px] tracking-widest text-red-700 uppercase"
+                    >
+                        Incoming Hit Quality
+                    </h3>
+                    <QualitySpectrum :segments="qualitySegmentsIn" hue="red" />
+                </div>
+            </section>
 
             <!-- DPS Timeline -->
             <section class="mb-6">
