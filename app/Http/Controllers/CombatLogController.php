@@ -7,7 +7,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCombatLogRequest;
 use App\Models\CombatEvent;
 use App\Models\CombatLog;
+use App\Models\EveEntity;
 use App\Services\CombatLogParser;
+use App\Services\EveEntityResolver;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -23,10 +25,15 @@ final class CombatLogController extends Controller
         ]);
     }
 
-    public function store(StoreCombatLogRequest $request, CombatLogParser $parser): RedirectResponse
+    public function store(StoreCombatLogRequest $request, CombatLogParser $parser, EveEntityResolver $resolver): RedirectResponse
     {
         $file = $request->file('log_file');
         $parsed = $parser->parse($file->get());
+
+        $resolver->resolve(
+            characterNames: array_map(fn (\App\Data\CombatEvent $e): string => $e->playerName, $parsed['events']),
+            typeNames: array_values(array_filter(array_map(fn (\App\Data\CombatEvent $e): ?string => $e->shipName, $parsed['events']))),
+        );
 
         $combatLog = CombatLog::create([
             'uuid' => Str::uuid()->toString(),
@@ -75,6 +82,16 @@ final class CombatLogController extends Controller
 
         $hide = (string) $request->query('hide', '');
 
+        $names = $events->pluck('player_name')
+            ->merge($events->pluck('ship_name')->filter())
+            ->unique()
+            ->values();
+
+        $entities = EveEntity::query()
+            ->whereIn('name', $names)
+            ->whereNotNull('eve_id')
+            ->get();
+
         return Inertia::render('Analysis', [
             'analysis' => [
                 'listener' => $combatLog->listener,
@@ -82,9 +99,16 @@ final class CombatLogController extends Controller
                 'events' => $mappedEvents,
             ],
             'uuid' => $combatLog->uuid,
+            'pilotIds' => $entities
+                ->where('kind', \App\Enums\EveEntityKind::Character)
+                ->pluck('eve_id', 'name'),
+            'shipTypeIds' => $entities
+                ->where('kind', \App\Enums\EveEntityKind::InventoryType)
+                ->pluck('eve_id', 'name'),
             'filters' => [
                 'from' => $request->query('from'),
                 'to' => $request->query('to'),
+                'pilot' => $request->query('pilot'),
                 'hide' => $hide === ''
                     ? []
                     : array_values(array_filter(array_map(trim(...), explode(',', $hide)))),
