@@ -1,25 +1,27 @@
-name: tests
+name: Tests
 
 on:
   push:
-    branches:
-      - develop
-      - main
-      - master
-      - workos
+    branches: [main]
   pull_request:
-    branches:
-      - develop
-      - main
-      - master
-      - workos
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  ci:
+  tests:
     runs-on: ubuntu-latest
+
     strategy:
+      fail-fast: false
       matrix:
-        php-version: ['8.3', '8.4', '8.5']
+        php: ['8.3', '8.4', '8.5']
+
+    name: PHP ${{ matrix.php }}
 
     steps:
       - name: Checkout code
@@ -28,29 +30,29 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php-version }}
+          php-version: ${{ matrix.php }}
           tools: composer:v2
-          coverage: xdebug
+          coverage: none
 
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
-          node-version: '22'
+          node-version: '24'
+          cache: npm
 
-      - name: Install Node Dependencies
-        run: npm i
-
-      - name: Install Dependencies
+      - name: Install Composer Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
-      - name: Copy Environment File
-        run: cp .env.example .env
+      - name: Install Node Dependencies
+        run: npm ci
 
-      - name: Generate Application Key
-        run: php artisan key:generate
+      - name: Prepare Environment
+        run: |
+          cp .env.example .env
+          php artisan key:generate
 
       - name: Build Assets
         run: npm run build
 
-      - name: Tests
-        run: ./vendor/bin/pest
+      - name: Run Tests
+        run: php artisan test --compact
