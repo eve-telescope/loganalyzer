@@ -270,3 +270,27 @@ test('no parsed field ever contains markup', function () {
             ->and($event->shipName ?? '')->not->toContain('<');
     }
 });
+
+test('it parses logistics received with a plain pilot target (issue #1)', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.01 12:00:00
+    ------------------------------------------------------------
+    [ 2026.01.01 12:00:05 ] (combat) <color=0xffccff66><b>512</b><color=0x77ffffff><font size=10> remote shield boosted by </font><b><color=0xffffffff>Logi Pilot[CORP](Basilisk)</b><color=0x77ffffff><font size=10> - Large Remote Shield Booster</font>
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->type)->toBe(EventType::Logistics)
+        ->and($event->direction)->toBe(EventDirection::Incoming)
+        ->and($event->damage)->toBe(512)
+        ->and($event->playerName)->toBe('Logi Pilot')
+        ->and($event->corporation)->toBe('CORP')
+        ->and($event->shipName)->toBe('Basilisk')
+        ->and($event->weapon)->toBe('Large Remote Shield Booster');
+});

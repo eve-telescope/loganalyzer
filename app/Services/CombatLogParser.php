@@ -153,6 +153,25 @@ final class CombatLogParser
             );
         }
 
+        // Logistics received — plain target variant ("Pilot[CORP](Ship)"
+        // wrapped in <color=0xffffffff>, like damage lines). Reported in #1:
+        // these lines were silently dropped by the pattern above.
+        if (preg_match('/<b>(\d+)<\/b>.*?remote (shield|armor|hull) (boosted|repaired) by.*?<b><color=0xffffffff>(.+?)<\/b>.*? - (.+?)(?:<\/font>)?$/u', $content, $match)) {
+            $target = $this->parseTarget($this->clean($match[4]));
+
+            return new CombatEvent(
+                timestamp: $timestamp,
+                damage: (int) $match[1],
+                direction: EventDirection::Incoming,
+                playerName: $target['name'],
+                corporation: $target['corporation'],
+                shipName: $target['ship'],
+                weapon: $this->clean($match[5]),
+                quality: $this->clean($match[2]).' '.$this->clean($match[3]),
+                type: EventType::Logistics,
+            );
+        }
+
         // Logistics dealt
         if (preg_match('/<b>(\d+)<\/b>.*?remote (shield|armor|hull) (boosted|repaired) to.*?<b><color=0xffffffff>(.+?)<\/b>.*? - (.+)$/u', $content, $match)) {
             return new CombatEvent(
