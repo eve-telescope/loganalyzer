@@ -1012,29 +1012,15 @@ watch(
 
             <!-- Hit quality spectrums -->
             <section class="mb-6 grid gap-4 lg:grid-cols-2">
-                <div
-                    class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
-                >
-                    <h3
-                        class="mb-3 font-mono text-xs tracking-widest text-cyan-400 uppercase"
-                    >
-                        Outgoing Hit Quality
-                    </h3>
+                <StatPanel title="Outgoing Hit Quality" accent="cyan">
                     <QualitySpectrum
                         :segments="qualitySegmentsOut"
                         hue="cyan"
                     />
-                </div>
-                <div
-                    class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
-                >
-                    <h3
-                        class="mb-3 font-mono text-xs tracking-widest text-red-400 uppercase"
-                    >
-                        Incoming Hit Quality
-                    </h3>
+                </StatPanel>
+                <StatPanel title="Incoming Hit Quality" accent="red">
                     <QualitySpectrum :segments="qualitySegmentsIn" hue="red" />
-                </div>
+                </StatPanel>
             </section>
 
             <!-- DPS Timeline -->
@@ -1060,9 +1046,7 @@ watch(
                         Timeline
                     </h2>
                 </div>
-                <div
-                    class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
-                >
+                <StatPanel>
                     <DpsLineChart
                         :data="dpsOverTime"
                         :selection="selection"
@@ -1070,7 +1054,7 @@ watch(
                         @update:selection="selection = $event"
                         @toggle-series="toggleSeries"
                     />
-                </div>
+                </StatPanel>
             </section>
 
             <!-- Damage Breakdowns -->
@@ -1097,49 +1081,21 @@ watch(
                     </h2>
                 </div>
                 <div class="grid gap-4 lg:grid-cols-2">
-                    <div
-                        class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
-                    >
-                        <h3
-                            class="mb-3 font-mono text-xs tracking-widest text-cyan-400 uppercase"
-                        >
-                            Outgoing &mdash; By Target
-                        </h3>
+                    <StatPanel title="Outgoing — By Target" accent="cyan">
                         <DamageBarChart :items="damageByTargetItems" />
-                    </div>
-                    <div
-                        class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
-                    >
-                        <h3
-                            class="mb-3 font-mono text-xs tracking-widest text-cyan-400 uppercase"
-                        >
-                            Outgoing &mdash; By Weapon
-                        </h3>
+                    </StatPanel>
+                    <StatPanel title="Outgoing — By Weapon" accent="cyan">
                         <DamageDoughnutChart :items="damageByWeaponItems" />
-                    </div>
-                    <div
-                        class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
-                    >
-                        <h3
-                            class="mb-3 font-mono text-xs tracking-widest text-red-400 uppercase"
-                        >
-                            Incoming &mdash; By Source
-                        </h3>
+                    </StatPanel>
+                    <StatPanel title="Incoming — By Source" accent="red">
                         <DamageBarChart
                             :items="incomingBySourceItems"
                             color="#ef4444"
                         />
-                    </div>
-                    <div
-                        class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
-                    >
-                        <h3
-                            class="mb-3 font-mono text-xs tracking-widest text-red-400 uppercase"
-                        >
-                            Incoming &mdash; By Weapon
-                        </h3>
+                    </StatPanel>
+                    <StatPanel title="Incoming — By Weapon" accent="red">
                         <DamageDoughnutChart :items="incomingByWeaponItems" />
-                    </div>
+                    </StatPanel>
                 </div>
             </section>
 
@@ -1166,9 +1122,7 @@ watch(
                         Pilot Details
                     </h2>
                 </div>
-                <div
-                    class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
-                >
+                <StatPanel>
                     <div class="mb-4 flex gap-px">
                         <button
                             v-for="tab in [
@@ -1213,7 +1167,7 @@ watch(
                         :rows="logiTableRows"
                         empty-text="No logistics events"
                     />
-                </div>
+                </StatPanel>
             </section>
         </div>
     </div>

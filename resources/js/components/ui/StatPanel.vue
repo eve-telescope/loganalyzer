@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-    title: string;
+    title?: string;
     accent?: 'cyan' | 'red' | 'green' | 'orange' | 'purple' | 'default';
 }>();
 
@@ -29,7 +29,7 @@ const accentDotColor: Record<string, string> = {
             class="absolute right-0 bottom-0 h-2 w-2 border-r border-b border-slate-500/50"
         />
 
-        <div class="mb-3 flex items-center gap-2">
+        <div v-if="title" class="mb-3 flex items-center gap-2">
             <span
                 class="h-1.5 w-1.5 rounded-full"
                 :class="accentDotColor[accent ?? 'default']"
