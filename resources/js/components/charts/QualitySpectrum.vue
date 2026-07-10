@@ -25,7 +25,7 @@ const RAMPS: Record<string, string[]> = {
         'bg-cyan-500',
         'bg-cyan-600',
         'bg-cyan-700',
-        'bg-slate-600',
+        'bg-zinc-600',
     ],
     red: [
         'bg-red-200',
@@ -34,7 +34,7 @@ const RAMPS: Record<string, string[]> = {
         'bg-red-500',
         'bg-red-600',
         'bg-red-700',
-        'bg-slate-600',
+        'bg-zinc-600',
     ],
 };
 
@@ -45,7 +45,7 @@ const total = computed(() =>
 const items = computed(() =>
     props.segments.map((segment, i) => ({
         ...segment,
-        colorClass: RAMPS[props.hue][i] ?? 'bg-slate-600',
+        colorClass: RAMPS[props.hue][i] ?? 'bg-zinc-600',
         share: total.value > 0 ? (segment.count / total.value) * 100 : 0,
     })),
 );
@@ -63,6 +63,7 @@ function formatShare(share: number): string {
             <div
                 v-for="segment in visibleItems"
                 :key="segment.label"
+                class="transition-all duration-500 motion-reduce:transition-none"
                 :class="segment.colorClass"
                 :style="{ width: `${segment.share}%` }"
                 :title="`${segment.label}: ${segment.count} (${formatShare(segment.share)})`"
@@ -78,14 +79,14 @@ function formatShare(share: number): string {
                     class="h-1.5 w-1.5 rounded-full"
                     :class="segment.colorClass"
                 />
-                <span class="text-xs text-slate-300">
+                <span class="text-xs text-zinc-300">
                     {{ segment.label }}
                 </span>
-                <span class="font-mono text-xs text-slate-200 tabular-nums">
+                <span class="font-mono text-xs text-zinc-200 tabular-nums">
                     {{ segment.count }} · {{ formatShare(segment.share) }}
                 </span>
             </li>
         </ul>
     </div>
-    <p v-else class="text-xs text-slate-400">No attack events in range</p>
+    <p v-else class="text-xs text-zinc-400">No attack events in range</p>
 </template>

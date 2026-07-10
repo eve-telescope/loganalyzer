@@ -30,7 +30,7 @@ const chartData = computed(() => ({
                 (_, idx) => colors[idx % colors.length],
             ),
             borderWidth: 2,
-            borderColor: '#020617',
+            borderColor: '#09090b',
         },
     ],
 }));
@@ -45,16 +45,16 @@ const chartOptions = {
             labels: {
                 usePointStyle: true,
                 padding: 12,
-                color: '#cbd5e1',
+                color: '#d4d4d8',
                 font: { family: 'monospace', size: 12 },
             },
         },
         tooltip: {
-            backgroundColor: 'rgba(15, 23, 42, 0.95)',
-            borderColor: 'rgba(51, 65, 85, 0.5)',
+            backgroundColor: 'rgba(24, 24, 27, 0.95)',
+            borderColor: 'rgba(63, 63, 70, 0.6)',
             borderWidth: 1,
-            titleColor: '#e2e8f0',
-            bodyColor: '#cbd5e1',
+            titleColor: '#f4f4f5',
+            bodyColor: '#d4d4d8',
             titleFont: { family: 'monospace' },
             bodyFont: { family: 'monospace' },
             callbacks: {

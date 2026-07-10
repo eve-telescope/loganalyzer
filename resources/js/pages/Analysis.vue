@@ -7,9 +7,13 @@ import DamageBarChart from '@/components/charts/DamageBarChart.vue';
 import DamageDoughnutChart from '@/components/charts/DamageDoughnutChart.vue';
 import DpsLineChart from '@/components/charts/DpsLineChart.vue';
 import QualitySpectrum from '@/components/charts/QualitySpectrum.vue';
+import AnimatedNumber from '@/components/ui/AnimatedNumber.vue';
 import DataTable from '@/components/ui/DataTable.vue';
 
 import type { Column } from '@/components/ui/DataTable.vue';
+import EventTypeIcon from '@/components/ui/EventTypeIcon.vue';
+import PilotAvatar from '@/components/ui/PilotAvatar.vue';
+import ShipIcon from '@/components/ui/ShipIcon.vue';
 import StatPanel from '@/components/ui/StatPanel.vue';
 import StatRow from '@/components/ui/StatRow.vue';
 import { eveTimestampToIso, formatDateTime, formatTime } from '@/lib/dates';
@@ -37,9 +41,12 @@ const BUCKET_SECONDS = 5;
 const props = defineProps<{
     analysis: CombatAnalysis;
     uuid?: string;
+    pilotIds: Record<string, number>;
+    shipTypeIds: Record<string, number>;
     filters: {
         from: string | null;
         to: string | null;
+        pilot: string | null;
         hide: string[];
     };
 }>();
@@ -312,22 +319,25 @@ const efficiency = computed((): number | null => {
 });
 
 /** HP repaired onto the listener per HP of damage taken. */
-const tankSupportRatio = computed((): string => {
+const tankSupportRatio = computed((): number | string => {
     if (summary.value.totalDamageReceived === 0) {
         return '—';
     }
 
-    return `${Math.round((summary.value.totalLogiReceived / summary.value.totalDamageReceived) * 100)}%`;
+    return (
+        (summary.value.totalLogiReceived / summary.value.totalDamageReceived) *
+        100
+    );
 });
 
-const neutPressure = computed((): string => {
+const neutPressure = computed((): number | string => {
     const duration = summary.value.combatDurationSeconds;
 
     if (duration === 0 || details.value.neutIn === 0) {
         return '—';
     }
 
-    return `${(details.value.neutIn / duration).toFixed(1)} GJ/s`;
+    return details.value.neutIn / duration;
 });
 
 const qualitySegmentsOut = computed(() =>
@@ -625,16 +635,6 @@ function formatNumber(n: number): string {
     return n.toLocaleString();
 }
 
-function hitRate(hits: number, misses: number): string {
-    const total = hits + misses;
-
-    if (total === 0) {
-        return '0%';
-    }
-
-    return `${((hits / total) * 100).toFixed(1)}%`;
-}
-
 const damageByTargetItems = computed(() =>
     Object.entries(damageByTarget.value)
         .sort(([, a], [, b]) => b.damage - a.damage)
@@ -684,9 +684,164 @@ const selectionLabel = computed(() => {
 
 const activeTab = ref<'outgoing' | 'incoming' | 'logistics'>('outgoing');
 
+function percentFormat(n: number): string {
+    return `${n.toFixed(1)}%`;
+}
+
+function wholePercentFormat(n: number): string {
+    return `${Math.round(n)}%`;
+}
+
+function gjFormat(n: number): string {
+    return `${Math.round(n).toLocaleString()} GJ`;
+}
+
+function gjPerSecondFormat(n: number): string {
+    return `${n.toFixed(1)} GJ/s`;
+}
+
+function accuracyValue(hits: number, misses: number): number | string {
+    const total = hits + misses;
+
+    return total > 0 ? (hits / total) * 100 : '—';
+}
+
+// Pilot engagement drilldown
+const selectedPilot = ref<string | null>(props.filters.pilot);
+
+function selectPilot(name: string) {
+    selectedPilot.value = selectedPilot.value === name ? null : name;
+}
+
+const ENGAGEMENT_TYPES = ['damage', 'logistics', 'neutralization'] as const;
+type EngagementType = (typeof ENGAGEMENT_TYPES)[number];
+
+const ENGAGEMENT_TYPE_LABELS: Record<EngagementType, string> = {
+    damage: 'Damage',
+    logistics: 'Logistics',
+    neutralization: 'Energy',
+};
+
+const engagementTypeFilter = ref<Set<EngagementType>>(
+    new Set(ENGAGEMENT_TYPES),
+);
+const engagementDirection = ref<'both' | 'outgoing' | 'incoming'>('both');
+
+function toggleEngagementType(type: EngagementType) {
+    const next = new Set(engagementTypeFilter.value);
+
+    if (next.has(type)) {
+        next.delete(type);
+    } else {
+        next.add(type);
+    }
+
+    engagementTypeFilter.value = next;
+}
+
+const pilotEvents = computed((): CombatEventData[] =>
+    selectedPilot.value
+        ? filteredEvents.value.filter(
+              (e) => e.playerName === selectedPilot.value,
+          )
+        : [],
+);
+
+const engagement = computed(() => {
+    let dealt = 0;
+    let received = 0;
+    let hitsOn = 0;
+    let missesOn = 0;
+    let hitsBy = 0;
+    let missesBy = 0;
+    let logiIn = 0;
+    let logiOut = 0;
+    let neutIn = 0;
+    let neutOut = 0;
+    let ship: string | null = null;
+
+    for (const e of pilotEvents.value) {
+        if (e.shipName) {
+            ship = e.shipName;
+        }
+
+        if (e.type === 'damage') {
+            if (e.direction === 'outgoing') {
+                dealt += e.damage;
+
+                if (e.quality === 'Misses') {
+                    missesOn++;
+                } else {
+                    hitsOn++;
+                }
+            } else {
+                received += e.damage;
+
+                if (e.quality === 'Misses') {
+                    missesBy++;
+                } else {
+                    hitsBy++;
+                }
+            }
+        } else if (e.type === 'logistics') {
+            if (e.direction === 'incoming') {
+                logiIn += e.damage;
+            } else {
+                logiOut += e.damage;
+            }
+        } else if (e.direction === 'incoming') {
+            neutIn += e.damage;
+        } else {
+            neutOut += e.damage;
+        }
+    }
+
+    return {
+        dealt,
+        received,
+        hitsOn,
+        missesOn,
+        hitsBy,
+        missesBy,
+        logiIn,
+        logiOut,
+        neutIn,
+        neutOut,
+        ship,
+    };
+});
+
+const engagementLog = computed(() =>
+    pilotEvents.value
+        .filter((e) => engagementTypeFilter.value.has(e.type))
+        .filter(
+            (e) =>
+                engagementDirection.value === 'both' ||
+                e.direction === engagementDirection.value,
+        )
+        .map((e) => ({
+            ...e,
+            time: e.timestamp.split(' ')[1] ?? e.timestamp,
+        })),
+);
+
+function eventColorClass(e: { type: string; direction: string }): string {
+    if (e.type === 'damage') {
+        return e.direction === 'outgoing' ? 'text-cyan-400' : 'text-red-400';
+    }
+
+    if (e.type === 'logistics') {
+        return e.direction === 'incoming'
+            ? 'text-emerald-400'
+            : 'text-amber-400';
+    }
+
+    return e.direction === 'incoming' ? 'text-violet-400' : 'text-pink-400';
+}
+
 watch(
-    [selection, hiddenSeries],
-    ([sel, hidden]) => {
+    [selection, hiddenSeries, selectedPilot],
+    ([sel, hidden, pilot]) => {
         const query: Record<string, string> = {};
 
         if (sel) {
@@ -698,12 +853,17 @@ watch(
             query.hide = ALL_SERIES_KEYS.filter((k) => hidden.has(k)).join(',');
         }
 
+        if (pilot) {
+            query.pilot = pilot;
+        }
+
         const current = new URLSearchParams(window.location.search);
 
         if (
             current.get('from') === (query.from ?? null) &&
             current.get('to') === (query.to ?? null) &&
-            current.get('hide') === (query.hide ?? null)
+            current.get('hide') === (query.hide ?? null) &&
+            current.get('pilot') === (query.pilot ?? null)
         ) {
             return;
         }
@@ -730,7 +890,7 @@ watch(
         <meta name="twitter:title" :content="ogTitle" />
         <meta name="twitter:description" :content="ogDescription" />
     </Head>
-    <div class="min-h-screen bg-slate-950 text-slate-300">
+    <div class="min-h-screen bg-zinc-950 text-zinc-300">
         <!-- Scanline overlay -->
         <div
             class="pointer-events-none fixed inset-0 opacity-[0.015]"
@@ -739,20 +899,20 @@ watch(
                     0deg,
                     transparent,
                     transparent 2px,
-                    rgba(148, 163, 184, 0.3) 2px,
-                    rgba(148, 163, 184, 0.3) 4px
+                    rgba(161, 161, 170, 0.3) 2px,
+                    rgba(161, 161, 170, 0.3) 4px
                 );
             "
         />
 
         <div class="relative mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <!-- After-action report header -->
-            <header class="mb-6 border-b border-slate-800 pb-6">
+            <header class="mb-6 border-b border-zinc-800 pb-6">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
                         <!-- Crosshair icon -->
                         <svg
-                            class="h-4 w-4 text-cyan-500"
+                            class="h-4 w-4 text-amber-400"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -766,14 +926,14 @@ watch(
                             <circle cx="12" cy="12" r="3" />
                         </svg>
                         <p
-                            class="font-mono text-xs tracking-widest text-slate-400 uppercase"
+                            class="font-mono text-xs tracking-widest text-zinc-400 uppercase"
                         >
                             Combat Log Analyzer // After-Action Report
                         </p>
                     </div>
                     <Link
                         :href="create.url()"
-                        class="flex items-center gap-1.5 font-mono text-xs tracking-wider text-slate-400 uppercase transition-colors hover:text-cyan-300"
+                        class="flex items-center gap-1.5 font-mono text-xs tracking-wider text-zinc-400 uppercase transition-colors hover:text-amber-300"
                     >
                         <!-- Upload icon -->
                         <svg
@@ -794,29 +954,30 @@ watch(
                 </div>
 
                 <h1
-                    class="mt-5 font-mono text-2xl font-bold tracking-tight text-slate-100 sm:text-3xl"
+                    class="mt-5 font-mono text-2xl font-bold tracking-tight text-zinc-100 sm:text-3xl"
                 >
                     {{ analysis.listener }}
                 </h1>
                 <p
-                    class="mt-1.5 font-mono text-xs tracking-wider text-slate-400 uppercase"
+                    class="mt-1.5 font-mono text-xs tracking-wider text-zinc-400 uppercase"
                 >
                     {{ analysis.sessionStarted }} //
                     {{ formatDuration(summary.combatDurationSeconds) }}
                     {{ selection ? 'selected' : '' }} //
-                    {{ formatNumber(filteredEvents.length) }} events //
-                    {{ details.pilotsInvolved }} pilots
+                    <AnimatedNumber :value="filteredEvents.length" /> events //
+                    <AnimatedNumber :value="details.pilotsInvolved" />
+                    pilots
                 </p>
 
                 <!-- Damage balance verdict -->
                 <div v-if="efficiency !== null" class="mt-5 max-w-3xl">
                     <div class="flex h-2 gap-0.5 overflow-hidden rounded-full">
                         <div
-                            class="bg-cyan-500"
+                            class="bg-cyan-500 transition-all duration-500 motion-reduce:transition-none"
                             :style="{ width: `${efficiency}%` }"
                         />
                         <div
-                            class="bg-red-500/80"
+                            class="bg-red-500/80 transition-all duration-500 motion-reduce:transition-none"
                             :style="{ width: `${100 - efficiency}%` }"
                         />
                     </div>
@@ -824,13 +985,20 @@ watch(
                         class="mt-2 flex items-baseline justify-between font-mono text-xs tracking-wider uppercase"
                     >
                         <span class="text-cyan-300">
-                            {{ formatNumber(summary.totalDamageDealt) }} dealt
+                            <AnimatedNumber :value="summary.totalDamageDealt" />
+                            dealt
                         </span>
-                        <span class="font-semibold text-slate-100">
-                            Efficiency {{ efficiency.toFixed(1) }}%
+                        <span class="font-semibold text-zinc-100">
+                            Efficiency
+                            <AnimatedNumber
+                                :value="efficiency"
+                                :format="percentFormat"
+                            />
                         </span>
                         <span class="text-red-300">
-                            {{ formatNumber(summary.totalDamageReceived) }}
+                            <AnimatedNumber
+                                :value="summary.totalDamageReceived"
+                            />
                             received
                         </span>
                     </div>
@@ -840,7 +1008,7 @@ watch(
             <!-- Filter indicator -->
             <div
                 v-if="selection"
-                class="mb-4 flex items-center gap-2 border-l-2 border-cyan-400 bg-cyan-950/20 px-3 py-2 font-mono text-xs tracking-wider text-cyan-300 uppercase"
+                class="mb-4 flex items-center gap-2 border-l-2 border-amber-400 bg-amber-950/20 px-3 py-2 font-mono text-xs tracking-wider text-amber-300 uppercase"
             >
                 <svg
                     class="h-3 w-3 shrink-0"
@@ -864,34 +1032,31 @@ watch(
                     <p
                         class="font-mono text-2xl font-bold text-cyan-400 tabular-nums"
                     >
-                        {{ formatNumber(summary.totalDamageDealt) }}
+                        <AnimatedNumber :value="summary.totalDamageDealt" />
                     </p>
-                    <p class="mb-3 text-xs text-slate-400">damage dealt</p>
+                    <p class="mb-3 text-xs text-zinc-400">damage dealt</p>
                     <dl class="space-y-1.5">
                         <StatRow
                             label="DPS avg"
-                            :value="formatNumber(Math.round(summary.dpsDealt))"
+                            :value="Math.round(summary.dpsDealt)"
                         />
                         <StatRow
                             label="DPS peak (10s)"
-                            :value="formatNumber(peakDps.dealt)"
+                            :value="peakDps.dealt"
                         />
                         <StatRow
                             label="Accuracy"
                             :value="
-                                hitRate(
+                                accuracyValue(
                                     summary.totalOutgoingHits,
                                     summary.totalOutgoingMisses,
                                 )
                             "
+                            :format="percentFormat"
                         />
                         <StatRow
                             label="Biggest hit"
-                            :value="
-                                details.biggestHitOut
-                                    ? formatNumber(details.biggestHitOut.damage)
-                                    : '—'
-                            "
+                            :value="details.biggestHitOut?.damage ?? '—'"
                             :hint="
                                 details.biggestHitOut
                                     ? `${details.biggestHitOut.weapon} → ${details.biggestHitOut.pilot}`
@@ -900,7 +1065,7 @@ watch(
                         />
                         <StatRow
                             label="Targets engaged"
-                            :value="String(details.uniqueTargets)"
+                            :value="details.uniqueTargets"
                         />
                     </dl>
                 </StatPanel>
@@ -909,36 +1074,31 @@ watch(
                     <p
                         class="font-mono text-2xl font-bold text-red-400 tabular-nums"
                     >
-                        {{ formatNumber(summary.totalDamageReceived) }}
+                        <AnimatedNumber :value="summary.totalDamageReceived" />
                     </p>
-                    <p class="mb-3 text-xs text-slate-400">damage received</p>
+                    <p class="mb-3 text-xs text-zinc-400">damage received</p>
                     <dl class="space-y-1.5">
                         <StatRow
                             label="DPS avg"
-                            :value="
-                                formatNumber(Math.round(summary.dpsReceived))
-                            "
+                            :value="Math.round(summary.dpsReceived)"
                         />
                         <StatRow
                             label="DPS peak (10s)"
-                            :value="formatNumber(peakDps.received)"
+                            :value="peakDps.received"
                         />
                         <StatRow
                             label="Enemy accuracy"
                             :value="
-                                hitRate(
+                                accuracyValue(
                                     summary.totalIncomingHits,
                                     summary.totalIncomingMisses,
                                 )
                             "
+                            :format="percentFormat"
                         />
                         <StatRow
                             label="Hardest hit taken"
-                            :value="
-                                details.biggestHitIn
-                                    ? formatNumber(details.biggestHitIn.damage)
-                                    : '—'
-                            "
+                            :value="details.biggestHitIn?.damage ?? '—'"
                             :hint="
                                 details.biggestHitIn
                                     ? `${details.biggestHitIn.weapon} ← ${details.biggestHitIn.pilot}`
@@ -947,7 +1107,7 @@ watch(
                         />
                         <StatRow
                             label="Unique attackers"
-                            :value="String(details.uniqueAttackers)"
+                            :value="details.uniqueAttackers"
                         />
                     </dl>
                 </StatPanel>
@@ -956,28 +1116,29 @@ watch(
                     <p
                         class="font-mono text-2xl font-bold text-emerald-400 tabular-nums"
                     >
-                        {{ formatNumber(summary.totalLogiReceived) }}
+                        <AnimatedNumber :value="summary.totalLogiReceived" />
                     </p>
-                    <p class="mb-3 text-xs text-slate-400">
+                    <p class="mb-3 text-xs text-zinc-400">
                         hp repaired onto you
                     </p>
                     <dl class="space-y-1.5">
                         <StatRow
                             label="Rep cycles received"
-                            :value="String(details.logiInCycles)"
+                            :value="details.logiInCycles"
                         />
                         <StatRow
                             label="Tank support"
                             :value="tankSupportRatio"
+                            :format="wholePercentFormat"
                             hint="HP repaired onto you per HP of damage taken"
                         />
                         <StatRow
                             label="HP repaired by you"
-                            :value="formatNumber(summary.totalLogiDealt)"
+                            :value="summary.totalLogiDealt"
                         />
                         <StatRow
                             label="Rep cycles dealt"
-                            :value="String(details.logiOutCycles)"
+                            :value="details.logiOutCycles"
                         />
                     </dl>
                 </StatPanel>
@@ -986,25 +1147,30 @@ watch(
                     <p
                         class="font-mono text-2xl font-bold text-purple-400 tabular-nums"
                     >
-                        {{ formatNumber(details.neutIn) }}
+                        <AnimatedNumber :value="details.neutIn" />
                         <span class="text-sm font-medium text-purple-300/80">
                             GJ
                         </span>
                     </p>
-                    <p class="mb-3 text-xs text-slate-400">drained from you</p>
+                    <p class="mb-3 text-xs text-zinc-400">drained from you</p>
                     <dl class="space-y-1.5">
-                        <StatRow label="Neut pressure" :value="neutPressure" />
+                        <StatRow
+                            label="Neut pressure"
+                            :value="neutPressure"
+                            :format="gjPerSecondFormat"
+                        />
                         <StatRow
                             label="Neut events in"
-                            :value="String(details.neutInEvents)"
+                            :value="details.neutInEvents"
                         />
                         <StatRow
                             label="Drained by you"
-                            :value="`${formatNumber(details.neutOut)} GJ`"
+                            :value="details.neutOut"
+                            :format="gjFormat"
                         />
                         <StatRow
                             label="Neut events out"
-                            :value="String(details.neutOutEvents)"
+                            :value="details.neutOutEvents"
                         />
                     </dl>
                 </StatPanel>
@@ -1028,7 +1194,7 @@ watch(
                 <div class="mb-3 flex items-center gap-2">
                     <!-- Chart icon -->
                     <svg
-                        class="h-4 w-4 text-slate-400"
+                        class="h-4 w-4 text-zinc-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1041,7 +1207,7 @@ watch(
                         />
                     </svg>
                     <h2
-                        class="font-mono text-sm font-medium tracking-widest text-slate-300 uppercase"
+                        class="font-mono text-sm font-medium tracking-widest text-zinc-300 uppercase"
                     >
                         Timeline
                     </h2>
@@ -1062,7 +1228,7 @@ watch(
                 <div class="mb-3 flex items-center gap-2">
                     <!-- Bolt icon -->
                     <svg
-                        class="h-4 w-4 text-slate-400"
+                        class="h-4 w-4 text-zinc-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1075,7 +1241,7 @@ watch(
                         />
                     </svg>
                     <h2
-                        class="font-mono text-sm font-medium tracking-widest text-slate-300 uppercase"
+                        class="font-mono text-sm font-medium tracking-widest text-zinc-300 uppercase"
                     >
                         Damage Breakdown
                     </h2>
@@ -1104,7 +1270,7 @@ watch(
                 <div class="mb-3 flex items-center gap-2">
                     <!-- Table icon -->
                     <svg
-                        class="h-4 w-4 text-slate-400"
+                        class="h-4 w-4 text-zinc-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1117,7 +1283,7 @@ watch(
                         />
                     </svg>
                     <h2
-                        class="font-mono text-sm font-medium tracking-widest text-slate-300 uppercase"
+                        class="font-mono text-sm font-medium tracking-widest text-zinc-300 uppercase"
                     >
                         Pilot Details
                     </h2>
@@ -1134,8 +1300,8 @@ watch(
                             class="border-b-2 px-4 py-2 font-mono text-xs tracking-widest uppercase transition-colors"
                             :class="
                                 activeTab === tab
-                                    ? 'border-cyan-400 text-cyan-300'
-                                    : 'border-transparent text-slate-400 hover:text-slate-200'
+                                    ? 'border-amber-400 text-amber-300'
+                                    : 'border-transparent text-zinc-400 hover:text-zinc-200'
                             "
                             @click="activeTab = tab"
                         >
@@ -1154,19 +1320,288 @@ watch(
                         :columns="pilotColumns"
                         :rows="outgoingTableRows"
                         empty-text="No outgoing damage events"
-                    />
+                        clickable
+                        selected-key="name"
+                        :selected-value="selectedPilot"
+                        @row-click="selectPilot(String($event.name))"
+                    >
+                        <template #cell-name="{ value }">
+                            <span class="flex items-center gap-2">
+                                <PilotAvatar
+                                    :name="value"
+                                    :character-id="pilotIds[value] ?? null"
+                                />
+                                <span>{{ value }}</span>
+                            </span>
+                        </template>
+                        <template #cell-ship="{ value }">
+                            <span class="flex items-center gap-2">
+                                <ShipIcon
+                                    :name="value"
+                                    :type-id="shipTypeIds[value] ?? null"
+                                />
+                                <span>{{ value }}</span>
+                            </span>
+                        </template>
+                    </DataTable>
                     <DataTable
                         v-else-if="activeTab === 'incoming'"
                         :columns="pilotColumns"
                         :rows="incomingTableRows"
                         empty-text="No incoming damage events"
-                    />
+                        clickable
+                        selected-key="name"
+                        :selected-value="selectedPilot"
+                        @row-click="selectPilot(String($event.name))"
+                    >
+                        <template #cell-name="{ value }">
+                            <span class="flex items-center gap-2">
+                                <PilotAvatar
+                                    :name="value"
+                                    :character-id="pilotIds[value] ?? null"
+                                />
+                                <span>{{ value }}</span>
+                            </span>
+                        </template>
+                        <template #cell-ship="{ value }">
+                            <span class="flex items-center gap-2">
+                                <ShipIcon
+                                    :name="value"
+                                    :type-id="shipTypeIds[value] ?? null"
+                                />
+                                <span>{{ value }}</span>
+                            </span>
+                        </template>
+                    </DataTable>
                     <DataTable
                         v-else
                         :columns="logiColumns"
                         :rows="logiTableRows"
                         empty-text="No logistics events"
-                    />
+                        clickable
+                        selected-key="name"
+                        :selected-value="selectedPilot"
+                        @row-click="selectPilot(String($event.name))"
+                    >
+                        <template #cell-name="{ value }">
+                            <span class="flex items-center gap-2">
+                                <PilotAvatar
+                                    :name="value"
+                                    :character-id="pilotIds[value] ?? null"
+                                />
+                                <span>{{ value }}</span>
+                            </span>
+                        </template>
+                        <template #cell-ship="{ value }">
+                            <span class="flex items-center gap-2">
+                                <ShipIcon
+                                    :name="value"
+                                    :type-id="shipTypeIds[value] ?? null"
+                                />
+                                <span>{{ value }}</span>
+                            </span>
+                        </template>
+                    </DataTable>
+                </StatPanel>
+            </section>
+
+            <!-- Pilot engagement drilldown -->
+            <section v-if="selectedPilot" class="mt-6">
+                <StatPanel :title="`Engagement — ${selectedPilot}`">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <PilotAvatar
+                                :name="selectedPilot"
+                                :character-id="pilotIds[selectedPilot] ?? null"
+                                size="md"
+                            />
+                            <div>
+                                <p
+                                    class="font-mono text-lg font-semibold text-zinc-100"
+                                >
+                                    {{ selectedPilot }}
+                                </p>
+                                <p
+                                    v-if="engagement.ship"
+                                    class="flex items-center gap-1.5 text-xs text-zinc-400"
+                                >
+                                    <ShipIcon
+                                        :name="engagement.ship"
+                                        :type-id="
+                                            shipTypeIds[engagement.ship] ?? null
+                                        "
+                                    />
+                                    {{ engagement.ship }}
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            class="font-mono text-xs tracking-wider text-zinc-400 uppercase transition-colors hover:text-amber-300"
+                            @click="selectedPilot = null"
+                        >
+                            Close ✕
+                        </button>
+                    </div>
+
+                    <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                        <div>
+                            <p
+                                class="mb-2 font-mono text-xs tracking-widest text-cyan-400 uppercase"
+                            >
+                                You → {{ selectedPilot }}
+                            </p>
+                            <dl class="space-y-1.5">
+                                <StatRow
+                                    label="Damage dealt"
+                                    :value="engagement.dealt"
+                                />
+                                <StatRow
+                                    label="Hits / misses"
+                                    :value="`${engagement.hitsOn} / ${engagement.missesOn}`"
+                                />
+                                <StatRow
+                                    label="Accuracy"
+                                    :value="
+                                        accuracyValue(
+                                            engagement.hitsOn,
+                                            engagement.missesOn,
+                                        )
+                                    "
+                                    :format="percentFormat"
+                                />
+                                <StatRow
+                                    v-if="engagement.logiOut > 0"
+                                    label="HP repaired onto them"
+                                    :value="engagement.logiOut"
+                                />
+                                <StatRow
+                                    v-if="engagement.neutOut > 0"
+                                    label="Energy drained from them"
+                                    :value="engagement.neutOut"
+                                    :format="gjFormat"
+                                />
+                            </dl>
+                        </div>
+                        <div>
+                            <p
+                                class="mb-2 font-mono text-xs tracking-widest text-red-400 uppercase"
+                            >
+                                {{ selectedPilot }} → You
+                            </p>
+                            <dl class="space-y-1.5">
+                                <StatRow
+                                    label="Damage received"
+                                    :value="engagement.received"
+                                />
+                                <StatRow
+                                    label="Hits / misses"
+                                    :value="`${engagement.hitsBy} / ${engagement.missesBy}`"
+                                />
+                                <StatRow
+                                    label="Accuracy"
+                                    :value="
+                                        accuracyValue(
+                                            engagement.hitsBy,
+                                            engagement.missesBy,
+                                        )
+                                    "
+                                    :format="percentFormat"
+                                />
+                                <StatRow
+                                    v-if="engagement.logiIn > 0"
+                                    label="HP repaired onto you"
+                                    :value="engagement.logiIn"
+                                />
+                                <StatRow
+                                    v-if="engagement.neutIn > 0"
+                                    label="Energy drained from you"
+                                    :value="engagement.neutIn"
+                                    :format="gjFormat"
+                                />
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 flex flex-wrap items-center gap-2">
+                        <button
+                            v-for="direction in [
+                                'both',
+                                'outgoing',
+                                'incoming',
+                            ] as const"
+                            :key="direction"
+                            class="border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors"
+                            :class="
+                                engagementDirection === direction
+                                    ? 'border-amber-400/60 bg-amber-400/10 text-amber-300'
+                                    : 'border-zinc-700 text-zinc-400 hover:text-zinc-200'
+                            "
+                            @click="engagementDirection = direction"
+                        >
+                            {{ direction }}
+                        </button>
+                        <span class="mx-1 h-4 w-px bg-zinc-700" />
+                        <button
+                            v-for="type in ENGAGEMENT_TYPES"
+                            :key="type"
+                            class="flex items-center gap-1.5 border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors"
+                            :class="
+                                engagementTypeFilter.has(type)
+                                    ? 'border-amber-400/60 bg-amber-400/10 text-amber-300'
+                                    : 'border-zinc-700 text-zinc-400 hover:text-zinc-200'
+                            "
+                            @click="toggleEngagementType(type)"
+                        >
+                            <EventTypeIcon :type="type" />
+                            {{ ENGAGEMENT_TYPE_LABELS[type] }}
+                        </button>
+                    </div>
+
+                    <ul
+                        class="mt-3 max-h-96 divide-y divide-zinc-800/60 overflow-y-auto"
+                    >
+                        <li
+                            v-for="(e, i) in engagementLog"
+                            :key="i"
+                            class="flex items-center gap-3 py-1.5"
+                        >
+                            <span
+                                class="font-mono text-xs text-zinc-500 tabular-nums"
+                            >
+                                {{ e.time }}
+                            </span>
+                            <span :class="eventColorClass(e)">
+                                <EventTypeIcon :type="e.type" />
+                            </span>
+                            <span
+                                class="font-mono text-xs"
+                                :class="eventColorClass(e)"
+                            >
+                                {{ e.direction === 'outgoing' ? '→' : '←' }}
+                            </span>
+                            <span
+                                class="w-20 shrink-0 text-right font-mono text-sm font-medium tabular-nums"
+                                :class="eventColorClass(e)"
+                            >
+                                {{ formatNumber(e.damage)
+                                }}{{ e.type === 'neutralization' ? ' GJ' : '' }}
+                            </span>
+                            <span class="truncate text-xs text-zinc-300">
+                                {{ e.weapon }}
+                            </span>
+                            <span
+                                class="ml-auto shrink-0 font-mono text-[11px] text-zinc-500 uppercase"
+                            >
+                                {{ e.quality }}
+                            </span>
+                        </li>
+                        <li
+                            v-if="engagementLog.length === 0"
+                            class="py-4 text-center text-sm text-zinc-400"
+                        >
+                            No events match the filters
+                        </li>
+                    </ul>
                 </StatPanel>
             </section>
         </div>

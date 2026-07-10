@@ -52,10 +52,10 @@ function handleFileInput(event: Event) {
         class="relative rounded border-2 border-dashed transition-all duration-200"
         :class="[
             isDragging
-                ? 'border-cyan-400 bg-cyan-950/20 shadow-[0_0_20px_rgba(34,211,238,0.1)]'
+                ? 'border-amber-400 bg-amber-950/20 shadow-[0_0_20px_rgba(34,211,238,0.1)]'
                 : error
                   ? 'border-red-500/50 bg-red-950/10'
-                  : 'border-slate-600 bg-slate-800/40 hover:border-slate-500 hover:bg-slate-800/60',
+                  : 'border-zinc-600 bg-zinc-800/40 hover:border-zinc-500 hover:bg-zinc-800/60',
         ]"
         @dragover.prevent="isDragging = true"
         @dragleave.prevent="isDragging = false"
@@ -64,7 +64,7 @@ function handleFileInput(event: Event) {
         <label class="flex cursor-pointer flex-col items-center gap-3 p-10">
             <svg
                 class="h-10 w-10"
-                :class="isDragging ? 'text-cyan-400' : 'text-slate-500'"
+                :class="isDragging ? 'text-amber-400' : 'text-zinc-500'"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -79,16 +79,16 @@ function handleFileInput(event: Event) {
             <div class="text-center">
                 <p
                     v-if="fileName"
-                    class="font-mono text-sm font-medium text-cyan-400"
+                    class="font-mono text-sm font-medium text-amber-400"
                 >
                     {{ fileName }}
                 </p>
                 <template v-else>
-                    <p class="text-sm font-medium text-slate-300">
+                    <p class="text-sm font-medium text-zinc-300">
                         Drop your combat log here or
-                        <span class="text-cyan-400">browse</span>
+                        <span class="text-amber-400">browse</span>
                     </p>
-                    <p class="mt-1 text-xs text-slate-500">
+                    <p class="mt-1 text-xs text-zinc-500">
                         .txt or .log files up to {{ maxSizeMb }}MB
                     </p>
                 </template>

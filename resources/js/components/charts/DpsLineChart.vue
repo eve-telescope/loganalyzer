@@ -38,6 +38,10 @@ const emit = defineEmits<{
     'toggle-series': [key: SeriesKey];
 }>();
 
+const prefersReducedMotion =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const chartRef = shallowRef<{ chart: Chart } | null>(null);
 const dragStart = ref<number | null>(null);
 const dragEnd = ref<number | null>(null);
@@ -172,14 +176,14 @@ const selectionPlugin: Plugin = {
         const right = xScale.getPixelForValue(endIdx);
 
         ctx.save();
-        ctx.fillStyle = 'rgba(34, 211, 238, 0.08)';
+        ctx.fillStyle = 'rgba(251, 191, 36, 0.08)';
         ctx.fillRect(
             left,
             yScale.top,
             right - left,
             yScale.bottom - yScale.top,
         );
-        ctx.strokeStyle = 'rgba(34, 211, 238, 0.4)';
+        ctx.strokeStyle = 'rgba(251, 191, 36, 0.45)';
         ctx.lineWidth = 1;
         ctx.setLineDash([4, 4]);
         ctx.strokeRect(
@@ -266,7 +270,7 @@ const chartData = computed(() => {
 const chartOptions = computed(() => ({
     responsive: true,
     maintainAspectRatio: false,
-    animation: false as const,
+    animation: prefersReducedMotion ? (false as const) : { duration: 400 },
     interaction: {
         mode: 'index' as const,
         intersect: false,
@@ -277,7 +281,7 @@ const chartOptions = computed(() => ({
             labels: {
                 usePointStyle: true,
                 padding: 16,
-                color: '#cbd5e1',
+                color: '#d4d4d8',
                 font: { family: 'monospace', size: 12 },
             },
             onClick: (_e: unknown, legendItem: { datasetIndex?: number }) => {
@@ -291,11 +295,11 @@ const chartOptions = computed(() => ({
             },
         },
         tooltip: {
-            backgroundColor: 'rgba(15, 23, 42, 0.95)',
-            borderColor: 'rgba(51, 65, 85, 0.5)',
+            backgroundColor: 'rgba(24, 24, 27, 0.95)',
+            borderColor: 'rgba(63, 63, 70, 0.6)',
             borderWidth: 1,
-            titleColor: '#e2e8f0',
-            bodyColor: '#cbd5e1',
+            titleColor: '#f4f4f5',
+            bodyColor: '#d4d4d8',
             titleFont: { family: 'monospace' },
             bodyFont: { family: 'monospace' },
             callbacks: {
@@ -309,24 +313,24 @@ const chartOptions = computed(() => ({
     },
     scales: {
         x: {
-            grid: { color: 'rgba(51, 65, 85, 0.3)' },
+            grid: { color: 'rgba(63, 63, 70, 0.35)' },
             ticks: {
                 maxTicksLimit: 15,
-                color: '#94a3b8',
+                color: '#a1a1aa',
                 font: { family: 'monospace', size: 11 },
             },
         },
         y: {
             beginAtZero: true,
-            grid: { color: 'rgba(51, 65, 85, 0.3)' },
+            grid: { color: 'rgba(63, 63, 70, 0.35)' },
             ticks: {
-                color: '#94a3b8',
+                color: '#a1a1aa',
                 font: { family: 'monospace', size: 11 },
             },
             title: {
                 display: true,
                 text: 'HP/s',
-                color: '#94a3b8',
+                color: '#a1a1aa',
                 font: { family: 'monospace' },
             },
         },
@@ -337,14 +341,12 @@ const chartOptions = computed(() => ({
 <template>
     <div>
         <div class="mb-2 flex items-center justify-between">
-            <p
-                class="font-mono text-xs tracking-wider text-slate-400 uppercase"
-            >
+            <p class="font-mono text-xs tracking-wider text-zinc-400 uppercase">
                 Click and drag to select a time range
             </p>
             <button
                 v-if="selection"
-                class="font-mono text-xs font-medium tracking-wider text-cyan-300 uppercase hover:text-cyan-200"
+                class="font-mono text-xs font-medium tracking-wider text-amber-300 uppercase hover:text-amber-200"
                 @click="clearSelection"
             >
                 Clear selection

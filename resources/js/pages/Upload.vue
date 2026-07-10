@@ -48,7 +48,7 @@ function submit() {
         />
     </Head>
     <div
-        class="flex min-h-screen flex-col items-center justify-center bg-slate-950 p-6"
+        class="flex min-h-screen flex-col items-center justify-center bg-zinc-950 p-6"
     >
         <!-- Subtle grid background -->
         <div
@@ -71,12 +71,12 @@ function submit() {
         <div class="relative w-full max-w-lg">
             <div class="mb-8 text-center">
                 <h1
-                    class="font-mono text-3xl font-bold tracking-tight text-slate-100"
+                    class="font-mono text-3xl font-bold tracking-tight text-zinc-100"
                 >
                     COMBAT LOG
-                    <span class="text-cyan-400">ANALYZER</span>
+                    <span class="text-amber-400">ANALYZER</span>
                 </h1>
-                <p class="mt-2 text-sm text-slate-500">
+                <p class="mt-2 text-sm text-zinc-500">
                     Upload your EVE Online combat log to analyze DPS, damage
                     breakdowns, logistics, and more.
                 </p>
@@ -92,17 +92,15 @@ function submit() {
                 />
 
                 <div v-if="form.progress" class="mt-4">
-                    <div class="h-1 overflow-hidden rounded-full bg-slate-800">
+                    <div class="h-1 overflow-hidden rounded-full bg-zinc-800">
                         <div
-                            class="h-full rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.5)] transition-all duration-300"
+                            class="h-full rounded-full bg-amber-400 shadow-[0_0_8px_rgba(34,211,238,0.5)] transition-all duration-300"
                             :style="{
                                 width: `${form.progress.percentage}%`,
                             }"
                         />
                     </div>
-                    <p
-                        class="mt-1 text-center font-mono text-xs text-slate-500"
-                    >
+                    <p class="mt-1 text-center font-mono text-xs text-zinc-500">
                         UPLOADING... {{ form.progress.percentage }}%
                     </p>
                 </div>
@@ -110,7 +108,7 @@ function submit() {
                 <button
                     type="submit"
                     :disabled="!form.log_file || form.processing"
-                    class="mt-4 w-full rounded border border-cyan-500/30 bg-cyan-500/10 px-4 py-3 font-mono text-sm font-medium tracking-wider text-cyan-400 uppercase transition-all hover:border-cyan-400/50 hover:bg-cyan-500/20 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] disabled:cursor-not-allowed disabled:opacity-30"
+                    class="mt-4 w-full rounded border border-amber-500/30 bg-amber-500/10 px-4 py-3 font-mono text-sm font-medium tracking-wider text-amber-400 uppercase transition-all hover:border-amber-400/50 hover:bg-amber-500/20 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] disabled:cursor-not-allowed disabled:opacity-30"
                 >
                     <span v-if="form.processing">ANALYZING...</span>
                     <span v-else>ANALYZE COMBAT LOG</span>

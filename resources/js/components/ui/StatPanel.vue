@@ -10,23 +10,23 @@ const accentDotColor: Record<string, string> = {
     green: 'bg-emerald-400',
     orange: 'bg-amber-400',
     purple: 'bg-purple-400',
-    default: 'bg-slate-500',
+    default: 'bg-zinc-500',
 };
 </script>
 
 <template>
-    <div class="relative border border-slate-700/50 bg-slate-900/60 p-5">
+    <div class="relative border border-zinc-700/60 bg-zinc-900/60 p-5">
         <span
-            class="absolute top-0 left-0 h-2 w-2 border-t border-l border-slate-500/50"
+            class="absolute top-0 left-0 h-2 w-2 border-t border-l border-zinc-500/60"
         />
         <span
-            class="absolute top-0 right-0 h-2 w-2 border-t border-r border-slate-500/50"
+            class="absolute top-0 right-0 h-2 w-2 border-t border-r border-zinc-500/60"
         />
         <span
-            class="absolute bottom-0 left-0 h-2 w-2 border-b border-l border-slate-500/50"
+            class="absolute bottom-0 left-0 h-2 w-2 border-b border-l border-zinc-500/60"
         />
         <span
-            class="absolute right-0 bottom-0 h-2 w-2 border-r border-b border-slate-500/50"
+            class="absolute right-0 bottom-0 h-2 w-2 border-r border-b border-zinc-500/60"
         />
 
         <div v-if="title" class="mb-3 flex items-center gap-2">
@@ -35,7 +35,7 @@ const accentDotColor: Record<string, string> = {
                 :class="accentDotColor[accent ?? 'default']"
             />
             <h3
-                class="font-mono text-xs tracking-widest text-slate-400 uppercase"
+                class="font-mono text-xs tracking-widest text-zinc-400 uppercase"
             >
                 {{ title }}
             </h3>
