@@ -5,13 +5,16 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Enums\EveEntityKind;
-use App\Esi\ResolveUniverseIdsRequest;
 use App\Models\EveEntity;
-use NicolasKion\Esi\Connector;
+use NicolasKion\Esi\DTO\UniverseId;
+use NicolasKion\Esi\DTO\UniverseIds;
+use NicolasKion\Esi\Esi;
 
 final class EveEntityResolver
 {
     private const int MAX_NAMES_PER_REQUEST = 500;
+
+    public function __construct(private readonly Esi $esi) {}
 
     /**
      * Resolves pilot and ship names to EVE character/type IDs, caching every
@@ -46,17 +49,17 @@ final class EveEntityResolver
         ];
 
         foreach (array_chunk(array_values(array_unique($missing)), self::MAX_NAMES_PER_REQUEST) as $chunk) {
-            $result = (new Connector)->send(new ResolveUniverseIdsRequest($chunk));
+            $result = $this->esi->getIds($chunk);
 
             if ($result->failed()) {
                 continue;
             }
 
-            /** @var array<string, list<array{id: int, name: string}>> $data */
+            /** @var UniverseIds $data */
             $data = $result->data;
 
-            $resolvedCharacters = array_column($data['characters'] ?? [], 'id', 'name');
-            $resolvedTypes = array_column($data['inventory_types'] ?? [], 'id', 'name');
+            $resolvedCharacters = $this->toMap($data->characters);
+            $resolvedTypes = $this->toMap($data->inventory_types);
 
             $rows = [];
 
@@ -86,6 +89,21 @@ final class EveEntityResolver
             'characters' => $this->buildMap($characterNames, $knownCharacters),
             'types' => $this->buildMap($typeNames, $knownTypes),
         ];
+    }
+
+    /**
+     * @param  UniverseId[]  $ids
+     * @return array<string, int>
+     */
+    private function toMap(array $ids): array
+    {
+        $map = [];
+
+        foreach ($ids as $id) {
+            $map[$id->name] = $id->id;
+        }
+
+        return $map;
     }
 
     /**
