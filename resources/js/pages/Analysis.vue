@@ -17,7 +17,12 @@ import ShipIcon from '@/components/ui/ShipIcon.vue';
 import StatPanel from '@/components/ui/StatPanel.vue';
 import StatRow from '@/components/ui/StatRow.vue';
 import ZkillLink from '@/components/ui/ZkillLink.vue';
-import { eveTimestampToIso, formatDateTime, formatTime } from '@/lib/dates';
+import {
+    eveTimestampToIso,
+    formatDateTime,
+    formatTime,
+    relativeTimeFromEve,
+} from '@/lib/dates';
 import type {
     CombatAnalysis,
     CombatEventData,
@@ -309,14 +314,6 @@ const peakDps = computed(() => {
             : 0;
 
     return { dealt: peakOf(dealtBuckets), received: peakOf(receivedBuckets) };
-});
-
-/** Killboard-style damage efficiency: share of all damage that was dealt by the listener. */
-const efficiency = computed((): number | null => {
-    const total =
-        summary.value.totalDamageDealt + summary.value.totalDamageReceived;
-
-    return total > 0 ? (summary.value.totalDamageDealt / total) * 100 : null;
 });
 
 /** HP repaired onto the listener per HP of damage taken. */
@@ -983,48 +980,19 @@ watch(
                 <p
                     class="mt-1.5 font-mono text-xs tracking-wider text-zinc-400 uppercase"
                 >
-                    {{ analysis.sessionStarted }} //
+                    {{ analysis.sessionStarted }}
+                    <template
+                        v-if="relativeTimeFromEve(analysis.sessionStarted)"
+                    >
+                        ({{ relativeTimeFromEve(analysis.sessionStarted) }})
+                    </template>
+                    //
                     {{ formatDuration(summary.combatDurationSeconds) }}
                     {{ selection ? 'selected' : '' }} //
                     <AnimatedNumber :value="filteredEvents.length" /> events //
                     <AnimatedNumber :value="details.pilotsInvolved" />
                     pilots
                 </p>
-
-                <!-- Damage balance verdict -->
-                <div v-if="efficiency !== null" class="mt-5 max-w-3xl">
-                    <div class="flex h-2 gap-0.5 overflow-hidden rounded-full">
-                        <div
-                            class="bg-cyan-500 transition-all duration-500 motion-reduce:transition-none"
-                            :style="{ width: `${efficiency}%` }"
-                        />
-                        <div
-                            class="bg-red-500/80 transition-all duration-500 motion-reduce:transition-none"
-                            :style="{ width: `${100 - efficiency}%` }"
-                        />
-                    </div>
-                    <div
-                        class="mt-2 flex items-baseline justify-between font-mono text-xs tracking-wider uppercase"
-                    >
-                        <span class="text-cyan-300">
-                            <AnimatedNumber :value="summary.totalDamageDealt" />
-                            dealt
-                        </span>
-                        <span class="font-semibold text-zinc-100">
-                            Efficiency
-                            <AnimatedNumber
-                                :value="efficiency"
-                                :format="percentFormat"
-                            />
-                        </span>
-                        <span class="text-red-300">
-                            <AnimatedNumber
-                                :value="summary.totalDamageReceived"
-                            />
-                            received
-                        </span>
-                    </div>
-                </div>
             </header>
 
             <!-- Filter indicator -->
