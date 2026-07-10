@@ -9,15 +9,16 @@ const props = defineProps<{
     items: { label: string; value: number }[];
 }>();
 
+// CVD-validated categorical order; assigned by position, never cycled per hue.
 const colors = [
-    'rgb(34, 211, 238)',
-    'rgb(52, 211, 153)',
-    'rgb(251, 191, 36)',
-    'rgb(239, 68, 68)',
-    'rgb(168, 85, 247)',
-    'rgb(236, 72, 153)',
-    'rgb(56, 189, 248)',
-    'rgb(148, 163, 184)',
+    '#0891b2',
+    '#ef4444',
+    '#059669',
+    '#d97706',
+    '#8b5cf6',
+    '#db2777',
+    '#0284c7',
+    '#64748b',
 ];
 
 const chartData = computed(() => ({
@@ -28,8 +29,8 @@ const chartData = computed(() => ({
             backgroundColor: props.items.map(
                 (_, idx) => colors[idx % colors.length],
             ),
-            borderWidth: 1,
-            borderColor: 'rgb(15, 23, 42)',
+            borderWidth: 2,
+            borderColor: '#020617',
         },
     ],
 }));
@@ -44,8 +45,8 @@ const chartOptions = {
             labels: {
                 usePointStyle: true,
                 padding: 12,
-                color: '#94a3b8',
-                font: { family: 'monospace', size: 10 },
+                color: '#cbd5e1',
+                font: { family: 'monospace', size: 12 },
             },
         },
         tooltip: {
@@ -53,7 +54,7 @@ const chartOptions = {
             borderColor: 'rgba(51, 65, 85, 0.5)',
             borderWidth: 1,
             titleColor: '#e2e8f0',
-            bodyColor: '#94a3b8',
+            bodyColor: '#cbd5e1',
             titleFont: { family: 'monospace' },
             bodyFont: { family: 'monospace' },
             callbacks: {

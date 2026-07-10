@@ -202,43 +202,43 @@ const SERIES: ReadonlyArray<{
     {
         key: 'dpsDealt',
         label: 'DPS Dealt',
-        color: 'rgb(34, 211, 238)',
-        bg: 'rgba(34, 211, 238, 0.05)',
+        color: '#0891b2',
+        bg: 'rgba(8, 145, 178, 0.08)',
         pick: (d) => d.dpsDealt,
     },
     {
         key: 'dpsReceived',
         label: 'DPS Received',
-        color: 'rgb(239, 68, 68)',
-        bg: 'rgba(239, 68, 68, 0.05)',
+        color: '#ef4444',
+        bg: 'rgba(239, 68, 68, 0.08)',
         pick: (d) => d.dpsReceived,
     },
     {
         key: 'logiReceived',
         label: 'Logi Received',
-        color: 'rgb(52, 211, 153)',
-        bg: 'rgba(52, 211, 153, 0.05)',
+        color: '#059669',
+        bg: 'rgba(5, 150, 105, 0.08)',
         pick: (d) => d.logiReceived,
     },
     {
         key: 'logiDealt',
         label: 'Logi Dealt',
-        color: 'rgb(251, 191, 36)',
-        bg: 'rgba(251, 191, 36, 0.05)',
+        color: '#d97706',
+        bg: 'rgba(217, 119, 6, 0.08)',
         pick: (d) => d.logiDealt,
     },
     {
         key: 'neutIn',
         label: 'Energy Neut In',
-        color: 'rgb(168, 85, 247)',
-        bg: 'rgba(168, 85, 247, 0.05)',
+        color: '#8b5cf6',
+        bg: 'rgba(139, 92, 246, 0.08)',
         pick: (d) => d.neutIn,
     },
     {
         key: 'neutOut',
         label: 'Energy Neut Out',
-        color: 'rgb(217, 70, 239)',
-        bg: 'rgba(217, 70, 239, 0.05)',
+        color: '#db2777',
+        bg: 'rgba(219, 39, 119, 0.08)',
         pick: (d) => d.neutOut,
     },
 ];
@@ -253,11 +253,11 @@ const chartData = computed(() => {
             data: props.data.map(s.pick),
             borderColor: s.color,
             backgroundColor: s.bg,
-            fill: true,
+            fill: false,
             tension: 0.3,
             pointRadius: 0,
             pointHitRadius: 10,
-            borderWidth: 1.5,
+            borderWidth: 2,
             hidden: hidden.has(s.key),
         })),
     };
@@ -277,8 +277,8 @@ const chartOptions = computed(() => ({
             labels: {
                 usePointStyle: true,
                 padding: 16,
-                color: '#94a3b8',
-                font: { family: 'monospace', size: 11 },
+                color: '#cbd5e1',
+                font: { family: 'monospace', size: 12 },
             },
             onClick: (_e: unknown, legendItem: { datasetIndex?: number }) => {
                 const idx = legendItem.datasetIndex;
@@ -295,7 +295,7 @@ const chartOptions = computed(() => ({
             borderColor: 'rgba(51, 65, 85, 0.5)',
             borderWidth: 1,
             titleColor: '#e2e8f0',
-            bodyColor: '#94a3b8',
+            bodyColor: '#cbd5e1',
             titleFont: { family: 'monospace' },
             bodyFont: { family: 'monospace' },
             callbacks: {
@@ -312,21 +312,21 @@ const chartOptions = computed(() => ({
             grid: { color: 'rgba(51, 65, 85, 0.3)' },
             ticks: {
                 maxTicksLimit: 15,
-                color: '#475569',
-                font: { family: 'monospace', size: 10 },
+                color: '#94a3b8',
+                font: { family: 'monospace', size: 11 },
             },
         },
         y: {
             beginAtZero: true,
             grid: { color: 'rgba(51, 65, 85, 0.3)' },
             ticks: {
-                color: '#475569',
-                font: { family: 'monospace', size: 10 },
+                color: '#94a3b8',
+                font: { family: 'monospace', size: 11 },
             },
             title: {
                 display: true,
                 text: 'HP/s',
-                color: '#475569',
+                color: '#94a3b8',
                 font: { family: 'monospace' },
             },
         },
@@ -338,13 +338,13 @@ const chartOptions = computed(() => ({
     <div>
         <div class="mb-2 flex items-center justify-between">
             <p
-                class="font-mono text-[10px] tracking-wider text-slate-600 uppercase"
+                class="font-mono text-xs tracking-wider text-slate-400 uppercase"
             >
                 Click and drag to select a time range
             </p>
             <button
                 v-if="selection"
-                class="font-mono text-[10px] font-medium tracking-wider text-cyan-500 uppercase hover:text-cyan-400"
+                class="font-mono text-xs font-medium tracking-wider text-cyan-300 uppercase hover:text-cyan-200"
                 @click="clearSelection"
             >
                 Clear selection

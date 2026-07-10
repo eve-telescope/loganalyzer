@@ -11,9 +11,9 @@ defineProps<{
         class="flex items-baseline justify-between gap-3"
         :title="hint"
     >
-        <dt class="truncate text-[10px] text-slate-600">{{ label }}</dt>
+        <dt class="truncate text-xs text-slate-400">{{ label }}</dt>
         <dd
-            class="shrink-0 font-mono text-xs font-medium text-slate-300 tabular-nums"
+            class="shrink-0 font-mono text-sm font-medium text-slate-100 tabular-nums"
         >
             {{ value }}
         </dd>

@@ -15,7 +15,7 @@ const accentDotColor: Record<string, string> = {
 </script>
 
 <template>
-    <div class="relative border border-slate-800/60 bg-slate-900/40 p-4">
+    <div class="relative border border-slate-700/50 bg-slate-900/60 p-5">
         <span
             class="absolute top-0 left-0 h-2 w-2 border-t border-l border-slate-500/50"
         />
@@ -35,7 +35,7 @@ const accentDotColor: Record<string, string> = {
                 :class="accentDotColor[accent ?? 'default']"
             />
             <h3
-                class="font-mono text-[10px] tracking-widest text-slate-500 uppercase"
+                class="font-mono text-xs tracking-widest text-slate-400 uppercase"
             >
                 {{ title }}
             </h3>

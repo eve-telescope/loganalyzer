@@ -766,14 +766,14 @@ watch(
                             <circle cx="12" cy="12" r="3" />
                         </svg>
                         <p
-                            class="font-mono text-[10px] tracking-widest text-slate-500 uppercase"
+                            class="font-mono text-xs tracking-widest text-slate-400 uppercase"
                         >
                             Combat Log Analyzer // After-Action Report
                         </p>
                     </div>
                     <Link
                         :href="create.url()"
-                        class="flex items-center gap-1.5 font-mono text-[10px] tracking-wider text-slate-500 uppercase transition-colors hover:text-cyan-400"
+                        class="flex items-center gap-1.5 font-mono text-xs tracking-wider text-slate-400 uppercase transition-colors hover:text-cyan-300"
                     >
                         <!-- Upload icon -->
                         <svg
@@ -799,7 +799,7 @@ watch(
                     {{ analysis.listener }}
                 </h1>
                 <p
-                    class="mt-1 font-mono text-[10px] tracking-wider text-slate-600 uppercase"
+                    class="mt-1.5 font-mono text-xs tracking-wider text-slate-400 uppercase"
                 >
                     {{ analysis.sessionStarted }} //
                     {{ formatDuration(summary.combatDurationSeconds) }}
@@ -810,9 +810,7 @@ watch(
 
                 <!-- Damage balance verdict -->
                 <div v-if="efficiency !== null" class="mt-5 max-w-3xl">
-                    <div
-                        class="flex h-1.5 gap-0.5 overflow-hidden rounded-full"
-                    >
+                    <div class="flex h-2 gap-0.5 overflow-hidden rounded-full">
                         <div
                             class="bg-cyan-500"
                             :style="{ width: `${efficiency}%` }"
@@ -823,15 +821,15 @@ watch(
                         />
                     </div>
                     <div
-                        class="mt-1.5 flex items-baseline justify-between font-mono text-[10px] tracking-wider uppercase"
+                        class="mt-2 flex items-baseline justify-between font-mono text-xs tracking-wider uppercase"
                     >
-                        <span class="text-cyan-500">
+                        <span class="text-cyan-300">
                             {{ formatNumber(summary.totalDamageDealt) }} dealt
                         </span>
-                        <span class="text-slate-400">
+                        <span class="font-semibold text-slate-100">
                             Efficiency {{ efficiency.toFixed(1) }}%
                         </span>
-                        <span class="text-red-500">
+                        <span class="text-red-300">
                             {{ formatNumber(summary.totalDamageReceived) }}
                             received
                         </span>
@@ -842,7 +840,7 @@ watch(
             <!-- Filter indicator -->
             <div
                 v-if="selection"
-                class="mb-4 flex items-center gap-2 border-l-2 border-cyan-500 bg-cyan-950/10 px-3 py-1.5 font-mono text-[10px] tracking-wider text-cyan-500 uppercase"
+                class="mb-4 flex items-center gap-2 border-l-2 border-cyan-400 bg-cyan-950/20 px-3 py-2 font-mono text-xs tracking-wider text-cyan-300 uppercase"
             >
                 <svg
                     class="h-3 w-3 shrink-0"
@@ -868,7 +866,7 @@ watch(
                     >
                         {{ formatNumber(summary.totalDamageDealt) }}
                     </p>
-                    <p class="mb-3 text-[10px] text-slate-600">damage dealt</p>
+                    <p class="mb-3 text-xs text-slate-400">damage dealt</p>
                     <dl class="space-y-1.5">
                         <StatRow
                             label="DPS avg"
@@ -913,9 +911,7 @@ watch(
                     >
                         {{ formatNumber(summary.totalDamageReceived) }}
                     </p>
-                    <p class="mb-3 text-[10px] text-slate-600">
-                        damage received
-                    </p>
+                    <p class="mb-3 text-xs text-slate-400">damage received</p>
                     <dl class="space-y-1.5">
                         <StatRow
                             label="DPS avg"
@@ -962,7 +958,7 @@ watch(
                     >
                         {{ formatNumber(summary.totalLogiReceived) }}
                     </p>
-                    <p class="mb-3 text-[10px] text-slate-600">
+                    <p class="mb-3 text-xs text-slate-400">
                         hp repaired onto you
                     </p>
                     <dl class="space-y-1.5">
@@ -991,13 +987,11 @@ watch(
                         class="font-mono text-2xl font-bold text-purple-400 tabular-nums"
                     >
                         {{ formatNumber(details.neutIn) }}
-                        <span class="text-sm font-medium text-purple-500/70">
+                        <span class="text-sm font-medium text-purple-300/80">
                             GJ
                         </span>
                     </p>
-                    <p class="mb-3 text-[10px] text-slate-600">
-                        drained from you
-                    </p>
+                    <p class="mb-3 text-xs text-slate-400">drained from you</p>
                     <dl class="space-y-1.5">
                         <StatRow label="Neut pressure" :value="neutPressure" />
                         <StatRow
@@ -1019,10 +1013,10 @@ watch(
             <!-- Hit quality spectrums -->
             <section class="mb-6 grid gap-4 lg:grid-cols-2">
                 <div
-                    class="rounded border border-slate-800/60 bg-slate-900/40 p-5"
+                    class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
                 >
                     <h3
-                        class="mb-3 font-mono text-[10px] tracking-widest text-cyan-600 uppercase"
+                        class="mb-3 font-mono text-xs tracking-widest text-cyan-400 uppercase"
                     >
                         Outgoing Hit Quality
                     </h3>
@@ -1032,10 +1026,10 @@ watch(
                     />
                 </div>
                 <div
-                    class="rounded border border-slate-800/60 bg-slate-900/40 p-5"
+                    class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
                 >
                     <h3
-                        class="mb-3 font-mono text-[10px] tracking-widest text-red-700 uppercase"
+                        class="mb-3 font-mono text-xs tracking-widest text-red-400 uppercase"
                     >
                         Incoming Hit Quality
                     </h3>
@@ -1048,7 +1042,7 @@ watch(
                 <div class="mb-3 flex items-center gap-2">
                     <!-- Chart icon -->
                     <svg
-                        class="h-4 w-4 text-slate-600"
+                        class="h-4 w-4 text-slate-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1061,13 +1055,13 @@ watch(
                         />
                     </svg>
                     <h2
-                        class="font-mono text-xs font-medium tracking-widest text-slate-500 uppercase"
+                        class="font-mono text-sm font-medium tracking-widest text-slate-300 uppercase"
                     >
                         Timeline
                     </h2>
                 </div>
                 <div
-                    class="rounded border border-slate-800/60 bg-slate-900/40 p-5"
+                    class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
                 >
                     <DpsLineChart
                         :data="dpsOverTime"
@@ -1084,7 +1078,7 @@ watch(
                 <div class="mb-3 flex items-center gap-2">
                     <!-- Bolt icon -->
                     <svg
-                        class="h-4 w-4 text-slate-600"
+                        class="h-4 w-4 text-slate-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1097,50 +1091,50 @@ watch(
                         />
                     </svg>
                     <h2
-                        class="font-mono text-xs font-medium tracking-widest text-slate-500 uppercase"
+                        class="font-mono text-sm font-medium tracking-widest text-slate-300 uppercase"
                     >
                         Damage Breakdown
                     </h2>
                 </div>
                 <div class="grid gap-4 lg:grid-cols-2">
                     <div
-                        class="rounded border border-slate-800/60 bg-slate-900/40 p-5"
+                        class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
                     >
                         <h3
-                            class="mb-3 font-mono text-[10px] tracking-widest text-cyan-600 uppercase"
+                            class="mb-3 font-mono text-xs tracking-widest text-cyan-400 uppercase"
                         >
                             Outgoing &mdash; By Target
                         </h3>
                         <DamageBarChart :items="damageByTargetItems" />
                     </div>
                     <div
-                        class="rounded border border-slate-800/60 bg-slate-900/40 p-5"
+                        class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
                     >
                         <h3
-                            class="mb-3 font-mono text-[10px] tracking-widest text-cyan-600 uppercase"
+                            class="mb-3 font-mono text-xs tracking-widest text-cyan-400 uppercase"
                         >
                             Outgoing &mdash; By Weapon
                         </h3>
                         <DamageDoughnutChart :items="damageByWeaponItems" />
                     </div>
                     <div
-                        class="rounded border border-slate-800/60 bg-slate-900/40 p-5"
+                        class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
                     >
                         <h3
-                            class="mb-3 font-mono text-[10px] tracking-widest text-red-700 uppercase"
+                            class="mb-3 font-mono text-xs tracking-widest text-red-400 uppercase"
                         >
                             Incoming &mdash; By Source
                         </h3>
                         <DamageBarChart
                             :items="incomingBySourceItems"
-                            color="rgb(239, 68, 68)"
+                            color="#ef4444"
                         />
                     </div>
                     <div
-                        class="rounded border border-slate-800/60 bg-slate-900/40 p-5"
+                        class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
                     >
                         <h3
-                            class="mb-3 font-mono text-[10px] tracking-widest text-red-700 uppercase"
+                            class="mb-3 font-mono text-xs tracking-widest text-red-400 uppercase"
                         >
                             Incoming &mdash; By Weapon
                         </h3>
@@ -1154,7 +1148,7 @@ watch(
                 <div class="mb-3 flex items-center gap-2">
                     <!-- Table icon -->
                     <svg
-                        class="h-4 w-4 text-slate-600"
+                        class="h-4 w-4 text-slate-400"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1167,13 +1161,13 @@ watch(
                         />
                     </svg>
                     <h2
-                        class="font-mono text-xs font-medium tracking-widest text-slate-500 uppercase"
+                        class="font-mono text-sm font-medium tracking-widest text-slate-300 uppercase"
                     >
                         Pilot Details
                     </h2>
                 </div>
                 <div
-                    class="rounded border border-slate-800/60 bg-slate-900/40 p-5"
+                    class="rounded-lg border border-slate-700/50 bg-slate-900/60 p-5"
                 >
                     <div class="mb-4 flex gap-px">
                         <button
@@ -1183,11 +1177,11 @@ watch(
                                 'logistics',
                             ] as const"
                             :key="tab"
-                            class="border-b-2 px-4 py-1.5 font-mono text-[10px] tracking-widest uppercase transition-colors"
+                            class="border-b-2 px-4 py-2 font-mono text-xs tracking-widest uppercase transition-colors"
                             :class="
                                 activeTab === tab
-                                    ? 'border-cyan-500 text-cyan-400'
-                                    : 'border-transparent text-slate-600 hover:text-slate-400'
+                                    ? 'border-cyan-400 text-cyan-300'
+                                    : 'border-transparent text-slate-400 hover:text-slate-200'
                             "
                             @click="activeTab = tab"
                         >

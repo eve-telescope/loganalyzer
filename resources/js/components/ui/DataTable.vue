@@ -30,7 +30,7 @@ function getValue(row: Record<string, unknown>, col: Column): string {
                     <th
                         v-for="col in columns"
                         :key="col.key"
-                        class="px-3 py-2 font-mono text-[10px] font-medium tracking-wider text-slate-500 uppercase"
+                        class="px-3 py-2 font-mono text-xs font-medium tracking-wider text-slate-400 uppercase"
                         :class="col.align === 'right' ? 'text-right' : 'text-left'"
                     >
                         {{ col.label }}
@@ -46,7 +46,7 @@ function getValue(row: Record<string, unknown>, col: Column): string {
                     <td
                         v-for="col in columns"
                         :key="col.key"
-                        class="px-3 py-2 font-mono text-xs text-slate-300"
+                        class="px-3 py-2.5 font-mono text-sm text-slate-200"
                         :class="col.align === 'right' ? 'text-right' : 'text-left'"
                     >
                         {{ getValue(row, col) }}
@@ -55,7 +55,7 @@ function getValue(row: Record<string, unknown>, col: Column): string {
                 <tr v-if="rows.length === 0">
                     <td
                         :colspan="columns.length"
-                        class="px-3 py-6 text-center font-mono text-xs text-slate-600"
+                        class="px-3 py-6 text-center font-mono text-sm text-slate-400"
                     >
                         {{ emptyText ?? 'No data' }}
                     </td>

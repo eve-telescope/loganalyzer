@@ -19,22 +19,22 @@ const props = defineProps<{
  */
 const RAMPS: Record<string, string[]> = {
     cyan: [
+        'bg-cyan-200',
         'bg-cyan-300',
         'bg-cyan-400',
         'bg-cyan-500',
         'bg-cyan-600',
         'bg-cyan-700',
-        'bg-cyan-800',
-        'bg-slate-700',
+        'bg-slate-600',
     ],
     red: [
+        'bg-red-200',
         'bg-red-300',
         'bg-red-400',
         'bg-red-500',
         'bg-red-600',
         'bg-red-700',
-        'bg-red-800',
-        'bg-slate-700',
+        'bg-slate-600',
     ],
 };
 
@@ -45,7 +45,7 @@ const total = computed(() =>
 const items = computed(() =>
     props.segments.map((segment, i) => ({
         ...segment,
-        colorClass: RAMPS[props.hue][i] ?? 'bg-slate-700',
+        colorClass: RAMPS[props.hue][i] ?? 'bg-slate-600',
         share: total.value > 0 ? (segment.count / total.value) * 100 : 0,
     })),
 );
@@ -59,7 +59,7 @@ function formatShare(share: number): string {
 
 <template>
     <div v-if="total > 0">
-        <div class="flex h-2 gap-0.5 overflow-hidden rounded-full">
+        <div class="flex h-2.5 gap-0.5 overflow-hidden rounded-full">
             <div
                 v-for="segment in visibleItems"
                 :key="segment.label"
@@ -78,14 +78,14 @@ function formatShare(share: number): string {
                     class="h-1.5 w-1.5 rounded-full"
                     :class="segment.colorClass"
                 />
-                <span class="text-[10px] text-slate-500">
+                <span class="text-xs text-slate-300">
                     {{ segment.label }}
                 </span>
-                <span class="font-mono text-[10px] text-slate-400 tabular-nums">
+                <span class="font-mono text-xs text-slate-200 tabular-nums">
                     {{ segment.count }} · {{ formatShare(segment.share) }}
                 </span>
             </li>
         </ul>
     </div>
-    <p v-else class="text-[10px] text-slate-600">No attack events in range</p>
+    <p v-else class="text-xs text-slate-400">No attack events in range</p>
 </template>
