@@ -10,11 +10,11 @@ use NicolasKion\Esi\DTO\UniverseId;
 use NicolasKion\Esi\DTO\UniverseIds;
 use NicolasKion\Esi\Esi;
 
-final class EveEntityResolver
+final readonly class EveEntityResolver
 {
     private const int MAX_NAMES_PER_REQUEST = 500;
 
-    public function __construct(private readonly Esi $esi) {}
+    public function __construct(private Esi $esi) {}
 
     /**
      * Resolves pilot and ship names to EVE character/type IDs, caching every

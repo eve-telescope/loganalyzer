@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('eve_entities', function (Blueprint $table) {
+        Schema::create('eve_entities', function (Blueprint $table): void {
             $table->id();
             $table->string('kind');
             $table->string('name');
