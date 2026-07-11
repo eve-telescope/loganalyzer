@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Head, Link, router } from '@inertiajs/vue3';
-import { computed, ref, watch } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import {
     create,
     download,
@@ -717,6 +717,38 @@ const selectedPilot = ref<string | null>(props.filters.pilot);
 
 function selectPilot(name: string) {
     selectedPilot.value = selectedPilot.value === name ? null : name;
+}
+
+const engagementDialog = ref<HTMLDialogElement | null>(null);
+
+watch(
+    selectedPilot,
+    (pilot) => {
+        const dialog = engagementDialog.value;
+
+        if (!dialog) {
+            return;
+        }
+
+        if (pilot && !dialog.open) {
+            dialog.showModal();
+        } else if (!pilot && dialog.open) {
+            dialog.close();
+        }
+    },
+    { flush: 'post' },
+);
+
+onMounted(() => {
+    if (selectedPilot.value) {
+        engagementDialog.value?.showModal();
+    }
+});
+
+function onEngagementDialogClick(event: MouseEvent) {
+    if (event.target === engagementDialog.value) {
+        engagementDialog.value?.close();
+    }
 }
 
 const ENGAGEMENT_TYPES = ['damage', 'logistics', 'neutralization'] as const;
@@ -1472,218 +1504,237 @@ watch(
             </section>
 
             <!-- Pilot engagement drilldown -->
-            <section v-if="selectedPilot" class="mt-6">
-                <StatPanel :title="`Engagement — ${selectedPilot}`">
-                    <div class="flex items-start justify-between gap-4">
-                        <div class="flex items-center gap-3">
-                            <ShipIcon
-                                v-if="
-                                    pilotIds[selectedPilot] == null &&
-                                    shipTypeIds[selectedPilot] != null
-                                "
-                                :name="selectedPilot"
-                                :type-id="shipTypeIds[selectedPilot]"
-                            />
-                            <PilotAvatar
-                                v-else
-                                :name="selectedPilot"
-                                :character-id="pilotIds[selectedPilot] ?? null"
-                                size="md"
-                            />
+            <dialog
+                ref="engagementDialog"
+                class="m-auto w-full max-w-3xl bg-transparent p-4 backdrop:bg-zinc-950/80 backdrop:backdrop-blur-sm"
+                @close="selectedPilot = null"
+                @click="onEngagementDialogClick"
+            >
+                <div
+                    v-if="selectedPilot"
+                    class="max-h-[90vh] overflow-y-auto bg-zinc-950"
+                >
+                    <StatPanel :title="`Engagement — ${selectedPilot}`">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <ShipIcon
+                                    v-if="
+                                        pilotIds[selectedPilot] == null &&
+                                        shipTypeIds[selectedPilot] != null
+                                    "
+                                    :name="selectedPilot"
+                                    :type-id="shipTypeIds[selectedPilot]"
+                                />
+                                <PilotAvatar
+                                    v-else
+                                    :name="selectedPilot"
+                                    :character-id="
+                                        pilotIds[selectedPilot] ?? null
+                                    "
+                                    size="md"
+                                />
+                                <div>
+                                    <p
+                                        class="flex items-center gap-2 font-mono text-lg font-semibold text-zinc-100"
+                                    >
+                                        {{ selectedPilot }}
+                                        <ZkillLink
+                                            v-if="
+                                                pilotIds[selectedPilot] != null
+                                            "
+                                            :character-id="
+                                                pilotIds[selectedPilot]
+                                            "
+                                            :name="selectedPilot"
+                                        />
+                                    </p>
+                                    <p
+                                        v-if="engagement.ship"
+                                        class="flex items-center gap-1.5 text-xs text-zinc-400"
+                                    >
+                                        <ShipIcon
+                                            :name="engagement.ship"
+                                            :type-id="
+                                                shipTypeIds[engagement.ship] ??
+                                                null
+                                            "
+                                        />
+                                        {{ engagement.ship }}
+                                    </p>
+                                </div>
+                            </div>
+                            <button
+                                class="font-mono text-xs tracking-wider text-zinc-400 uppercase transition-colors hover:text-amber-300"
+                                @click="selectedPilot = null"
+                            >
+                                Close ✕
+                            </button>
+                        </div>
+
+                        <div class="mt-4 grid gap-4 sm:grid-cols-2">
                             <div>
                                 <p
-                                    class="flex items-center gap-2 font-mono text-lg font-semibold text-zinc-100"
+                                    class="mb-2 font-mono text-xs tracking-widest text-cyan-400 uppercase"
                                 >
-                                    {{ selectedPilot }}
-                                    <ZkillLink
-                                        v-if="pilotIds[selectedPilot] != null"
-                                        :character-id="pilotIds[selectedPilot]"
-                                        :name="selectedPilot"
-                                    />
+                                    You → {{ selectedPilot }}
                                 </p>
-                                <p
-                                    v-if="engagement.ship"
-                                    class="flex items-center gap-1.5 text-xs text-zinc-400"
-                                >
-                                    <ShipIcon
-                                        :name="engagement.ship"
-                                        :type-id="
-                                            shipTypeIds[engagement.ship] ?? null
+                                <dl class="space-y-1.5">
+                                    <StatRow
+                                        label="Damage dealt"
+                                        :value="engagement.dealt"
+                                    />
+                                    <StatRow
+                                        label="Hits / misses"
+                                        :value="`${engagement.hitsOn} / ${engagement.missesOn}`"
+                                    />
+                                    <StatRow
+                                        label="Accuracy"
+                                        :value="
+                                            accuracyValue(
+                                                engagement.hitsOn,
+                                                engagement.missesOn,
+                                            )
                                         "
+                                        :format="percentFormat"
                                     />
-                                    {{ engagement.ship }}
+                                    <StatRow
+                                        v-if="engagement.logiOut > 0"
+                                        label="HP repaired onto them"
+                                        :value="engagement.logiOut"
+                                    />
+                                    <StatRow
+                                        v-if="engagement.neutOut > 0"
+                                        label="Energy drained from them"
+                                        :value="engagement.neutOut"
+                                        :format="gjFormat"
+                                    />
+                                </dl>
+                            </div>
+                            <div>
+                                <p
+                                    class="mb-2 font-mono text-xs tracking-widest text-red-400 uppercase"
+                                >
+                                    {{ selectedPilot }} → You
                                 </p>
+                                <dl class="space-y-1.5">
+                                    <StatRow
+                                        label="Damage received"
+                                        :value="engagement.received"
+                                    />
+                                    <StatRow
+                                        label="Hits / misses"
+                                        :value="`${engagement.hitsBy} / ${engagement.missesBy}`"
+                                    />
+                                    <StatRow
+                                        label="Accuracy"
+                                        :value="
+                                            accuracyValue(
+                                                engagement.hitsBy,
+                                                engagement.missesBy,
+                                            )
+                                        "
+                                        :format="percentFormat"
+                                    />
+                                    <StatRow
+                                        v-if="engagement.logiIn > 0"
+                                        label="HP repaired onto you"
+                                        :value="engagement.logiIn"
+                                    />
+                                    <StatRow
+                                        v-if="engagement.neutIn > 0"
+                                        label="Energy drained from you"
+                                        :value="engagement.neutIn"
+                                        :format="gjFormat"
+                                    />
+                                </dl>
                             </div>
                         </div>
-                        <button
-                            class="font-mono text-xs tracking-wider text-zinc-400 uppercase transition-colors hover:text-amber-300"
-                            @click="selectedPilot = null"
-                        >
-                            Close ✕
-                        </button>
-                    </div>
 
-                    <div class="mt-4 grid gap-4 sm:grid-cols-2">
-                        <div>
-                            <p
-                                class="mb-2 font-mono text-xs tracking-widest text-cyan-400 uppercase"
+                        <div class="mt-5 flex flex-wrap items-center gap-2">
+                            <button
+                                v-for="direction in [
+                                    'both',
+                                    'outgoing',
+                                    'incoming',
+                                ] as const"
+                                :key="direction"
+                                class="border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors"
+                                :class="
+                                    engagementDirection === direction
+                                        ? 'border-amber-400/60 bg-amber-400/10 text-amber-300'
+                                        : 'border-zinc-700 text-zinc-400 hover:text-zinc-200'
+                                "
+                                @click="engagementDirection = direction"
                             >
-                                You → {{ selectedPilot }}
-                            </p>
-                            <dl class="space-y-1.5">
-                                <StatRow
-                                    label="Damage dealt"
-                                    :value="engagement.dealt"
-                                />
-                                <StatRow
-                                    label="Hits / misses"
-                                    :value="`${engagement.hitsOn} / ${engagement.missesOn}`"
-                                />
-                                <StatRow
-                                    label="Accuracy"
-                                    :value="
-                                        accuracyValue(
-                                            engagement.hitsOn,
-                                            engagement.missesOn,
-                                        )
-                                    "
-                                    :format="percentFormat"
-                                />
-                                <StatRow
-                                    v-if="engagement.logiOut > 0"
-                                    label="HP repaired onto them"
-                                    :value="engagement.logiOut"
-                                />
-                                <StatRow
-                                    v-if="engagement.neutOut > 0"
-                                    label="Energy drained from them"
-                                    :value="engagement.neutOut"
-                                    :format="gjFormat"
-                                />
-                            </dl>
+                                {{ direction }}
+                            </button>
+                            <span class="mx-1 h-4 w-px bg-zinc-700" />
+                            <button
+                                v-for="type in ENGAGEMENT_TYPES"
+                                :key="type"
+                                class="flex items-center gap-1.5 border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors"
+                                :class="
+                                    engagementTypeFilter.has(type)
+                                        ? 'border-amber-400/60 bg-amber-400/10 text-amber-300'
+                                        : 'border-zinc-700 text-zinc-400 hover:text-zinc-200'
+                                "
+                                @click="toggleEngagementType(type)"
+                            >
+                                <EventTypeIcon :type="type" />
+                                {{ ENGAGEMENT_TYPE_LABELS[type] }}
+                            </button>
                         </div>
-                        <div>
-                            <p
-                                class="mb-2 font-mono text-xs tracking-widest text-red-400 uppercase"
-                            >
-                                {{ selectedPilot }} → You
-                            </p>
-                            <dl class="space-y-1.5">
-                                <StatRow
-                                    label="Damage received"
-                                    :value="engagement.received"
-                                />
-                                <StatRow
-                                    label="Hits / misses"
-                                    :value="`${engagement.hitsBy} / ${engagement.missesBy}`"
-                                />
-                                <StatRow
-                                    label="Accuracy"
-                                    :value="
-                                        accuracyValue(
-                                            engagement.hitsBy,
-                                            engagement.missesBy,
-                                        )
-                                    "
-                                    :format="percentFormat"
-                                />
-                                <StatRow
-                                    v-if="engagement.logiIn > 0"
-                                    label="HP repaired onto you"
-                                    :value="engagement.logiIn"
-                                />
-                                <StatRow
-                                    v-if="engagement.neutIn > 0"
-                                    label="Energy drained from you"
-                                    :value="engagement.neutIn"
-                                    :format="gjFormat"
-                                />
-                            </dl>
-                        </div>
-                    </div>
 
-                    <div class="mt-5 flex flex-wrap items-center gap-2">
-                        <button
-                            v-for="direction in [
-                                'both',
-                                'outgoing',
-                                'incoming',
-                            ] as const"
-                            :key="direction"
-                            class="border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors"
-                            :class="
-                                engagementDirection === direction
-                                    ? 'border-amber-400/60 bg-amber-400/10 text-amber-300'
-                                    : 'border-zinc-700 text-zinc-400 hover:text-zinc-200'
-                            "
-                            @click="engagementDirection = direction"
+                        <ul
+                            class="mt-3 max-h-96 divide-y divide-zinc-800/60 overflow-y-auto"
                         >
-                            {{ direction }}
-                        </button>
-                        <span class="mx-1 h-4 w-px bg-zinc-700" />
-                        <button
-                            v-for="type in ENGAGEMENT_TYPES"
-                            :key="type"
-                            class="flex items-center gap-1.5 border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors"
-                            :class="
-                                engagementTypeFilter.has(type)
-                                    ? 'border-amber-400/60 bg-amber-400/10 text-amber-300'
-                                    : 'border-zinc-700 text-zinc-400 hover:text-zinc-200'
-                            "
-                            @click="toggleEngagementType(type)"
-                        >
-                            <EventTypeIcon :type="type" />
-                            {{ ENGAGEMENT_TYPE_LABELS[type] }}
-                        </button>
-                    </div>
-
-                    <ul
-                        class="mt-3 max-h-96 divide-y divide-zinc-800/60 overflow-y-auto"
-                    >
-                        <li
-                            v-for="(e, i) in engagementLog"
-                            :key="i"
-                            class="flex items-center gap-3 py-1.5"
-                        >
-                            <span
-                                class="font-mono text-xs text-zinc-500 tabular-nums"
+                            <li
+                                v-for="(e, i) in engagementLog"
+                                :key="i"
+                                class="flex items-center gap-3 py-1.5"
                             >
-                                {{ e.time }}
-                            </span>
-                            <span :class="eventColorClass(e)">
-                                <EventTypeIcon :type="e.type" />
-                            </span>
-                            <span
-                                class="font-mono text-xs"
-                                :class="eventColorClass(e)"
+                                <span
+                                    class="font-mono text-xs text-zinc-500 tabular-nums"
+                                >
+                                    {{ e.time }}
+                                </span>
+                                <span :class="eventColorClass(e)">
+                                    <EventTypeIcon :type="e.type" />
+                                </span>
+                                <span
+                                    class="font-mono text-xs"
+                                    :class="eventColorClass(e)"
+                                >
+                                    {{ e.direction === 'outgoing' ? '→' : '←' }}
+                                </span>
+                                <span
+                                    class="w-20 shrink-0 text-right font-mono text-sm font-medium tabular-nums"
+                                    :class="eventColorClass(e)"
+                                >
+                                    {{ formatNumber(e.damage)
+                                    }}{{
+                                        e.type === 'neutralization' ? ' GJ' : ''
+                                    }}
+                                </span>
+                                <span class="truncate text-xs text-zinc-300">
+                                    {{ e.weapon }}
+                                </span>
+                                <span
+                                    class="ml-auto shrink-0 font-mono text-[11px] text-zinc-500 uppercase"
+                                >
+                                    {{ e.quality }}
+                                </span>
+                            </li>
+                            <li
+                                v-if="engagementLog.length === 0"
+                                class="py-4 text-center text-sm text-zinc-400"
                             >
-                                {{ e.direction === 'outgoing' ? '→' : '←' }}
-                            </span>
-                            <span
-                                class="w-20 shrink-0 text-right font-mono text-sm font-medium tabular-nums"
-                                :class="eventColorClass(e)"
-                            >
-                                {{ formatNumber(e.damage)
-                                }}{{ e.type === 'neutralization' ? ' GJ' : '' }}
-                            </span>
-                            <span class="truncate text-xs text-zinc-300">
-                                {{ e.weapon }}
-                            </span>
-                            <span
-                                class="ml-auto shrink-0 font-mono text-[11px] text-zinc-500 uppercase"
-                            >
-                                {{ e.quality }}
-                            </span>
-                        </li>
-                        <li
-                            v-if="engagementLog.length === 0"
-                            class="py-4 text-center text-sm text-zinc-400"
-                        >
-                            No events match the filters
-                        </li>
-                    </ul>
-                </StatPanel>
-            </section>
+                                No events match the filters
+                            </li>
+                        </ul>
+                    </StatPanel>
+                </div>
+            </dialog>
         </div>
     </div>
 </template>
