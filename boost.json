@@ -10,6 +10,7 @@
     "sail": false,
     "skills": [
         "laravel-best-practices",
+        "octane-development",
         "wayfinder-development",
         "pest-testing",
         "inertia-vue-development",

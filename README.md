@@ -50,7 +50,9 @@ The `setup` script installs Composer and npm dependencies, creates the `.env` fi
 composer run dev
 ```
 
-This starts the Laravel dev server, queue worker, log tailing ([Pail](https://github.com/laravel/pail)), and Vite with hot module replacement — all in one terminal.
+This starts [Laravel Octane](https://laravel.com/docs/octane) (FrankenPHP, with file watching), a queue worker, log tailing ([Pail](https://github.com/laravel/pail)), and Vite with hot module replacement — all in one terminal.
+
+The app runs on Octane so the framework stays booted between requests — large log uploads parse noticeably faster. PHP limits for big uploads (`upload_max_filesize`, `memory_limit`, …) are source-controlled in [`php.ini`](php.ini), which the FrankenPHP binary loads from the project root. In production, serve with `php artisan octane:start` from the project root and front it with your proxy of choice.
 
 If you use [Laravel Herd](https://herd.laravel.com), the app is also served at `https://loganalyzer.test` — you only need `npm run dev` alongside it.
 
