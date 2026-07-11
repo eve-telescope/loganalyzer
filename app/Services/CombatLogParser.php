@@ -187,29 +187,61 @@ final class CombatLogParser
             );
         }
 
-        // Energy neutralization / nosferatu. Direction depends on (verb, preposition):
+        // Energy neutralization / nosferatu — rich target format. The target
+        // block names the victim in full ("Ship ... [ALLIANCE] [CORP] [Pilot] -"),
+        // which only appears when the listener is the aggressor, so these are
+        // outgoing. Nosferatu gains are logged as "+N GJ".
+        if (preg_match('/<b>([+-]?\d+) GJ<\/b>.*?energy (neutralized|drained)(?: (to|from))?\s*<\/font><b>(.*?\[[^\]]+\] ?-\s*(?:<\/font>)?)<\/b>.*? - (.+?)<\/font>/u', $content, $match)) {
+            $verb = $match[2];
+            $targetHtml = $match[4];
+
+            preg_match_all('/\[([^\]]+)\]/u', strip_tags($targetHtml), $brackets);
+            $tickers = $brackets[1];
+            $pilot = array_pop($tickers);
+
+            preg_match('/<b>([^<]*)<\/b>|<fontsize=\d+>([^<]*)<\/fontsize>/u', $targetHtml, $shipMatch);
+            $ship = $this->clean($shipMatch[1] ?: ($shipMatch[2] ?? ''));
+
+            return new CombatEvent(
+                timestamp: $timestamp,
+                damage: abs((int) $match[1]),
+                direction: EventDirection::Outgoing,
+                playerName: $this->clean($pilot),
+                corporation: $tickers === [] ? null : $this->clean(end($tickers)),
+                shipName: $ship !== '' ? $ship : null,
+                weapon: $this->clean($match[5]),
+                quality: $verb === 'neutralized' ? 'Neutralized' : 'Drained',
+                type: EventType::Neutralization,
+            );
+        }
+
+        // Energy neutralization / nosferatu — legacy/plain target format
+        // (only the other party's ship name). Direction depends on
+        // (verb, preposition, sign):
         //   "neutralized {ship}"       → incoming neut (verified)
         //   "drained to {ship}"        → incoming nos (verified, negative GJ)
         //   "neutralized to {ship}"    → outgoing neut (best-effort, no fixture)
-        //   "drained from {ship}"      → outgoing nos (best-effort, no fixture)
-        if (preg_match('/<b>-?(\d+) GJ<\/b>.*?energy (neutralized|drained)(?: (to|from))? .*?<b>([^<]+)<\/b>.*? - (.+?)<\/font>/u', $content, $match)) {
+        //   "drained from {ship}"      → outgoing nos (verified, positive GJ)
+        if (preg_match('/<b>([+-]?\d+) GJ<\/b>.*?energy (neutralized|drained)(?: (to|from))? .*?(?:<b>([^<]+)<\/b>|<fontsize=\d+>([^<]+)<\/fontsize>).*? - (.+?)<\/font>/u', $content, $match)) {
             $verb = $match[2];
             $preposition = $match[3];
+            $ship = $this->clean($match[4] !== '' ? $match[4] : $match[5]);
 
             $direction = match (true) {
                 $preposition === 'from' => EventDirection::Outgoing,
+                str_starts_with($match[1], '+') => EventDirection::Outgoing,
                 $verb === 'neutralized' && $preposition === 'to' => EventDirection::Outgoing,
                 default => EventDirection::Incoming,
             };
 
             return new CombatEvent(
                 timestamp: $timestamp,
-                damage: (int) $match[1],
+                damage: abs((int) $match[1]),
                 direction: $direction,
-                playerName: $this->clean($match[4]),
+                playerName: $ship,
                 corporation: null,
-                shipName: $this->clean($match[4]),
-                weapon: $this->clean($match[5]),
+                shipName: $ship,
+                weapon: $this->clean($match[6]),
                 quality: $verb === 'neutralized' ? 'Neutralized' : 'Drained',
                 type: EventType::Neutralization,
             );

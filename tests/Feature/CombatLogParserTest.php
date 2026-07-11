@@ -294,3 +294,82 @@ test('it parses logistics received with a plain pilot target (issue #1)', functi
         ->and($event->shipName)->toBe('Basilisk')
         ->and($event->weapon)->toBe('Large Remote Shield Booster');
 });
+
+test('it parses rich-format outgoing energy neutralization with pilot details', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.05.28 19:00:00
+    ------------------------------------------------------------
+    [ 2026.05.28 19:10:45 ] (combat) <color=0xff7fffff><b>27 GJ</b><color=0x77ffffff><font size=10> energy neutralized </font><b><color=0xffffffff><font size=12><color=0xFFFFFFFF><b>Huginn</b></color></font><font size=12><color=0xFFFFE900> [CVA]</color></font><font size=11> [TLOS]</font> <font size=11>[DarkOldMaker] -</font></b><color=0x77ffffff><font size=10> - Heavy Abyssal Energy Neutralizer</font>
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->type)->toBe(EventType::Neutralization)
+        ->and($event->direction)->toBe(EventDirection::Outgoing)
+        ->and($event->damage)->toBe(27)
+        ->and($event->playerName)->toBe('DarkOldMaker')
+        ->and($event->corporation)->toBe('TLOS')
+        ->and($event->shipName)->toBe('Huginn')
+        ->and($event->weapon)->toBe('Heavy Abyssal Energy Neutralizer')
+        ->and($event->quality)->toBe('Neutralized');
+});
+
+test('it parses rich-format outgoing nosferatu drains with positive GJ', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.05.28 19:00:00
+    ------------------------------------------------------------
+    [ 2026.05.28 19:10:40 ] (combat) <color=0xff7fffff><b>+269 GJ</b><color=0x77ffffff><font size=10> energy drained from </font><b><color=0xffffffff><font size=12><color=0xFFFFFFFF><b>Basilisk</b></color></font><font size=12><color=0xFFFFE900> [CVA]</color></font><font size=11> [TLOS]</font> <font size=11>[Daniel Grosny] -</font></b><color=0x77ffffff><font size=10> - Heavy Abyssal Energy Nosferatu</font>
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->direction)->toBe(EventDirection::Outgoing)
+        ->and($event->damage)->toBe(269)
+        ->and($event->playerName)->toBe('Daniel Grosny')
+        ->and($event->shipName)->toBe('Basilisk')
+        ->and($event->quality)->toBe('Drained');
+});
+
+test('it parses incoming neutralization with fontsize-wrapped ship names', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Test Pilot
+      Session Started: 2026.01.14 19:00:00
+    ------------------------------------------------------------
+    [ 2026.01.14 20:02:50 ] (combat) <color=0xffe57f7f><b>3345 GJ</b><color=0x77ffffff><font size=10> energy neutralized </font><b><color=0xffffffff><b><color=0xffFF4500><fontsize=13>Keepstar</fontsize></color></b> </b><color=0x77ffffff><font size=10> - Standup Energy Neutralization Burst Projector</font>
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->direction)->toBe(EventDirection::Incoming)
+        ->and($event->damage)->toBe(3345)
+        ->and($event->playerName)->toBe('Keepstar')
+        ->and($event->weapon)->toBe('Standup Energy Neutralization Burst Projector');
+});
+
+test('it parses outgoing neutralization from the testlog3 fixture', function () {
+    $result = $this->parser->parse(file_get_contents(base_path('tests/Fixtures/testlog3.txt')));
+
+    $outgoingNeut = array_filter(
+        $result['events'],
+        fn ($e) => $e->type === EventType::Neutralization && $e->direction === EventDirection::Outgoing,
+    );
+
+    expect(count($outgoingNeut))->toBeGreaterThan(300);
+});
