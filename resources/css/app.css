@@ -10,6 +10,14 @@
         'Noto Color Emoji';
 }
 
+/* Dark canvas: the viewport scrollbar and overscroll areas composite
+   against the root background, which would otherwise be white. */
+html {
+    color-scheme: dark;
+    background-color: var(--color-zinc-950);
+    scrollbar-color: var(--color-zinc-700) var(--color-zinc-950);
+}
+
 /* Themed scrollbars for the dark console look */
 * {
     scrollbar-width: thin;
