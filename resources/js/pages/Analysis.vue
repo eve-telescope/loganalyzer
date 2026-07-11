@@ -332,15 +332,19 @@ const tankSupportRatio = computed((): number | string => {
     );
 });
 
-const neutPressure = computed((): number | string => {
+function neutPressureFor(totalGj: number): number | string {
     const duration = summary.value.combatDurationSeconds;
 
-    if (duration === 0 || details.value.neutIn === 0) {
-        return '—';
-    }
+    return duration === 0 || totalGj === 0 ? '—' : totalGj / duration;
+}
 
-    return details.value.neutIn / duration;
-});
+const neutPressureIn = computed((): number | string =>
+    neutPressureFor(details.value.neutIn),
+);
+
+const neutPressureOut = computed((): number | string =>
+    neutPressureFor(details.value.neutOut),
+);
 
 const qualitySegmentsOut = computed(() =>
     QUALITY_ORDER.map((quality) => ({
@@ -1170,8 +1174,8 @@ watch(
                     <p class="mb-3 text-xs text-zinc-400">drained from you</p>
                     <dl class="space-y-1.5">
                         <StatRow
-                            label="Neut pressure"
-                            :value="neutPressure"
+                            label="Pressure on you"
+                            :value="neutPressureIn"
                             :format="gjPerSecondFormat"
                         />
                         <StatRow
@@ -1182,6 +1186,11 @@ watch(
                             label="Drained by you"
                             :value="details.neutOut"
                             :format="gjFormat"
+                        />
+                        <StatRow
+                            label="Pressure by you"
+                            :value="neutPressureOut"
+                            :format="gjPerSecondFormat"
                         />
                         <StatRow
                             label="Neut events out"
