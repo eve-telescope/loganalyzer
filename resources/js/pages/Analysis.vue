@@ -1506,13 +1506,13 @@ watch(
             <!-- Pilot engagement drilldown -->
             <dialog
                 ref="engagementDialog"
-                class="m-auto w-full max-w-3xl bg-transparent p-4 backdrop:bg-zinc-950/80 backdrop:backdrop-blur-sm"
+                class="m-auto w-full max-w-6xl bg-transparent p-4 backdrop:bg-zinc-950/60 backdrop:backdrop-blur-[2px]"
                 @close="selectedPilot = null"
                 @click="onEngagementDialogClick"
             >
                 <div
                     v-if="selectedPilot"
-                    class="max-h-[90vh] overflow-y-auto bg-zinc-950"
+                    class="max-h-[92vh] overflow-y-auto bg-zinc-950"
                 >
                     <StatPanel :title="`Engagement — ${selectedPilot}`">
                         <div class="flex items-start justify-between gap-4">
@@ -1686,7 +1686,7 @@ watch(
                         </div>
 
                         <ul
-                            class="mt-3 max-h-96 divide-y divide-zinc-800/60 overflow-y-auto"
+                            class="mt-3 max-h-[55vh] divide-y divide-zinc-800/60 overflow-y-auto"
                         >
                             <li
                                 v-for="(e, i) in engagementLog"
