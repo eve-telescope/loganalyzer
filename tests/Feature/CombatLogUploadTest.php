@@ -6,6 +6,7 @@ use App\Models\CombatLog;
 use App\Models\EveEntity;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 
 beforeEach(function () {
     Http::preventStrayRequests();
@@ -291,4 +292,47 @@ test('names matching an item type are never treated as characters', function () 
             ->where('pilotIds.Aria Vex', 93000001)
             ->etc()
         );
+});
+
+test('uploading stores the compressed raw log and it can be downloaded', function () {
+    fakeEsiIds();
+    Storage::fake();
+
+    $contents = file_get_contents(base_path('tests/Fixtures/testlog.txt'));
+    $file = UploadedFile::fake()->createWithContent('my-fight.txt', $contents);
+
+    $this->post('/analyze', ['log_file' => $file]);
+
+    $combatLog = CombatLog::first();
+
+    Storage::assertExists("combat-logs/{$combatLog->uuid}.txt.gz");
+    expect(gzdecode(Storage::get("combat-logs/{$combatLog->uuid}.txt.gz")))->toBe($contents);
+
+    $this->get("/logs/{$combatLog->uuid}")
+        ->assertInertia(fn ($page) => $page->where('rawLogAvailable', true)->etc());
+
+    $response = $this->get("/logs/{$combatLog->uuid}/download");
+    $response->assertStatus(200);
+    $response->assertDownload('my-fight.txt');
+    expect($response->streamedContent())->toBe($contents);
+});
+
+test('the download route returns 404 when no raw log is stored', function () {
+    fakeEsiIds();
+    Storage::fake();
+
+    $file = UploadedFile::fake()->createWithContent(
+        'combat.txt',
+        file_get_contents(base_path('tests/Fixtures/testlog.txt')),
+    );
+
+    $this->post('/analyze', ['log_file' => $file]);
+
+    $combatLog = CombatLog::first();
+    Storage::delete("combat-logs/{$combatLog->uuid}.txt.gz");
+
+    $this->get("/logs/{$combatLog->uuid}")
+        ->assertInertia(fn ($page) => $page->where('rawLogAvailable', false)->etc());
+
+    $this->get("/logs/{$combatLog->uuid}/download")->assertStatus(404);
 });

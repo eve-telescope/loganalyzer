@@ -12,9 +12,11 @@ use App\Services\CombatLogParser;
 use App\Services\EveEntityResolver;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
 use Inertia\Response;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 final class CombatLogController extends Controller
 {
@@ -28,7 +30,8 @@ final class CombatLogController extends Controller
     public function store(StoreCombatLogRequest $request, CombatLogParser $parser, EveEntityResolver $resolver): RedirectResponse
     {
         $file = $request->file('log_file');
-        $parsed = $parser->parse($file->get());
+        $contents = $file->get();
+        $parsed = $parser->parse($contents);
 
         $resolver->resolve(
             characterNames: array_map(fn (\App\Data\CombatEvent $e): string => $e->playerName, $parsed['events']),
@@ -41,6 +44,8 @@ final class CombatLogController extends Controller
             'session_started' => $parsed['sessionStarted'],
             'original_filename' => $file->getClientOriginalName(),
         ]);
+
+        Storage::put($this->rawLogPath($combatLog), gzencode($contents, 9));
 
         $rows = array_map(fn (\App\Data\CombatEvent $event): array => [
             'combat_log_id' => $combatLog->id,
@@ -99,6 +104,7 @@ final class CombatLogController extends Controller
                 'events' => $mappedEvents,
             ],
             'uuid' => $combatLog->uuid,
+            'rawLogAvailable' => Storage::exists($this->rawLogPath($combatLog)),
             'pilotIds' => $entities
                 ->where('kind', \App\Enums\EveEntityKind::Character)
                 ->pluck('eve_id', 'name'),
@@ -114,5 +120,25 @@ final class CombatLogController extends Controller
                     : array_values(array_filter(array_map(trim(...), explode(',', $hide)))),
             ],
         ]);
+    }
+
+    public function download(CombatLog $combatLog): StreamedResponse
+    {
+        $path = $this->rawLogPath($combatLog);
+
+        abort_unless(Storage::exists($path), 404);
+
+        return response()->streamDownload(
+            function () use ($path): void {
+                echo gzdecode(Storage::get($path));
+            },
+            $combatLog->original_filename ?: 'combat-log.txt',
+            ['Content-Type' => 'text/plain; charset=utf-8'],
+        );
+    }
+
+    private function rawLogPath(CombatLog $combatLog): string
+    {
+        return "combat-logs/{$combatLog->uuid}.txt.gz";
     }
 }
