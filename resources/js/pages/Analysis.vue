@@ -1510,11 +1510,11 @@ watch(
                 @close="selectedPilot = null"
                 @click="onEngagementDialogClick"
             >
-                <div
-                    v-if="selectedPilot"
-                    class="max-h-[92vh] overflow-y-auto bg-zinc-950"
-                >
-                    <StatPanel :title="`Engagement — ${selectedPilot}`">
+                <div v-if="selectedPilot" class="h-[90vh] bg-zinc-950">
+                    <StatPanel
+                        :title="`Engagement — ${selectedPilot}`"
+                        class="flex h-full flex-col overflow-hidden"
+                    >
                         <div class="flex items-start justify-between gap-4">
                             <div class="flex items-center gap-3">
                                 <ShipIcon
@@ -1686,7 +1686,7 @@ watch(
                         </div>
 
                         <ul
-                            class="mt-3 max-h-[55vh] divide-y divide-zinc-800/60 overflow-y-auto"
+                            class="mt-3 min-h-0 flex-1 divide-y divide-zinc-800/60 overflow-y-auto"
                         >
                             <li
                                 v-for="(e, i) in engagementLog"
