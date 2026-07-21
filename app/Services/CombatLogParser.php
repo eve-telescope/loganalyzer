@@ -119,7 +119,7 @@ final class CombatLogParser
         $events = [];
 
         preg_match_all(
-            '/^\[ (\d{4}\.\d{2}\.\d{2} \d{2}:\d{2}:\d{2}) \] \(combat\) (.+)$/mu',
+            '/^\[ (\d{4}\.\d{2}\.\d{2} \d{2}:\d{2}:\d{2}) \] \(combat\) (.*?)(?=^\[ \d{4}\.\d{2}\.\d{2} \d{2}:\d{2}:\d{2} \] |\z)/msu',
             $contents,
             $matches,
             PREG_SET_ORDER,
@@ -167,6 +167,21 @@ final class CombatLogParser
                 corporation: $target['corporation'],
                 shipName: $target['ship'],
                 weapon: $this->clean($match[5]),
+                quality: $this->clean($match[2]).' '.$this->clean($match[3]),
+                type: EventType::Logistics,
+            );
+        }
+
+        // Logistics dealt with separate ship, pilot, and corporation markup.
+        if (preg_match('/<b>(\d+)<\/b>.*?remote (shield|armor|hull) (boosted|repaired) to.*?<fontsize=12>([^<\r\n]+).*?<fontsize=10>([^<]+)<\/color>.*?<b>(?:\[([^\]]+)\]|&lt;([^&]+)&gt;)<\/b>.*? - (.+?)(?:<\/font>)?\s*$/su', $content, $match)) {
+            return new CombatEvent(
+                timestamp: $timestamp,
+                damage: (int) $match[1],
+                direction: EventDirection::Outgoing,
+                playerName: $this->clean($match[5]),
+                corporation: $this->clean($match[6] !== '' ? $match[6] : $match[7]),
+                shipName: $this->clean($match[4]),
+                weapon: $this->clean($match[8]),
                 quality: $this->clean($match[2]).' '.$this->clean($match[3]),
                 type: EventType::Logistics,
             );

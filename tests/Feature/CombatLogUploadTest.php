@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Models\CombatEvent;
 use App\Models\CombatLog;
 use App\Models\EveEntity;
 use Illuminate\Http\UploadedFile;
@@ -335,4 +336,77 @@ test('the download route returns 404 when no raw log is stored', function () {
         ->assertInertia(fn ($page) => $page->where('rawLogAvailable', false)->etc());
 
     $this->get("/logs/{$combatLog->uuid}/download")->assertStatus(404);
+});
+
+test('a stored combat log can be regenerated from its raw contents', function () {
+    fakeEsiIds();
+    Storage::fake();
+
+    $contents = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Hunter Hughes
+      Session Started: 2026.07.20 22:25:40
+    ------------------------------------------------------------
+    [ 2026.07.20 23:31:34 ] (combat) <color=0xffccff66><b>382</b><color=0x77ffffff><font size=10> remote armor repaired to </font><b><color=0xffffffff><color=0xff04f300><b><fontsize=12>Crow
+    </color><color=0xffffffff></b></fontsize><fontsize=10>TinkerbeI</color><color=0xff04f300><b>[LPPLS]</b><color=0x77ffffff><font size=10> - 'Peace' Large Remote Armor Repairer</font>
+    LOG;
+
+    $combatLog = CombatLog::factory()->create([
+        'listener' => 'Stale Listener',
+        'session_started' => '2025.01.01 00:00:00',
+        'original_filename' => 'fight.txt',
+    ]);
+    CombatEvent::create([
+        'combat_log_id' => $combatLog->id,
+        'timestamp' => '2025.01.01 00:00:01',
+        'damage' => 1,
+        'direction' => 'incoming',
+        'player_name' => 'Stale Pilot',
+        'weapon' => 'Stale Weapon',
+        'quality' => 'Hits',
+        'type' => 'damage',
+    ]);
+
+    $path = "combat-logs/{$combatLog->uuid}.txt.gz";
+    $compressedContents = gzencode($contents, 9);
+    Storage::put($path, $compressedContents);
+
+    $this->post("/logs/{$combatLog->uuid}/regenerate")
+        ->assertRedirect("/logs/{$combatLog->uuid}");
+
+    $combatLog->refresh();
+
+    expect($combatLog->listener)->toBe('Hunter Hughes')
+        ->and($combatLog->session_started)->toBe('2026.07.20 22:25:40')
+        ->and($combatLog->original_filename)->toBe('fight.txt')
+        ->and(Storage::get($path))->toBe($compressedContents)
+        ->and($combatLog->events)->toHaveCount(1);
+
+    $event = $combatLog->events->first();
+    expect($event->damage)->toBe(382)
+        ->and($event->player_name)->toBe('TinkerbeI')
+        ->and($event->corporation)->toBe('LPPLS')
+        ->and($event->ship_name)->toBe('Crow')
+        ->and($event->weapon)->toBe("'Peace' Large Remote Armor Repairer");
+});
+
+test('regeneration returns 404 without changing events when the raw log is missing', function () {
+    Storage::fake();
+
+    $combatLog = CombatLog::factory()->create();
+    CombatEvent::create([
+        'combat_log_id' => $combatLog->id,
+        'timestamp' => '2026.01.01 00:00:01',
+        'damage' => 100,
+        'direction' => 'outgoing',
+        'player_name' => 'Existing Pilot',
+        'weapon' => 'Existing Weapon',
+        'quality' => 'Hits',
+        'type' => 'damage',
+    ]);
+
+    $this->post("/logs/{$combatLog->uuid}/regenerate")->assertNotFound();
+
+    expect($combatLog->events()->count())->toBe(1);
 });

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { Head, Link, router } from '@inertiajs/vue3';
+import { Head, Link, router, useForm } from '@inertiajs/vue3';
 import { computed, onMounted, ref, watch } from 'vue';
 import {
     create,
     download,
+    regenerate,
 } from '@/actions/App/Http/Controllers/CombatLogController';
 
 import DamageBarChart from '@/components/charts/DamageBarChart.vue';
@@ -62,6 +63,13 @@ const props = defineProps<{
 }>();
 
 const VALID_SERIES_KEYS = new Set<SeriesKey>(ALL_SERIES_KEYS);
+const regenerateForm = useForm({});
+
+function regenerateAnalysis() {
+    if (props.uuid) {
+        regenerateForm.submit(regenerate(props.uuid));
+    }
+}
 
 const ogTitle = computed(() => `${props.analysis.listener} — Combat Analysis`);
 
@@ -1010,6 +1018,35 @@ watch(
                             </svg>
                             Raw Log
                         </a>
+                        <button
+                            v-if="rawLogAvailable && uuid"
+                            type="button"
+                            :disabled="regenerateForm.processing"
+                            class="flex items-center gap-1.5 font-mono text-xs tracking-wider text-zinc-400 uppercase transition-colors hover:text-amber-300 disabled:cursor-wait disabled:text-zinc-600"
+                            @click="regenerateAnalysis"
+                        >
+                            <svg
+                                class="h-3.5 w-3.5"
+                                :class="{
+                                    'animate-spin': regenerateForm.processing,
+                                }"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M16.023 9.348h4.992V4.356m-.97 5.52A8.25 8.25 0 106.27 18.45M3.985 14.652H8.98v4.992"
+                                />
+                            </svg>
+                            {{
+                                regenerateForm.processing
+                                    ? 'Regenerating...'
+                                    : 'Regenerate'
+                            }}
+                        </button>
                         <Link
                             :href="create.url()"
                             class="flex items-center gap-1.5 font-mono text-xs tracking-wider text-zinc-400 uppercase transition-colors hover:text-amber-300"

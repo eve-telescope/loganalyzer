@@ -260,6 +260,32 @@ test('it strips markup from logistics dealt weapons', function () {
         ->and($event->type)->toBe(EventType::Logistics);
 });
 
+test('it parses multiline rich-format logistics dealt events', function () {
+    $log = <<<'LOG'
+    ------------------------------------------------------------
+      Gamelog
+      Listener: Hunter Hughes
+      Session Started: 2026.07.20 22:25:40
+    ------------------------------------------------------------
+    [ 2026.07.20 23:31:34 ] (combat) <color=0xffccff66><b>382</b><color=0x77ffffff><font size=10> remote armor repaired to </font><b><color=0xffffffff><color=0xff04f300><b><fontsize=12>Crow
+    </color><color=0xffffffff></b></fontsize><fontsize=10>TinkerbeI</color><color=0xff04f300><b>[LPPLS]</b><color=0x77ffffff><font size=10> - 'Peace' Large Remote Armor Repairer</font>
+    LOG;
+
+    $result = $this->parser->parse($log);
+
+    expect($result['events'])->toHaveCount(1);
+
+    $event = $result['events'][0];
+    expect($event->type)->toBe(EventType::Logistics)
+        ->and($event->direction)->toBe(EventDirection::Outgoing)
+        ->and($event->damage)->toBe(382)
+        ->and($event->playerName)->toBe('TinkerbeI')
+        ->and($event->corporation)->toBe('LPPLS')
+        ->and($event->shipName)->toBe('Crow')
+        ->and($event->weapon)->toBe("'Peace' Large Remote Armor Repairer")
+        ->and($event->quality)->toBe('armor repaired');
+});
+
 test('no parsed field ever contains markup', function () {
     $contents = file_get_contents(base_path('tests/Fixtures/testlog.txt'));
     $result = $this->parser->parse($contents);

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Data\CombatEvent as ParsedCombatEvent;
 use App\Http\Requests\StoreCombatLogRequest;
 use App\Models\CombatEvent;
 use App\Models\CombatLog;
@@ -12,6 +13,7 @@ use App\Services\CombatLogParser;
 use App\Services\EveEntityResolver;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
@@ -33,10 +35,7 @@ final class CombatLogController extends Controller
         $contents = $file->get();
         $parsed = $parser->parse($contents);
 
-        $resolver->resolve(
-            characterNames: array_map(fn (\App\Data\CombatEvent $e): string => $e->playerName, $parsed['events']),
-            typeNames: array_values(array_filter(array_map(fn (\App\Data\CombatEvent $e): ?string => $e->shipName, $parsed['events']))),
-        );
+        $this->resolveEntities($parsed['events'], $resolver);
 
         $combatLog = CombatLog::create([
             'uuid' => Str::uuid()->toString(),
@@ -47,22 +46,33 @@ final class CombatLogController extends Controller
 
         Storage::put($this->rawLogPath($combatLog), gzencode($contents, 9));
 
-        $rows = array_map(fn (\App\Data\CombatEvent $event): array => [
-            'combat_log_id' => $combatLog->id,
-            'timestamp' => $event->timestamp,
-            'damage' => $event->damage,
-            'direction' => $event->direction->value,
-            'player_name' => $event->playerName,
-            'corporation' => $event->corporation,
-            'ship_name' => $event->shipName,
-            'weapon' => $event->weapon,
-            'quality' => $event->quality,
-            'type' => $event->type->value,
-        ], $parsed['events']);
+        $this->insertEvents($combatLog, $parsed['events']);
 
-        foreach (array_chunk($rows, 500) as $chunk) {
-            $combatLog->events()->insert($chunk);
-        }
+        return redirect()->route('combat-log.show', $combatLog);
+    }
+
+    public function regenerate(CombatLog $combatLog, CombatLogParser $parser, EveEntityResolver $resolver): RedirectResponse
+    {
+        $path = $this->rawLogPath($combatLog);
+
+        abort_unless(Storage::exists($path), 404);
+
+        $contents = gzdecode(Storage::get($path));
+
+        abort_if($contents === false, 422, 'The stored combat log could not be decoded.');
+
+        $parsed = $parser->parse($contents);
+
+        $this->resolveEntities($parsed['events'], $resolver);
+
+        DB::transaction(function () use ($combatLog, $parsed): void {
+            $combatLog->update([
+                'listener' => $parsed['listener'],
+                'session_started' => $parsed['sessionStarted'],
+            ]);
+            $combatLog->events()->delete();
+            $this->insertEvents($combatLog, $parsed['events']);
+        });
 
         return redirect()->route('combat-log.show', $combatLog);
     }
@@ -140,5 +150,39 @@ final class CombatLogController extends Controller
     private function rawLogPath(CombatLog $combatLog): string
     {
         return "combat-logs/{$combatLog->uuid}.txt.gz";
+    }
+
+    /**
+     * @param  list<ParsedCombatEvent>  $events
+     */
+    private function resolveEntities(array $events, EveEntityResolver $resolver): void
+    {
+        $resolver->resolve(
+            characterNames: array_map(fn (ParsedCombatEvent $event): string => $event->playerName, $events),
+            typeNames: array_values(array_filter(array_map(fn (ParsedCombatEvent $event): ?string => $event->shipName, $events))),
+        );
+    }
+
+    /**
+     * @param  list<ParsedCombatEvent>  $events
+     */
+    private function insertEvents(CombatLog $combatLog, array $events): void
+    {
+        $rows = array_map(fn (ParsedCombatEvent $event): array => [
+            'combat_log_id' => $combatLog->id,
+            'timestamp' => $event->timestamp,
+            'damage' => $event->damage,
+            'direction' => $event->direction->value,
+            'player_name' => $event->playerName,
+            'corporation' => $event->corporation,
+            'ship_name' => $event->shipName,
+            'weapon' => $event->weapon,
+            'quality' => $event->quality,
+            'type' => $event->type->value,
+        ], $events);
+
+        foreach (array_chunk($rows, 500) as $chunk) {
+            $combatLog->events()->insert($chunk);
+        }
     }
 }
