@@ -55,6 +55,24 @@ def explained(expected, actual):
     return expected
 
 
+def batches(logs, limit=20_000_000):
+    """The logs in groups of about `limit` bytes of base64, so the PHP
+    side stays inside its memory limit on a directory of real logs."""
+    batch, size = {}, 0
+    for name, encoded in logs.items():
+        if batch and size + len(encoded) > limit:
+            yield batch
+            batch, size = {}, 0
+        batch[name] = encoded
+        size += len(encoded)
+    if batch:
+        yield batch
+
+
+def events(result):
+    return len(result.get("events", [])) if "error" not in result else "error"
+
+
 def main():
     arguments = argparse.ArgumentParser()
     arguments.add_argument("directory", nargs="?")
@@ -78,8 +96,10 @@ def main():
         for index in range(options.count):
             logs[f"log-{index:05d}"] = base64.b64encode(parser_corpus.random_log(rng).encode()).decode()
 
-    expected = php(logs)
-    actual = rust(logs)
+    expected, actual = {}, {}
+    for batch in batches(logs):
+        expected.update(php(batch))
+        actual.update(rust(batch))
     php_failed = [name for name in logs if "error" in expected[name]]
     different = [
         name for name in logs
@@ -89,7 +109,7 @@ def main():
     print(f"PHP failed (fixed, FIXES.md): {len(php_failed)}")
     print(f"parsed differently: {len(different)}")
     for name in different[:50]:
-        print(f"  {name}")
+        print(f"  {name}: events PHP {events(expected[name])}, Rust {events(actual[name])}")
     sys.exit(1 if different else 0)
 
 
