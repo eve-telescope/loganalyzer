@@ -12,13 +12,21 @@ test.use({ reducedMotion: 'reduce' });
 
 test.beforeEach(() => resetDatabase());
 
+/** The session start's age ("(8 MONTHS AGO)") depends on the day the
+ * page is read; it is compared as a placeholder. */
+function withoutAge(text: string): string {
+  return text.replace(/\([^()]* AGO\)/, '(AGE)');
+}
+
 function recorded(name: string): string {
-  return JSON.parse(
-    readFileSync(
-      new URL(`../../tests/fixtures/golden/texts/${name}.json`, import.meta.url),
-      'utf8',
-    ),
-  ).text;
+  return withoutAge(
+    JSON.parse(
+      readFileSync(
+        new URL(`../../tests/fixtures/golden/texts/${name}.json`, import.meta.url),
+        'utf8',
+      ),
+    ).text,
+  );
 }
 
 for (const visual of VISUAL_PAGES.filter((page) => page.text)) {
@@ -32,6 +40,6 @@ for (const visual of VISUAL_PAGES.filter((page) => page.text)) {
     }
     await page.waitForTimeout(300);
     const text = (await page.evaluate(readText)).replaceAll(uuid, '{uuid}');
-    expect(text).toBe(recorded(visual.name));
+    expect(withoutAge(text)).toBe(recorded(visual.name));
   });
 }
