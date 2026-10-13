@@ -98,9 +98,11 @@ services:
     environment:
       AXUM_URL: http://api:3000
       ORIGIN: ${ORIGIN:-http://localhost:5317}
-      # The scheme of the page URLs (og:url) comes from the proxy, so the
-      # stack on http://localhost:5317 is not taken for https.
+      # The scheme and host of the page URLs (og:url) come from the
+      # proxy, so the stack on http://localhost:5317 is not taken for
+      # https, and the preview behind portal keeps its own name.
       PROTOCOL_HEADER: x-forwarded-proto
+      HOST_HEADER: x-forwarded-host
     depends_on:
       - api
     restart: unless-stopped

@@ -80,9 +80,10 @@ written with escaped backslashes.
 - Whole stack: `docker compose up --build` on http://localhost:5317.
   Ports are fixed: Postgres 5447, stack 5317, the Laravel reference 8317.
   The `sample-seed` service stores three sample logs (fixed uuids
-  `5a3b6e1c-0d4f-4a2b-8c7d-1e2f3a4b5c01` to `...03`); Playwright
-  truncates the same database, so run `docker compose run --rm
-  sample-seed` again after an e2e run.
+  `5a3b6e1c-0d4f-4a2b-8c7d-1e2f3a4b5c01` to `...03`, names resolved
+  through the real ESI). Playwright truncates the same database and
+  caches the mock's ids, so reset the stack after an e2e run
+  (`docker compose down -v`, then up again).
 - Local preview on https://loganalyzer.test (portal):
   `APP_URL=https://loganalyzer.test ORIGIN=https://loganalyzer.test
   docker compose up --build -d`.
