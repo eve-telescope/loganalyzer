@@ -1,0 +1,149 @@
+# The whole stack on http://localhost:5317:
+#   docker compose up --build
+# (the sample-seed service stores three sample logs, so the analysis
+# pages have something to show; see its links in `docker compose logs
+# sample-seed`)
+# The local preview on https://loganalyzer.test (portal):
+#   APP_URL=https://loganalyzer.test ORIGIN=https://loganalyzer.test docker compose up --build -d
+# Hot-reloading frontend instead of the built one:
+#   docker compose --profile dev up -d postgres api frontend-dev
+# Postgres alone, for `cargo run` + `npm run dev` on the host:
+#   docker compose up -d postgres
+#
+# Fixed ports, so the stack runs next to other projects: Postgres 5447,
+# the composed stack 5317.
+
+name: loganalyzer
+
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  postgres:
+    image: postgres:18
+    container_name: loganalyzer-postgres
+    environment:
+      POSTGRES_USER: loganalyzer
+      POSTGRES_PASSWORD: loganalyzer
+      POSTGRES_DB: loganalyzer
+    ports:
+      - "127.0.0.1:5447:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U loganalyzer"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+    logging: *logging
+
+  api:
+    build: .
+    image: loganalyzer-api
+    container_name: loganalyzer-api
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgres://loganalyzer:loganalyzer@postgres:5432/loganalyzer
+      BIND_ADDR: 0.0.0.0:3000
+      APP_URL: ${APP_URL:-http://localhost:5317}
+      # The real ESI by default; CI points it at a closed port, so the
+      # e2e suite never depends on it.
+      ESI_BASE_URL: ${ESI_BASE_URL:-https://esi.evetech.net}
+      RUST_LOG: ${RUST_LOG:-info}
+    volumes:
+      - combat-logs:/data/combat-logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+    develop:
+      watch:
+        - { action: rebuild, path: ./src }
+        - { action: rebuild, path: ./migrations }
+        - { action: rebuild, path: ./Cargo.toml }
+    logging: *logging
+
+  # One-shot: stores the sample logs the api image carries. Safe to
+  # repeat; it migrates first and skips logs that exist.
+  sample-seed:
+    build: .
+    # The api's image, so `up --no-build` runs it without a build of its
+    # own.
+    image: loganalyzer-api
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgres://loganalyzer:loganalyzer@postgres:5432/loganalyzer
+      APP_URL: ${APP_URL:-http://localhost:5317}
+      ESI_BASE_URL: ${ESI_BASE_URL:-https://esi.evetech.net}
+    volumes:
+      - combat-logs:/data/combat-logs
+    command: seed_samples
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+    logging: *logging
+
+  frontend:
+    build: ./frontend
+    image: loganalyzer-frontend
+    container_name: loganalyzer-frontend
+    environment:
+      AXUM_URL: http://api:3000
+      ORIGIN: ${ORIGIN:-http://localhost:5317}
+      # The scheme of the page URLs (og:url) comes from the proxy, so the
+      # stack on http://localhost:5317 is not taken for https.
+      PROTOCOL_HEADER: x-forwarded-proto
+    depends_on:
+      - api
+    restart: unless-stopped
+    develop:
+      watch:
+        - action: rebuild
+          path: ./frontend
+          ignore: [node_modules/, .svelte-kit/, build/]
+    logging: *logging
+
+  proxy:
+    image: caddy:2
+    container_name: loganalyzer-proxy
+    ports:
+      - "127.0.0.1:5317:5317"
+    volumes:
+      - ./deploy/Caddyfile.dev:/etc/caddy/Caddyfile:ro
+    depends_on:
+      - api
+      - frontend
+    restart: unless-stopped
+    logging: *logging
+
+  frontend-dev:
+    image: node:26
+    container_name: loganalyzer-frontend-dev
+    profiles: ["dev"]
+    working_dir: /app
+    command: sh -c "npm ci && npx vite dev --host 0.0.0.0 --port 5317"
+    environment:
+      AXUM_URL: http://api:3000
+      VITE_POLL_WATCH: "1"
+      TZ: UTC
+    ports:
+      - "127.0.0.1:5317:5317"
+    volumes:
+      - ./frontend:/app
+      - frontend-node-modules:/app/node_modules
+    depends_on:
+      - api
+    logging: *logging
+
+volumes:
+  postgres-data:
+  combat-logs:
+  frontend-node-modules:

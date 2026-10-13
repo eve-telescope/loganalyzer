@@ -1,0 +1,54 @@
+# Production on the shared server (TimKunze96/infra): only the api and the
+# frontend, from prebuilt images tagged with the commit (IMAGE_TAG in .env).
+# Postgres and Caddy are the server's; both containers join its external
+# `web` network, where Caddy reaches them as loganalyzer-api and
+# loganalyzer-frontend (deploy/Caddyfile). Run from /opt/loganalyzer:
+#   docker compose -f compose.prod.yml up -d
+#
+# .env holds DATABASE_URL (the shared Postgres) and IMAGE_TAG. The raw
+# logs live on the combat-logs volume.
+
+name: loganalyzer
+
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  api:
+    image: loganalyzer-api:${IMAGE_TAG:?set IMAGE_TAG in .env}
+    container_name: loganalyzer-api
+    env_file: .env
+    environment:
+      BIND_ADDR: 0.0.0.0:3000
+      APP_URL: https://loganalyzer.eve-telescope.com
+      LOG_STORAGE_DIR: /data/combat-logs
+      RUST_LOG: ${RUST_LOG:-info}
+    volumes:
+      - combat-logs:/data/combat-logs
+    networks:
+      - web
+    restart: unless-stopped
+    logging: *logging
+
+  frontend:
+    image: loganalyzer-frontend:${IMAGE_TAG:?set IMAGE_TAG in .env}
+    container_name: loganalyzer-frontend
+    environment:
+      AXUM_URL: http://loganalyzer-api:3000
+      ORIGIN: https://loganalyzer.eve-telescope.com
+    depends_on:
+      - api
+    networks:
+      - web
+    restart: unless-stopped
+    logging: *logging
+
+networks:
+  web:
+    external: true
+
+volumes:
+  combat-logs:

@@ -1,0 +1,24 @@
+{
+  "characters": {
+    "Aria Vex": 93000001,
+    "Korr Malan": 93000002,
+    "Selene Dur": 93000003,
+    "Tovak Rin": 93000004,
+    "Logi Pilot": 93000005,
+    "Nicolas Kion": 93000006,
+    "Hammerhead II": 95194769,
+    "De BuG": 93000007,
+    "TinkerbeI": 93000008
+  },
+  "inventory_types": {
+    "Drake": 24698,
+    "Hurricane": 24702,
+    "Caracal": 621,
+    "Rupture": 629,
+    "Basilisk": 11985,
+    "Hammerhead II": 2185,
+    "Crow": 11176,
+    "Huginn": 11961,
+    "Sabre": 22456
+  }
+}

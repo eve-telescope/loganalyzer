@@ -1,0 +1,45 @@
+/* The site's styles, as the Laravel app had them (resources/css/app.css). */
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans:
+    Instrument Sans, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Dark canvas: the viewport scrollbar and overscroll areas composite
+   against the root background, which would otherwise be white. */
+html {
+  color-scheme: dark;
+  background-color: var(--color-zinc-950);
+  scrollbar-color: var(--color-zinc-700) var(--color-zinc-950);
+}
+
+/* Themed scrollbars for the dark console look */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-zinc-700) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-zinc-700);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-zinc-600);
+}
+
+/* Lock page scroll while a modal dialog is open */
+body:has(dialog[open]) {
+  overflow: hidden;
+}
