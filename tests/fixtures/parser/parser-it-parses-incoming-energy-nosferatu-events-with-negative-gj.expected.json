@@ -1,0 +1,17 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:05",
+      "damage": 2,
+      "direction": "incoming",
+      "playerName": "Stiletto",
+      "corporation": null,
+      "shipName": "Stiletto",
+      "weapon": "Small Ghoul Compact Energy Nosferatu",
+      "quality": "Drained",
+      "type": "neutralization"
+    }
+  ]
+}

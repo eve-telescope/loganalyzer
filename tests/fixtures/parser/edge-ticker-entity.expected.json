@@ -1,0 +1,28 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:01",
+      "damage": 300,
+      "direction": "outgoing",
+      "playerName": "Some Pilot",
+      "corporation": "TICK",
+      "shipName": "Guardian",
+      "weapon": "Large Remote Armor Repairer II",
+      "quality": "armor repaired",
+      "type": "logistics"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:02",
+      "damage": 310,
+      "direction": "outgoing",
+      "playerName": "Other Pilot",
+      "corporation": "CORP",
+      "shipName": "Guardian",
+      "weapon": "Large Remote Armor Repairer II",
+      "quality": "armor repaired",
+      "type": "logistics"
+    }
+  ]
+}

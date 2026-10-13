@@ -1,0 +1,28 @@
+{
+  "listener": "Hunter Hughes",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:01",
+      "damage": 382,
+      "direction": "outgoing",
+      "playerName": "TinkerbeI",
+      "corporation": "LPPLS",
+      "shipName": "Crow",
+      "weapon": "'Peace' Large Remote Armor Repairer",
+      "quality": "armor repaired",
+      "type": "logistics"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:03",
+      "damage": 401,
+      "direction": "outgoing",
+      "playerName": "TinkerbeI",
+      "corporation": "LPPLS",
+      "shipName": "Crow",
+      "weapon": "'Peace' Large Remote Armor Repairer",
+      "quality": "armor repaired",
+      "type": "logistics"
+    }
+  ]
+}

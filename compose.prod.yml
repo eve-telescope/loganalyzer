@@ -1,0 +1,93 @@
+# Production, deployed by Coolify (Docker Compose build pack, this file)
+# from the images .github/workflows/release.yml pushes to GHCR on every
+# merge to main.
+#
+# Only the proxy gets a domain: in Coolify set the "Domains" of
+# loganalyzer-proxy to https://loganalyzer.eve-telescope.com and leave the
+# api and frontend without one. Traefik terminates TLS and hands plain
+# HTTP to the proxy on :80, which routes to the api and the frontend
+# (deploy/Caddyfile).
+#
+# The services carry the app's prefix because the api also joins the
+# server's external `coolify` network to reach the shared Postgres
+# (DATABASE_URL), where other apps' services live too: a plain `api`
+# would not resolve to this one. The proxy and the frontend stay off it.
+# The api runs its migrations on startup.
+#
+# The raw logs live on the external loganalyzer_storage volume.
+#
+# Coolify fills in the ${VAR}s from the resource's environment variables:
+# DATABASE_URL is required, the rest have the app's defaults.
+
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  loganalyzer-api:
+    image: ghcr.io/eve-telescope/loganalyzer-api:latest
+    pull_policy: always
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?}
+      BIND_ADDR: 0.0.0.0:3000
+      APP_URL: ${APP_URL:-https://loganalyzer.eve-telescope.com}
+      APP_NAME: ${APP_NAME:-}
+      RUST_LOG: ${RUST_LOG:-info}
+      LOG_STORAGE_DIR: /data/combat-logs
+      UPLOAD_MAX_SIZE_MB: ${UPLOAD_MAX_SIZE_MB:-}
+      ESI_BASE_URL: ${ESI_BASE_URL:-}
+      ESI_USER_AGENT: ${ESI_USER_AGENT:-}
+      ESI_TRIES: ${ESI_TRIES:-}
+      ESI_RETRY_DELAY_MS: ${ESI_RETRY_DELAY_MS:-}
+      ESI_TIMEOUT_MS: ${ESI_TIMEOUT_MS:-}
+    volumes:
+      - loganalyzer_storage:/data/combat-logs
+    # The image has no curl or wget; bash talks HTTP to /up itself.
+    healthcheck:
+      test:
+        - CMD
+        - bash
+        - -c
+        - "exec 3<>/dev/tcp/127.0.0.1/3000 && printf 'GET /up HTTP/1.1\\r\\nHost: localhost\\r\\nConnection: close\\r\\n\\r\\n' >&3 && head -n 1 <&3 | grep -q ' 200 '"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      - default
+      - coolify
+    restart: unless-stopped
+    logging: *logging
+
+  loganalyzer-frontend:
+    image: ghcr.io/eve-telescope/loganalyzer-frontend:latest
+    pull_policy: always
+    environment:
+      AXUM_URL: http://loganalyzer-api:3000
+      ORIGIN: ${APP_URL:-https://loganalyzer.eve-telescope.com}
+    depends_on:
+      - loganalyzer-api
+    restart: unless-stopped
+    logging: *logging
+
+  loganalyzer-proxy:
+    image: ghcr.io/eve-telescope/loganalyzer-proxy:latest
+    pull_policy: always
+    environment:
+      API_HOST: loganalyzer-api
+      FRONTEND_HOST: loganalyzer-frontend
+    depends_on:
+      - loganalyzer-api
+      - loganalyzer-frontend
+    restart: unless-stopped
+    logging: *logging
+
+networks:
+  coolify:
+    external: true
+
+volumes:
+  loganalyzer_storage:
+    external: true

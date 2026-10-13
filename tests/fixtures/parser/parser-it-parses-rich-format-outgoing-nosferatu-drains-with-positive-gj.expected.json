@@ -1,0 +1,17 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.05.28 19:00:00",
+  "events": [
+    {
+      "timestamp": "2026.05.28 19:10:40",
+      "damage": 269,
+      "direction": "outgoing",
+      "playerName": "Daniel Grosny",
+      "corporation": "TLOS",
+      "shipName": "Basilisk",
+      "weapon": "Heavy Abyssal Energy Nosferatu",
+      "quality": "Drained",
+      "type": "neutralization"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+------------------------------------------------------------
+  Gamelog
+  Listener: Nicolas Kion
+  Session Started: 2026.02.12 09:41:44
+------------------------------------------------------------
+[ 2026.02.12 09:42:00 ] (combat) <color=0xff00ffff><b>120</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Hammerhead II</b><font size=10><color=0x77ffffff> - Light Neutron Blaster II - Hits
+[ 2026.02.12 09:42:05 ] (combat) <color=0xff00ffff><b>340</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Aria Vex[RAZR](Drake)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits

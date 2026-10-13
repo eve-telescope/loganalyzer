@@ -1,0 +1,39 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:01",
+      "damage": 77,
+      "direction": "outgoing",
+      "playerName": "Enemy Pilot",
+      "corporation": "CORP",
+      "shipName": "Drake",
+      "weapon": "Heavy Missile",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:03",
+      "damage": 88,
+      "direction": "incoming",
+      "playerName": "Enemy Pilot",
+      "corporation": "CORP",
+      "shipName": "Drake",
+      "weapon": "Heavy Missile",
+      "quality": "Grazes",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:10",
+      "damage": 99,
+      "direction": "outgoing",
+      "playerName": "Enemy Pilot",
+      "corporation": "CORP",
+      "shipName": "Drake",
+      "weapon": "Heavy Missile",
+      "quality": "Wrecks",
+      "type": "damage"
+    }
+  ]
+}

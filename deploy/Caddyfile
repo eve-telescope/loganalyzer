@@ -1,0 +1,42 @@
+# The shared origin, in production (the proxy image, deploy/Dockerfile,
+# behind Coolify's Traefik, which terminates TLS) and in the local stack
+# (docker-compose.yml, published on :5317). Backend paths, and every
+# request that is not a GET or HEAD (the upload and the regeneration), go
+# to the api, page GETs to the SvelteKit node server. Keep the path list
+# in sync with frontend/proxy-paths.ts.
+#
+# The upstreams default to the dev stack's service names; production sets
+# API_HOST and FRONTEND_HOST to its prefixed ones.
+{
+	# Traefik (or portal locally) in front: keep its X-Forwarded-*
+	# headers, so the api sees the client's address and https.
+	servers {
+		trusted_proxies static private_ranges
+	}
+}
+
+:80 {
+	encode zstd gzip
+	header {
+		X-Frame-Options SAMEORIGIN
+		X-XSS-Protection "1; mode=block"
+		X-Content-Type-Options nosniff
+	}
+	# Logs of up to 25 MiB with room for the form around them; the api
+	# answers anything over its own limit with the size message.
+	request_body {
+		max_size 27MiB
+	}
+
+	@axum {
+		path /api /api/* /up /up/* /analyze /analyze/* /logs/*/download /logs/*/regenerate
+	}
+	reverse_proxy @axum {$API_HOST:api}:3000
+
+	@mutation {
+		not method GET HEAD
+	}
+	reverse_proxy @mutation {$API_HOST:api}:3000
+
+	reverse_proxy {$FRONTEND_HOST:frontend}:3000
+}

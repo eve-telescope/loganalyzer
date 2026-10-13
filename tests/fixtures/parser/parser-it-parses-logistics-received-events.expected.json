@@ -1,0 +1,17 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:05",
+      "damage": 575,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics"
+    }
+  ]
+}

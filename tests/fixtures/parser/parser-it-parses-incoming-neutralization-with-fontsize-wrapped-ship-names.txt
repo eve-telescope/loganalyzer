@@ -1,0 +1,6 @@
+------------------------------------------------------------
+  Gamelog
+  Listener: Test Pilot
+  Session Started: 2026.01.14 19:00:00
+------------------------------------------------------------
+[ 2026.01.14 20:02:50 ] (combat) <color=0xffe57f7f><b>3345 GJ</b><color=0x77ffffff><font size=10> energy neutralized </font><b><color=0xffffffff><b><color=0xffFF4500><fontsize=13>Keepstar</fontsize></color></b> </b><color=0x77ffffff><font size=10> - Standup Energy Neutralization Burst Projector</font>

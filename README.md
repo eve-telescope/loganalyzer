@@ -1,92 +1,119 @@
 # Combat Log Analyzer
 
-[![Tests](https://github.com/eve-telescope/loganalyzer/actions/workflows/tests.yml/badge.svg)](https://github.com/eve-telescope/loganalyzer/actions/workflows/tests.yml)
-[![Code Quality](https://github.com/eve-telescope/loganalyzer/actions/workflows/code-quality.yml/badge.svg)](https://github.com/eve-telescope/loganalyzer/actions/workflows/code-quality.yml)
+[![CI](https://github.com/eve-telescope/loganalyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/eve-telescope/loganalyzer/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Floganalyzer.eve-telescope.com&label=loganalyzer.eve-telescope.com)](https://loganalyzer.eve-telescope.com)
+[![Rust](https://img.shields.io/badge/Rust-Axum-DEA584?logo=rust&logoColor=white)](https://github.com/tokio-rs/axum)
+[![SvelteKit](https://img.shields.io/badge/SvelteKit-Svelte%205-FF3E00?logo=svelte&logoColor=white)](https://svelte.dev/docs/kit)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-18-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org)
 
-Upload and analyze **EVE Online** combat logs. Get DPS graphs, damage breakdowns, logistics statistics, and detailed per-pilot numbers from a plain gamelog file — shareable via a unique URL.
+Upload an EVE Online combat log and get an after-action report: DPS over
+time, damage breakdowns, logistics, energy warfare and the numbers per
+pilot, at a link you can share. Part of the Telescope toolkit, live at
+https://loganalyzer.eve-telescope.com.
+
+Your gamelogs are in `Documents/EVE/logs/Gamelogs`. Drop one on the page
+and share the link it takes you to.
 
 ## Features
 
-- **Drag & drop upload** of EVE Online gamelog files (size limit enforced client- and server-side, configurable via `LOGANALYZER_UPLOAD_MAX_SIZE_MB`)
-- **DPS over time** chart with incoming/outgoing series
-- **Damage breakdowns** by target, source, and weapon
-- **Logistics tracking** — remote shield/armor/hull reps dealt and received
-- **Energy warfare** — neutralizer and nosferatu events (incoming and outgoing)
-- **Timeline filters** synced to the URL, so a filtered view can be shared
-- **Shareable results** — every analyzed log gets a UUID-based URL
+- Drag and drop upload of a gamelog (`.txt` or `.log`, up to 25 MB),
+  checked in the browser before it is sent, with upload progress
+- A parser for the combat lines of the English client: hits and misses
+  both ways, remote shield, armor and hull repairs, neutralizers and
+  nosferatu, drone damage attributed to its owner where the log tells
+- Pilot portraits, ship icons and zKillboard links, with the names
+  resolved through ESI and cached
+- A timeline of DPS, repairs and energy warfare; drag over it to look at
+  a time range
+- Totals, peaks, hit quality, damage by target, source and weapon, and a
+  per-pilot engagement log
+- Shareable links that keep the selected range, the hidden series and
+  the open pilot, with link previews that name the pilot and the totals
+- The raw log for download, and a fresh analysis of it after parser
+  improvements
 
-## Tech Stack
+## Stack
 
-| Layer | Technology |
-| --- | --- |
-| Backend | [Laravel 13](https://laravel.com) (PHP 8.4+) |
-| Frontend | [Vue 3](https://vuejs.org) + [Inertia.js v3](https://inertiajs.com) |
-| Styling | [Tailwind CSS 4](https://tailwindcss.com) |
-| Charts | [Chart.js](https://www.chartjs.org) via vue-chartjs |
-| Routing bridge | [Laravel Wayfinder](https://github.com/laravel/wayfinder) (typed route functions for TypeScript) |
-| Build | [Vite 8](https://vite.dev) |
-| Database | SQLite (default) |
+- API: Rust, [Axum](https://github.com/tokio-rs/axum) and
+  [sqlx](https://github.com/launchbadge/sqlx) on Postgres; the parser
+  runs on [PCRE2](https://github.com/BurntSushi/rust-pcre2)
+- Frontend: [SvelteKit](https://svelte.dev/docs/kit) (SSR,
+  adapter-node), Svelte 5, Tailwind CSS 4 and
+  [Chart.js](https://www.chartjs.org)
+- Names from [ESI](https://developers.eveonline.com/api-explorer)
+  (`POST /universe/ids/`), images from images.evetech.net
 
-## Getting Started
+One origin serves both: Caddy (or the Vite dev proxy) sends `/api/*`,
+`/up`, `/analyze`, the raw log download and the regeneration
+(`/logs/*/download`, `/logs/*/regenerate`) and every request that is not
+a GET or HEAD to Axum, and page loads to SvelteKit.
+`frontend/proxy-paths.ts` and `deploy/Caddyfile` hold that list.
 
-### Requirements
+## Running it
 
-- PHP 8.4+ with Composer
-- Node.js 22+ with npm
-
-### Setup
-
-```bash
-git clone https://github.com/eve-telescope/loganalyzer.git
-cd loganalyzer
-composer run setup
-```
-
-The `setup` script installs Composer and npm dependencies, creates the `.env` file, generates the application key, runs migrations, and builds the frontend.
-
-### Development
-
-```bash
-composer run dev
-```
-
-This starts [Laravel Octane](https://laravel.com/docs/octane) (FrankenPHP, with file watching), a queue worker, log tailing ([Pail](https://github.com/laravel/pail)), and Vite with hot module replacement — all in one terminal.
-
-The app runs on Octane so the framework stays booted between requests — large log uploads parse noticeably faster. PHP limits for big uploads (`upload_max_filesize`, `memory_limit`, …) are source-controlled in [`php.ini`](php.ini), which the FrankenPHP binary loads from the project root. In production, serve with `php artisan octane:start` from the project root and front it with your proxy of choice.
-
-If you use [Laravel Herd](https://herd.laravel.com), the app is also served at `https://loganalyzer.test` — you only need `npm run dev` alongside it.
-
-## Testing & Code Quality
+The whole stack (Postgres, API, SvelteKit, Caddy) on
+http://localhost:5317, with three sample logs stored on start (at
+`/logs/5a3b6e1c-0d4f-4a2b-8c7d-1e2f3a4b5c01` to `...5c03`):
 
 ```bash
-php artisan test              # Pest test suite
-composer lint                 # Laravel Pint (auto-fix)
-composer lint:check           # Laravel Pint (check only)
-vendor/bin/phpstan analyse    # Larastan static analysis
-vendor/bin/rector --dry-run   # Rector automated refactoring (preview)
-npm run lint                  # ESLint (auto-fix)
-npm run format                # Prettier (auto-fix)
-npm run types:check           # vue-tsc TypeScript check
-composer ci:check             # Everything CI runs, locally
+docker compose up --build -d
 ```
 
-Test fixtures (synthetic gamelog files) live in `tests/Fixtures/`.
+Or natively, with only Postgres in docker:
 
-## Continuous Integration
+```bash
+docker compose up -d postgres     # Postgres on 127.0.0.1:5447
+cargo run                         # API on 127.0.0.1:3000
+cd frontend && npm install && npm run dev
+```
 
-GitHub Actions run on every push to `main` and on pull requests:
+Configuration lives in `.env` (see `.env.example`); everything has a
+working local default. `cargo run --bin seed_samples` stores the sample
+logs in the native setup.
 
-- **Tests** (`tests.yml`) — full Pest suite against PHP 8.4 and 8.5
-- **Code Quality** (`code-quality.yml`) — Pint, Larastan, Rector (dry run), ESLint, Prettier, and TypeScript checks
+## Testing
 
-[Dependabot](.github/dependabot.yml) opens weekly grouped update PRs for Composer, npm, and GitHub Actions dependencies.
+```bash
+docker compose up -d postgres
+cargo test
+cd frontend && npm run check && npm run lint && npm run format:check && npm test
+docker compose up --build -d && cd frontend && npm run test:e2e
+```
 
-## How It Works
+The Rust suites drive the real router on their own `loganalyzer_test`
+database, with ESI replaced by a mock on an ephemeral port. The parser
+is pinned over every fixture log in `tests/fixtures/parser` and a corpus
+of generated ones. The vitest suites check the analysis math value by
+value, and Playwright runs against the composed stack on port 5317.
 
-1. A gamelog file is uploaded and parsed by [`CombatLogParser`](app/Services/CombatLogParser.php), which extracts the listener (pilot), session start, and all combat events (damage, misses, logistics, energy warfare) via regex.
-2. Events are stored as individual rows and the log gets a UUID.
-3. The analysis page aggregates the events into charts and tables, entirely filterable by time range and event series.
+## Deployment
+
+Coolify runs `compose.prod.yml`. A push to main runs
+`.github/workflows/release.yml`, which builds the api, frontend and
+proxy images, pushes them to `ghcr.io/eve-telescope/loganalyzer-*`
+(`latest` and the commit) and calls Coolify's deploy webhook, so Coolify
+pulls and restarts them. Only `loganalyzer-proxy` has the domain;
+Traefik terminates TLS in front of it and the proxy routes with
+`deploy/Caddyfile`, the same file the local stack mounts. The api
+reaches the shared Postgres over the `coolify` network (`DATABASE_URL`
+is a Coolify environment variable), runs its migrations on startup and
+keeps the raw logs on the `loganalyzer_storage` volume.
+
+## Layout
+
+```
+src/                 the API: parser, ESI client, uploads, pages' props, router
+src/parser/          the gamelog parser and its text helpers
+src/bin/             migrate, seed_samples
+migrations/          the Postgres schema
+tests/integration/   the Rust suites, one binary
+tests/fixtures/      gamelogs with their parsed events, the ESI name table
+frontend/            the SvelteKit app and its Playwright suite (e2e/)
+deploy/              the proxy image and its Caddyfile (local and production)
+```
 
 ## License
 
-Open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Open-source software licensed under the
+[MIT license](https://opensource.org/licenses/MIT).

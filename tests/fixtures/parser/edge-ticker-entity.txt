@@ -1,0 +1,13 @@
+------------------------------------------------------------
+  Gamelog
+  Listener: Test Pilot
+  Session Started: 2026.01.01 12:00:00
+------------------------------------------------------------
+[ 2026.01.01 12:00:01 ] (combat) <color=0xffccff66><b>300</b><color=0x77ffffff><font size=10> remote armor repaired to </font><b><color=0xffffffff><color=0xff04f300><b><fontsize=12>Guardian
+</color><color=0xffffffff></b></fontsize><fontsize=10>Some Pilot</color><color=0xff04f300><b>&lt;TICK&gt;</b><color=0x77ffffff><font size=10> - Large Remote Armor Repairer II</font>
+[ 2026.01.01 12:00:02 ] (combat) <color=0xffccff66><b>310</b><color=0x77ffffff><font size=10> remote armor repaired to </font><b><color=0xffffffff><color=0xff04f300><b><fontsize=12>Guardian
+</color><color=0xffffffff></b></fontsize><fontsize=10>Other Pilot</color><color=0xff04f300><b>[CORP]</b><color=0x77ffffff><font size=10> - Large Remote Armor Repairer II</font>
+[ 2026.01.01 12:00:03 ] (combat) <color=0xffccff66><b>320</b><color=0x77ffffff><font size=10> remote armor repaired to </font><b><color=0xffffffff><color=0xff04f300><b><fontsize=12>Guardian
+</color><color=0xffffffff></b></fontsize><fontsize=10>Third Pilot</color><color=0xff04f300><b>&lt;&gt;</b><color=0x77ffffff><font size=10> - Large Remote Armor Repairer II</font>
+[ 2026.01.01 12:00:04 ] (combat) <color=0xffccff66><b>330</b><color=0x77ffffff><font size=10> remote armor repaired to </font><b><color=0xffffffff><color=0xff04f300><b><fontsize=12>Guardian
+</color><color=0xffffffff></b></fontsize><fontsize=10>Fourth Pilot</color><color=0xff04f300><b>[]</b><color=0x77ffffff><font size=10> - Large Remote Armor Repairer II</font>

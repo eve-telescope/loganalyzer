@@ -1,0 +1,39 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:01",
+      "damage": 88,
+      "direction": "incoming",
+      "playerName": "Pilot One",
+      "corporation": ".BOP",
+      "shipName": "Cenotaph",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:02",
+      "damage": 92,
+      "direction": "incoming",
+      "playerName": "Pilot Two",
+      "corporation": ".BOP",
+      "shipName": "Rupture",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:05",
+      "damage": 120,
+      "direction": "outgoing",
+      "playerName": "Warrior II",
+      "corporation": ".BOP",
+      "shipName": "Warrior II",
+      "weapon": "Heavy Missile",
+      "quality": "Hits",
+      "type": "damage"
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 * text=auto eol=lf
 
-*.blade.php diff=html
-*.css diff=css
-*.html diff=html
-*.md diff=markdown
-*.php diff=php
+*.png binary
+*.ico binary
+*.gz binary
+*.svg text
 
-CHANGELOG.md export-ignore
-README.md export-ignore
+# The parser fixtures are uploaded bytes: CRLF and bare CR line ends,
+# BOMs and invalid UTF-8 are what they test, so git must not touch them.
+tests/fixtures/parser/*.txt -text
