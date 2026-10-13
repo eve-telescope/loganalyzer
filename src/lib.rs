@@ -1,7 +1,10 @@
 pub mod config;
 pub mod db;
 pub mod disposition;
+pub mod entities;
+pub mod esi;
 pub mod filters;
+pub mod logs;
 pub mod parser;
 pub mod samples;
 pub mod server;

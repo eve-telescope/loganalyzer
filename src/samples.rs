@@ -32,6 +32,25 @@ pub const SAMPLES: [Sample; 3] = [
 ];
 
 /// Stores the samples that are missing; returns how many were added.
-pub async fn seed(_state: &AppState) -> Result<usize, std::io::Error> {
-    unimplemented!("not ported yet")
+pub async fn seed(state: &AppState) -> Result<usize, crate::logs::StoreError> {
+    let mut added = 0;
+    for sample in &SAMPLES {
+        let exists: bool =
+            sqlx::query_scalar("select exists (select 1 from combat_logs where uuid = $1)")
+                .bind(sample.uuid)
+                .fetch_one(&state.pool)
+                .await?;
+        if exists {
+            continue;
+        }
+        crate::logs::store(
+            state,
+            sample.contents.to_vec(),
+            Some(sample.file_name.to_owned()),
+            sample.uuid,
+        )
+        .await?;
+        added += 1;
+    }
+    Ok(added)
 }

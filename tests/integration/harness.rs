@@ -69,9 +69,15 @@ async fn the_mock_esi_answers_from_its_table_and_records_requests() {
     );
     let requests = esi.requests();
     assert_eq!(requests.len(), 1);
-    assert_eq!(requests[0].names, ["aria vex", "Drake", "Hammerhead II", "Nobody"]);
+    assert_eq!(
+        requests[0].names,
+        ["aria vex", "Drake", "Hammerhead II", "Nobody"]
+    );
     assert_eq!(requests[0].user_agent.as_deref(), Some("harness"));
-    assert_eq!(answer(&json!({ "characters": {} }), &["x".to_owned()]), json!({}));
+    assert_eq!(
+        answer(&json!({ "characters": {} }), &["x".to_owned()]),
+        json!({})
+    );
 
     esi.fail_next(&[503]);
     let failed = reqwest::Client::new()
