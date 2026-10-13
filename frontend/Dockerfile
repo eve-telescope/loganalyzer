@@ -14,8 +14,8 @@ RUN npm run build
 FROM node:26-bookworm-slim AS runtime
 WORKDIR /app
 # The analysis page renders log times and numbers on the server: UTC and
-# en-US, like the Laravel box, so the link previews of shared logs (the
-# OpenGraph description) read the same.
+# en-US, so the link previews of shared logs (the OpenGraph description)
+# read the same everywhere.
 ENV NODE_ENV=production \
     TZ=UTC \
     LANG=en_US.UTF-8

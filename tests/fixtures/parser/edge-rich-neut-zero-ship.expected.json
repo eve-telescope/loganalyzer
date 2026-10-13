@@ -8,7 +8,7 @@
       "direction": "outgoing",
       "playerName": "Zero Ship Pilot",
       "corporation": null,
-      "shipName": null,
+      "shipName": "0",
       "weapon": "Heavy Abyssal Energy Neutralizer",
       "quality": "Neutralized",
       "type": "neutralization"

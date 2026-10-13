@@ -14,14 +14,8 @@ describe('canonicalRedirect', () => {
     expect(redirect('/logs///')).toEqual([308, '/logs']);
   });
 
-  it('sends the front controller to the path behind it with a 301', () => {
-    expect(redirect('/index.php')).toEqual([301, '/']);
-    expect(redirect('/index.php/logs/x?from=a')).toEqual([301, '/logs/x?from=a']);
-  });
-
   it('leaves the pages alone', () => {
     expect(redirect('/')).toBeNull();
     expect(redirect('/logs/x')).toBeNull();
-    expect(redirect('/index.phpx')).toBeNull();
   });
 });

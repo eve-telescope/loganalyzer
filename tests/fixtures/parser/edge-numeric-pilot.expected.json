@@ -1,3 +1,28 @@
 {
-  "error": "TypeError: App\\Data\\CombatEvent::__construct(): Argument #4 ($playerName) must be of type string, int given, called in /app/app/Services/CombatLogParser.php on line 78"
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:01",
+      "damage": 88,
+      "direction": "incoming",
+      "playerName": "12345",
+      "corporation": ".BOP",
+      "shipName": "Cenotaph",
+      "weapon": "Hammerhead II",
+      "quality": "Penetrates",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:02",
+      "damage": 270,
+      "direction": "outgoing",
+      "playerName": "12345",
+      "corporation": ".BOP",
+      "shipName": "Hammerhead II",
+      "weapon": "Heavy Missile",
+      "quality": "Hits",
+      "type": "damage"
+    }
+  ]
 }

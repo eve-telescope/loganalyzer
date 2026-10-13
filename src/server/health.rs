@@ -10,7 +10,7 @@ use serde_json::json;
 
 use super::AppState;
 
-/// Laravel's health page (`withRouting(health: '/up')`).
+/// The health page the uptime checks read.
 const UP_PAGE: &str = include_str!("up.html");
 
 pub async fn up(State(state): State<AppState>) -> Html<String> {

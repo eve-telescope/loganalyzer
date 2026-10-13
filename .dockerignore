@@ -2,11 +2,9 @@ target
 frontend
 node_modules
 deploy
-scripts
 .git
 .claude
 *.md
 storage
-tests/fixtures/golden
-tests/fixtures/php-functions
+tests/fixtures/string-functions
 tests/integration

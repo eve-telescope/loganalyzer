@@ -1,12 +1,11 @@
 //! Shared harness for the integration suites: the real router on the test
 //! database, a mock ESI on an ephemeral port, a temporary directory for
-//! the raw logs, request helpers and the factories the PHP tests used.
+//! the raw logs, request helpers and row factories.
 
 // Not every suite uses every helper.
 #![allow(dead_code)]
 
 pub mod esi;
-pub mod golden;
 
 use std::path::{Path, PathBuf};
 use std::time::Duration;
@@ -25,7 +24,7 @@ use loganalyzer::server::AppState;
 
 pub use esi::MockEsi;
 
-/// The site URL, as the reference recorded it (scripts/laravel-reference/env).
+/// The site URL the suites run under.
 pub const APP_URL: &str = "https://loganalyzer.eve-telescope.com";
 pub const HOST: &str = "loganalyzer.eve-telescope.com";
 pub const USER_AGENT: &str = "EVE Log Analyzer/1.0 (+https://loganalyzer.eve-telescope.com; +https://github.com/eve-telescope/loganalyzer)";
@@ -39,7 +38,7 @@ pub fn fixture(name: &str) -> Vec<u8> {
     std::fs::read(&path).unwrap_or_else(|error| panic!("{}: {error}", path.display()))
 }
 
-/// The fixture the PHP upload tests used.
+/// The fixture most upload tests use.
 pub fn testlog() -> Vec<u8> {
     fixture("testlog")
 }
@@ -61,7 +60,7 @@ pub async fn test_pool() -> PgPool {
         .expect("Postgres not reachable - start it with `docker compose up -d postgres`")
 }
 
-/// Clears every table; ids restart at 1, like Laravel's RefreshDatabase.
+/// Clears every table; ids restart at 1.
 pub async fn reset_database(pool: &PgPool) {
     sqlx::query("truncate combat_events, combat_logs, eve_entities restart identity cascade")
         .execute(pool)
@@ -223,7 +222,7 @@ impl TestApp {
             .expect("count")
     }
 
-    /// `CombatLog::factory()->create()`: a log row with the given fields.
+    /// A log row with the given fields.
     pub async fn create_log(
         &self,
         listener: &str,
@@ -245,7 +244,7 @@ impl TestApp {
         (id, uuid)
     }
 
-    /// `CombatEvent::create([...])` with the fields the PHP tests set.
+    /// An event row (a `Hits` damage event) of a log.
     pub async fn create_event(
         &self,
         log_id: i64,
@@ -270,7 +269,7 @@ impl TestApp {
         .expect("event inserts");
     }
 
-    /// `EveEntity::factory()->create([...])`.
+    /// A cached name.
     pub async fn create_entity(&self, kind: &str, name: &str, eve_id: Option<i64>) {
         sqlx::query(
             "insert into eve_entities (kind, name, eve_id, created_at, updated_at)
@@ -284,8 +283,8 @@ impl TestApp {
         .expect("entity inserts");
     }
 
-    /// The stored id of a name, as `EveEntity::where('name', ...)->value('eve_id')`
-    /// (the first row of any kind).
+    /// The stored id of a name: of the given kind, or the first row of
+    /// any kind.
     pub async fn eve_id(&self, kind: Option<&str>, name: &str) -> Option<i64> {
         sqlx::query_scalar(
             "select eve_id from eve_entities where name = $1 and ($2::text is null or kind = $2)
@@ -299,7 +298,7 @@ impl TestApp {
         .flatten()
     }
 
-    /// The only log, as `CombatLog::first()`.
+    /// The first log.
     pub async fn first_log(&self) -> Option<(i64, Uuid, String, String, Option<String>)> {
         sqlx::query_as(
             "select id, uuid, listener, session_started, original_filename from combat_logs
@@ -478,8 +477,8 @@ pub fn json_difference(path: &str, expected: &Value, actual: &Value) -> Option<S
     }
 }
 
-/// The value at a dotted path (`filters.hide`), like Inertia's assertions
-/// read props. Keys may contain spaces (`pilotIds.Aria Vex`).
+/// The value at a dotted path (`filters.hide`). Keys may contain spaces
+/// (`pilotIds.Aria Vex`).
 #[track_caller]
 pub fn at<'a>(value: &'a Value, path: &str) -> &'a Value {
     let mut current = value;

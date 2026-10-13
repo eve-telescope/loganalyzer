@@ -1,7 +1,7 @@
 //! The ESI client and the name cache against the mock ESI: the request it
-//! sends, the retry policy (two tries, then the chunk is skipped; FIXES.md
-//! "ESI being down held an upload for 20 seconds"), chunks of 500 names,
-//! and the cache's spelling rules.
+//! sends, the retry policy (two tries, then the chunk is skipped, so ESI
+//! being down never holds an upload), chunks of 500 names, and the
+//! cache's spelling rules.
 
 use std::time::{Duration, Instant};
 
@@ -153,9 +153,8 @@ async fn names_in_esi_answers_are_unescaped_and_normalized() {
 
 #[tokio::test]
 async fn a_cached_name_counts_only_in_its_stored_spelling() {
-    // Laravel compared the cache's spelling exactly, so another spelling
-    // asks ESI again and updates the stored row (which keeps its
-    // spelling).
+    // The cache compares the spelling exactly, so another spelling asks
+    // ESI again and updates the stored row (which keeps its spelling).
     let app = TestApp::new().await;
     app.create_entity("character", "aria vex", None).await;
     app.upload_log("combat.txt", &testlog()).await;

@@ -4,7 +4,7 @@
 // raw file.
 import { expect, test, type Page } from '@playwright/test';
 
-import { TESTLOG } from './visual-pages.ts';
+import { TESTLOG } from './pages.ts';
 import {
   blockEveImages,
   deleteRawLog,

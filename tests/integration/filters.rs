@@ -1,8 +1,7 @@
 //! The analysis page's URL state read from the query string: trimmed,
-//! empty as null, `hide` split and filtered, array parameters ignored
-//! (FIXES.md, "Array query parameters broke the analysis page").
+//! empty as null, `hide` split and filtered, array parameters ignored.
 
-use loganalyzer::filters::{Filters, str_trim};
+use loganalyzer::filters::{Filters, trim_value};
 
 fn filters(query: &str) -> Filters {
     Filters::from_query(query)
@@ -85,7 +84,7 @@ fn bytes_that_are_not_utf8_become_replacement_characters() {
 }
 
 #[test]
-fn str_trim_matches_laravel() {
-    assert_eq!(str_trim("\u{FEFF}\u{200B}\u{200E} x \t\0"), "x");
-    assert_eq!(str_trim("\u{2003}x\u{2029}"), "x");
+fn trim_value_trims_invisible_marks_and_unicode_spaces() {
+    assert_eq!(trim_value("\u{FEFF}\u{200B}\u{200E} x \t\0"), "x");
+    assert_eq!(trim_value("\u{2003}x\u{2029}"), "x");
 }

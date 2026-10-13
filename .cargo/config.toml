@@ -3,7 +3,6 @@
 # run concurrently.
 [env]
 RUST_TEST_THREADS = "1"
-# The parser runs on PCRE2 like PHP's preg_* functions: the bundled copy,
-# linked statically, so every build (host, docker, CI) runs the same
-# library version.
+# The parser runs on the bundled PCRE2, linked statically, so every
+# build (host, docker, CI) runs the same library version.
 PCRE2_SYS_STATIC = "1"

@@ -15,7 +15,7 @@ use axum::extract::{DefaultBodyLimit, Request};
 use axum::http::{HeaderMap, HeaderValue, Method, StatusCode, header};
 use axum::middleware::Next;
 use axum::response::{IntoResponse, Response};
-use axum::routing::{any, get, post};
+use axum::routing::{get, post};
 use sqlx::PgPool;
 
 use crate::config::Config;
@@ -62,17 +62,11 @@ pub fn router(state: AppState) -> Router {
         .route("/analyze", post(actions::analyze))
         .route("/logs/{uuid}/download", get(actions::download))
         .route("/logs/{uuid}/regenerate", post(actions::regenerate))
-        // Laravel's local disk route; nothing is served from there.
-        .route("/storage/{*path}", any(errors::not_found))
         .nest("/api", api_router())
         .fallback(errors::not_found)
         .method_not_allowed_fallback(errors::method_not_allowed)
         .layer(DefaultBodyLimit::max(body_limit))
         .layer(axum::middleware::from_fn(reject_cross_site_mutations))
-        .layer(axum::middleware::from_fn_with_state(
-            state.clone(),
-            reload_inertia_requests,
-        ))
         .layer(axum::middleware::from_fn(canonical_paths))
         .with_state(state)
 }
@@ -85,8 +79,7 @@ fn api_router() -> Router<AppState> {
 }
 
 /// One URL per page: a trailing slash (`/logs/x/`) redirects to the path
-/// without it, and the old front controller (`/index.php`, also as a
-/// prefix) to the path after it. 308 keeps the method of a form post.
+/// without it. 308 keeps the method of a form post.
 async fn canonical_paths(request: Request, next: Next) -> Response {
     let path = request.uri().path();
     let query = request
@@ -94,34 +87,17 @@ async fn canonical_paths(request: Request, next: Next) -> Response {
         .query()
         .map(|query| format!("?{query}"))
         .unwrap_or_default();
-    let target = if let Some(rest) = path.strip_prefix("/index.php") {
-        (rest.is_empty() || rest.starts_with('/')).then(|| {
-            let rest = rest.trim_end_matches('/');
-            (
-                StatusCode::MOVED_PERMANENTLY,
-                if rest.is_empty() {
-                    "/".to_owned()
-                } else {
-                    rest.to_owned()
-                },
-            )
-        })
-    } else if path.len() > 1 && path.ends_with('/') {
+    let target = (path.len() > 1 && path.ends_with('/')).then(|| {
         let trimmed = path.trim_end_matches('/');
-        Some((
-            StatusCode::PERMANENT_REDIRECT,
-            if trimmed.is_empty() {
-                "/".to_owned()
-            } else {
-                trimmed.to_owned()
-            },
-        ))
-    } else {
-        None
-    };
+        if trimmed.is_empty() {
+            "/".to_owned()
+        } else {
+            trimmed.to_owned()
+        }
+    });
     match target {
-        Some((status, path)) => {
-            let mut response = status.into_response();
+        Some(path) => {
+            let mut response = StatusCode::PERMANENT_REDIRECT.into_response();
             if let Ok(location) = HeaderValue::from_str(&format!("{path}{query}")) {
                 response.headers_mut().insert(header::LOCATION, location);
             }
@@ -131,50 +107,7 @@ async fn canonical_paths(request: Request, next: Next) -> Response {
     }
 }
 
-/// Tabs left open on the Laravel site still send Inertia's XHR
-/// (`X-Inertia: true`). A 409 with `X-Inertia-Location` makes Inertia load
-/// that URL in full: the same page for a GET, the page a form was on for
-/// anything else (its Referer, or the home page).
-async fn reload_inertia_requests(
-    axum::extract::State(state): axum::extract::State<AppState>,
-    request: Request,
-    next: Next,
-) -> Response {
-    if !request.headers().contains_key("x-inertia") {
-        return next.run(request).await;
-    }
-    let headers = request.headers();
-    let location = if matches!(*request.method(), Method::GET | Method::HEAD) {
-        let scheme = headers
-            .get("x-forwarded-proto")
-            .and_then(|value| value.to_str().ok())
-            .unwrap_or_else(|| state.config.app_url.split("://").next().unwrap_or("https"));
-        let host = headers
-            .get(header::HOST)
-            .and_then(|value| value.to_str().ok())
-            .unwrap_or_default();
-        let path = request
-            .uri()
-            .path_and_query()
-            .map_or("/", |path| path.as_str());
-        format!("{scheme}://{host}{path}")
-    } else {
-        headers
-            .get(header::REFERER)
-            .and_then(|value| value.to_str().ok())
-            .filter(|referer| !is_cross_site_url(referer, headers))
-            .map_or_else(|| format!("{}/", state.config.app_url), str::to_owned)
-    };
-    let mut response = StatusCode::CONFLICT.into_response();
-    if let Ok(location) = location.parse() {
-        response
-            .headers_mut()
-            .insert("x-inertia-location", location);
-    }
-    response
-}
-
-/// The same-origin check that replaces Laravel's CSRF token: a mutation
+/// The same-origin check that stands in for a CSRF token: a mutation
 /// the browser marks as coming from another site, or whose `Origin` is not
 /// this host, is refused. Requests without either header (scripts, curl)
 /// cannot be forged by a third-party page and pass.

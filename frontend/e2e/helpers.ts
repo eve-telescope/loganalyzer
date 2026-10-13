@@ -6,7 +6,7 @@ import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { expect, type APIRequestContext, type Page } from '@playwright/test';
 
-import type { Upload } from './visual-pages.ts';
+import type { Upload } from './pages.ts';
 
 export function psql(sql: string): string {
   return execFileSync(
@@ -38,7 +38,7 @@ export function quote(value: string | null): string {
   return value === null ? 'null' : `'${value.replaceAll("'", "''")}'`;
 }
 
-/** Laravel's RefreshDatabase: every table empty, no raw logs. */
+/** Every table empty, no raw logs. */
 export function resetDatabase(): void {
   psql('truncate combat_events, combat_logs, eve_entities restart identity cascade');
   inApi('rm -f /data/combat-logs/*.txt.gz');
@@ -48,36 +48,104 @@ export function fixture(name: string): Buffer {
   return readFileSync(new URL(`../../tests/fixtures/parser/${name}.txt`, import.meta.url));
 }
 
-const SCENARIOS: Record<string, string> = {
-  testlog: 'upload-testlog',
-  testlog2: 'upload-testlog2',
-  testlog3: 'upload-testlog3',
+type CachedName = [kind: 'character' | 'inventory_type', name: string, eveId: number | null];
+
+/** Every name of the larger fixture logs with the id the mock ESI table
+ * (tests/fixtures/esi/names.json) has for it, or none. */
+const NAMES: Record<string, CachedName[]> = {
+  testlog: [
+    ['character', 'Aria Vex', 93000001],
+    ['character', 'Korr Malan', 93000002],
+    ['character', 'Selene Dur', 93000003],
+    ['character', 'Tovak Rin', 93000004],
+    ['character', 'Logi Pilot', 93000005],
+    ['inventory_type', 'Drake', 24698],
+    ['inventory_type', 'Hurricane', 24702],
+    ['inventory_type', 'Caracal', 621],
+    ['inventory_type', 'Rupture', 629],
+    ['inventory_type', 'Basilisk', 11985],
+  ],
+  testlog2: [
+    ['character', 'Sabre', null],
+    ['inventory_type', 'Sabre', 22456],
+    ['character', 'Curse', null],
+    ['character', 'Bhaalgorn', null],
+    ['character', 'Stiletto', null],
+    ['character', 'Ashimmu', null],
+    ['inventory_type', 'Curse', null],
+    ['inventory_type', 'Bhaalgorn', null],
+    ['inventory_type', 'Stiletto', null],
+    ['inventory_type', 'Ashimmu', null],
+  ],
+  testlog3: [
+    ['character', 'DarkOldMaker', null],
+    ['character', 'Valynda DtAuber', null],
+    ['character', 'Daniel Grosny', null],
+    ['character', 'Sill Isis', null],
+    ['character', 'eeski', null],
+    ['character', 'Fardendur', null],
+    ['character', 'Jinggels', null],
+    ['character', 'Flo May', null],
+    ['character', 'Maven Kador', null],
+    ['character', 'Shizzles Mantar', null],
+    ['character', 'Fogaz', null],
+    ['character', 'Vanbo Murgalesh', null],
+    ['character', 'vyshnegradsky', null],
+    ['character', 'Cab Man', null],
+    ['character', 'Ares Tzestu', null],
+    ['character', 'Corevas', null],
+    ['character', 'Loki', null],
+    ['character', 'Salvatore Satriani', null],
+    ['character', 'Basilisk', null],
+    ['inventory_type', 'Basilisk', 11985],
+    ['character', 'Belisarius Koren', null],
+    ['character', 'Midgath Stallsman', null],
+    ['character', 'GROUND XERO', null],
+    ['character', 'Ufoporno', null],
+    ['character', 'Okudaa', null],
+    ['character', 'Wood3hs Pizza', null],
+    ['character', 'Jason Horne', null],
+    ['character', 'Devesta Julii', null],
+    ['character', 'Anun Naku', null],
+    ['character', 'Gorax Skord', null],
+    ['character', 'Avion Sundiver', null],
+    ['character', 'Calista Seymour', null],
+    ['character', 'Lambertx', null],
+    ['character', 'Warrior II', null],
+    ['character', 'Manfred Stahler', null],
+    ['character', 'Kitty Duval', null],
+    ['inventory_type', 'Huginn', 11961],
+    ['inventory_type', 'Nightmare', null],
+    ['inventory_type', 'Claymore', null],
+    ['inventory_type', 'Ishkur', null],
+    ['inventory_type', 'Ishtar', null],
+    ['inventory_type', 'Onyx', null],
+    ['inventory_type', 'Deimos', null],
+    ['inventory_type', 'Condor', null],
+    ['inventory_type', 'Flycatcher', null],
+    ['inventory_type', 'Revelation Navy Issue', null],
+    ['inventory_type', 'Legion', null],
+    ['inventory_type', 'Vengeance', null],
+    ['inventory_type', 'Lachesis', null],
+    ['inventory_type', 'Broadsword', null],
+    ['inventory_type', 'Hurricane Fleet Issue', null],
+  ],
 };
 
 /**
- * The names of a fixture log as the Laravel reference resolved them (its
- * mock ESI), cached before the upload, so the upload asks ESI nothing
- * and the page shows what the reference showed.
+ * Caches the names of a fixture log before its upload, so the upload asks
+ * ESI nothing and the page shows the same ids on every machine.
  */
 export function cacheNames(fixtureName: string): void {
-  const scenario = SCENARIOS[fixtureName];
-  if (!scenario) {
-    return;
-  }
-  const recorded = JSON.parse(
-    readFileSync(new URL('../../tests/fixtures/golden/mutations.json', import.meta.url), 'utf8'),
-  ) as {
-    name: string;
-    rows: { eve_entities: { kind: string; name: string; eve_id: number | null }[] };
-  }[];
-  const rows = recorded.find((entry) => entry.name === scenario)!.rows.eve_entities;
-  if (rows.length === 0) {
+  const rows = NAMES[fixtureName];
+  if (!rows) {
     return;
   }
   psql(
     `insert into eve_entities (kind, name, eve_id, created_at, updated_at) values ${rows
       .map(
-        (row) => `(${quote(row.kind)}, ${quote(row.name)}, ${row.eve_id ?? 'null'}, now(), now())`,
+        ([kind, name, eveId]) =>
+          `(${quote(kind)}, ${quote(name)}, ${eveId ?? 'null'}, now(), now())`,
       )
       .join(', ')} on conflict do nothing`,
   );
@@ -127,7 +195,7 @@ export function watchErrors(page: Page): string[] {
 }
 
 /** Portraits and icons stay away (the fixture ids have none), so the
- * initials show, as in the recorded Laravel pages. */
+ * initials show. */
 export async function blockEveImages(page: Page): Promise<void> {
   await page.route(/images\.evetech\.net/, (route) => route.abort());
 }

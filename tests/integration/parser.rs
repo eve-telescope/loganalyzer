@@ -1,9 +1,6 @@
-//! The parser against the PHP parser: CombatLogParserTest's tests one to
-//! one, and the full output for every fixture in tests/fixtures/parser
-//! and the generated corpus, compared with what PHP answered
-//! (`*.expected.json`, scripts/laravel-reference/parser_expected.py).
-//! Where PHP threw (the upload answered 500), the fixed behavior is
-//! pinned instead (FIXES.md).
+//! The parser: single lines and the full output for every fixture in
+//! tests/fixtures/parser (`<name>.txt` against `<name>.expected.json`)
+//! and for the generated corpus of small logs.
 
 use loganalyzer::parser::{Direction, Event, EventType, ParsedLog, parse};
 use serde_json::Value;
@@ -35,8 +32,6 @@ fn only_event(name: &str) -> Event {
     assert_eq!(events.len(), 1, "{events:#?}");
     events.into_iter().next().expect("one event")
 }
-
-// CombatLogParserTest.php
 
 #[test]
 fn it_extracts_the_listener_name_from_the_header() {
@@ -265,11 +260,10 @@ fn it_parses_outgoing_neutralization_from_the_testlog3_fixture() {
     assert!(outgoing > 300, "{outgoing}");
 }
 
-// The fixed crashes (FIXES.md, "Some logs failed the upload with 500").
+// Lines with odd parts.
 
 #[test]
 fn a_rich_energy_line_without_a_ship_keeps_the_event() {
-    assert!(expected("edge-rich-neut-without-ship")["error"].is_string());
     let event = only_event("edge-rich-neut-without-ship");
     assert_eq!(event.player_name, "DarkOldMaker");
     assert_eq!(event.corporation.as_deref(), Some("TLOS"));
@@ -280,7 +274,6 @@ fn a_rich_energy_line_without_a_ship_keeps_the_event() {
 
 #[test]
 fn a_rich_energy_line_whose_pilot_sits_in_markup_reads_as_the_plain_format() {
-    assert!(expected("edge-rich-neut-pilot-in-tag")["error"].is_string());
     let event = only_event("edge-rich-neut-pilot-in-tag");
     assert_eq!(event.player_name, "Huginn");
     assert_eq!(event.ship_name.as_deref(), Some("Huginn"));
@@ -289,21 +282,17 @@ fn a_rich_energy_line_whose_pilot_sits_in_markup_reads_as_the_plain_format() {
 
 #[test]
 fn a_drone_owner_with_a_numeric_name_is_attributed() {
-    assert!(expected("edge-numeric-pilot")["error"].is_string());
     let events = parsed("edge-numeric-pilot").events;
     assert_eq!(events[1].player_name, "12345");
     assert_eq!(events[1].ship_name.as_deref(), Some("Hammerhead II"));
 }
 
 #[test]
-fn an_energy_amount_below_php_int_min_saturates() {
-    // PHP's abs() of PHP_INT_MIN is a float, which the event refused.
+fn an_energy_amount_below_i64_min_saturates() {
     let events = parsed("edge-huge-numbers").events;
     let last = events.last().expect("events");
     assert_eq!(last.damage, i64::MAX);
 }
-
-// FIXES.md, "A ticker or ship called 0 was dropped".
 
 #[test]
 fn a_corporation_or_ship_named_0_is_kept() {
@@ -314,38 +303,10 @@ fn a_corporation_or_ship_named_0_is_kept() {
     assert_eq!(event.ship_name.as_deref(), Some("0"));
 }
 
-// Every fixture against PHP's answer.
-
-/// The documented differences: the fixtures PHP failed on, and the
-/// fields the "0" fix changes.
-fn known_difference(name: &str, expected: &mut Value) -> bool {
-    match name {
-        "edge-rich-neut-without-ship" | "edge-rich-neut-pilot-in-tag" | "edge-numeric-pilot" => {
-            true
-        }
-        "edge-corp-zero" => {
-            expected["events"][0]["corporation"] = Value::from("0");
-            expected["events"][3]["corporation"] = Value::from("0");
-            false
-        }
-        "edge-rich-neut-zero-ship" => {
-            expected["events"][0]["shipName"] = Value::from("0");
-            false
-        }
-        "edge-huge-numbers" => {
-            let events = expected["events"].as_array_mut().expect("events");
-            let last = events.last_mut().expect("an event");
-            if last.get("damage").is_none() {
-                last["damage"] = Value::from(i64::MAX);
-            }
-            false
-        }
-        _ => false,
-    }
-}
+// Every fixture against its expected output.
 
 #[test]
-fn every_fixture_parses_like_php() {
+fn every_fixture_parses_to_its_expected_output() {
     let directory = repo_path("tests/fixtures/parser");
     let mut names: Vec<String> = std::fs::read_dir(&directory)
         .expect("fixtures")
@@ -357,10 +318,7 @@ fn every_fixture_parses_like_php() {
     names.sort();
     assert!(names.len() > 50, "{names:?}");
     for name in names {
-        let mut wanted = expected(&name);
-        if known_difference(&name, &mut wanted) {
-            continue;
-        }
+        let wanted = expected(&name);
         let actual = serde_json::to_value(parsed(&name)).expect("JSON");
         if let Some(difference) = crate::common::json_difference(&name, &wanted, &actual) {
             panic!("{difference}");
@@ -369,7 +327,7 @@ fn every_fixture_parses_like_php() {
 }
 
 #[test]
-fn the_generated_corpus_parses_like_php() {
+fn the_generated_corpus_parses_to_its_expected_output() {
     let read = |file: &str| -> Value {
         let path = repo_path(&format!("tests/fixtures/parser/generated/{file}"));
         serde_json::from_str(&std::fs::read_to_string(path).expect("corpus")).expect("JSON")
@@ -382,7 +340,6 @@ fn the_generated_corpus_parses_like_php() {
         let bytes = base64_decode(encoded.as_str().expect("base64"));
         let actual = serde_json::to_value(parse(&bytes)).expect("JSON");
         let wanted = &outputs[name];
-        assert!(wanted.get("error").is_none(), "{name}: {wanted}");
         assert_json_eq(wanted, &actual);
     }
 }

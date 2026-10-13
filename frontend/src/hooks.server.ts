@@ -2,10 +2,9 @@ import type { Handle, HandleFetch } from '@sveltejs/kit/hooks';
 import { AXUM_URL } from '$app/env/private';
 
 import { canonicalRedirect } from '#lib/server/canonical.ts';
-import { inertiaReload } from '#lib/server/inertia.ts';
 
 export const handle: Handle = async ({ event, resolve }) => {
-  return canonicalRedirect(event.url) ?? inertiaReload(event.request, event.url) ?? resolve(event);
+  return canonicalRedirect(event.url) ?? resolve(event);
 };
 
 // Server-side loads reach Axum directly; the browser goes through the

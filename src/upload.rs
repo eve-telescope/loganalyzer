@@ -1,13 +1,13 @@
 //! The upload form's one field, `log_file`, read from a multipart body
-//! and checked like Laravel's `required` and `File::default()
-//! ->extensions(['txt', 'log'])->max(...)` rules, with their messages.
+//! and checked: present, a file, a `.txt` or `.log` name and at most the
+//! configured size, each with its message.
 
 use axum::extract::Multipart;
 use axum::extract::multipart::MultipartError;
 use axum::http::StatusCode;
 
-/// An accepted log: its bytes and the name the browser sent, as Symfony
-/// cleaned it (the part after the last `/` or `\`).
+/// An accepted log: its bytes and the name the browser sent (the part
+/// after the last `/` or `\`).
 #[derive(Debug)]
 pub struct LogFile {
     pub contents: Vec<u8>,
@@ -34,13 +34,13 @@ enum Field {
     File { name: String, contents: Vec<u8> },
 }
 
-/// The client name as Symfony's `UploadedFile` keeps it.
+/// The file name without any path the browser sent with it.
 pub fn client_name(name: &str) -> String {
     let name = name.replace('\\', "/");
     name.rsplit('/').next().unwrap_or_default().to_owned()
 }
 
-/// `strtolower(pathinfo($name, PATHINFO_EXTENSION))`.
+/// The lowercased extension after the last dot, or empty.
 pub fn client_extension(name: &str) -> String {
     name.rsplit_once('.')
         .map(|(_, extension)| extension.to_ascii_lowercase())
@@ -64,7 +64,7 @@ pub async fn read(mut multipart: Multipart, max_size_mb: u64) -> Result<LogFile,
             Ok(bytes) => bytes,
             Err(error) => return Err(read_error(&error, max_size_mb)),
         };
-        // A later occurrence replaces an earlier one, as in PHP.
+        // A later occurrence replaces an earlier one.
         field = match file_name {
             // A file input left empty sends a part without a file name.
             Some(name) if name.is_empty() => Field::Missing,
@@ -79,7 +79,9 @@ pub async fn read(mut multipart: Multipart, max_size_mb: u64) -> Result<LogFile,
     match field {
         Field::Missing => Err(REQUIRED.to_owned()),
         // ConvertEmptyStringsToNull, after TrimStrings.
-        Field::Text(text) if crate::filters::str_trim(&text).is_empty() => Err(REQUIRED.to_owned()),
+        Field::Text(text) if crate::filters::trim_value(&text).is_empty() => {
+            Err(REQUIRED.to_owned())
+        }
         Field::Text(_) => Err(NOT_A_FILE.to_owned()),
         Field::File { name, contents } => {
             let original_name = client_name(&name);

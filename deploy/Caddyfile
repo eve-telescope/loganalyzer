@@ -29,7 +29,7 @@
 	}
 
 	@axum {
-		path /api /api/* /up /up/* /analyze /analyze/* /storage /storage/* /logs/*/download /logs/*/regenerate
+		path /api /api/* /up /up/* /analyze /analyze/* /logs/*/download /logs/*/regenerate
 	}
 	reverse_proxy @axum {$API_HOST:api}:3000
 

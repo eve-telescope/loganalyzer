@@ -3,9 +3,8 @@
 
 // Paths Axum owns outright: every method proxies to the API. `/api` the
 // page props and the health check, `/up` the health page, `/analyze` the
-// upload (so a GET gets the api's 405), `/storage` Laravel's old local
-// disk route (404).
-export const axumPrefixes = ['/api', '/up', '/analyze', '/storage'];
+// upload (so a GET gets the api's 405).
+export const axumPrefixes = ['/api', '/up', '/analyze'];
 
 // Below a log: the raw log download and the regeneration
 // (`/logs/{uuid}/download`, `/logs/{uuid}/regenerate`).

@@ -1,5 +1,4 @@
-// The timeline's series and its drag selection
-// (resources/js/components/charts/DpsLineChart.vue).
+// The timeline's series and its drag selection.
 import type { DateTimeRange, DpsDataPoint, SeriesKey } from '#lib/types.ts';
 
 export const SERIES: ReadonlyArray<{

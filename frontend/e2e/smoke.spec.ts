@@ -3,7 +3,7 @@
 import { expect, test } from '@playwright/test';
 
 import { blockEveImages, resetDatabase, uploadLog, watchErrors } from './helpers.ts';
-import { EMPTY, TESTLOG, TESTLOG3 } from './visual-pages.ts';
+import { EMPTY, TESTLOG, TESTLOG3 } from './pages.ts';
 
 test.beforeEach(() => resetDatabase());
 

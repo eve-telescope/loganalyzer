@@ -13,42 +13,24 @@ the browser at Axum's port directly. The setup mirrors Medico
 structure or tooling, do what they do. ESI work follows MutaMarket
 (`../MutaMarket`).
 
-## The legacy reference
-
-The site ran as a Laravel 13 + Inertia/Vue app (Octane), which is still on
-the `main` branch until cutover (and checked out read-only at
-`../forge-migration/legacy/loganalyzer`). It is the spec for behavior:
-read how it does something before changing or completing a feature here,
-and mirror it. The plan is
-`../forge-migration/sites/loganalyzer.eve-telescope.com/plan.md`.
-
-- `tests/fixtures/golden/` holds what Laravel actually answered, recorded
-  with `scripts/laravel-reference/` (`run.sh setup`, `run.sh start`,
-  `record.py`, `capture.mjs`, `analysis-outputs.mjs`), against the mock
-  ESI table `tests/fixtures/esi/names.json`.
-- `tests/fixtures/parser/*.expected.json` and `generated/expected.json`
-  are the PHP parser's answers (`parser_expected.py`),
-  `tests/fixtures/php-functions/answers.json` PHP's string functions'.
-- Never regenerate a fixture to make a failing change pass.
-
-Every Laravel bug is fixed, not copied, and logged in `FIXES.md` with the
-test that pins it. Any other difference from Laravel is a bug here.
-
 ## The parser
 
-`src/parser/` keeps PHP's `preg_*` patterns as they were, on PCRE2 with
-PHP's `/u` options (UTF and UCP), so its output matches the PHP parser
-byte for byte; `strip_tags`, `mb_trim` and `(int)` are ported in
-`src/parser/php.rs`. A change to the parser needs `cargo test parser::`
-and `scripts/parser-diff` (PHP in the reference container against
-`src/bin/parse_logs.rs`) to stay green. Pattern strings with `\u` must be
-written with escaped backslashes.
+`src/parser/` runs its patterns on PCRE2 in UTF and UCP mode;
+`src/parser/text.rs` strips markup, trims and reads numbers. Every
+fixture log in `tests/fixtures/parser` has its parsed output next to it
+(`<name>.expected.json`), and `generated/` is a corpus of small logs with
+theirs: `cargo test parser::` pins all of them, so a parser change that
+alters an output updates that file in the same commit, on purpose.
+Uploaded logs are kept, and a regeneration reparses them with the
+current parser. Pattern strings with `\u` must be written with escaped
+backslashes.
 
 ## Testing rules
 
 - Every change lands with its tests in the same commit.
 - Tests are precise: exact JSON key sets at every level
-  (`common::assert_json_eq`), exact messages, statuses and orderings.
+  (`common::assert_json_eq`), exact messages, statuses and orderings,
+  with the expected values written out in the test.
 - Behavior tests drive the real router (`oneshot`) on the dedicated
   `loganalyzer_test` database (`db::test_pool()`, created and migrated on
   first use, `TEST_DATABASE_URL` to override). ESI is a local mock on an
@@ -61,8 +43,6 @@ written with escaped backslashes.
   `*.svelte.test.ts` ones run in Chromium). Playwright (`frontend/e2e`)
   runs against the composed stack and seeds through
   `docker exec loganalyzer-postgres psql`.
-- `tests/PORTED.md` maps every PHP test to its port; `scripts/parity`
-  prints passing over total per suite.
 - Before committing: `cargo fmt`, `cargo clippy --all-targets` (zero
   warnings), `cargo test`, and in `frontend/` `npm run check`,
   `npm run lint`, `npm run format:check`, `npm test`.
@@ -79,7 +59,7 @@ written with escaped backslashes.
   `BIND_ADDR`, default 127.0.0.1:3000, see `.env.example`) and
   `npm run dev` in `frontend/`.
 - Whole stack: `docker compose up --build` on http://localhost:5317.
-  Ports are fixed: Postgres 5447, stack 5317, the Laravel reference 8317.
+  Ports are fixed: Postgres 5447, stack 5317.
   The `sample-seed` service stores three sample logs (fixed uuids
   `5a3b6e1c-0d4f-4a2b-8c7d-1e2f3a4b5c01` to `...03`, names resolved
   through the real ESI). Playwright truncates the same database and
@@ -89,8 +69,10 @@ written with escaped backslashes.
   `APP_URL=https://loganalyzer.test ORIGIN=https://loganalyzer.test
   docker compose up --build -d`.
 - Frontend: pages load their props from `/api/pages/<path>`
-  (`#lib/server/api.ts`); the analysis math is `#lib/analysis.ts`, lifted
-  from the Laravel page and pinned value by value.
-- Deploy: merge to main. GitHub Actions builds the three images
-  (`ghcr.io/eve-telescope/loganalyzer-{api,frontend,proxy}`) and pushes
-  them to GHCR, then Coolify redeploys `compose.prod.yml`.
+  (`#lib/server/api.ts`); the analysis math is `#lib/analysis.ts`, pinned
+  value by value in `analysis.test.ts`.
+- Production: Coolify runs `compose.prod.yml` (`loganalyzer-api`,
+  `loganalyzer-frontend` and `loganalyzer-proxy`, images from GHCR built
+  by `.github/workflows/release.yml` on every push to main); the api
+  reaches the shared Coolify Postgres over the `coolify` network (see the
+  README).

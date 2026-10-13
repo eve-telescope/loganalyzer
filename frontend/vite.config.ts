@@ -64,7 +64,7 @@ export default defineConfig({
         test: {
           name: 'server',
           environment: 'node',
-          // The server renders log times in UTC, like the Laravel box.
+          // The server renders log times in UTC.
           env: { TZ: 'UTC' },
           include: ['src/**/*.{test,spec}.{js,ts}', '*.test.ts'],
           exclude: ['src/**/*.svelte.{test,spec}.{js,ts}'],

@@ -1,6 +1,5 @@
 // The pilot avatar's portrait or, for NPCs and unresolved names, its
-// initials on a hue picked by a hash of the name
-// (resources/js/components/ui/PilotAvatar.vue).
+// initials on a hue picked by a hash of the name.
 
 const HUES = [
   'bg-zinc-700 text-zinc-200',

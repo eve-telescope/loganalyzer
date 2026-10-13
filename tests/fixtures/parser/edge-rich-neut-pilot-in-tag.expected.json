@@ -1,3 +1,17 @@
 {
-  "error": "TypeError: App\\Services\\CombatLogParser::clean(): Argument #1 ($value) must be of type string, null given, called in /app/app/Services/CombatLogParser.php on line 224"
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:01",
+      "damage": 27,
+      "direction": "incoming",
+      "playerName": "Huginn",
+      "corporation": null,
+      "shipName": "Huginn",
+      "weapon": "Heavy Abyssal Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization"
+    }
+  ]
 }

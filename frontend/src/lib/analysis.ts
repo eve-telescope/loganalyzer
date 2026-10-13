@@ -1,6 +1,5 @@
-// Everything the analysis page shows, derived from the event list: the
-// functions of the Laravel page (resources/js/pages/Analysis.vue) as they
-// were, each taking what its computed property read.
+// Everything the analysis page shows, derived from the event list, one
+// function per panel, each taking only what it reads.
 
 import { eveTimestampToIso, formatDateTime, formatTime, parseTime } from './dates.ts';
 import type {

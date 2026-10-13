@@ -1,16 +1,14 @@
 //! The combat log parser: an EVE Online gamelog in, the listener, the
-//! session start and the combat events out. The patterns are PHP's
-//! `preg_*` patterns as they were, run by PCRE2 with PHP's `/u` options
-//! (UTF and UCP), so lazy quantifiers, the lookahead of the event
-//! splitter and `$` before a final newline behave the same. The input is
-//! the uploaded bytes as they are; bytes that are not UTF-8 match nothing
-//! (listener `Unknown`, no events), as PHP's functions return false on
-//! them.
+//! session start and the combat events out. The patterns run on PCRE2
+//! in UTF and UCP mode, which decides how lazy quantifiers, the
+//! lookahead of the event splitter and `$` before a final newline behave.
+//! The input is the uploaded bytes as they are; a log that is not UTF-8
+//! matches nothing (listener `Unknown`, no events).
 //!
-//! tests/integration/parser.rs compares the output with what the PHP
-//! parser answered for every fixture and a generated corpus.
+//! tests/integration/parser.rs pins the output for every fixture and a
+//! generated corpus.
 
-pub mod php;
+pub mod text;
 
 use std::collections::{HashMap, HashSet};
 use std::sync::LazyLock;
@@ -18,7 +16,7 @@ use std::sync::LazyLock;
 use pcre2::bytes::{Captures, Regex, RegexBuilder};
 use serde::{Deserialize, Serialize};
 
-use php::{clean, int, strip_tags};
+use text::{clean, leading_int, strip_tags};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
@@ -154,14 +152,13 @@ static ENERGY_SHIP: LazyLock<Regex> =
     LazyLock::new(|| u(r"<b>([^<]*)</b>|<fontsize=\d+>([^<]*)</fontsize>"));
 static TARGET: LazyLock<Regex> = LazyLock::new(|| u(r"^(.+?)\[([^\]]*)\]\(([^)]+)\)$"));
 
-/// `preg_match`: a match, or nothing (no match, or a PCRE2 error such as
+/// The first match, or nothing (no match, or a PCRE2 error such as
 /// a subject that is not UTF-8).
 fn first<'s>(regex: &Regex, subject: &'s [u8]) -> Option<Captures<'s>> {
     regex.captures(subject).ok().flatten()
 }
 
-/// A group's bytes; a group that did not take part is empty, as PHP
-/// reports it.
+/// A group's bytes; a group that did not take part is empty.
 fn group<'s>(captures: &Captures<'s>, index: usize) -> &'s [u8] {
     captures
         .get(index)
@@ -174,9 +171,8 @@ fn text(bytes: &[u8]) -> String {
 
 /// Parses a whole gamelog.
 pub fn parse(contents: &[u8]) -> ParsedLog {
-    // PHP checks the whole subject before every match and answers false
-    // for bytes that are not UTF-8. Every later subject is a part of this
-    // one cut at character boundaries.
+    // A log that is not UTF-8 matches nothing. Every later subject is a
+    // part of this one cut at character boundaries, so it is checked once.
     if std::str::from_utf8(contents).is_err() {
         return ParsedLog {
             listener: "Unknown".to_owned(),
@@ -198,8 +194,7 @@ pub fn parse(contents: &[u8]) -> ParsedLog {
 fn parse_events(contents: &[u8]) -> Vec<Event> {
     let mut events = Vec::new();
     for entry in ENTRY.captures_iter(contents) {
-        // An error mid-way (PHP: preg_match_all returns false) ends the
-        // list with the matches so far.
+        // An error mid-way ends the list with the matches so far.
         let Ok(entry) = entry else { break };
         if let Some(event) = parse_combat_line(&text(group(&entry, 1)), group(&entry, 2)) {
             events.push(event);
@@ -226,10 +221,10 @@ fn energy_quality(verb: &[u8]) -> String {
     .to_owned()
 }
 
-/// The amount of an energy line: `abs((int) $amount)`, saturating where
-/// PHP's `abs` overflowed into a float.
+/// The amount of an energy line, without its sign; `i64::MIN` saturates
+/// to `i64::MAX`.
 fn energy_amount(amount: &[u8]) -> i64 {
-    int(&text(amount)).saturating_abs()
+    leading_int(&text(amount)).saturating_abs()
 }
 
 fn parse_combat_line(timestamp: &str, content: &[u8]) -> Option<Event> {
@@ -255,7 +250,7 @@ fn parse_combat_line(timestamp: &str, content: &[u8]) -> Option<Event> {
     // Logistics received, the target in separate ship and pilot markup.
     if let Some(m) = first(&LOGI_RECEIVED_RICH, content) {
         return Some(event(
-            int(&text(group(&m, 1))),
+            leading_int(&text(group(&m, 1))),
             Direction::Incoming,
             clean(group(&m, 5)),
             None,
@@ -270,7 +265,7 @@ fn parse_combat_line(timestamp: &str, content: &[u8]) -> Option<Event> {
     if let Some(m) = first(&LOGI_RECEIVED_PLAIN, content) {
         let target = parse_target(&clean(group(&m, 4)));
         return Some(event(
-            int(&text(group(&m, 1))),
+            leading_int(&text(group(&m, 1))),
             Direction::Incoming,
             target.name,
             target.corporation,
@@ -291,7 +286,7 @@ fn parse_combat_line(timestamp: &str, content: &[u8]) -> Option<Event> {
             ticker
         });
         return Some(event(
-            int(&text(group(&m, 1))),
+            leading_int(&text(group(&m, 1))),
             Direction::Outgoing,
             clean(group(&m, 5)),
             Some(corporation),
@@ -305,7 +300,7 @@ fn parse_combat_line(timestamp: &str, content: &[u8]) -> Option<Event> {
     // Logistics dealt, plain target (kept whole, not split).
     if let Some(m) = first(&LOGI_DEALT_PLAIN, content) {
         return Some(event(
-            int(&text(group(&m, 1))),
+            leading_int(&text(group(&m, 1))),
             Direction::Outgoing,
             clean(group(&m, 4)),
             None,
@@ -385,7 +380,7 @@ fn parse_combat_line(timestamp: &str, content: &[u8]) -> Option<Event> {
             Direction::Incoming
         };
         return Some(event(
-            int(&text(group(&m, 1))),
+            leading_int(&text(group(&m, 1))),
             direction,
             target.name,
             target.corporation,

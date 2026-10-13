@@ -1,18 +1,17 @@
-//! The `Content-Disposition` of a download, built like Symfony's
-//! `HeaderUtils::makeDisposition` with Laravel's ASCII fallback name:
-//! `attachment; filename=<ASCII>` plus `filename*=utf-8''<name>` when the
+//! The `Content-Disposition` of a download: `attachment;
+//! filename=<ASCII>` plus `filename*=utf-8''<name>` (RFC 6266) when the
 //! name is not plain ASCII.
 
 use percent_encoding::{AsciiSet, NON_ALPHANUMERIC, utf8_percent_encode};
 
-/// PHP's `rawurlencode`: everything but letters, digits and `-_.~`.
+/// Percent-encodes everything but letters, digits and `-_.~`.
 const RAWURLENCODE: &AsciiSet = &NON_ALPHANUMERIC
     .remove(b'-')
     .remove(b'_')
     .remove(b'.')
     .remove(b'~');
 
-/// The ASCII stand-in for a name, as Laravel's `Str::ascii` made it:
+/// The ASCII stand-in for a name, for clients without `filename*`:
 /// Unicode spaces become spaces, invisible and control characters go,
 /// letters of the Latin, Greek and Cyrillic scripts are transliterated
 /// (deunicode), anything else is dropped.
@@ -47,7 +46,7 @@ pub fn ascii(name: &str) -> String {
     out
 }
 
-/// Symfony's `HeaderUtils::quote`: a token stays bare, anything else is
+/// A header parameter value: a token stays bare, anything else is
 /// quoted with `"` and `\` escaped.
 fn quote(value: &str) -> String {
     let token = !value.is_empty()
@@ -82,7 +81,7 @@ mod tests {
     use super::attachment;
 
     #[test]
-    fn builds_symfony_dispositions() {
+    fn builds_dispositions_with_an_ascii_fallback() {
         assert_eq!(
             attachment("my-fight.txt"),
             "attachment; filename=my-fight.txt"

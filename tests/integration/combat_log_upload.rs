@@ -1,14 +1,13 @@
-//! CombatLogUploadTest.php, one to one, with the assertions made exact:
-//! the upload page's props, the upload, the analysis page's props, ESI
-//! name resolution against the mock, the raw log download and the
-//! regeneration.
+//! The main flow: the upload page's props, the upload, the analysis
+//! page's props, ESI name resolution against the mock, the raw log
+//! download and the regeneration.
 
 use axum::http::StatusCode;
 use serde_json::{Value, json};
 
 use crate::common::{TestApp, assert_json_eq, at, fixture, gunzip, gzip, testlog};
 
-/// The answer `fakeEsiIds()` gave.
+/// A small ESI table: two pilots and two ships.
 fn fake_esi_ids(app: &TestApp) {
     app.esi.set_table(json!({
         "characters": { "Aria Vex": 93000001, "Korr Malan": 93000002 },

@@ -1,6 +1,6 @@
 //! A mock of ESI's `POST /universe/ids/` on an ephemeral port, answering
-//! from a name table the way scripts/laravel-reference/mock_esi.py
-//! answered the Laravel reference: every requested name the table knows
+//! from a name table (tests/fixtures/esi/names.json) the way ESI does:
+//! every requested name the table knows
 //! (compared case-insensitively) under each category that has it, with
 //! the table's spelling; empty categories left out. It records what it
 //! was asked and can be told to fail.

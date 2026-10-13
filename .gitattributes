@@ -8,4 +8,3 @@
 # The parser fixtures are uploaded bytes: CRLF and bare CR line ends,
 # BOMs and invalid UTF-8 are what they test, so git must not touch them.
 tests/fixtures/parser/*.txt -text
-tests/fixtures/golden/http/*.bin -text

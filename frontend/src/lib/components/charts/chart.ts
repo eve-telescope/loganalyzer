@@ -1,5 +1,4 @@
-// chart.js with the pieces the charts use, registered once (vue-chartjs
-// registered each chart's controller with its component).
+// chart.js with the pieces the charts use, registered once.
 import {
   ArcElement,
   BarController,

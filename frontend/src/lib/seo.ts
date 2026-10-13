@@ -1,7 +1,7 @@
 // The <head> of each page as data (rendered by page-head.svelte): the
 // title with the app name after it, the description, OpenGraph and
 // Twitter tags of the page, and the link preview image every page
-// shares (resources/views/app.blade.php and the pages' <Head>).
+// shares.
 
 export interface MetaTag {
   /** `name` or `property`, as the tag was written. */
@@ -34,8 +34,7 @@ const property = (key: string, content: string): MetaTag => ({
 });
 
 /** The tags of every page: the theme color, its URL without the query
- * (the home page without the slash, as Laravel's `url()->current()`
- * wrote it), and the preview image. */
+ * (the home page without the slash), and the preview image. */
 function shared(url: PageUrl): MetaTag[] {
   const image = `${url.origin}/og-image.png`;
   return [

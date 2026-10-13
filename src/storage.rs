@@ -64,7 +64,7 @@ impl RawLogs {
     }
 }
 
-/// The first gzip member's contents, as PHP's `gzdecode` reads them.
+/// The first gzip member's contents.
 pub fn gunzip(compressed: &[u8]) -> Result<Vec<u8>, Undecodable> {
     let mut contents = Vec::new();
     GzDecoder::new(compressed)

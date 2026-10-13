@@ -1,47 +1,10 @@
-//! The harness itself: every route of the Laravel app is registered
-//! (tests/fixtures/routes.json), the mock ESI answers from its table and
-//! records what it was asked, and every app starts on an empty database.
+//! The harness itself: the mock ESI answers from its table and records
+//! what it was asked, and every app starts on an empty database.
 
-use axum::body::Body;
-use axum::http::{Method, StatusCode};
 use serde_json::json;
 
 use crate::common::esi::answer;
-use crate::common::golden::read_json;
-use crate::common::{HOST, MockEsi, TestApp, header_map};
-
-#[tokio::test]
-async fn every_laravel_route_is_registered() {
-    let app = TestApp::new().await;
-    let uuid = "5a3b6e1c-0d4f-4a2b-8c7d-1e2f3a4b5c01";
-    for route in read_json("routes.json").as_array().expect("routes") {
-        let uri = route["uri"].as_str().expect("a uri");
-        if uri.starts_with("storage/") {
-            continue;
-        }
-        let path = match format!("/{}", uri.trim_start_matches('/')).as_str() {
-            "/" => "/api/pages/home".to_owned(),
-            "/logs/{combatLog}" => format!("/api/pages/logs/{uuid}"),
-            other => other.replace("{combatLog}", uuid),
-        };
-        for method in route["method"].as_str().expect("methods").split('|') {
-            let response = app
-                .request(
-                    method.parse::<Method>().expect("a method"),
-                    &path,
-                    header_map(&[("host", HOST)]),
-                    Body::empty(),
-                )
-                .await;
-            assert!(
-                response.status != StatusCode::METHOD_NOT_ALLOWED
-                    && (response.status != StatusCode::NOT_FOUND || path.contains(uuid)),
-                "{method} {path}: {}",
-                response.status
-            );
-        }
-    }
-}
+use crate::common::{MockEsi, TestApp};
 
 #[tokio::test]
 async fn the_mock_esi_answers_from_its_table_and_records_requests() {

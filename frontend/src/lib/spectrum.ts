@@ -1,4 +1,4 @@
-// The hit quality bar (resources/js/components/charts/QualitySpectrum.vue).
+// The hit quality bar.
 // Hit quality is ordinal (Wrecks = best roll, Grazes = worst, Misses =
 // none), so each direction uses one hue running bright to dim, with
 // misses in neutral slate. Counts are always shown in the legend so

@@ -3,4 +3,3 @@
 node_modules
 .DS_Store
 /storage
-__pycache__

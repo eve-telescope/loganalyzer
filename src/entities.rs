@@ -14,7 +14,7 @@ pub const CHARACTER: &str = "character";
 pub const INVENTORY_TYPE: &str = "inventory_type";
 
 /// Unique names in first-seen order, without empty ones (and without
-/// `"0"`, which PHP's `array_filter` dropped and no EVE name is).
+/// `"0"`, which no EVE name is).
 fn distinct(names: impl IntoIterator<Item = String>) -> Vec<String> {
     let mut seen = HashSet::new();
     names
@@ -32,7 +32,7 @@ struct Row {
 }
 
 /// An insertion-ordered map of rows where a later write to a key keeps
-/// the key's place (a PHP array).
+/// the key's place.
 #[derive(Default)]
 struct Rows {
     order: Vec<Row>,

@@ -17,8 +17,8 @@ pub struct Filters {
     pub hide: Vec<String>,
 }
 
-/// One query parameter after PHP's parsing: the last plain value, or an
-/// array when the last occurrence used `name[...]`.
+/// One query parameter: the last plain value, or an array when the last
+/// occurrence used `name[...]` (which counts as no value).
 #[derive(Debug, Clone)]
 enum Param {
     Value(String),
@@ -38,7 +38,7 @@ fn param(query: &str, name: &str) -> Option<Param> {
     found
 }
 
-static STR_TRIM: LazyLock<Regex> = LazyLock::new(|| {
+static VALUE_TRIM: LazyLock<Regex> = LazyLock::new(|| {
     RegexBuilder::new()
         .utf(true)
         .ucp(true)
@@ -46,13 +46,15 @@ static STR_TRIM: LazyLock<Regex> = LazyLock::new(|| {
         .expect("pattern")
 });
 
-/// Laravel's `Str::trim`, which its TrimStrings middleware applies to
-/// every query value: Unicode whitespace, BOM, zero width space and the
+/// Trims a query value: Unicode whitespace, BOM, zero width space and the
 /// left-to-right mark at both ends.
-pub fn str_trim(value: &str) -> String {
+pub fn trim_value(value: &str) -> String {
     let mut out = String::new();
     let mut last = 0;
-    for found in STR_TRIM.find_iter(value.as_bytes()).filter_map(Result::ok) {
+    for found in VALUE_TRIM
+        .find_iter(value.as_bytes())
+        .filter_map(Result::ok)
+    {
         out.push_str(&value[last..found.start()]);
         last = found.end();
     }
@@ -60,15 +62,15 @@ pub fn str_trim(value: &str) -> String {
     out
 }
 
-/// PHP's `trim`: ASCII whitespace and NUL.
-fn php_trim(value: &str) -> &str {
+/// Trims ASCII whitespace and NUL.
+fn ascii_trim(value: &str) -> &str {
     value.trim_matches([' ', '\n', '\r', '\t', '\x0b', '\0'])
 }
 
-/// A plain value after TrimStrings and ConvertEmptyStringsToNull.
+/// A plain value, trimmed; empty is none.
 fn value(query: &str, name: &str) -> Option<String> {
     match param(query, name)? {
-        Param::Value(value) => Some(str_trim(&value)).filter(|value| !value.is_empty()),
+        Param::Value(value) => Some(trim_value(&value)).filter(|value| !value.is_empty()),
         Param::Array => None,
     }
 }
@@ -78,7 +80,7 @@ impl Filters {
         let hide = value(query, "hide")
             .map(|hide| {
                 hide.split(',')
-                    .map(php_trim)
+                    .map(ascii_trim)
                     .filter(|part| !part.is_empty() && *part != "0")
                     .map(str::to_owned)
                     .collect()
@@ -98,8 +100,8 @@ mod tests {
     use super::*;
 
     #[test]
-    fn trims_like_laravel() {
-        assert_eq!(str_trim("\u{200B} a b \u{3000}"), "a b");
-        assert_eq!(str_trim("\u{180E}x"), "x");
+    fn trims_unicode_whitespace_and_invisible_marks() {
+        assert_eq!(trim_value("\u{200B} a b \u{3000}"), "a b");
+        assert_eq!(trim_value("\u{180E}x"), "x");
     }
 }

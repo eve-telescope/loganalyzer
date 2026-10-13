@@ -1,4 +1,4 @@
-/* The site's styles, as the Laravel app had them (resources/css/app.css). */
+/* The site's styles: Tailwind with the theme's colors and fonts. */
 @import 'tailwindcss';
 
 @theme inline {

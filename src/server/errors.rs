@@ -1,16 +1,15 @@
-//! Error answers: the error pages the site always showed (Laravel's
-//! minimal page for the statuses it had a view for, Symfony's generic
-//! page for the others) and JSON for the api and for fetch requests.
+//! Error answers: the minimal error page for the common statuses, a
+//! plain page for the rest, and JSON for the api and for fetch requests.
 
 use axum::Json;
 use axum::http::{HeaderMap, HeaderValue, StatusCode, Uri, header};
 use axum::response::{Html, IntoResponse, Response};
 use serde_json::json;
 
-/// Laravel's minimal error view.
-const LARAVEL_PAGE: &str = include_str!("error.html");
-/// Symfony's error page, for statuses Laravel had no view for.
-const SYMFONY_PAGE: &str = include_str!("symfony-error.html");
+/// The minimal error page: the status and its message, centered.
+const MINIMAL_PAGE: &str = include_str!("error.html");
+/// The plain page for the statuses the minimal page is not used for.
+const PLAIN_PAGE: &str = include_str!("plain-error.html");
 
 /// The English message of a status, as the pages and JSON errors show it.
 pub fn message(status: StatusCode) -> &'static str {
@@ -31,8 +30,8 @@ pub fn message(status: StatusCode) -> &'static str {
 
 pub fn error_page(status: StatusCode) -> Response {
     let template = match status.as_u16() {
-        401 | 402 | 403 | 404 | 419 | 429 | 500 | 503 => LARAVEL_PAGE,
-        _ => SYMFONY_PAGE,
+        401 | 402 | 403 | 404 | 419 | 429 | 500 | 503 => MINIMAL_PAGE,
+        _ => PLAIN_PAGE,
     };
     let page = template
         .replace("{{status}}", status.as_str())
@@ -84,9 +83,4 @@ pub async fn not_found(uri: Uri) -> Response {
 /// A known path with another method.
 pub async fn method_not_allowed() -> Response {
     error_page(StatusCode::METHOD_NOT_ALLOWED)
-}
-
-/// The answer of every route that is registered but not ported yet.
-pub async fn not_implemented() -> Response {
-    json_error(StatusCode::NOT_IMPLEMENTED, "Not Implemented")
 }

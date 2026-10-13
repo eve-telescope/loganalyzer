@@ -1,5 +1,4 @@
-// The upload form's state, like Inertia's `useForm` had it (`errors`,
-// `processing`, `progress`). The file goes up with XMLHttpRequest,
+// The upload form's state (`errors`, `processing`, `progress`). The file goes up with XMLHttpRequest,
 // which reports upload progress (fetch does not).
 import { failureMessage } from './upload.ts';
 
