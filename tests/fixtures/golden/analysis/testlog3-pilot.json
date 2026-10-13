@@ -1,0 +1,6408 @@
+{
+  "ogTitle": "De BuG — Combat Analysis",
+  "ogDescription": "17,115 damage dealt / 202,827 received — 28 DPS avg — 10m 13s combat",
+  "selection": null,
+  "hiddenSeries": [],
+  "dpsOverTime": [
+    {
+      "datetime": "2026-05-28T19:10:30",
+      "label": "19:10:30",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 419.8
+    },
+    {
+      "datetime": "2026-05-28T19:10:35",
+      "label": "19:10:35",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:10:40",
+      "label": "19:10:40",
+      "dpsDealt": 0,
+      "dpsReceived": 36.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 139.8
+    },
+    {
+      "datetime": "2026-05-28T19:10:45",
+      "label": "19:10:45",
+      "dpsDealt": 0,
+      "dpsReceived": 381.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 412.8
+    },
+    {
+      "datetime": "2026-05-28T19:10:50",
+      "label": "19:10:50",
+      "dpsDealt": 0,
+      "dpsReceived": 419,
+      "logiReceived": 400.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 303.4
+    },
+    {
+      "datetime": "2026-05-28T19:10:55",
+      "label": "19:10:55",
+      "dpsDealt": 36,
+      "dpsReceived": 498.8,
+      "logiReceived": 773.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 107.6
+    },
+    {
+      "datetime": "2026-05-28T19:11:00",
+      "label": "19:11:00",
+      "dpsDealt": 37.6,
+      "dpsReceived": 298,
+      "logiReceived": 435.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 143
+    },
+    {
+      "datetime": "2026-05-28T19:11:05",
+      "label": "19:11:05",
+      "dpsDealt": 67.8,
+      "dpsReceived": 498,
+      "logiReceived": 187.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 179
+    },
+    {
+      "datetime": "2026-05-28T19:11:10",
+      "label": "19:11:10",
+      "dpsDealt": 93.4,
+      "dpsReceived": 532.8,
+      "logiReceived": 739,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 534.2
+    },
+    {
+      "datetime": "2026-05-28T19:11:15",
+      "label": "19:11:15",
+      "dpsDealt": 67.2,
+      "dpsReceived": 407.8,
+      "logiReceived": 463.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 324.8
+    },
+    {
+      "datetime": "2026-05-28T19:11:20",
+      "label": "19:11:20",
+      "dpsDealt": 67.2,
+      "dpsReceived": 512.6,
+      "logiReceived": 502.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 103.2
+    },
+    {
+      "datetime": "2026-05-28T19:11:25",
+      "label": "19:11:25",
+      "dpsDealt": 79.6,
+      "dpsReceived": 741.8,
+      "logiReceived": 312.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 51
+    },
+    {
+      "datetime": "2026-05-28T19:11:30",
+      "label": "19:11:30",
+      "dpsDealt": 101.8,
+      "dpsReceived": 535.6,
+      "logiReceived": 870.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 451
+    },
+    {
+      "datetime": "2026-05-28T19:11:35",
+      "label": "19:11:35",
+      "dpsDealt": 86,
+      "dpsReceived": 541.8,
+      "logiReceived": 646.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 481
+    },
+    {
+      "datetime": "2026-05-28T19:11:40",
+      "label": "19:11:40",
+      "dpsDealt": 47.2,
+      "dpsReceived": 390,
+      "logiReceived": 411.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 121.8
+    },
+    {
+      "datetime": "2026-05-28T19:11:45",
+      "label": "19:11:45",
+      "dpsDealt": 44.2,
+      "dpsReceived": 218,
+      "logiReceived": 92,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 8.4
+    },
+    {
+      "datetime": "2026-05-28T19:11:50",
+      "label": "19:11:50",
+      "dpsDealt": 122.6,
+      "dpsReceived": 174,
+      "logiReceived": 217.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 50.6
+    },
+    {
+      "datetime": "2026-05-28T19:11:55",
+      "label": "19:11:55",
+      "dpsDealt": 128.4,
+      "dpsReceived": 96,
+      "logiReceived": 169.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 816
+    },
+    {
+      "datetime": "2026-05-28T19:12:00",
+      "label": "19:12:00",
+      "dpsDealt": 96.6,
+      "dpsReceived": 126.6,
+      "logiReceived": 132.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 136.6
+    },
+    {
+      "datetime": "2026-05-28T19:12:05",
+      "label": "19:12:05",
+      "dpsDealt": 43,
+      "dpsReceived": 107.2,
+      "logiReceived": 62.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 172.4
+    },
+    {
+      "datetime": "2026-05-28T19:12:10",
+      "label": "19:12:10",
+      "dpsDealt": 43.8,
+      "dpsReceived": 113.6,
+      "logiReceived": 86.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 4.4
+    },
+    {
+      "datetime": "2026-05-28T19:12:15",
+      "label": "19:12:15",
+      "dpsDealt": 0,
+      "dpsReceived": 122.6,
+      "logiReceived": 133,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 148.6
+    },
+    {
+      "datetime": "2026-05-28T19:12:20",
+      "label": "19:12:20",
+      "dpsDealt": 0,
+      "dpsReceived": 31,
+      "logiReceived": 86,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 444
+    },
+    {
+      "datetime": "2026-05-28T19:12:25",
+      "label": "19:12:25",
+      "dpsDealt": 52.4,
+      "dpsReceived": 41.8,
+      "logiReceived": 44.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 283.2
+    },
+    {
+      "datetime": "2026-05-28T19:12:30",
+      "label": "19:12:30",
+      "dpsDealt": 82,
+      "dpsReceived": 32.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 36.2
+    },
+    {
+      "datetime": "2026-05-28T19:12:35",
+      "label": "19:12:35",
+      "dpsDealt": 42.4,
+      "dpsReceived": 26.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 1.2
+    },
+    {
+      "datetime": "2026-05-28T19:12:40",
+      "label": "19:12:40",
+      "dpsDealt": 48.6,
+      "dpsReceived": 19.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:12:45",
+      "label": "19:12:45",
+      "dpsDealt": 22.2,
+      "dpsReceived": 18.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 237.4
+    },
+    {
+      "datetime": "2026-05-28T19:12:50",
+      "label": "19:12:50",
+      "dpsDealt": 25,
+      "dpsReceived": 13,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 475.6
+    },
+    {
+      "datetime": "2026-05-28T19:12:55",
+      "label": "19:12:55",
+      "dpsDealt": 15.2,
+      "dpsReceived": 11.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 70
+    },
+    {
+      "datetime": "2026-05-28T19:13:00",
+      "label": "19:13:00",
+      "dpsDealt": 45.8,
+      "dpsReceived": 10.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 82.4
+    },
+    {
+      "datetime": "2026-05-28T19:13:05",
+      "label": "19:13:05",
+      "dpsDealt": 38.2,
+      "dpsReceived": 10.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 68.8
+    },
+    {
+      "datetime": "2026-05-28T19:13:10",
+      "label": "19:13:10",
+      "dpsDealt": 42.2,
+      "dpsReceived": 10.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 264.6
+    },
+    {
+      "datetime": "2026-05-28T19:13:15",
+      "label": "19:13:15",
+      "dpsDealt": 34,
+      "dpsReceived": 1.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 29.2
+    },
+    {
+      "datetime": "2026-05-28T19:13:20",
+      "label": "19:13:20",
+      "dpsDealt": 33.6,
+      "dpsReceived": 1.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 73.8
+    },
+    {
+      "datetime": "2026-05-28T19:13:25",
+      "label": "19:13:25",
+      "dpsDealt": 4.6,
+      "dpsReceived": 5,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 219.6
+    },
+    {
+      "datetime": "2026-05-28T19:13:30",
+      "label": "19:13:30",
+      "dpsDealt": 0,
+      "dpsReceived": 4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 236.4
+    },
+    {
+      "datetime": "2026-05-28T19:13:35",
+      "label": "19:13:35",
+      "dpsDealt": 62,
+      "dpsReceived": 2.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 170.2
+    },
+    {
+      "datetime": "2026-05-28T19:13:40",
+      "label": "19:13:40",
+      "dpsDealt": 50.6,
+      "dpsReceived": 19.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 9
+    },
+    {
+      "datetime": "2026-05-28T19:13:45",
+      "label": "19:13:45",
+      "dpsDealt": 89.2,
+      "dpsReceived": 314.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 305
+    },
+    {
+      "datetime": "2026-05-28T19:13:50",
+      "label": "19:13:50",
+      "dpsDealt": 64.6,
+      "dpsReceived": 825.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 332
+    },
+    {
+      "datetime": "2026-05-28T19:13:55",
+      "label": "19:13:55",
+      "dpsDealt": 40.8,
+      "dpsReceived": 838.6,
+      "logiReceived": 291,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 91.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:00",
+      "label": "19:14:00",
+      "dpsDealt": 19.4,
+      "dpsReceived": 790,
+      "logiReceived": 569.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 626.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:05",
+      "label": "19:14:05",
+      "dpsDealt": 92.2,
+      "dpsReceived": 500.2,
+      "logiReceived": 838.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 53.4
+    },
+    {
+      "datetime": "2026-05-28T19:14:10",
+      "label": "19:14:10",
+      "dpsDealt": 68.2,
+      "dpsReceived": 859,
+      "logiReceived": 1373,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 22.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:15",
+      "label": "19:14:15",
+      "dpsDealt": 115.8,
+      "dpsReceived": 1126.6,
+      "logiReceived": 968.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 59.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:20",
+      "label": "19:14:20",
+      "dpsDealt": 68.6,
+      "dpsReceived": 1665.6,
+      "logiReceived": 1015.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 473.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:25",
+      "label": "19:14:25",
+      "dpsDealt": 68.4,
+      "dpsReceived": 1115.8,
+      "logiReceived": 750.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 184.6
+    },
+    {
+      "datetime": "2026-05-28T19:14:30",
+      "label": "19:14:30",
+      "dpsDealt": 59.8,
+      "dpsReceived": 1027.6,
+      "logiReceived": 866.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 54
+    },
+    {
+      "datetime": "2026-05-28T19:14:35",
+      "label": "19:14:35",
+      "dpsDealt": 56.8,
+      "dpsReceived": 903,
+      "logiReceived": 591,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 71.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:40",
+      "label": "19:14:40",
+      "dpsDealt": 24.6,
+      "dpsReceived": 752.4,
+      "logiReceived": 756.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 68.6
+    },
+    {
+      "datetime": "2026-05-28T19:14:45",
+      "label": "19:14:45",
+      "dpsDealt": 71.6,
+      "dpsReceived": 967.2,
+      "logiReceived": 282.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 226.8
+    },
+    {
+      "datetime": "2026-05-28T19:14:50",
+      "label": "19:14:50",
+      "dpsDealt": 42.8,
+      "dpsReceived": 1017.6,
+      "logiReceived": 1129,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 206.8
+    },
+    {
+      "datetime": "2026-05-28T19:14:55",
+      "label": "19:14:55",
+      "dpsDealt": 49.8,
+      "dpsReceived": 1088.4,
+      "logiReceived": 1065.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 97.8
+    },
+    {
+      "datetime": "2026-05-28T19:15:00",
+      "label": "19:15:00",
+      "dpsDealt": 111.4,
+      "dpsReceived": 1073.6,
+      "logiReceived": 818.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 182
+    },
+    {
+      "datetime": "2026-05-28T19:15:05",
+      "label": "19:15:05",
+      "dpsDealt": 99.8,
+      "dpsReceived": 894,
+      "logiReceived": 1007,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 150.6
+    },
+    {
+      "datetime": "2026-05-28T19:15:10",
+      "label": "19:15:10",
+      "dpsDealt": 73.6,
+      "dpsReceived": 351.8,
+      "logiReceived": 358,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 281.4
+    },
+    {
+      "datetime": "2026-05-28T19:15:15",
+      "label": "19:15:15",
+      "dpsDealt": 46,
+      "dpsReceived": 375.8,
+      "logiReceived": 912.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 89.2
+    },
+    {
+      "datetime": "2026-05-28T19:15:20",
+      "label": "19:15:20",
+      "dpsDealt": 108.4,
+      "dpsReceived": 43,
+      "logiReceived": 743,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 93.2
+    },
+    {
+      "datetime": "2026-05-28T19:15:25",
+      "label": "19:15:25",
+      "dpsDealt": 105.2,
+      "dpsReceived": 60.6,
+      "logiReceived": 380.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 61.8
+    },
+    {
+      "datetime": "2026-05-28T19:15:30",
+      "label": "19:15:30",
+      "dpsDealt": 91,
+      "dpsReceived": 64.4,
+      "logiReceived": 196.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 53.8
+    },
+    {
+      "datetime": "2026-05-28T19:15:35",
+      "label": "19:15:35",
+      "dpsDealt": 67.6,
+      "dpsReceived": 100.4,
+      "logiReceived": 473.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 224
+    },
+    {
+      "datetime": "2026-05-28T19:15:40",
+      "label": "19:15:40",
+      "dpsDealt": 26.2,
+      "dpsReceived": 418.8,
+      "logiReceived": 95.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 180.4
+    },
+    {
+      "datetime": "2026-05-28T19:15:45",
+      "label": "19:15:45",
+      "dpsDealt": 0,
+      "dpsReceived": 638.8,
+      "logiReceived": 422.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 26.6
+    },
+    {
+      "datetime": "2026-05-28T19:15:50",
+      "label": "19:15:50",
+      "dpsDealt": 0,
+      "dpsReceived": 196.6,
+      "logiReceived": 382.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 156
+    },
+    {
+      "datetime": "2026-05-28T19:15:55",
+      "label": "19:15:55",
+      "dpsDealt": 0,
+      "dpsReceived": 1051.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 44.2
+    },
+    {
+      "datetime": "2026-05-28T19:16:00",
+      "label": "19:16:00",
+      "dpsDealt": 0,
+      "dpsReceived": 999.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 375.8
+    },
+    {
+      "datetime": "2026-05-28T19:16:05",
+      "label": "19:16:05",
+      "dpsDealt": 0,
+      "dpsReceived": 1310.2,
+      "logiReceived": 427.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 76.6
+    },
+    {
+      "datetime": "2026-05-28T19:16:10",
+      "label": "19:16:10",
+      "dpsDealt": 0,
+      "dpsReceived": 999.4,
+      "logiReceived": 475.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 155.4
+    },
+    {
+      "datetime": "2026-05-28T19:16:15",
+      "label": "19:16:15",
+      "dpsDealt": 0,
+      "dpsReceived": 2326.2,
+      "logiReceived": 1069.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 400
+    },
+    {
+      "datetime": "2026-05-28T19:16:20",
+      "label": "19:16:20",
+      "dpsDealt": 0,
+      "dpsReceived": 1346.6,
+      "logiReceived": 687,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 384.2
+    },
+    {
+      "datetime": "2026-05-28T19:16:25",
+      "label": "19:16:25",
+      "dpsDealt": 0,
+      "dpsReceived": 846.2,
+      "logiReceived": 947,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 178
+    },
+    {
+      "datetime": "2026-05-28T19:16:30",
+      "label": "19:16:30",
+      "dpsDealt": 0,
+      "dpsReceived": 1034.8,
+      "logiReceived": 765.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 361.4
+    },
+    {
+      "datetime": "2026-05-28T19:16:35",
+      "label": "19:16:35",
+      "dpsDealt": 0,
+      "dpsReceived": 1316.6,
+      "logiReceived": 621.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 165.8
+    },
+    {
+      "datetime": "2026-05-28T19:16:40",
+      "label": "19:16:40",
+      "dpsDealt": 0,
+      "dpsReceived": 3663,
+      "logiReceived": 558.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 50.4
+    },
+    {
+      "datetime": "2026-05-28T19:16:45",
+      "label": "19:16:45",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:16:50",
+      "label": "19:16:50",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:16:55",
+      "label": "19:16:55",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:00",
+      "label": "19:17:00",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:05",
+      "label": "19:17:05",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:10",
+      "label": "19:17:10",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:15",
+      "label": "19:17:15",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:20",
+      "label": "19:17:20",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:25",
+      "label": "19:17:25",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:30",
+      "label": "19:17:30",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:35",
+      "label": "19:17:35",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:40",
+      "label": "19:17:40",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:45",
+      "label": "19:17:45",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:50",
+      "label": "19:17:50",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:55",
+      "label": "19:17:55",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:00",
+      "label": "19:18:00",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:05",
+      "label": "19:18:05",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:10",
+      "label": "19:18:10",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:15",
+      "label": "19:18:15",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:20",
+      "label": "19:18:20",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:25",
+      "label": "19:18:25",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:30",
+      "label": "19:18:30",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:35",
+      "label": "19:18:35",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:40",
+      "label": "19:18:40",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:45",
+      "label": "19:18:45",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:50",
+      "label": "19:18:50",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:55",
+      "label": "19:18:55",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:00",
+      "label": "19:19:00",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:05",
+      "label": "19:19:05",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:10",
+      "label": "19:19:10",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:15",
+      "label": "19:19:15",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:20",
+      "label": "19:19:20",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:25",
+      "label": "19:19:25",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:30",
+      "label": "19:19:30",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:35",
+      "label": "19:19:35",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:40",
+      "label": "19:19:40",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:45",
+      "label": "19:19:45",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:50",
+      "label": "19:19:50",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:55",
+      "label": "19:19:55",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:00",
+      "label": "19:20:00",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:05",
+      "label": "19:20:05",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:10",
+      "label": "19:20:10",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:15",
+      "label": "19:20:15",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:20",
+      "label": "19:20:20",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:25",
+      "label": "19:20:25",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:30",
+      "label": "19:20:30",
+      "dpsDealt": 0,
+      "dpsReceived": 313.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:35",
+      "label": "19:20:35",
+      "dpsDealt": 0,
+      "dpsReceived": 286.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:40",
+      "label": "19:20:40",
+      "dpsDealt": 0,
+      "dpsReceived": 48,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    }
+  ],
+  "summary": {
+    "totalDamageDealt": 17115,
+    "totalDamageReceived": 202827,
+    "combatDurationSeconds": 613,
+    "dpsDealt": 27.92,
+    "dpsReceived": 330.88,
+    "totalOutgoingHits": 247,
+    "totalOutgoingMisses": 28,
+    "totalIncomingHits": 2717,
+    "totalIncomingMisses": 203,
+    "totalLogiReceived": 143045,
+    "totalLogiDealt": 0
+  },
+  "details": {
+    "qualityOut": {
+      "Penetrates": 70,
+      "Grazes": 30,
+      "Misses": 28,
+      "Hits": 66,
+      "Glances Off": 31,
+      "Smashes": 47,
+      "Wrecks": 3
+    },
+    "qualityIn": {
+      "Grazes": 434,
+      "Hits": 751,
+      "Smashes": 531,
+      "Glances Off": 339,
+      "Penetrates": 630,
+      "Wrecks": 32,
+      "Misses": 203
+    },
+    "biggestHitOut": {
+      "damage": 288,
+      "weapon": "Wasp II",
+      "pilot": "DarkOldMaker"
+    },
+    "biggestHitIn": {
+      "damage": 4736,
+      "weapon": "Quad Mega Pulse Laser II",
+      "pilot": "Anun Naku"
+    },
+    "uniqueTargets": 7,
+    "uniqueAttackers": 30,
+    "pilotsInvolved": 35,
+    "neutIn": 0,
+    "neutOut": 71870,
+    "neutInEvents": 0,
+    "neutOutEvents": 339,
+    "logiInCycles": 362,
+    "logiOutCycles": 0
+  },
+  "peakDps": {
+    "dealt": 126,
+    "received": 1832
+  },
+  "tankSupportRatio": 70.52562035626421,
+  "neutPressureIn": "—",
+  "neutPressureOut": 117.24306688417619,
+  "qualitySegmentsOut": [
+    {
+      "label": "Wrecks",
+      "count": 3
+    },
+    {
+      "label": "Smashes",
+      "count": 47
+    },
+    {
+      "label": "Penetrates",
+      "count": 70
+    },
+    {
+      "label": "Hits",
+      "count": 66
+    },
+    {
+      "label": "Glances Off",
+      "count": 31
+    },
+    {
+      "label": "Grazes",
+      "count": 30
+    },
+    {
+      "label": "Misses",
+      "count": 28
+    }
+  ],
+  "qualitySegmentsIn": [
+    {
+      "label": "Wrecks",
+      "count": 32
+    },
+    {
+      "label": "Smashes",
+      "count": 531
+    },
+    {
+      "label": "Penetrates",
+      "count": 630
+    },
+    {
+      "label": "Hits",
+      "count": 751
+    },
+    {
+      "label": "Glances Off",
+      "count": 339
+    },
+    {
+      "label": "Grazes",
+      "count": 434
+    },
+    {
+      "label": "Misses",
+      "count": 203
+    }
+  ],
+  "damageByTarget": {
+    "DarkOldMaker": {
+      "damage": 9707,
+      "hits": 118,
+      "misses": 6,
+      "ship": "Huginn"
+    },
+    "Shizzles Mantar": {
+      "damage": 3976,
+      "hits": 52,
+      "misses": 6,
+      "ship": "Nightmare"
+    },
+    "Belisarius Koren": {
+      "damage": 2347,
+      "hits": 46,
+      "misses": 2,
+      "ship": "Nightmare"
+    },
+    "Daniel Grosny": {
+      "damage": 1085,
+      "hits": 31,
+      "misses": 1,
+      "ship": "Basilisk"
+    },
+    "Ufoporno": {
+      "damage": 0,
+      "hits": 0,
+      "misses": 6,
+      "ship": null
+    },
+    "Wood3hs Pizza": {
+      "damage": 0,
+      "hits": 0,
+      "misses": 5,
+      "ship": null
+    },
+    "Warrior II": {
+      "damage": 0,
+      "hits": 0,
+      "misses": 2,
+      "ship": null
+    }
+  },
+  "damageByWeapon": {
+    "Wasp II": {
+      "damage": 17115,
+      "hits": 247
+    }
+  },
+  "incomingBySource": {
+    "Anun Naku": {
+      "damage": 33980,
+      "hits": 31,
+      "misses": 0,
+      "ship": "Revelation Navy Issue"
+    },
+    "Jinggels": {
+      "damage": 17019,
+      "hits": 190,
+      "misses": 4,
+      "ship": "Nightmare"
+    },
+    "Fardendur": {
+      "damage": 14204,
+      "hits": 171,
+      "misses": 5,
+      "ship": "Nightmare"
+    },
+    "Cab Man": {
+      "damage": 13885,
+      "hits": 155,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Corevas": {
+      "damage": 13874,
+      "hits": 275,
+      "misses": 17,
+      "ship": "Nightmare"
+    },
+    "Shizzles Mantar": {
+      "damage": 13205,
+      "hits": 99,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Ares Tzestu": {
+      "damage": 11953,
+      "hits": 24,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Maven Kador": {
+      "damage": 10761,
+      "hits": 49,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Jason Horne": {
+      "damage": 10212,
+      "hits": 118,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Belisarius Koren": {
+      "damage": 8838,
+      "hits": 34,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Vanbo Murgalesh": {
+      "damage": 8821,
+      "hits": 157,
+      "misses": 9,
+      "ship": "Nightmare"
+    },
+    "Gorax Skord": {
+      "damage": 8178,
+      "hits": 94,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Flo May": {
+      "damage": 7769,
+      "hits": 304,
+      "misses": 1,
+      "ship": "Nightmare"
+    },
+    "Devesta Julii": {
+      "damage": 7195,
+      "hits": 16,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Fogaz": {
+      "damage": 5975,
+      "hits": 185,
+      "misses": 5,
+      "ship": "Claymore"
+    },
+    "Midgath Stallsman": {
+      "damage": 3313,
+      "hits": 84,
+      "misses": 141,
+      "ship": "Ishtar"
+    },
+    "Kitty Duval": {
+      "damage": 1892,
+      "hits": 8,
+      "misses": 2,
+      "ship": "Hurricane Fleet Issue"
+    },
+    "Valynda DtAuber": {
+      "damage": 1862,
+      "hits": 94,
+      "misses": 0,
+      "ship": "Huginn"
+    },
+    "Ufoporno": {
+      "damage": 1696,
+      "hits": 12,
+      "misses": 0,
+      "ship": "Deimos"
+    },
+    "Avion Sundiver": {
+      "damage": 1690,
+      "hits": 16,
+      "misses": 0,
+      "ship": "Legion"
+    },
+    "DarkOldMaker": {
+      "damage": 1469,
+      "hits": 128,
+      "misses": 1,
+      "ship": "Huginn"
+    },
+    "Manfred Stahler": {
+      "damage": 1349,
+      "hits": 4,
+      "misses": 0,
+      "ship": "Broadsword"
+    },
+    "vyshnegradsky": {
+      "damage": 1012,
+      "hits": 138,
+      "misses": 0,
+      "ship": "Claymore"
+    },
+    "Lambertx": {
+      "damage": 584,
+      "hits": 18,
+      "misses": 0,
+      "ship": "Lachesis"
+    },
+    "eeski": {
+      "damage": 539,
+      "hits": 79,
+      "misses": 1,
+      "ship": "Basilisk"
+    },
+    "Daniel Grosny": {
+      "damage": 505,
+      "hits": 70,
+      "misses": 0,
+      "ship": "Basilisk"
+    },
+    "Salvatore Satriani": {
+      "damage": 459,
+      "hits": 66,
+      "misses": 17,
+      "ship": "Ishkur"
+    },
+    "Sill Isis": {
+      "damage": 426,
+      "hits": 89,
+      "misses": 0,
+      "ship": "Basilisk"
+    },
+    "Okudaa": {
+      "damage": 141,
+      "hits": 6,
+      "misses": 0,
+      "ship": "Condor"
+    },
+    "GROUND XERO": {
+      "damage": 21,
+      "hits": 3,
+      "misses": 0,
+      "ship": "Onyx"
+    }
+  },
+  "incomingByWeapon": {
+    "Tachyon Beam Laser II": {
+      "damage": 135433,
+      "hits": 389
+    },
+    "Quad Mega Pulse Laser II": {
+      "damage": 33980,
+      "hits": 31
+    },
+    "Valkyrie II": {
+      "damage": 6381,
+      "hits": 549
+    },
+    "Warrior II": {
+      "damage": 5569,
+      "hits": 811
+    },
+    "Acolyte II": {
+      "damage": 4628,
+      "hits": 631
+    },
+    "Curator II": {
+      "damage": 3313,
+      "hits": 84
+    },
+    "Mjolnir Fury Heavy Missile": {
+      "damage": 2131,
+      "hits": 14
+    },
+    "Caldari Navy Scourge Heavy Missile": {
+      "damage": 1858,
+      "hits": 21
+    },
+    "Heavy Neutron Blaster II": {
+      "damage": 1696,
+      "hits": 12
+    },
+    "Heavy Beam Laser II": {
+      "damage": 1690,
+      "hits": 16
+    },
+    "425mm AutoCannon II": {
+      "damage": 1680,
+      "hits": 3
+    },
+    "650mm Artillery Cannon II": {
+      "damage": 1381,
+      "hits": 22
+    },
+    "220mm Vulcan AutoCannon II": {
+      "damage": 1349,
+      "hits": 4
+    },
+    "Hobgoblin II": {
+      "damage": 640,
+      "hits": 93
+    },
+    "200mm Railgun II": {
+      "damage": 584,
+      "hits": 18
+    },
+    "280mm Howitzer Artillery II": {
+      "damage": 173,
+      "hits": 4
+    },
+    "Caldari Navy Nova Light Missile": {
+      "damage": 151,
+      "hits": 2
+    },
+    "Mjolnir Light Missile": {
+      "damage": 141,
+      "hits": 6
+    },
+    "Caldari Navy Scourge Rocket": {
+      "damage": 21,
+      "hits": 3
+    },
+    "Light Ion Blaster II": {
+      "damage": 21,
+      "hits": 1
+    },
+    "125mm Gatling AutoCannon II": {
+      "damage": 7,
+      "hits": 3
+    }
+  },
+  "outgoingTableRows": [
+    {
+      "name": "DarkOldMaker",
+      "ship": "Huginn",
+      "damage": 9707,
+      "dps": 16,
+      "hits": 118,
+      "misses": 6,
+      "hitRate": "95.2%"
+    },
+    {
+      "name": "Shizzles Mantar",
+      "ship": "Nightmare",
+      "damage": 3976,
+      "dps": 6,
+      "hits": 52,
+      "misses": 6,
+      "hitRate": "89.7%"
+    },
+    {
+      "name": "Belisarius Koren",
+      "ship": "Nightmare",
+      "damage": 2347,
+      "dps": 4,
+      "hits": 46,
+      "misses": 2,
+      "hitRate": "95.8%"
+    },
+    {
+      "name": "Daniel Grosny",
+      "ship": "Basilisk",
+      "damage": 1085,
+      "dps": 2,
+      "hits": 31,
+      "misses": 1,
+      "hitRate": "96.9%"
+    },
+    {
+      "name": "Ufoporno",
+      "ship": "-",
+      "damage": 0,
+      "dps": 0,
+      "hits": 0,
+      "misses": 6,
+      "hitRate": "0.0%"
+    },
+    {
+      "name": "Wood3hs Pizza",
+      "ship": "-",
+      "damage": 0,
+      "dps": 0,
+      "hits": 0,
+      "misses": 5,
+      "hitRate": "0.0%"
+    },
+    {
+      "name": "Warrior II",
+      "ship": "-",
+      "damage": 0,
+      "dps": 0,
+      "hits": 0,
+      "misses": 2,
+      "hitRate": "0.0%"
+    }
+  ],
+  "incomingTableRows": [
+    {
+      "name": "Anun Naku",
+      "ship": "Revelation Navy Issue",
+      "damage": 33980,
+      "dps": 55,
+      "hits": 31,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Jinggels",
+      "ship": "Nightmare",
+      "damage": 17019,
+      "dps": 28,
+      "hits": 190,
+      "misses": 4,
+      "hitRate": "97.9%"
+    },
+    {
+      "name": "Fardendur",
+      "ship": "Nightmare",
+      "damage": 14204,
+      "dps": 23,
+      "hits": 171,
+      "misses": 5,
+      "hitRate": "97.2%"
+    },
+    {
+      "name": "Cab Man",
+      "ship": "Nightmare",
+      "damage": 13885,
+      "dps": 23,
+      "hits": 155,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Corevas",
+      "ship": "Nightmare",
+      "damage": 13874,
+      "dps": 23,
+      "hits": 275,
+      "misses": 17,
+      "hitRate": "94.2%"
+    },
+    {
+      "name": "Shizzles Mantar",
+      "ship": "Nightmare",
+      "damage": 13205,
+      "dps": 22,
+      "hits": 99,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Ares Tzestu",
+      "ship": "Nightmare",
+      "damage": 11953,
+      "dps": 19,
+      "hits": 24,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Maven Kador",
+      "ship": "Nightmare",
+      "damage": 10761,
+      "dps": 18,
+      "hits": 49,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Jason Horne",
+      "ship": "Nightmare",
+      "damage": 10212,
+      "dps": 17,
+      "hits": 118,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Belisarius Koren",
+      "ship": "Nightmare",
+      "damage": 8838,
+      "dps": 14,
+      "hits": 34,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Vanbo Murgalesh",
+      "ship": "Nightmare",
+      "damage": 8821,
+      "dps": 14,
+      "hits": 157,
+      "misses": 9,
+      "hitRate": "94.6%"
+    },
+    {
+      "name": "Gorax Skord",
+      "ship": "Nightmare",
+      "damage": 8178,
+      "dps": 13,
+      "hits": 94,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Flo May",
+      "ship": "Nightmare",
+      "damage": 7769,
+      "dps": 13,
+      "hits": 304,
+      "misses": 1,
+      "hitRate": "99.7%"
+    },
+    {
+      "name": "Devesta Julii",
+      "ship": "Nightmare",
+      "damage": 7195,
+      "dps": 12,
+      "hits": 16,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Fogaz",
+      "ship": "Claymore",
+      "damage": 5975,
+      "dps": 10,
+      "hits": 185,
+      "misses": 5,
+      "hitRate": "97.4%"
+    },
+    {
+      "name": "Midgath Stallsman",
+      "ship": "Ishtar",
+      "damage": 3313,
+      "dps": 5,
+      "hits": 84,
+      "misses": 141,
+      "hitRate": "37.3%"
+    },
+    {
+      "name": "Kitty Duval",
+      "ship": "Hurricane Fleet Issue",
+      "damage": 1892,
+      "dps": 3,
+      "hits": 8,
+      "misses": 2,
+      "hitRate": "80.0%"
+    },
+    {
+      "name": "Valynda DtAuber",
+      "ship": "Huginn",
+      "damage": 1862,
+      "dps": 3,
+      "hits": 94,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Ufoporno",
+      "ship": "Deimos",
+      "damage": 1696,
+      "dps": 3,
+      "hits": 12,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Avion Sundiver",
+      "ship": "Legion",
+      "damage": 1690,
+      "dps": 3,
+      "hits": 16,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "DarkOldMaker",
+      "ship": "Huginn",
+      "damage": 1469,
+      "dps": 2,
+      "hits": 128,
+      "misses": 1,
+      "hitRate": "99.2%"
+    },
+    {
+      "name": "Manfred Stahler",
+      "ship": "Broadsword",
+      "damage": 1349,
+      "dps": 2,
+      "hits": 4,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "vyshnegradsky",
+      "ship": "Claymore",
+      "damage": 1012,
+      "dps": 2,
+      "hits": 138,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Lambertx",
+      "ship": "Lachesis",
+      "damage": 584,
+      "dps": 1,
+      "hits": 18,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "eeski",
+      "ship": "Basilisk",
+      "damage": 539,
+      "dps": 1,
+      "hits": 79,
+      "misses": 1,
+      "hitRate": "98.8%"
+    },
+    {
+      "name": "Daniel Grosny",
+      "ship": "Basilisk",
+      "damage": 505,
+      "dps": 1,
+      "hits": 70,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Salvatore Satriani",
+      "ship": "Ishkur",
+      "damage": 459,
+      "dps": 1,
+      "hits": 66,
+      "misses": 17,
+      "hitRate": "79.5%"
+    },
+    {
+      "name": "Sill Isis",
+      "ship": "Basilisk",
+      "damage": 426,
+      "dps": 1,
+      "hits": 89,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Okudaa",
+      "ship": "Condor",
+      "damage": 141,
+      "dps": 0,
+      "hits": 6,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "GROUND XERO",
+      "ship": "Onyx",
+      "damage": 21,
+      "dps": 0,
+      "hits": 3,
+      "misses": 0,
+      "hitRate": "100.0%"
+    }
+  ],
+  "logiTableRows": [
+    {
+      "name": "Basilisk",
+      "direction": "Received",
+      "ship": "-",
+      "module": "Large Remote Shield Booster II",
+      "amount": 91683,
+      "count": 227
+    },
+    {
+      "name": "Loki",
+      "direction": "Received",
+      "ship": "-",
+      "module": "Pithum A-Type Medium Remote Shield Booster",
+      "amount": 51362,
+      "count": 135
+    }
+  ],
+  "damageByTargetItems": [
+    {
+      "label": "DarkOldMaker (Huginn)",
+      "value": 9707
+    },
+    {
+      "label": "Shizzles Mantar (Nightmare)",
+      "value": 3976
+    },
+    {
+      "label": "Belisarius Koren (Nightmare)",
+      "value": 2347
+    },
+    {
+      "label": "Daniel Grosny (Basilisk)",
+      "value": 1085
+    },
+    {
+      "label": "Ufoporno",
+      "value": 0
+    },
+    {
+      "label": "Wood3hs Pizza",
+      "value": 0
+    },
+    {
+      "label": "Warrior II",
+      "value": 0
+    }
+  ],
+  "damageByWeaponItems": [
+    {
+      "label": "Wasp II",
+      "value": 17115
+    }
+  ],
+  "incomingBySourceItems": [
+    {
+      "label": "Anun Naku (Revelation Navy Issue)",
+      "value": 33980
+    },
+    {
+      "label": "Jinggels (Nightmare)",
+      "value": 17019
+    },
+    {
+      "label": "Fardendur (Nightmare)",
+      "value": 14204
+    },
+    {
+      "label": "Cab Man (Nightmare)",
+      "value": 13885
+    },
+    {
+      "label": "Corevas (Nightmare)",
+      "value": 13874
+    },
+    {
+      "label": "Shizzles Mantar (Nightmare)",
+      "value": 13205
+    },
+    {
+      "label": "Ares Tzestu (Nightmare)",
+      "value": 11953
+    },
+    {
+      "label": "Maven Kador (Nightmare)",
+      "value": 10761
+    },
+    {
+      "label": "Jason Horne (Nightmare)",
+      "value": 10212
+    },
+    {
+      "label": "Belisarius Koren (Nightmare)",
+      "value": 8838
+    },
+    {
+      "label": "Vanbo Murgalesh (Nightmare)",
+      "value": 8821
+    },
+    {
+      "label": "Gorax Skord (Nightmare)",
+      "value": 8178
+    },
+    {
+      "label": "Flo May (Nightmare)",
+      "value": 7769
+    },
+    {
+      "label": "Devesta Julii (Nightmare)",
+      "value": 7195
+    },
+    {
+      "label": "Fogaz (Claymore)",
+      "value": 5975
+    },
+    {
+      "label": "Midgath Stallsman (Ishtar)",
+      "value": 3313
+    },
+    {
+      "label": "Kitty Duval (Hurricane Fleet Issue)",
+      "value": 1892
+    },
+    {
+      "label": "Valynda DtAuber (Huginn)",
+      "value": 1862
+    },
+    {
+      "label": "Ufoporno (Deimos)",
+      "value": 1696
+    },
+    {
+      "label": "Avion Sundiver (Legion)",
+      "value": 1690
+    },
+    {
+      "label": "DarkOldMaker (Huginn)",
+      "value": 1469
+    },
+    {
+      "label": "Manfred Stahler (Broadsword)",
+      "value": 1349
+    },
+    {
+      "label": "vyshnegradsky (Claymore)",
+      "value": 1012
+    },
+    {
+      "label": "Lambertx (Lachesis)",
+      "value": 584
+    },
+    {
+      "label": "eeski (Basilisk)",
+      "value": 539
+    },
+    {
+      "label": "Daniel Grosny (Basilisk)",
+      "value": 505
+    },
+    {
+      "label": "Salvatore Satriani (Ishkur)",
+      "value": 459
+    },
+    {
+      "label": "Sill Isis (Basilisk)",
+      "value": 426
+    },
+    {
+      "label": "Okudaa (Condor)",
+      "value": 141
+    },
+    {
+      "label": "GROUND XERO (Onyx)",
+      "value": 21
+    }
+  ],
+  "incomingByWeaponItems": [
+    {
+      "label": "Tachyon Beam Laser II",
+      "value": 135433
+    },
+    {
+      "label": "Quad Mega Pulse Laser II",
+      "value": 33980
+    },
+    {
+      "label": "Valkyrie II",
+      "value": 6381
+    },
+    {
+      "label": "Warrior II",
+      "value": 5569
+    },
+    {
+      "label": "Acolyte II",
+      "value": 4628
+    },
+    {
+      "label": "Curator II",
+      "value": 3313
+    },
+    {
+      "label": "Mjolnir Fury Heavy Missile",
+      "value": 2131
+    },
+    {
+      "label": "Caldari Navy Scourge Heavy Missile",
+      "value": 1858
+    },
+    {
+      "label": "Heavy Neutron Blaster II",
+      "value": 1696
+    },
+    {
+      "label": "Heavy Beam Laser II",
+      "value": 1690
+    },
+    {
+      "label": "425mm AutoCannon II",
+      "value": 1680
+    },
+    {
+      "label": "650mm Artillery Cannon II",
+      "value": 1381
+    },
+    {
+      "label": "220mm Vulcan AutoCannon II",
+      "value": 1349
+    },
+    {
+      "label": "Hobgoblin II",
+      "value": 640
+    },
+    {
+      "label": "200mm Railgun II",
+      "value": 584
+    },
+    {
+      "label": "280mm Howitzer Artillery II",
+      "value": 173
+    },
+    {
+      "label": "Caldari Navy Nova Light Missile",
+      "value": 151
+    },
+    {
+      "label": "Mjolnir Light Missile",
+      "value": 141
+    },
+    {
+      "label": "Caldari Navy Scourge Rocket",
+      "value": 21
+    },
+    {
+      "label": "Light Ion Blaster II",
+      "value": 21
+    },
+    {
+      "label": "125mm Gatling AutoCannon II",
+      "value": 7
+    }
+  ],
+  "selectionLabel": null,
+  "selectedPilot": "Flo May",
+  "engagement": {
+    "dealt": 0,
+    "received": 7769,
+    "hitsOn": 0,
+    "missesOn": 0,
+    "hitsBy": 304,
+    "missesBy": 1,
+    "logiIn": 0,
+    "logiOut": 0,
+    "neutIn": 0,
+    "neutOut": 8190,
+    "ship": "Nightmare"
+  },
+  "engagementLog": [
+    {
+      "timestamp": "2026.05.28 19:10:46",
+      "damage": 99,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:10:46"
+    },
+    {
+      "timestamp": "2026.05.28 19:10:50",
+      "damage": 594,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:10:50"
+    },
+    {
+      "timestamp": "2026.05.28 19:10:56",
+      "damage": 94,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:10:56"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:06",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:11:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:06",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:06",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:07",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:07",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:09",
+      "damage": 293,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:09"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:10",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:10",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:11:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:10",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:11",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:11",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:14",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:11:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:14",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:14",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:14",
+      "damage": 600,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:11:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:15",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:15",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:16",
+      "damage": 210,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:18",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:18"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:18",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:11:18"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:18",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:18"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:19",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:19",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:22",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:22"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:22",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:22"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:22",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:22"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:23",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:23"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:23",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:23"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:26",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:26",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:26",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:27",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:27",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:30",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:30"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:30",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:30"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:30",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:30"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:31",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:31",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:34",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:34"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:34",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:34"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:34",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:34"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:35",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:35"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:35",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:35"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:38",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:11:38"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:38",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:38"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:38",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:38"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:38",
+      "damage": 600,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:11:38"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:39",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:39"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:39",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:39"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:42",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:42"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:42",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:42"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:42",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:42"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:43",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:43"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:43",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:43"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:46",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:46"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:46",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:46"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:46",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:46"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:47",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:47"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:47",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:47"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:50",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:50"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:50",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:50"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:50",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:50"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:51",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:51"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:51",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:51"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:54",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:54"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:54",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:54"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:54",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:11:54"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:55",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:55"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:55",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:55"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:58",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:11:58"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:58",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:58"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:58",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:58"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:59",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:11:59"
+    },
+    {
+      "timestamp": "2026.05.28 19:11:59",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:11:59"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:02",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:02",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:02",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:02",
+      "damage": 541,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:12:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:03",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:03",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:06",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:06",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:06",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:07",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:12:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:07",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:10",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:10",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:10",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:11",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:11",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:14",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:14",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:12:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:14",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:15",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:15",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:18",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:18"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:18",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:18"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:18",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:18"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:19",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:19",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:22",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:22"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:22",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:22"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:22",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:22"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:23",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:23"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:23",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:12:23"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:26",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:26",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:26",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:26",
+      "damage": 593,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:12:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:27",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:12:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:27",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:30",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:30"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:30",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:12:30"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:30",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:30"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:31",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:31",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:34",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:34"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:34",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:34"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:34",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:34"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:35",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:35"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:35",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:35"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:38",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:38"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:38",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:38"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:38",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:38"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:39",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:39"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:39",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:39"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:42",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:42"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:42",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:42"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:42",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:42"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:43",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:43"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:43",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:43"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:46",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:46"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:46",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:12:46"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:46",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:46"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:47",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:47"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:47",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:47"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:50",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:12:50"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:50",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:50"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:50",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:50"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:50",
+      "damage": 304,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:12:50"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:51",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:12:51"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:51",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:12:51"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:54",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:54"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:54",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:54"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:54",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:54"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:55",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:55"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:55",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:55"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:58",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:58"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:58",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:12:58"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:58",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:58"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:59",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:59"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:59",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:59"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:02",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:13:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:02",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:13:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:02",
+      "damage": 20,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Wrecks",
+      "type": "damage",
+      "time": "19:13:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:03",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:13:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:03",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:13:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:06",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:13:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:06",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:13:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:06",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:13:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:07",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:13:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:07",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:13:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:10",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:13:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:10",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:13:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:10",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:13:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:11",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:13:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:11",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:13:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:14",
+      "damage": 208,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:13:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:38",
+      "damage": 567,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:13:38"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:02",
+      "damage": 600,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:14:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:03",
+      "damage": 196,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:14:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:10",
+      "damage": 463,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:14:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:17",
+      "damage": 447,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:14:17"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:26",
+      "damage": 600,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:14:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:31",
+      "damage": 236,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:14:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:38",
+      "damage": 182,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:14:38"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:50",
+      "damage": 600,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:14:50"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:51",
+      "damage": 220,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:14:51"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:58",
+      "damage": 345,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:14:58"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:03",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:03",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:04",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:04"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:04",
+      "damage": 2,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:04"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:04",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:04"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:05",
+      "damage": 526,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:05"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:07",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:07",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:08",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:08",
+      "damage": 0,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": null,
+      "shipName": null,
+      "weapon": "Warrior II",
+      "quality": "Misses",
+      "type": "damage",
+      "time": "19:15:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:08",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:11",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:11",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:12",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:12",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:12",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:12",
+      "damage": 487,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:14",
+      "damage": 600,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:15:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:15",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:15",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:16",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:16",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:16",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:19",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:19",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:19",
+      "damage": 321,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:20",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:20"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:20",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:20"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:20",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:20"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:23",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:23"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:23",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:23"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:24",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:24"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:24",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:24"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:24",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:24"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:26",
+      "damage": 45,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:27",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:27",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:28",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:28"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:28",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:28"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:28",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:28"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:31",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:31",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:32",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:32"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:32",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:32"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:32",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:32"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:35",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:35"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:35",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:35"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:36",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:36"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:36",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:36"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:36",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:36"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:39",
+      "damage": 600,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:15:39"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:39",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:39"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:39",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:39"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:40",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:40"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:40",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:40"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:40",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:40"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:43",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:43"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:43",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:43"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:44",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:44"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:44",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:44"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:44",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:44"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:47",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:47"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:47",
+      "damage": 20,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Wrecks",
+      "type": "damage",
+      "time": "19:15:47"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:48",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:48"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:48",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:48"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:48",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:48"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:51",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:51"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:51",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:51"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:52",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:52"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:52",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:52"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:52",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:52"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:55",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:55"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:55",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:55"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:56",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:56"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:56",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:56"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:56",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:56"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:59",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:59"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:59",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:59"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:00",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:00"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:00",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:00"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:00",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:16:00"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:03",
+      "damage": 600,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:16:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:03",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:03",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:16:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:04",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:04"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:04",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:16:04"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:04",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:04"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:07",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:07",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:08",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:08",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:08",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:10",
+      "damage": 598,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:11",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:16:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:11",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:12",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:12",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:12",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:15",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:15",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:16",
+      "damage": 25,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:16:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:16",
+      "damage": 42,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:16",
+      "damage": 48,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:17",
+      "damage": 238,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:16:17"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:19",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:19",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:20",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:20"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:20",
+      "damage": 2,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:16:20"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:20",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:20"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:23",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:23"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:23",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:23"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:24",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:16:24"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:24",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:24"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:24",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:24"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:24",
+      "damage": 314,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:24"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:27",
+      "damage": 583,
+      "direction": "outgoing",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "True Sansha Heavy Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:16:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:27",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:27",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:28",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:16:28"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:28",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:28"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:28",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:28"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:31",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:16:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:31",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:31",
+      "damage": 354,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:32",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:32"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:32",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:32"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:32",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:32"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:35",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:35"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:35",
+      "damage": 3,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:16:35"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:36",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:36"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:36",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:36"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:36",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:16:36"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:38",
+      "damage": 155,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Tachyon Beam Laser II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:16:38"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:40",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:40"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:40",
+      "damage": 4,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:16:40"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:40",
+      "damage": 12,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:40"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:40",
+      "damage": 14,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:16:40"
+    },
+    {
+      "timestamp": "2026.05.28 19:16:40",
+      "damage": 11,
+      "direction": "incoming",
+      "playerName": "Flo May",
+      "corporation": "TLOS",
+      "shipName": "Nightmare",
+      "weapon": "Warrior II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:16:40"
+    }
+  ],
+  "filteredEventCount": 3896,
+  "durations": [
+    "0s",
+    "1s",
+    "59s",
+    "1m 0s",
+    "1m 1s",
+    "59m 59s",
+    "60m 0s",
+    "122m 2s"
+  ],
+  "relativeSessionStart": "4 months ago",
+  "avatars": {
+    "DarkOldMaker": {
+      "initials": "D",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Valynda DtAuber": {
+      "initials": "VD",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "Daniel Grosny": {
+      "initials": "DG",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Sill Isis": {
+      "initials": "SI",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "eeski": {
+      "initials": "E",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "Fardendur": {
+      "initials": "F",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Jinggels": {
+      "initials": "J",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Flo May": {
+      "initials": "FM",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Maven Kador": {
+      "initials": "MK",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Shizzles Mantar": {
+      "initials": "SM",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Fogaz": {
+      "initials": "F",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Vanbo Murgalesh": {
+      "initials": "VM",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "vyshnegradsky": {
+      "initials": "V",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Cab Man": {
+      "initials": "CM",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Ares Tzestu": {
+      "initials": "AT",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Corevas": {
+      "initials": "C",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Loki": {
+      "initials": "L",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "Salvatore Satriani": {
+      "initials": "SS",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Basilisk": {
+      "initials": "B",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Belisarius Koren": {
+      "initials": "BK",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Midgath Stallsman": {
+      "initials": "MS",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "GROUND XERO": {
+      "initials": "GX",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Ufoporno": {
+      "initials": "U",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Okudaa": {
+      "initials": "O",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "Wood3hs Pizza": {
+      "initials": "WP",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Jason Horne": {
+      "initials": "JH",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Devesta Julii": {
+      "initials": "DJ",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Anun Naku": {
+      "initials": "AN",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Gorax Skord": {
+      "initials": "GS",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Avion Sundiver": {
+      "initials": "AS",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Calista Seymour": {
+      "initials": "CS",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Lambertx": {
+      "initials": "L",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Warrior II": {
+      "initials": "WI",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Manfred Stahler": {
+      "initials": "MS",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Kitty Duval": {
+      "initials": "KD",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    }
+  },
+  "spectrumOut": [
+    {
+      "label": "Wrecks",
+      "count": 3,
+      "colorClass": "bg-cyan-200",
+      "share": 1.090909090909091
+    },
+    {
+      "label": "Smashes",
+      "count": 47,
+      "colorClass": "bg-cyan-300",
+      "share": 17.09090909090909
+    },
+    {
+      "label": "Penetrates",
+      "count": 70,
+      "colorClass": "bg-cyan-400",
+      "share": 25.454545454545453
+    },
+    {
+      "label": "Hits",
+      "count": 66,
+      "colorClass": "bg-cyan-500",
+      "share": 24
+    },
+    {
+      "label": "Glances Off",
+      "count": 31,
+      "colorClass": "bg-cyan-600",
+      "share": 11.272727272727273
+    },
+    {
+      "label": "Grazes",
+      "count": 30,
+      "colorClass": "bg-cyan-700",
+      "share": 10.909090909090908
+    },
+    {
+      "label": "Misses",
+      "count": 28,
+      "colorClass": "bg-zinc-600",
+      "share": 10.181818181818182
+    }
+  ],
+  "spectrumIn": [
+    {
+      "label": "Wrecks",
+      "count": 32,
+      "colorClass": "bg-red-200",
+      "share": 1.095890410958904
+    },
+    {
+      "label": "Smashes",
+      "count": 531,
+      "colorClass": "bg-red-300",
+      "share": 18.184931506849313
+    },
+    {
+      "label": "Penetrates",
+      "count": 630,
+      "colorClass": "bg-red-400",
+      "share": 21.575342465753426
+    },
+    {
+      "label": "Hits",
+      "count": 751,
+      "colorClass": "bg-red-500",
+      "share": 25.719178082191778
+    },
+    {
+      "label": "Glances Off",
+      "count": 339,
+      "colorClass": "bg-red-600",
+      "share": 11.609589041095889
+    },
+    {
+      "label": "Grazes",
+      "count": 434,
+      "colorClass": "bg-red-700",
+      "share": 14.863013698630137
+    },
+    {
+      "label": "Misses",
+      "count": 203,
+      "colorClass": "bg-zinc-600",
+      "share": 6.952054794520548
+    }
+  ]
+}

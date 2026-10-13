@@ -1,0 +1,11 @@
+{
+  "path": "/favicon.svg",
+  "method": "GET",
+  "status": 200,
+  "content_type": "image/svg+xml",
+  "headers": {
+    "content-length": "813"
+  },
+  "sha256": "90fb265b23993fcbcf100daa5f55d8d2bb6ee120ffed4a5c8576877404e43bf2",
+  "length": 813
+}

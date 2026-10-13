@@ -1,0 +1,12 @@
+{
+  "path": "/logs/8812f9d6-63d3-4c82-870f-43a31e2a71b2/download",
+  "method": "GET",
+  "status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "headers": {
+    "cache-control": "no-cache, private",
+    "content-disposition": "attachment; filename=.txt; filename*=utf-8''%E6%97%A5%E6%9C%AC%E8%AA%9E.txt"
+  },
+  "sha256": "b704b5f71bc4b031610718801ed334eb11296ecee5272c553a380e369fc68b90",
+  "length": 1090
+}

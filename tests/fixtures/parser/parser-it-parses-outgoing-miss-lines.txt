@@ -1,0 +1,6 @@
+------------------------------------------------------------
+  Gamelog
+  Listener: Test Pilot
+  Session Started: 2026.01.01 12:00:00
+------------------------------------------------------------
+[ 2026.01.01 12:00:05 ] (combat) Your Heavy Missile misses Enemy Pilot completely - Heavy Missile

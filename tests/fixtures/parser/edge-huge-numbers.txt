@@ -1,0 +1,11 @@
+------------------------------------------------------------
+  Gamelog
+  Listener: Test Pilot
+  Session Started: 2026.01.01 12:00:00
+------------------------------------------------------------
+[ 2026.01.01 12:00:01 ] (combat) <color=0xff00ffff><b>4294967295</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Big Pilot[CORP](Titan)</b><font size=10><color=0x77ffffff> - Doomsday - Hits
+[ 2026.01.01 12:00:02 ] (combat) <color=0xff00ffff><b>4294967296</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Big Pilot[CORP](Titan)</b><font size=10><color=0x77ffffff> - Doomsday - Hits
+[ 2026.01.01 12:00:03 ] (combat) <color=0xff00ffff><b>9223372036854775807</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Big Pilot[CORP](Titan)</b><font size=10><color=0x77ffffff> - Doomsday - Hits
+[ 2026.01.01 12:00:04 ] (combat) <color=0xffcc0000><b>99999999999999999999999</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Big Pilot[CORP](Titan)</b><font size=10><color=0x77ffffff> - Doomsday - Hits
+[ 2026.01.01 12:00:05 ] (combat) <color=0xff00ffff><b>000123</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Big Pilot[CORP](Titan)</b><font size=10><color=0x77ffffff> - Doomsday - Hits
+[ 2026.01.01 12:00:06 ] (combat) <color=0xffe57f7f><b>+99999999999999999999 GJ</b><color=0x77ffffff><font size=10> energy drained from </font><b><color=0xffffffff><fontsize=12><color=0xFF2ecc71><b>Titan</b></color></fontsize></b><color=0x77ffffff><font size=10> - Nosferatu</font>

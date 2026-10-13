@@ -1,0 +1,12 @@
+{
+  "path": "/logs/cef2d6cf-6cbd-4be4-b1f4-87074888f1db/download",
+  "method": "GET",
+  "status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "headers": {
+    "cache-control": "no-cache, private",
+    "content-disposition": "attachment; filename=Kampfe.txt; filename*=utf-8''K%C3%A4mpfe.txt"
+  },
+  "sha256": "091602185c14fabb7b6f39fc401422e70261c13cddfb3bf23bf6d318bd0dab03",
+  "length": 27033
+}

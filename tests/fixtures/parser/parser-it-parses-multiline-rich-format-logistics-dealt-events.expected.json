@@ -1,0 +1,17 @@
+{
+  "listener": "Hunter Hughes",
+  "sessionStarted": "2026.07.20 22:25:40",
+  "events": [
+    {
+      "timestamp": "2026.07.20 23:31:34",
+      "damage": 382,
+      "direction": "outgoing",
+      "playerName": "TinkerbeI",
+      "corporation": "LPPLS",
+      "shipName": "Crow",
+      "weapon": "'Peace' Large Remote Armor Repairer",
+      "quality": "armor repaired",
+      "type": "logistics"
+    }
+  ]
+}

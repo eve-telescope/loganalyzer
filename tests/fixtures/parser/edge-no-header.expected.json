@@ -1,0 +1,39 @@
+{
+  "listener": "Unknown",
+  "sessionStarted": "",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:01",
+      "damage": 500,
+      "direction": "outgoing",
+      "playerName": "Enemy Pilot",
+      "corporation": "CORP",
+      "shipName": "Drake",
+      "weapon": "Heavy Missile",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:02",
+      "damage": 120,
+      "direction": "incoming",
+      "playerName": "Enemy Pilot",
+      "corporation": "CORP",
+      "shipName": "Drake",
+      "weapon": "Heavy Missile",
+      "quality": "Smashes",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:03",
+      "damage": 0,
+      "direction": "outgoing",
+      "playerName": "Enemy Pilot",
+      "corporation": null,
+      "shipName": null,
+      "weapon": "Heavy Missile",
+      "quality": "Misses",
+      "type": "damage"
+    }
+  ]
+}

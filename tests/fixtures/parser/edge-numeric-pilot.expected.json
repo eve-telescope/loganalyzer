@@ -1,0 +1,3 @@
+{
+  "error": "TypeError: App\\Data\\CombatEvent::__construct(): Argument #4 ($playerName) must be of type string, int given, called in /app/app/Services/CombatLogParser.php on line 78"
+}

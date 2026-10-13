@@ -1,0 +1,12 @@
+------------------------------------------------------------
+  Gamelog
+  Listener: Hunter Hughes
+  Session Started: 2026.01.01 12:00:00
+------------------------------------------------------------
+[ 2026.01.01 12:00:01 ] (combat) <color=0xffccff66><b>382</b><color=0x77ffffff><font size=10> remote armor repaired to </font><b><color=0xffffffff><color=0xff04f300><b><fontsize=12>Crow
+</color><color=0xffffffff></b></fontsize><fontsize=10>TinkerbeI</color><color=0xff04f300><b>[LPPLS]</b><color=0x77ffffff><font size=10> - 'Peace' Large Remote Armor Repairer</font>
+[ 2026.01.01 12:00:02 ] (notify) Your cloak deactivates due to proximity
+[ 2026.01.01 12:00:03 ] (combat) <color=0xffccff66><b>401</b><color=0x77ffffff><font size=10> remote armor repaired to </font><b><color=0xffffffff><color=0xff04f300><b><fontsize=12>Crow
+</color><color=0xffffffff></b></fontsize><fontsize=10>TinkerbeI</color><color=0xff04f300><b>[LPPLS]</b><color=0x77ffffff><font size=10> - 'Peace' Large Remote Armor Repairer</font>
+[ 2026.01.01 12:00:04 ] (combat) continuation line
+  that runs over two lines - Hits

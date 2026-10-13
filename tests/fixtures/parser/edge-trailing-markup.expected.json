@@ -1,0 +1,39 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:01",
+      "damage": 512,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": "CORP",
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:02",
+      "damage": 410,
+      "direction": "outgoing",
+      "playerName": "Fleet Mate",
+      "corporation": null,
+      "shipName": null,
+      "weapon": "Medium Remote Shield Booster trailing",
+      "quality": "shield boosted",
+      "type": "logistics"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:03",
+      "damage": 500,
+      "direction": "outgoing",
+      "playerName": "Enemy Pilot",
+      "corporation": "CORP",
+      "shipName": "Drake",
+      "weapon": "Heavy Missile",
+      "quality": "Hits",
+      "type": "damage"
+    }
+  ]
+}

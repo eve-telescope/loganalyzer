@@ -1,0 +1,3664 @@
+{
+  "ogTitle": "De BuG — Combat Analysis",
+  "ogDescription": "11,425 damage dealt / 86,625 received — 54 DPS avg — 3m 30s combat",
+  "selection": {
+    "start": "2026-05-28T19:12:00",
+    "end": "2026-05-28T19:15:30"
+  },
+  "hiddenSeries": [
+    "logiReceived"
+  ],
+  "dpsOverTime": [
+    {
+      "datetime": "2026-05-28T19:10:30",
+      "label": "19:10:30",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 419.8
+    },
+    {
+      "datetime": "2026-05-28T19:10:35",
+      "label": "19:10:35",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:10:40",
+      "label": "19:10:40",
+      "dpsDealt": 0,
+      "dpsReceived": 36.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 139.8
+    },
+    {
+      "datetime": "2026-05-28T19:10:45",
+      "label": "19:10:45",
+      "dpsDealt": 0,
+      "dpsReceived": 381.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 412.8
+    },
+    {
+      "datetime": "2026-05-28T19:10:50",
+      "label": "19:10:50",
+      "dpsDealt": 0,
+      "dpsReceived": 419,
+      "logiReceived": 400.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 303.4
+    },
+    {
+      "datetime": "2026-05-28T19:10:55",
+      "label": "19:10:55",
+      "dpsDealt": 36,
+      "dpsReceived": 498.8,
+      "logiReceived": 773.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 107.6
+    },
+    {
+      "datetime": "2026-05-28T19:11:00",
+      "label": "19:11:00",
+      "dpsDealt": 37.6,
+      "dpsReceived": 298,
+      "logiReceived": 435.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 143
+    },
+    {
+      "datetime": "2026-05-28T19:11:05",
+      "label": "19:11:05",
+      "dpsDealt": 67.8,
+      "dpsReceived": 498,
+      "logiReceived": 187.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 179
+    },
+    {
+      "datetime": "2026-05-28T19:11:10",
+      "label": "19:11:10",
+      "dpsDealt": 93.4,
+      "dpsReceived": 532.8,
+      "logiReceived": 739,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 534.2
+    },
+    {
+      "datetime": "2026-05-28T19:11:15",
+      "label": "19:11:15",
+      "dpsDealt": 67.2,
+      "dpsReceived": 407.8,
+      "logiReceived": 463.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 324.8
+    },
+    {
+      "datetime": "2026-05-28T19:11:20",
+      "label": "19:11:20",
+      "dpsDealt": 67.2,
+      "dpsReceived": 512.6,
+      "logiReceived": 502.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 103.2
+    },
+    {
+      "datetime": "2026-05-28T19:11:25",
+      "label": "19:11:25",
+      "dpsDealt": 79.6,
+      "dpsReceived": 741.8,
+      "logiReceived": 312.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 51
+    },
+    {
+      "datetime": "2026-05-28T19:11:30",
+      "label": "19:11:30",
+      "dpsDealt": 101.8,
+      "dpsReceived": 535.6,
+      "logiReceived": 870.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 451
+    },
+    {
+      "datetime": "2026-05-28T19:11:35",
+      "label": "19:11:35",
+      "dpsDealt": 86,
+      "dpsReceived": 541.8,
+      "logiReceived": 646.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 481
+    },
+    {
+      "datetime": "2026-05-28T19:11:40",
+      "label": "19:11:40",
+      "dpsDealt": 47.2,
+      "dpsReceived": 390,
+      "logiReceived": 411.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 121.8
+    },
+    {
+      "datetime": "2026-05-28T19:11:45",
+      "label": "19:11:45",
+      "dpsDealt": 44.2,
+      "dpsReceived": 218,
+      "logiReceived": 92,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 8.4
+    },
+    {
+      "datetime": "2026-05-28T19:11:50",
+      "label": "19:11:50",
+      "dpsDealt": 122.6,
+      "dpsReceived": 174,
+      "logiReceived": 217.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 50.6
+    },
+    {
+      "datetime": "2026-05-28T19:11:55",
+      "label": "19:11:55",
+      "dpsDealt": 128.4,
+      "dpsReceived": 96,
+      "logiReceived": 169.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 816
+    },
+    {
+      "datetime": "2026-05-28T19:12:00",
+      "label": "19:12:00",
+      "dpsDealt": 96.6,
+      "dpsReceived": 126.6,
+      "logiReceived": 132.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 136.6
+    },
+    {
+      "datetime": "2026-05-28T19:12:05",
+      "label": "19:12:05",
+      "dpsDealt": 43,
+      "dpsReceived": 107.2,
+      "logiReceived": 62.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 172.4
+    },
+    {
+      "datetime": "2026-05-28T19:12:10",
+      "label": "19:12:10",
+      "dpsDealt": 43.8,
+      "dpsReceived": 113.6,
+      "logiReceived": 86.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 4.4
+    },
+    {
+      "datetime": "2026-05-28T19:12:15",
+      "label": "19:12:15",
+      "dpsDealt": 0,
+      "dpsReceived": 122.6,
+      "logiReceived": 133,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 148.6
+    },
+    {
+      "datetime": "2026-05-28T19:12:20",
+      "label": "19:12:20",
+      "dpsDealt": 0,
+      "dpsReceived": 31,
+      "logiReceived": 86,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 444
+    },
+    {
+      "datetime": "2026-05-28T19:12:25",
+      "label": "19:12:25",
+      "dpsDealt": 52.4,
+      "dpsReceived": 41.8,
+      "logiReceived": 44.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 283.2
+    },
+    {
+      "datetime": "2026-05-28T19:12:30",
+      "label": "19:12:30",
+      "dpsDealt": 82,
+      "dpsReceived": 32.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 36.2
+    },
+    {
+      "datetime": "2026-05-28T19:12:35",
+      "label": "19:12:35",
+      "dpsDealt": 42.4,
+      "dpsReceived": 26.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 1.2
+    },
+    {
+      "datetime": "2026-05-28T19:12:40",
+      "label": "19:12:40",
+      "dpsDealt": 48.6,
+      "dpsReceived": 19.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:12:45",
+      "label": "19:12:45",
+      "dpsDealt": 22.2,
+      "dpsReceived": 18.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 237.4
+    },
+    {
+      "datetime": "2026-05-28T19:12:50",
+      "label": "19:12:50",
+      "dpsDealt": 25,
+      "dpsReceived": 13,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 475.6
+    },
+    {
+      "datetime": "2026-05-28T19:12:55",
+      "label": "19:12:55",
+      "dpsDealt": 15.2,
+      "dpsReceived": 11.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 70
+    },
+    {
+      "datetime": "2026-05-28T19:13:00",
+      "label": "19:13:00",
+      "dpsDealt": 45.8,
+      "dpsReceived": 10.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 82.4
+    },
+    {
+      "datetime": "2026-05-28T19:13:05",
+      "label": "19:13:05",
+      "dpsDealt": 38.2,
+      "dpsReceived": 10.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 68.8
+    },
+    {
+      "datetime": "2026-05-28T19:13:10",
+      "label": "19:13:10",
+      "dpsDealt": 42.2,
+      "dpsReceived": 10.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 264.6
+    },
+    {
+      "datetime": "2026-05-28T19:13:15",
+      "label": "19:13:15",
+      "dpsDealt": 34,
+      "dpsReceived": 1.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 29.2
+    },
+    {
+      "datetime": "2026-05-28T19:13:20",
+      "label": "19:13:20",
+      "dpsDealt": 33.6,
+      "dpsReceived": 1.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 73.8
+    },
+    {
+      "datetime": "2026-05-28T19:13:25",
+      "label": "19:13:25",
+      "dpsDealt": 4.6,
+      "dpsReceived": 5,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 219.6
+    },
+    {
+      "datetime": "2026-05-28T19:13:30",
+      "label": "19:13:30",
+      "dpsDealt": 0,
+      "dpsReceived": 4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 236.4
+    },
+    {
+      "datetime": "2026-05-28T19:13:35",
+      "label": "19:13:35",
+      "dpsDealt": 62,
+      "dpsReceived": 2.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 170.2
+    },
+    {
+      "datetime": "2026-05-28T19:13:40",
+      "label": "19:13:40",
+      "dpsDealt": 50.6,
+      "dpsReceived": 19.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 9
+    },
+    {
+      "datetime": "2026-05-28T19:13:45",
+      "label": "19:13:45",
+      "dpsDealt": 89.2,
+      "dpsReceived": 314.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 305
+    },
+    {
+      "datetime": "2026-05-28T19:13:50",
+      "label": "19:13:50",
+      "dpsDealt": 64.6,
+      "dpsReceived": 825.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 332
+    },
+    {
+      "datetime": "2026-05-28T19:13:55",
+      "label": "19:13:55",
+      "dpsDealt": 40.8,
+      "dpsReceived": 838.6,
+      "logiReceived": 291,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 91.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:00",
+      "label": "19:14:00",
+      "dpsDealt": 19.4,
+      "dpsReceived": 790,
+      "logiReceived": 569.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 626.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:05",
+      "label": "19:14:05",
+      "dpsDealt": 92.2,
+      "dpsReceived": 500.2,
+      "logiReceived": 838.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 53.4
+    },
+    {
+      "datetime": "2026-05-28T19:14:10",
+      "label": "19:14:10",
+      "dpsDealt": 68.2,
+      "dpsReceived": 859,
+      "logiReceived": 1373,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 22.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:15",
+      "label": "19:14:15",
+      "dpsDealt": 115.8,
+      "dpsReceived": 1126.6,
+      "logiReceived": 968.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 59.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:20",
+      "label": "19:14:20",
+      "dpsDealt": 68.6,
+      "dpsReceived": 1665.6,
+      "logiReceived": 1015.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 473.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:25",
+      "label": "19:14:25",
+      "dpsDealt": 68.4,
+      "dpsReceived": 1115.8,
+      "logiReceived": 750.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 184.6
+    },
+    {
+      "datetime": "2026-05-28T19:14:30",
+      "label": "19:14:30",
+      "dpsDealt": 59.8,
+      "dpsReceived": 1027.6,
+      "logiReceived": 866.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 54
+    },
+    {
+      "datetime": "2026-05-28T19:14:35",
+      "label": "19:14:35",
+      "dpsDealt": 56.8,
+      "dpsReceived": 903,
+      "logiReceived": 591,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 71.2
+    },
+    {
+      "datetime": "2026-05-28T19:14:40",
+      "label": "19:14:40",
+      "dpsDealt": 24.6,
+      "dpsReceived": 752.4,
+      "logiReceived": 756.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 68.6
+    },
+    {
+      "datetime": "2026-05-28T19:14:45",
+      "label": "19:14:45",
+      "dpsDealt": 71.6,
+      "dpsReceived": 967.2,
+      "logiReceived": 282.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 226.8
+    },
+    {
+      "datetime": "2026-05-28T19:14:50",
+      "label": "19:14:50",
+      "dpsDealt": 42.8,
+      "dpsReceived": 1017.6,
+      "logiReceived": 1129,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 206.8
+    },
+    {
+      "datetime": "2026-05-28T19:14:55",
+      "label": "19:14:55",
+      "dpsDealt": 49.8,
+      "dpsReceived": 1088.4,
+      "logiReceived": 1065.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 97.8
+    },
+    {
+      "datetime": "2026-05-28T19:15:00",
+      "label": "19:15:00",
+      "dpsDealt": 111.4,
+      "dpsReceived": 1073.6,
+      "logiReceived": 818.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 182
+    },
+    {
+      "datetime": "2026-05-28T19:15:05",
+      "label": "19:15:05",
+      "dpsDealt": 99.8,
+      "dpsReceived": 894,
+      "logiReceived": 1007,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 150.6
+    },
+    {
+      "datetime": "2026-05-28T19:15:10",
+      "label": "19:15:10",
+      "dpsDealt": 73.6,
+      "dpsReceived": 351.8,
+      "logiReceived": 358,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 281.4
+    },
+    {
+      "datetime": "2026-05-28T19:15:15",
+      "label": "19:15:15",
+      "dpsDealt": 46,
+      "dpsReceived": 375.8,
+      "logiReceived": 912.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 89.2
+    },
+    {
+      "datetime": "2026-05-28T19:15:20",
+      "label": "19:15:20",
+      "dpsDealt": 108.4,
+      "dpsReceived": 43,
+      "logiReceived": 743,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 93.2
+    },
+    {
+      "datetime": "2026-05-28T19:15:25",
+      "label": "19:15:25",
+      "dpsDealt": 105.2,
+      "dpsReceived": 60.6,
+      "logiReceived": 380.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 61.8
+    },
+    {
+      "datetime": "2026-05-28T19:15:30",
+      "label": "19:15:30",
+      "dpsDealt": 91,
+      "dpsReceived": 64.4,
+      "logiReceived": 196.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 53.8
+    },
+    {
+      "datetime": "2026-05-28T19:15:35",
+      "label": "19:15:35",
+      "dpsDealt": 67.6,
+      "dpsReceived": 100.4,
+      "logiReceived": 473.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 224
+    },
+    {
+      "datetime": "2026-05-28T19:15:40",
+      "label": "19:15:40",
+      "dpsDealt": 26.2,
+      "dpsReceived": 418.8,
+      "logiReceived": 95.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 180.4
+    },
+    {
+      "datetime": "2026-05-28T19:15:45",
+      "label": "19:15:45",
+      "dpsDealt": 0,
+      "dpsReceived": 638.8,
+      "logiReceived": 422.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 26.6
+    },
+    {
+      "datetime": "2026-05-28T19:15:50",
+      "label": "19:15:50",
+      "dpsDealt": 0,
+      "dpsReceived": 196.6,
+      "logiReceived": 382.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 156
+    },
+    {
+      "datetime": "2026-05-28T19:15:55",
+      "label": "19:15:55",
+      "dpsDealt": 0,
+      "dpsReceived": 1051.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 44.2
+    },
+    {
+      "datetime": "2026-05-28T19:16:00",
+      "label": "19:16:00",
+      "dpsDealt": 0,
+      "dpsReceived": 999.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 375.8
+    },
+    {
+      "datetime": "2026-05-28T19:16:05",
+      "label": "19:16:05",
+      "dpsDealt": 0,
+      "dpsReceived": 1310.2,
+      "logiReceived": 427.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 76.6
+    },
+    {
+      "datetime": "2026-05-28T19:16:10",
+      "label": "19:16:10",
+      "dpsDealt": 0,
+      "dpsReceived": 999.4,
+      "logiReceived": 475.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 155.4
+    },
+    {
+      "datetime": "2026-05-28T19:16:15",
+      "label": "19:16:15",
+      "dpsDealt": 0,
+      "dpsReceived": 2326.2,
+      "logiReceived": 1069.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 400
+    },
+    {
+      "datetime": "2026-05-28T19:16:20",
+      "label": "19:16:20",
+      "dpsDealt": 0,
+      "dpsReceived": 1346.6,
+      "logiReceived": 687,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 384.2
+    },
+    {
+      "datetime": "2026-05-28T19:16:25",
+      "label": "19:16:25",
+      "dpsDealt": 0,
+      "dpsReceived": 846.2,
+      "logiReceived": 947,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 178
+    },
+    {
+      "datetime": "2026-05-28T19:16:30",
+      "label": "19:16:30",
+      "dpsDealt": 0,
+      "dpsReceived": 1034.8,
+      "logiReceived": 765.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 361.4
+    },
+    {
+      "datetime": "2026-05-28T19:16:35",
+      "label": "19:16:35",
+      "dpsDealt": 0,
+      "dpsReceived": 1316.6,
+      "logiReceived": 621.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 165.8
+    },
+    {
+      "datetime": "2026-05-28T19:16:40",
+      "label": "19:16:40",
+      "dpsDealt": 0,
+      "dpsReceived": 3663,
+      "logiReceived": 558.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 50.4
+    },
+    {
+      "datetime": "2026-05-28T19:16:45",
+      "label": "19:16:45",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:16:50",
+      "label": "19:16:50",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:16:55",
+      "label": "19:16:55",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:00",
+      "label": "19:17:00",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:05",
+      "label": "19:17:05",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:10",
+      "label": "19:17:10",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:15",
+      "label": "19:17:15",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:20",
+      "label": "19:17:20",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:25",
+      "label": "19:17:25",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:30",
+      "label": "19:17:30",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:35",
+      "label": "19:17:35",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:40",
+      "label": "19:17:40",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:45",
+      "label": "19:17:45",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:50",
+      "label": "19:17:50",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:17:55",
+      "label": "19:17:55",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:00",
+      "label": "19:18:00",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:05",
+      "label": "19:18:05",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:10",
+      "label": "19:18:10",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:15",
+      "label": "19:18:15",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:20",
+      "label": "19:18:20",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:25",
+      "label": "19:18:25",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:30",
+      "label": "19:18:30",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:35",
+      "label": "19:18:35",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:40",
+      "label": "19:18:40",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:45",
+      "label": "19:18:45",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:50",
+      "label": "19:18:50",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:18:55",
+      "label": "19:18:55",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:00",
+      "label": "19:19:00",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:05",
+      "label": "19:19:05",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:10",
+      "label": "19:19:10",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:15",
+      "label": "19:19:15",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:20",
+      "label": "19:19:20",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:25",
+      "label": "19:19:25",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:30",
+      "label": "19:19:30",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:35",
+      "label": "19:19:35",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:40",
+      "label": "19:19:40",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:45",
+      "label": "19:19:45",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:50",
+      "label": "19:19:50",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:19:55",
+      "label": "19:19:55",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:00",
+      "label": "19:20:00",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:05",
+      "label": "19:20:05",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:10",
+      "label": "19:20:10",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:15",
+      "label": "19:20:15",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:20",
+      "label": "19:20:20",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:25",
+      "label": "19:20:25",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:30",
+      "label": "19:20:30",
+      "dpsDealt": 0,
+      "dpsReceived": 313.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:35",
+      "label": "19:20:35",
+      "dpsDealt": 0,
+      "dpsReceived": 286.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-05-28T19:20:40",
+      "label": "19:20:40",
+      "dpsDealt": 0,
+      "dpsReceived": 48,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    }
+  ],
+  "summary": {
+    "totalDamageDealt": 11425,
+    "totalDamageReceived": 86625,
+    "combatDurationSeconds": 210,
+    "dpsDealt": 54.4,
+    "dpsReceived": 412.5,
+    "totalOutgoingHits": 176,
+    "totalOutgoingMisses": 22,
+    "totalIncomingHits": 958,
+    "totalIncomingMisses": 89,
+    "totalLogiReceived": 76315,
+    "totalLogiDealt": 0
+  },
+  "details": {
+    "qualityOut": {
+      "Smashes": 36,
+      "Penetrates": 50,
+      "Hits": 50,
+      "Glances Off": 20,
+      "Misses": 22,
+      "Grazes": 18,
+      "Wrecks": 2
+    },
+    "qualityIn": {
+      "Smashes": 176,
+      "Grazes": 156,
+      "Penetrates": 204,
+      "Hits": 270,
+      "Glances Off": 144,
+      "Wrecks": 8,
+      "Misses": 89
+    },
+    "biggestHitOut": {
+      "damage": 177,
+      "weapon": "Wasp II",
+      "pilot": "Belisarius Koren"
+    },
+    "biggestHitIn": {
+      "damage": 1746,
+      "weapon": "Quad Mega Pulse Laser II",
+      "pilot": "Anun Naku"
+    },
+    "uniqueTargets": 6,
+    "uniqueAttackers": 24,
+    "pilotsInvolved": 29,
+    "neutIn": 0,
+    "neutOut": 34470,
+    "neutInEvents": 0,
+    "neutOutEvents": 188,
+    "logiInCycles": 184,
+    "logiOutCycles": 0
+  },
+  "peakDps": {
+    "dealt": 107,
+    "received": 1391
+  },
+  "tankSupportRatio": 88.0981240981241,
+  "neutPressureIn": "—",
+  "neutPressureOut": 164.14285714285714,
+  "qualitySegmentsOut": [
+    {
+      "label": "Wrecks",
+      "count": 2
+    },
+    {
+      "label": "Smashes",
+      "count": 36
+    },
+    {
+      "label": "Penetrates",
+      "count": 50
+    },
+    {
+      "label": "Hits",
+      "count": 50
+    },
+    {
+      "label": "Glances Off",
+      "count": 20
+    },
+    {
+      "label": "Grazes",
+      "count": 18
+    },
+    {
+      "label": "Misses",
+      "count": 22
+    }
+  ],
+  "qualitySegmentsIn": [
+    {
+      "label": "Wrecks",
+      "count": 8
+    },
+    {
+      "label": "Smashes",
+      "count": 176
+    },
+    {
+      "label": "Penetrates",
+      "count": 204
+    },
+    {
+      "label": "Hits",
+      "count": 270
+    },
+    {
+      "label": "Glances Off",
+      "count": 144
+    },
+    {
+      "label": "Grazes",
+      "count": 156
+    },
+    {
+      "label": "Misses",
+      "count": 89
+    }
+  ],
+  "damageByTarget": {
+    "DarkOldMaker": {
+      "damage": 4017,
+      "hits": 47,
+      "misses": 2,
+      "ship": "Huginn"
+    },
+    "Shizzles Mantar": {
+      "damage": 3976,
+      "hits": 52,
+      "misses": 6,
+      "ship": "Nightmare"
+    },
+    "Belisarius Koren": {
+      "damage": 2347,
+      "hits": 46,
+      "misses": 2,
+      "ship": "Nightmare"
+    },
+    "Daniel Grosny": {
+      "damage": 1085,
+      "hits": 31,
+      "misses": 1,
+      "ship": "Basilisk"
+    },
+    "Ufoporno": {
+      "damage": 0,
+      "hits": 0,
+      "misses": 6,
+      "ship": null
+    },
+    "Wood3hs Pizza": {
+      "damage": 0,
+      "hits": 0,
+      "misses": 5,
+      "ship": null
+    }
+  },
+  "damageByWeapon": {
+    "Wasp II": {
+      "damage": 11425,
+      "hits": 176
+    }
+  },
+  "incomingBySource": {
+    "Anun Naku": {
+      "damage": 18489,
+      "hits": 17,
+      "misses": 0,
+      "ship": "Revelation Navy Issue"
+    },
+    "Shizzles Mantar": {
+      "damage": 6017,
+      "hits": 12,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Corevas": {
+      "damage": 5927,
+      "hits": 104,
+      "misses": 16,
+      "ship": "Nightmare"
+    },
+    "Jinggels": {
+      "damage": 5661,
+      "hits": 43,
+      "misses": 2,
+      "ship": "Nightmare"
+    },
+    "Fardendur": {
+      "damage": 5620,
+      "hits": 112,
+      "misses": 2,
+      "ship": "Nightmare"
+    },
+    "Maven Kador": {
+      "damage": 5481,
+      "hits": 24,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Belisarius Koren": {
+      "damage": 5445,
+      "hits": 24,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Cab Man": {
+      "damage": 5260,
+      "hits": 46,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Ares Tzestu": {
+      "damage": 4716,
+      "hits": 12,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Jason Horne": {
+      "damage": 4661,
+      "hits": 23,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Devesta Julii": {
+      "damage": 4397,
+      "hits": 9,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Flo May": {
+      "damage": 4249,
+      "hits": 135,
+      "misses": 1,
+      "ship": "Nightmare"
+    },
+    "Gorax Skord": {
+      "damage": 2632,
+      "hits": 7,
+      "misses": 0,
+      "ship": "Nightmare"
+    },
+    "Fogaz": {
+      "damage": 1928,
+      "hits": 72,
+      "misses": 5,
+      "ship": "Claymore"
+    },
+    "Vanbo Murgalesh": {
+      "damage": 1247,
+      "hits": 41,
+      "misses": 1,
+      "ship": "Nightmare"
+    },
+    "Midgath Stallsman": {
+      "damage": 1111,
+      "hits": 29,
+      "misses": 61,
+      "ship": "Ishtar"
+    },
+    "Ufoporno": {
+      "damage": 979,
+      "hits": 6,
+      "misses": 0,
+      "ship": "Deimos"
+    },
+    "Avion Sundiver": {
+      "damage": 914,
+      "hits": 10,
+      "misses": 0,
+      "ship": "Legion"
+    },
+    "DarkOldMaker": {
+      "damage": 504,
+      "hits": 52,
+      "misses": 1,
+      "ship": "Huginn"
+    },
+    "eeski": {
+      "damage": 345,
+      "hits": 53,
+      "misses": 0,
+      "ship": "Basilisk"
+    },
+    "vyshnegradsky": {
+      "damage": 344,
+      "hits": 47,
+      "misses": 0,
+      "ship": "Claymore"
+    },
+    "Valynda DtAuber": {
+      "damage": 331,
+      "hits": 25,
+      "misses": 0,
+      "ship": "Huginn"
+    },
+    "Sill Isis": {
+      "damage": 247,
+      "hits": 52,
+      "misses": 0,
+      "ship": "Basilisk"
+    },
+    "Okudaa": {
+      "damage": 120,
+      "hits": 3,
+      "misses": 0,
+      "ship": "Condor"
+    }
+  },
+  "incomingByWeapon": {
+    "Tachyon Beam Laser II": {
+      "damage": 58577,
+      "hits": 180
+    },
+    "Quad Mega Pulse Laser II": {
+      "damage": 18489,
+      "hits": 17
+    },
+    "Warrior II": {
+      "damage": 1781,
+      "hits": 281
+    },
+    "Caldari Navy Scourge Heavy Missile": {
+      "damage": 1466,
+      "hits": 17
+    },
+    "Valkyrie II": {
+      "damage": 1380,
+      "hits": 163
+    },
+    "Acolyte II": {
+      "damage": 1281,
+      "hits": 195
+    },
+    "Curator II": {
+      "damage": 1111,
+      "hits": 29
+    },
+    "Heavy Neutron Blaster II": {
+      "damage": 979,
+      "hits": 6
+    },
+    "Heavy Beam Laser II": {
+      "damage": 914,
+      "hits": 10
+    },
+    "Hobgoblin II": {
+      "damage": 345,
+      "hits": 53
+    },
+    "650mm Artillery Cannon II": {
+      "damage": 182,
+      "hits": 4
+    },
+    "Mjolnir Light Missile": {
+      "damage": 120,
+      "hits": 3
+    }
+  },
+  "outgoingTableRows": [
+    {
+      "name": "DarkOldMaker",
+      "ship": "Huginn",
+      "damage": 4017,
+      "dps": 19,
+      "hits": 47,
+      "misses": 2,
+      "hitRate": "95.9%"
+    },
+    {
+      "name": "Shizzles Mantar",
+      "ship": "Nightmare",
+      "damage": 3976,
+      "dps": 19,
+      "hits": 52,
+      "misses": 6,
+      "hitRate": "89.7%"
+    },
+    {
+      "name": "Belisarius Koren",
+      "ship": "Nightmare",
+      "damage": 2347,
+      "dps": 11,
+      "hits": 46,
+      "misses": 2,
+      "hitRate": "95.8%"
+    },
+    {
+      "name": "Daniel Grosny",
+      "ship": "Basilisk",
+      "damage": 1085,
+      "dps": 5,
+      "hits": 31,
+      "misses": 1,
+      "hitRate": "96.9%"
+    },
+    {
+      "name": "Ufoporno",
+      "ship": "-",
+      "damage": 0,
+      "dps": 0,
+      "hits": 0,
+      "misses": 6,
+      "hitRate": "0.0%"
+    },
+    {
+      "name": "Wood3hs Pizza",
+      "ship": "-",
+      "damage": 0,
+      "dps": 0,
+      "hits": 0,
+      "misses": 5,
+      "hitRate": "0.0%"
+    }
+  ],
+  "incomingTableRows": [
+    {
+      "name": "Anun Naku",
+      "ship": "Revelation Navy Issue",
+      "damage": 18489,
+      "dps": 88,
+      "hits": 17,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Shizzles Mantar",
+      "ship": "Nightmare",
+      "damage": 6017,
+      "dps": 29,
+      "hits": 12,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Corevas",
+      "ship": "Nightmare",
+      "damage": 5927,
+      "dps": 28,
+      "hits": 104,
+      "misses": 16,
+      "hitRate": "86.7%"
+    },
+    {
+      "name": "Jinggels",
+      "ship": "Nightmare",
+      "damage": 5661,
+      "dps": 27,
+      "hits": 43,
+      "misses": 2,
+      "hitRate": "95.6%"
+    },
+    {
+      "name": "Fardendur",
+      "ship": "Nightmare",
+      "damage": 5620,
+      "dps": 27,
+      "hits": 112,
+      "misses": 2,
+      "hitRate": "98.2%"
+    },
+    {
+      "name": "Maven Kador",
+      "ship": "Nightmare",
+      "damage": 5481,
+      "dps": 26,
+      "hits": 24,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Belisarius Koren",
+      "ship": "Nightmare",
+      "damage": 5445,
+      "dps": 26,
+      "hits": 24,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Cab Man",
+      "ship": "Nightmare",
+      "damage": 5260,
+      "dps": 25,
+      "hits": 46,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Ares Tzestu",
+      "ship": "Nightmare",
+      "damage": 4716,
+      "dps": 22,
+      "hits": 12,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Jason Horne",
+      "ship": "Nightmare",
+      "damage": 4661,
+      "dps": 22,
+      "hits": 23,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Devesta Julii",
+      "ship": "Nightmare",
+      "damage": 4397,
+      "dps": 21,
+      "hits": 9,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Flo May",
+      "ship": "Nightmare",
+      "damage": 4249,
+      "dps": 20,
+      "hits": 135,
+      "misses": 1,
+      "hitRate": "99.3%"
+    },
+    {
+      "name": "Gorax Skord",
+      "ship": "Nightmare",
+      "damage": 2632,
+      "dps": 13,
+      "hits": 7,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Fogaz",
+      "ship": "Claymore",
+      "damage": 1928,
+      "dps": 9,
+      "hits": 72,
+      "misses": 5,
+      "hitRate": "93.5%"
+    },
+    {
+      "name": "Vanbo Murgalesh",
+      "ship": "Nightmare",
+      "damage": 1247,
+      "dps": 6,
+      "hits": 41,
+      "misses": 1,
+      "hitRate": "97.6%"
+    },
+    {
+      "name": "Midgath Stallsman",
+      "ship": "Ishtar",
+      "damage": 1111,
+      "dps": 5,
+      "hits": 29,
+      "misses": 61,
+      "hitRate": "32.2%"
+    },
+    {
+      "name": "Ufoporno",
+      "ship": "Deimos",
+      "damage": 979,
+      "dps": 5,
+      "hits": 6,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Avion Sundiver",
+      "ship": "Legion",
+      "damage": 914,
+      "dps": 4,
+      "hits": 10,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "DarkOldMaker",
+      "ship": "Huginn",
+      "damage": 504,
+      "dps": 2,
+      "hits": 52,
+      "misses": 1,
+      "hitRate": "98.1%"
+    },
+    {
+      "name": "eeski",
+      "ship": "Basilisk",
+      "damage": 345,
+      "dps": 2,
+      "hits": 53,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "vyshnegradsky",
+      "ship": "Claymore",
+      "damage": 344,
+      "dps": 2,
+      "hits": 47,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Valynda DtAuber",
+      "ship": "Huginn",
+      "damage": 331,
+      "dps": 2,
+      "hits": 25,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Sill Isis",
+      "ship": "Basilisk",
+      "damage": 247,
+      "dps": 1,
+      "hits": 52,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Okudaa",
+      "ship": "Condor",
+      "damage": 120,
+      "dps": 1,
+      "hits": 3,
+      "misses": 0,
+      "hitRate": "100.0%"
+    }
+  ],
+  "logiTableRows": [
+    {
+      "name": "Basilisk",
+      "direction": "Received",
+      "ship": "-",
+      "module": "Large Remote Shield Booster II",
+      "amount": 51646,
+      "count": 125
+    },
+    {
+      "name": "Loki",
+      "direction": "Received",
+      "ship": "-",
+      "module": "Pithum A-Type Medium Remote Shield Booster",
+      "amount": 24669,
+      "count": 59
+    }
+  ],
+  "damageByTargetItems": [
+    {
+      "label": "DarkOldMaker (Huginn)",
+      "value": 4017
+    },
+    {
+      "label": "Shizzles Mantar (Nightmare)",
+      "value": 3976
+    },
+    {
+      "label": "Belisarius Koren (Nightmare)",
+      "value": 2347
+    },
+    {
+      "label": "Daniel Grosny (Basilisk)",
+      "value": 1085
+    },
+    {
+      "label": "Ufoporno",
+      "value": 0
+    },
+    {
+      "label": "Wood3hs Pizza",
+      "value": 0
+    }
+  ],
+  "damageByWeaponItems": [
+    {
+      "label": "Wasp II",
+      "value": 11425
+    }
+  ],
+  "incomingBySourceItems": [
+    {
+      "label": "Anun Naku (Revelation Navy Issue)",
+      "value": 18489
+    },
+    {
+      "label": "Shizzles Mantar (Nightmare)",
+      "value": 6017
+    },
+    {
+      "label": "Corevas (Nightmare)",
+      "value": 5927
+    },
+    {
+      "label": "Jinggels (Nightmare)",
+      "value": 5661
+    },
+    {
+      "label": "Fardendur (Nightmare)",
+      "value": 5620
+    },
+    {
+      "label": "Maven Kador (Nightmare)",
+      "value": 5481
+    },
+    {
+      "label": "Belisarius Koren (Nightmare)",
+      "value": 5445
+    },
+    {
+      "label": "Cab Man (Nightmare)",
+      "value": 5260
+    },
+    {
+      "label": "Ares Tzestu (Nightmare)",
+      "value": 4716
+    },
+    {
+      "label": "Jason Horne (Nightmare)",
+      "value": 4661
+    },
+    {
+      "label": "Devesta Julii (Nightmare)",
+      "value": 4397
+    },
+    {
+      "label": "Flo May (Nightmare)",
+      "value": 4249
+    },
+    {
+      "label": "Gorax Skord (Nightmare)",
+      "value": 2632
+    },
+    {
+      "label": "Fogaz (Claymore)",
+      "value": 1928
+    },
+    {
+      "label": "Vanbo Murgalesh (Nightmare)",
+      "value": 1247
+    },
+    {
+      "label": "Midgath Stallsman (Ishtar)",
+      "value": 1111
+    },
+    {
+      "label": "Ufoporno (Deimos)",
+      "value": 979
+    },
+    {
+      "label": "Avion Sundiver (Legion)",
+      "value": 914
+    },
+    {
+      "label": "DarkOldMaker (Huginn)",
+      "value": 504
+    },
+    {
+      "label": "eeski (Basilisk)",
+      "value": 345
+    },
+    {
+      "label": "vyshnegradsky (Claymore)",
+      "value": 344
+    },
+    {
+      "label": "Valynda DtAuber (Huginn)",
+      "value": 331
+    },
+    {
+      "label": "Sill Isis (Basilisk)",
+      "value": 247
+    },
+    {
+      "label": "Okudaa (Condor)",
+      "value": 120
+    }
+  ],
+  "incomingByWeaponItems": [
+    {
+      "label": "Tachyon Beam Laser II",
+      "value": 58577
+    },
+    {
+      "label": "Quad Mega Pulse Laser II",
+      "value": 18489
+    },
+    {
+      "label": "Warrior II",
+      "value": 1781
+    },
+    {
+      "label": "Caldari Navy Scourge Heavy Missile",
+      "value": 1466
+    },
+    {
+      "label": "Valkyrie II",
+      "value": 1380
+    },
+    {
+      "label": "Acolyte II",
+      "value": 1281
+    },
+    {
+      "label": "Curator II",
+      "value": 1111
+    },
+    {
+      "label": "Heavy Neutron Blaster II",
+      "value": 979
+    },
+    {
+      "label": "Heavy Beam Laser II",
+      "value": 914
+    },
+    {
+      "label": "Hobgoblin II",
+      "value": 345
+    },
+    {
+      "label": "650mm Artillery Cannon II",
+      "value": 182
+    },
+    {
+      "label": "Mjolnir Light Missile",
+      "value": 120
+    }
+  ],
+  "selectionLabel": "19:12:00 - 19:15:30",
+  "selectedPilot": "DarkOldMaker",
+  "engagement": {
+    "dealt": 4017,
+    "received": 504,
+    "hitsOn": 47,
+    "missesOn": 2,
+    "hitsBy": 52,
+    "missesBy": 1,
+    "logiIn": 0,
+    "logiOut": 0,
+    "neutIn": 0,
+    "neutOut": 496,
+    "ship": "Huginn"
+  },
+  "engagementLog": [
+    {
+      "timestamp": "2026.05.28 19:12:00",
+      "damage": 121,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:00"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:02",
+      "damage": 100,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:03",
+      "damage": 109,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:03",
+      "damage": 100,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:04",
+      "damage": 53,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:04"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:06",
+      "damage": 34,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:12:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:07",
+      "damage": 40,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:07",
+      "damage": 70,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:08",
+      "damage": 71,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:12:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:10",
+      "damage": 50,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:11",
+      "damage": 65,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:11",
+      "damage": 59,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:12:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:12:12",
+      "damage": 45,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:12:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:31",
+      "damage": 279,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Heavy Abyssal Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:13:31"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:55",
+      "damage": 33,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Wrecks",
+      "type": "damage",
+      "time": "19:13:55"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:55",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:13:55"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:55",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:13:55"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:56",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:13:56"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:59",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:13:59"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:59",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:13:59"
+    },
+    {
+      "timestamp": "2026.05.28 19:13:59",
+      "damage": 14,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:13:59"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:00",
+      "damage": 12,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:14:00"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:03",
+      "damage": 16,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:14:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:03",
+      "damage": 12,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:14:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:03",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:14:03"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:04",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:14:04"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:07",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:14:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:07",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:14:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:07",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:14:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:08",
+      "damage": 0,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": null,
+      "shipName": null,
+      "weapon": "Valkyrie II",
+      "quality": "Misses",
+      "type": "damage",
+      "time": "19:14:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:11",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:14:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:11",
+      "damage": 11,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:14:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:11",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:14:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:12",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:14:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:15",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:14:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:15",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:14:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:15",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:14:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:16",
+      "damage": 14,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:14:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:19",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:14:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:19",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:14:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:19",
+      "damage": 16,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:14:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:20",
+      "damage": 12,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:14:20"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:47",
+      "damage": 120,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Heavy Abyssal Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:14:47"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:56",
+      "damage": 90,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:14:56"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:56",
+      "damage": 61,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:14:56"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:57",
+      "damage": 0,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": null,
+      "shipName": null,
+      "weapon": "Wasp II",
+      "quality": "Misses",
+      "type": "damage",
+      "time": "19:14:57"
+    },
+    {
+      "timestamp": "2026.05.28 19:14:58",
+      "damage": 98,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:14:58"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:00",
+      "damage": 108,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:00"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:00",
+      "damage": 134,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:00"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:01",
+      "damage": 0,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": null,
+      "shipName": null,
+      "weapon": "Wasp II",
+      "quality": "Misses",
+      "type": "damage",
+      "time": "19:15:01"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:02",
+      "damage": 92,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:02",
+      "damage": 19,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Heavy Abyssal Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:15:02"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:04",
+      "damage": 112,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:04"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:04",
+      "damage": 111,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:04"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:05",
+      "damage": 119,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:05"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:06",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:06",
+      "damage": 119,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:06"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:07",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:07",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:07"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:08",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:08",
+      "damage": 65,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:08",
+      "damage": 132,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:08"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:09",
+      "damage": 64,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:09"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:10",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:10",
+      "damage": 74,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:10"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:11",
+      "damage": 11,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:11",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:11"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:12",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:12",
+      "damage": 75,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:12",
+      "damage": 85,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:12"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:13",
+      "damage": 93,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:13"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:14",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:14",
+      "damage": 41,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:14",
+      "damage": 52,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Heavy Abyssal Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:15:14"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:15",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:15",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:15"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:16",
+      "damage": 5,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:16",
+      "damage": 65,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:16",
+      "damage": 42,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:16"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:17",
+      "damage": 8,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Heavy Abyssal Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:15:17"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:17",
+      "damage": 77,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:17"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:18",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:18"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:18",
+      "damage": 46,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Glances Off",
+      "type": "damage",
+      "time": "19:15:18"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:19",
+      "damage": 24,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Wrecks",
+      "type": "damage",
+      "time": "19:15:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:19",
+      "damage": 9,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:19"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:20",
+      "damage": 11,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:20"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:20",
+      "damage": 56,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:20"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:20",
+      "damage": 96,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:20"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:21",
+      "damage": 92,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:21"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:22",
+      "damage": 11,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:22"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:22",
+      "damage": 112,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:22"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:23",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:23"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:23",
+      "damage": 7,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:23"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:24",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:24"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:24",
+      "damage": 134,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:24"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:24",
+      "damage": 52,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Grazes",
+      "type": "damage",
+      "time": "19:15:24"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:25",
+      "damage": 78,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:25"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:26",
+      "damage": 6,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:26",
+      "damage": 86,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Hits",
+      "type": "damage",
+      "time": "19:15:26"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:27",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:27",
+      "damage": 8,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:27"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:28",
+      "damage": 10,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:28"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:28",
+      "damage": 98,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:28"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:28",
+      "damage": 124,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:28"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:29",
+      "damage": 18,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Heavy Abyssal Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization",
+      "time": "19:15:29"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:29",
+      "damage": 140,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:29"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:30",
+      "damage": 12,
+      "direction": "incoming",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Valkyrie II",
+      "quality": "Penetrates",
+      "type": "damage",
+      "time": "19:15:30"
+    },
+    {
+      "timestamp": "2026.05.28 19:15:30",
+      "damage": 129,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Wasp II",
+      "quality": "Smashes",
+      "type": "damage",
+      "time": "19:15:30"
+    }
+  ],
+  "filteredEventCount": 1617,
+  "durations": [
+    "0s",
+    "1s",
+    "59s",
+    "1m 0s",
+    "1m 1s",
+    "59m 59s",
+    "60m 0s",
+    "122m 2s"
+  ],
+  "relativeSessionStart": "4 months ago",
+  "avatars": {
+    "DarkOldMaker": {
+      "initials": "D",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Valynda DtAuber": {
+      "initials": "VD",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "Daniel Grosny": {
+      "initials": "DG",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Sill Isis": {
+      "initials": "SI",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "eeski": {
+      "initials": "E",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "Fardendur": {
+      "initials": "F",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Jinggels": {
+      "initials": "J",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Flo May": {
+      "initials": "FM",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Maven Kador": {
+      "initials": "MK",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Shizzles Mantar": {
+      "initials": "SM",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Fogaz": {
+      "initials": "F",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Vanbo Murgalesh": {
+      "initials": "VM",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "vyshnegradsky": {
+      "initials": "V",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Cab Man": {
+      "initials": "CM",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Ares Tzestu": {
+      "initials": "AT",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Corevas": {
+      "initials": "C",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Loki": {
+      "initials": "L",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "Salvatore Satriani": {
+      "initials": "SS",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Basilisk": {
+      "initials": "B",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Belisarius Koren": {
+      "initials": "BK",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Midgath Stallsman": {
+      "initials": "MS",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "GROUND XERO": {
+      "initials": "GX",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Ufoporno": {
+      "initials": "U",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Okudaa": {
+      "initials": "O",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "Wood3hs Pizza": {
+      "initials": "WP",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Jason Horne": {
+      "initials": "JH",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Devesta Julii": {
+      "initials": "DJ",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Anun Naku": {
+      "initials": "AN",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Gorax Skord": {
+      "initials": "GS",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Avion Sundiver": {
+      "initials": "AS",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Calista Seymour": {
+      "initials": "CS",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Lambertx": {
+      "initials": "L",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Warrior II": {
+      "initials": "WI",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Manfred Stahler": {
+      "initials": "MS",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Kitty Duval": {
+      "initials": "KD",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    }
+  },
+  "spectrumOut": [
+    {
+      "label": "Wrecks",
+      "count": 2,
+      "colorClass": "bg-cyan-200",
+      "share": 1.0101010101010102
+    },
+    {
+      "label": "Smashes",
+      "count": 36,
+      "colorClass": "bg-cyan-300",
+      "share": 18.181818181818183
+    },
+    {
+      "label": "Penetrates",
+      "count": 50,
+      "colorClass": "bg-cyan-400",
+      "share": 25.252525252525253
+    },
+    {
+      "label": "Hits",
+      "count": 50,
+      "colorClass": "bg-cyan-500",
+      "share": 25.252525252525253
+    },
+    {
+      "label": "Glances Off",
+      "count": 20,
+      "colorClass": "bg-cyan-600",
+      "share": 10.1010101010101
+    },
+    {
+      "label": "Grazes",
+      "count": 18,
+      "colorClass": "bg-cyan-700",
+      "share": 9.090909090909092
+    },
+    {
+      "label": "Misses",
+      "count": 22,
+      "colorClass": "bg-zinc-600",
+      "share": 11.11111111111111
+    }
+  ],
+  "spectrumIn": [
+    {
+      "label": "Wrecks",
+      "count": 8,
+      "colorClass": "bg-red-200",
+      "share": 0.7640878701050621
+    },
+    {
+      "label": "Smashes",
+      "count": 176,
+      "colorClass": "bg-red-300",
+      "share": 16.809933142311365
+    },
+    {
+      "label": "Penetrates",
+      "count": 204,
+      "colorClass": "bg-red-400",
+      "share": 19.484240687679083
+    },
+    {
+      "label": "Hits",
+      "count": 270,
+      "colorClass": "bg-red-500",
+      "share": 25.787965616045845
+    },
+    {
+      "label": "Glances Off",
+      "count": 144,
+      "colorClass": "bg-red-600",
+      "share": 13.753581661891118
+    },
+    {
+      "label": "Grazes",
+      "count": 156,
+      "colorClass": "bg-red-700",
+      "share": 14.899713467048711
+    },
+    {
+      "label": "Misses",
+      "count": 89,
+      "colorClass": "bg-zinc-600",
+      "share": 8.500477554918815
+    }
+  ]
+}

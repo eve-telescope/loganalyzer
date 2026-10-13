@@ -1,0 +1,11 @@
+{
+  "path": "/up",
+  "method": "GET",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "headers": {
+    "cache-control": "no-cache, private"
+  },
+  "sha256": "269134356edf3714af3d0e7fb13a172b3daad08ccf01edd6e261c0f75f0ee628",
+  "length": 1836
+}

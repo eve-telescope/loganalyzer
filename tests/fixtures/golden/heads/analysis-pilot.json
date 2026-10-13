@@ -1,0 +1,24 @@
+{
+  "title": [
+    "Nicolas Kion — Combat Analysis - EVE Log Analyzer"
+  ],
+  "meta": {
+    "viewport": "width=device-width, initial-scale=1",
+    "theme-color": "#09090b",
+    "og:url": "https://loganalyzer.eve-telescope.com/logs/{uuid}",
+    "og:image": "https://loganalyzer.eve-telescope.com/og-image.png",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:image:alt": "Combat Log Analyzer — EVE Online after-action reports",
+    "twitter:image": "https://loganalyzer.eve-telescope.com/og-image.png",
+    "description": "22,005 damage dealt / 14,445 received — 9 DPS avg — 39m 40s combat",
+    "og:type": "website",
+    "og:site_name": "Combat Log Analyzer",
+    "og:title": "Nicolas Kion — Combat Analysis",
+    "og:description": "22,005 damage dealt / 14,445 received — 9 DPS avg — 39m 40s combat",
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Nicolas Kion — Combat Analysis",
+    "twitter:description": "22,005 damage dealt / 14,445 received — 9 DPS avg — 39m 40s combat"
+  },
+  "lang": "en"
+}

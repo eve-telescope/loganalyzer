@@ -1,0 +1,17 @@
+------------------------------------------------------------
+  Gamelog
+  Listener: Test Pilot
+  Session Started: 2026.01.01 12:00:00
+------------------------------------------------------------
+[ 2026.01.01 12:00:00 ] (notify) Ship stopping
+[ 2026.01.01 12:00:01 ] (combat) <color=0xff00ffff><b>77</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Enemy Pilot[CORP](Drake)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+[ 2026.01.01 12:00:01 ] (hint) Attempting to join a channel
+[ 2026.01.01 12:00:02 ] (question) Are you sure?
+[ 2026.01.01 12:00:03 ] (combat) <color=0xffcc0000><b>88</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Enemy Pilot[CORP](Drake)</b><font size=10><color=0x77ffffff> - Heavy Missile - Grazes
+[ 2026.01.01 12:00:04 ] (combat) Warp scramble attempt from <b>Enemy</b> to <b>you!</b>
+[ 2026.01.01 12:00:05 ] (combat) Warp disruption attempt from Enemy to you!
+[ 2026.01.01 12:00:06 ] (combat) <color=0xffffffff>Your target is jammed
+[ 2026.01.01 12:00:07 ] (None) Undocking from station
+[ 2026.01.01 12:00:08 ](combat) missing space after the bracket
+[ 2026.1.1 12:00:09 ] (combat) short date
+[ 2026.01.01 12:00:10 ] (combat) <color=0xff00ffff><b>99</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Enemy Pilot[CORP](Drake)</b><font size=10><color=0x77ffffff> - Heavy Missile - Wrecks

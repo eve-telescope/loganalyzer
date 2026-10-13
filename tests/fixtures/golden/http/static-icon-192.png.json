@@ -1,0 +1,11 @@
+{
+  "path": "/icon-192.png",
+  "method": "GET",
+  "status": 200,
+  "content_type": "image/png",
+  "headers": {
+    "content-length": "7991"
+  },
+  "sha256": "73202d50aae95959ebfac24a4b6f2a2d08224896fae2d2034ded330208c6146a",
+  "length": 7991
+}

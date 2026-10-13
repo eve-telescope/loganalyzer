@@ -1,0 +1,36 @@
+{
+  "status": 200,
+  "page": {
+    "component": "Analysis",
+    "props": {
+      "errors": {},
+      "name": "EVE Log Analyzer",
+      "auth": {
+        "user": null
+      },
+      "analysis": {
+        "listener": "Unknown",
+        "sessionStarted": "",
+        "events": []
+      },
+      "uuid": "8afdf26e-1382-417d-8c2d-686b29765f7c",
+      "rawLogAvailable": true,
+      "pilotIds": [],
+      "shipTypeIds": [],
+      "filters": {
+        "from": null,
+        "to": null,
+        "pilot": null,
+        "hide": []
+      }
+    },
+    "url": "/logs/8afdf26e-1382-417d-8c2d-686b29765f7c",
+    "version": "50d945215f8550d5c5c8ee162915ae99",
+    "sharedProps": [
+      "errors",
+      "name",
+      "auth"
+    ]
+  },
+  "path": "/logs/8afdf26e-1382-417d-8c2d-686b29765f7c"
+}

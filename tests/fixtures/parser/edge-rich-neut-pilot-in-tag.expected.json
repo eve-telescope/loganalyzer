@@ -1,0 +1,3 @@
+{
+  "error": "TypeError: App\\Services\\CombatLogParser::clean(): Argument #1 ($value) must be of type string, null given, called in /app/app/Services/CombatLogParser.php on line 224"
+}

@@ -1,0 +1,11 @@
+{
+  "path": "/icon-512-maskable.png",
+  "method": "GET",
+  "status": 200,
+  "content_type": "image/png",
+  "headers": {
+    "content-length": "30966"
+  },
+  "sha256": "8bb7dc965465a7bdcf313ec4c11efb928150489cdbf16c22ef47c153d9cb31ce",
+  "length": 30966
+}

@@ -1,0 +1,1550 @@
+{
+  "ogTitle": "Zoë Ångström — Combat Analysis",
+  "ogDescription": "483 damage dealt / 713 received — 22 DPS avg — 22s combat",
+  "selection": null,
+  "hiddenSeries": [],
+  "dpsOverTime": [
+    {
+      "datetime": "2026-01-01T12:00:00",
+      "label": "12:00:00",
+      "dpsDealt": 12,
+      "dpsReceived": 22,
+      "logiReceived": 42,
+      "logiDealt": 32,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-01-01T12:00:05",
+      "label": "12:00:05",
+      "dpsDealt": 17,
+      "dpsReceived": 27,
+      "logiReceived": 47,
+      "logiDealt": 37,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-01-01T12:00:10",
+      "label": "12:00:10",
+      "dpsDealt": 22,
+      "dpsReceived": 32,
+      "logiReceived": 52,
+      "logiDealt": 42,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-01-01T12:00:15",
+      "label": "12:00:15",
+      "dpsDealt": 27,
+      "dpsReceived": 37,
+      "logiReceived": 57,
+      "logiDealt": 47,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-01-01T12:00:20",
+      "label": "12:00:20",
+      "dpsDealt": 18.6,
+      "dpsReceived": 24.6,
+      "logiReceived": 36.6,
+      "logiDealt": 30.6,
+      "neutIn": 0,
+      "neutOut": 0
+    }
+  ],
+  "summary": {
+    "totalDamageDealt": 483,
+    "totalDamageReceived": 713,
+    "combatDurationSeconds": 22,
+    "dpsDealt": 21.95,
+    "dpsReceived": 32.41,
+    "totalOutgoingHits": 23,
+    "totalOutgoingMisses": 23,
+    "totalIncomingHits": 23,
+    "totalIncomingMisses": 23,
+    "totalLogiReceived": 1173,
+    "totalLogiDealt": 943
+  },
+  "details": {
+    "qualityOut": {
+      "Hits": 23,
+      "Misses": 23
+    },
+    "qualityIn": {
+      "Hits": 23,
+      "Misses": 23
+    },
+    "biggestHitOut": {
+      "damage": 32,
+      "weapon": "Light Missile",
+      "pilot": "00"
+    },
+    "biggestHitIn": {
+      "damage": 42,
+      "weapon": "Small Laser",
+      "pilot": "00"
+    },
+    "uniqueTargets": 22,
+    "uniqueAttackers": 22,
+    "pilotsInvolved": 23,
+    "neutIn": 0,
+    "neutOut": 0,
+    "neutInEvents": 0,
+    "neutOutEvents": 0,
+    "logiInCycles": 23,
+    "logiOutCycles": 23
+  },
+  "peakDps": {
+    "dealt": 25,
+    "received": 35
+  },
+  "tankSupportRatio": 164.51612903225808,
+  "neutPressureIn": "—",
+  "neutPressureOut": "—",
+  "qualitySegmentsOut": [
+    {
+      "label": "Wrecks",
+      "count": 0
+    },
+    {
+      "label": "Smashes",
+      "count": 0
+    },
+    {
+      "label": "Penetrates",
+      "count": 0
+    },
+    {
+      "label": "Hits",
+      "count": 23
+    },
+    {
+      "label": "Glances Off",
+      "count": 0
+    },
+    {
+      "label": "Grazes",
+      "count": 0
+    },
+    {
+      "label": "Misses",
+      "count": 23
+    }
+  ],
+  "qualitySegmentsIn": [
+    {
+      "label": "Wrecks",
+      "count": 0
+    },
+    {
+      "label": "Smashes",
+      "count": 0
+    },
+    {
+      "label": "Penetrates",
+      "count": 0
+    },
+    {
+      "label": "Hits",
+      "count": 23
+    },
+    {
+      "label": "Glances Off",
+      "count": 0
+    },
+    {
+      "label": "Grazes",
+      "count": 0
+    },
+    {
+      "label": "Misses",
+      "count": 23
+    }
+  ],
+  "damageByTarget": {
+    "0": {
+      "damage": 31,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Pilot": {
+      "damage": 57,
+      "hits": 2,
+      "misses": 2,
+      "ship": "Rifter"
+    },
+    "00": {
+      "damage": 32,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Amp &amp; Pilot": {
+      "damage": 30,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "ad": {
+      "damage": 27,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Apostrophe's Pilot": {
+      "damage": 26,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Quote \"Pilot\"": {
+      "damage": 25,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Emoji 🚀 Pilot": {
+      "damage": 24,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "日本語のパイロット": {
+      "damage": 23,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Em Space": {
+      "damage": 22,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Ideographic": {
+      "damage": 21,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Mongolian": {
+      "damage": 20,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Tab\tInside": {
+      "damage": 19,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Trailing NBSP": {
+      "damage": 18,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Leading NBSP": {
+      "damage": 17,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "No Break Space": {
+      "damage": 16,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Zoë Ångström": {
+      "damage": 15,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Pilot bold": {
+      "damage": 14,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Pilot < less": {
+      "damage": 13,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Pilot - dash": {
+      "damage": 12,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Pilot (paren)": {
+      "damage": 11,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    },
+    "Pilot [with] brackets": {
+      "damage": 10,
+      "hits": 1,
+      "misses": 1,
+      "ship": "Rifter"
+    }
+  },
+  "damageByWeapon": {
+    "Light Missile": {
+      "damage": 483,
+      "hits": 23
+    }
+  },
+  "incomingBySource": {
+    "0": {
+      "damage": 41,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Pilot": {
+      "damage": 77,
+      "hits": 2,
+      "misses": 2,
+      "ship": null
+    },
+    "00": {
+      "damage": 42,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Amp &amp; Pilot": {
+      "damage": 40,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "ad": {
+      "damage": 37,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Apostrophe's Pilot": {
+      "damage": 36,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Quote \"Pilot\"": {
+      "damage": 35,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Emoji 🚀 Pilot": {
+      "damage": 34,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "日本語のパイロット": {
+      "damage": 33,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Em Space": {
+      "damage": 32,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Ideographic": {
+      "damage": 31,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Mongolian": {
+      "damage": 30,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Tab\tInside": {
+      "damage": 29,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Trailing NBSP": {
+      "damage": 28,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Leading NBSP": {
+      "damage": 27,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "No Break Space": {
+      "damage": 26,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Zoë Ångström": {
+      "damage": 25,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Pilot bold": {
+      "damage": 24,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Pilot < less": {
+      "damage": 23,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Pilot - dash": {
+      "damage": 22,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Pilot (paren)": {
+      "damage": 21,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    },
+    "Pilot [with] brackets": {
+      "damage": 20,
+      "hits": 1,
+      "misses": 1,
+      "ship": null
+    }
+  },
+  "incomingByWeapon": {
+    "Small Laser": {
+      "damage": 713,
+      "hits": 23
+    },
+    "Warrior II": {
+      "damage": 0,
+      "hits": 0
+    }
+  },
+  "outgoingTableRows": [
+    {
+      "name": "0",
+      "ship": "Rifter",
+      "damage": 31,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot",
+      "ship": "Rifter",
+      "damage": 57,
+      "dps": 3,
+      "hits": 2,
+      "misses": 2,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "00",
+      "ship": "Rifter",
+      "damage": 32,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Amp &amp; Pilot",
+      "ship": "Rifter",
+      "damage": 30,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "ad",
+      "ship": "Rifter",
+      "damage": 27,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Apostrophe's Pilot",
+      "ship": "Rifter",
+      "damage": 26,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Quote \"Pilot\"",
+      "ship": "Rifter",
+      "damage": 25,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Emoji 🚀 Pilot",
+      "ship": "Rifter",
+      "damage": 24,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "日本語のパイロット",
+      "ship": "Rifter",
+      "damage": 23,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Em Space",
+      "ship": "Rifter",
+      "damage": 22,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Ideographic",
+      "ship": "Rifter",
+      "damage": 21,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Mongolian",
+      "ship": "Rifter",
+      "damage": 20,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Tab\tInside",
+      "ship": "Rifter",
+      "damage": 19,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Trailing NBSP",
+      "ship": "Rifter",
+      "damage": 18,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Leading NBSP",
+      "ship": "Rifter",
+      "damage": 17,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "No Break Space",
+      "ship": "Rifter",
+      "damage": 16,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Zoë Ångström",
+      "ship": "Rifter",
+      "damage": 15,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot bold",
+      "ship": "-",
+      "damage": 14,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot < less",
+      "ship": "Rifter",
+      "damage": 13,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot - dash",
+      "ship": "Rifter",
+      "damage": 12,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot (paren)",
+      "ship": "Rifter",
+      "damage": 11,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot [with] brackets",
+      "ship": "Rifter",
+      "damage": 10,
+      "dps": 0,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    }
+  ],
+  "incomingTableRows": [
+    {
+      "name": "0",
+      "ship": "-",
+      "damage": 41,
+      "dps": 2,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot",
+      "ship": "-",
+      "damage": 77,
+      "dps": 4,
+      "hits": 2,
+      "misses": 2,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "00",
+      "ship": "-",
+      "damage": 42,
+      "dps": 2,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Amp &amp; Pilot",
+      "ship": "-",
+      "damage": 40,
+      "dps": 2,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "ad",
+      "ship": "-",
+      "damage": 37,
+      "dps": 2,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Apostrophe's Pilot",
+      "ship": "-",
+      "damage": 36,
+      "dps": 2,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Quote \"Pilot\"",
+      "ship": "-",
+      "damage": 35,
+      "dps": 2,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Emoji 🚀 Pilot",
+      "ship": "-",
+      "damage": 34,
+      "dps": 2,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "日本語のパイロット",
+      "ship": "-",
+      "damage": 33,
+      "dps": 2,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Em Space",
+      "ship": "-",
+      "damage": 32,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Ideographic",
+      "ship": "-",
+      "damage": 31,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Mongolian",
+      "ship": "-",
+      "damage": 30,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Tab\tInside",
+      "ship": "-",
+      "damage": 29,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Trailing NBSP",
+      "ship": "-",
+      "damage": 28,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Leading NBSP",
+      "ship": "-",
+      "damage": 27,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "No Break Space",
+      "ship": "-",
+      "damage": 26,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Zoë Ångström",
+      "ship": "-",
+      "damage": 25,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot bold",
+      "ship": "-",
+      "damage": 24,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot < less",
+      "ship": "-",
+      "damage": 23,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot - dash",
+      "ship": "-",
+      "damage": 22,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot (paren)",
+      "ship": "-",
+      "damage": 21,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    },
+    {
+      "name": "Pilot [with] brackets",
+      "ship": "-",
+      "damage": 20,
+      "dps": 1,
+      "hits": 1,
+      "misses": 1,
+      "hitRate": "50.0%"
+    }
+  ],
+  "logiTableRows": [
+    {
+      "name": "Bantam",
+      "direction": "Received",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 261,
+      "count": 5
+    },
+    {
+      "name": "Pilot",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 97,
+      "count": 2
+    },
+    {
+      "name": "00",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 62,
+      "count": 1
+    },
+    {
+      "name": "0",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 61,
+      "count": 1
+    },
+    {
+      "name": "Amp &amp; Pilot",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 60,
+      "count": 1
+    },
+    {
+      "name": "Apostrophe's Pilot",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 56,
+      "count": 1
+    },
+    {
+      "name": "Quote \"Pilot\"",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 55,
+      "count": 1
+    },
+    {
+      "name": "Emoji 🚀 Pilot",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 54,
+      "count": 1
+    },
+    {
+      "name": "日本語のパイロット",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 53,
+      "count": 1
+    },
+    {
+      "name": "Em Space",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 52,
+      "count": 1
+    },
+    {
+      "name": "00",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 52,
+      "count": 1
+    },
+    {
+      "name": "Ideographic",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 51,
+      "count": 1
+    },
+    {
+      "name": "0",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 51,
+      "count": 1
+    },
+    {
+      "name": "Mongolian",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 50,
+      "count": 1
+    },
+    {
+      "name": "Amp &amp; Pilot",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 50,
+      "count": 1
+    },
+    {
+      "name": "Tab\tInside",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 49,
+      "count": 1
+    },
+    {
+      "name": "Trailing NBSP",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 48,
+      "count": 1
+    },
+    {
+      "name": "Leading NBSP",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 47,
+      "count": 1
+    },
+    {
+      "name": "ad",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 47,
+      "count": 1
+    },
+    {
+      "name": "No Break Space",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 46,
+      "count": 1
+    },
+    {
+      "name": "Apostrophe's Pilot",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 46,
+      "count": 1
+    },
+    {
+      "name": "Zoë Ångström",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 45,
+      "count": 1
+    },
+    {
+      "name": "Quote \"Pilot\"",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 45,
+      "count": 1
+    },
+    {
+      "name": "Emoji 🚀 Pilot",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 44,
+      "count": 1
+    },
+    {
+      "name": "日本語のパイロット",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 43,
+      "count": 1
+    },
+    {
+      "name": "Pilot - dash",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 42,
+      "count": 1
+    },
+    {
+      "name": "Em Space",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 42,
+      "count": 1
+    },
+    {
+      "name": "Pilot (paren)",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 41,
+      "count": 1
+    },
+    {
+      "name": "Ideographic",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 41,
+      "count": 1
+    },
+    {
+      "name": "Pilot [with] brackets",
+      "direction": "Received",
+      "ship": "Bantam",
+      "module": "Small Remote Shield Booster",
+      "amount": 40,
+      "count": 1
+    },
+    {
+      "name": "Mongolian",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 40,
+      "count": 1
+    },
+    {
+      "name": "Tab\tInside",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 39,
+      "count": 1
+    },
+    {
+      "name": "Trailing NBSP",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 38,
+      "count": 1
+    },
+    {
+      "name": "Leading NBSP",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 37,
+      "count": 1
+    },
+    {
+      "name": "No Break Space",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 36,
+      "count": 1
+    },
+    {
+      "name": "Zoë Ångström",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 35,
+      "count": 1
+    },
+    {
+      "name": "Pilot bold",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 34,
+      "count": 1
+    },
+    {
+      "name": "Pilot < less",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 33,
+      "count": 1
+    },
+    {
+      "name": "Pilot - dash",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 32,
+      "count": 1
+    },
+    {
+      "name": "Pilot (paren)",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 31,
+      "count": 1
+    },
+    {
+      "name": "Pilot [with] brackets",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Small Remote Shield Booster",
+      "amount": 30,
+      "count": 1
+    }
+  ],
+  "damageByTargetItems": [
+    {
+      "label": "Pilot (Rifter)",
+      "value": 57
+    },
+    {
+      "label": "00 (Rifter)",
+      "value": 32
+    },
+    {
+      "label": "0 (Rifter)",
+      "value": 31
+    },
+    {
+      "label": "Amp &amp; Pilot (Rifter)",
+      "value": 30
+    },
+    {
+      "label": "ad (Rifter)",
+      "value": 27
+    },
+    {
+      "label": "Apostrophe's Pilot (Rifter)",
+      "value": 26
+    },
+    {
+      "label": "Quote \"Pilot\" (Rifter)",
+      "value": 25
+    },
+    {
+      "label": "Emoji 🚀 Pilot (Rifter)",
+      "value": 24
+    },
+    {
+      "label": "日本語のパイロット (Rifter)",
+      "value": 23
+    },
+    {
+      "label": "Em Space (Rifter)",
+      "value": 22
+    },
+    {
+      "label": "Ideographic (Rifter)",
+      "value": 21
+    },
+    {
+      "label": "Mongolian (Rifter)",
+      "value": 20
+    },
+    {
+      "label": "Tab\tInside (Rifter)",
+      "value": 19
+    },
+    {
+      "label": "Trailing NBSP (Rifter)",
+      "value": 18
+    },
+    {
+      "label": "Leading NBSP (Rifter)",
+      "value": 17
+    },
+    {
+      "label": "No Break Space (Rifter)",
+      "value": 16
+    },
+    {
+      "label": "Zoë Ångström (Rifter)",
+      "value": 15
+    },
+    {
+      "label": "Pilot bold",
+      "value": 14
+    },
+    {
+      "label": "Pilot < less (Rifter)",
+      "value": 13
+    },
+    {
+      "label": "Pilot - dash (Rifter)",
+      "value": 12
+    },
+    {
+      "label": "Pilot (paren) (Rifter)",
+      "value": 11
+    },
+    {
+      "label": "Pilot [with] brackets (Rifter)",
+      "value": 10
+    }
+  ],
+  "damageByWeaponItems": [
+    {
+      "label": "Light Missile",
+      "value": 483
+    }
+  ],
+  "incomingBySourceItems": [
+    {
+      "label": "Pilot",
+      "value": 77
+    },
+    {
+      "label": "00",
+      "value": 42
+    },
+    {
+      "label": "0",
+      "value": 41
+    },
+    {
+      "label": "Amp &amp; Pilot",
+      "value": 40
+    },
+    {
+      "label": "ad",
+      "value": 37
+    },
+    {
+      "label": "Apostrophe's Pilot",
+      "value": 36
+    },
+    {
+      "label": "Quote \"Pilot\"",
+      "value": 35
+    },
+    {
+      "label": "Emoji 🚀 Pilot",
+      "value": 34
+    },
+    {
+      "label": "日本語のパイロット",
+      "value": 33
+    },
+    {
+      "label": "Em Space",
+      "value": 32
+    },
+    {
+      "label": "Ideographic",
+      "value": 31
+    },
+    {
+      "label": "Mongolian",
+      "value": 30
+    },
+    {
+      "label": "Tab\tInside",
+      "value": 29
+    },
+    {
+      "label": "Trailing NBSP",
+      "value": 28
+    },
+    {
+      "label": "Leading NBSP",
+      "value": 27
+    },
+    {
+      "label": "No Break Space",
+      "value": 26
+    },
+    {
+      "label": "Zoë Ångström",
+      "value": 25
+    },
+    {
+      "label": "Pilot bold",
+      "value": 24
+    },
+    {
+      "label": "Pilot < less",
+      "value": 23
+    },
+    {
+      "label": "Pilot - dash",
+      "value": 22
+    },
+    {
+      "label": "Pilot (paren)",
+      "value": 21
+    },
+    {
+      "label": "Pilot [with] brackets",
+      "value": 20
+    }
+  ],
+  "incomingByWeaponItems": [
+    {
+      "label": "Small Laser",
+      "value": 713
+    },
+    {
+      "label": "Warrior II",
+      "value": 0
+    }
+  ],
+  "selectionLabel": null,
+  "selectedPilot": null,
+  "engagement": {
+    "dealt": 0,
+    "received": 0,
+    "hitsOn": 0,
+    "missesOn": 0,
+    "hitsBy": 0,
+    "missesBy": 0,
+    "logiIn": 0,
+    "logiOut": 0,
+    "neutIn": 0,
+    "neutOut": 0,
+    "ship": null
+  },
+  "engagementLog": [],
+  "filteredEventCount": 138,
+  "durations": [
+    "0s",
+    "1s",
+    "59s",
+    "1m 0s",
+    "1m 1s",
+    "59m 59s",
+    "60m 0s",
+    "122m 2s"
+  ],
+  "relativeSessionStart": "9 months ago",
+  "avatars": {
+    "0": {
+      "initials": "0",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Pilot [with] brackets": {
+      "initials": "P[",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Pilot (paren)": {
+      "initials": "P(",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Pilot - dash": {
+      "initials": "P-",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "Pilot < less": {
+      "initials": "P<",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Bantam": {
+      "initials": "B",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Pilot bold": {
+      "initials": "PB",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "Zoë Ångström": {
+      "initials": "ZÅ",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "No Break Space": {
+      "initials": "NB",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Leading NBSP": {
+      "initials": "LN",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Trailing NBSP": {
+      "initials": "TN",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Tab\tInside": {
+      "initials": "TI",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Mongolian": {
+      "initials": "M",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Ideographic": {
+      "initials": "I",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Em Space": {
+      "initials": "ES",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "日本語のパイロット": {
+      "initials": "日",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "Emoji 🚀 Pilot": {
+      "initials": "E\ud83d",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Quote \"Pilot\"": {
+      "initials": "Q\"",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": null
+    },
+    "Apostrophe's Pilot": {
+      "initials": "AP",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    },
+    "ad": {
+      "initials": "A",
+      "hue": "bg-zinc-600 text-zinc-100",
+      "portrait": null
+    },
+    "Pilot": {
+      "initials": "P",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": null
+    },
+    "Amp &amp; Pilot": {
+      "initials": "A&",
+      "hue": "bg-stone-600 text-stone-100",
+      "portrait": null
+    },
+    "00": {
+      "initials": "0",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": null
+    }
+  },
+  "spectrumOut": [
+    {
+      "label": "Hits",
+      "count": 23,
+      "colorClass": "bg-cyan-500",
+      "share": 50
+    },
+    {
+      "label": "Misses",
+      "count": 23,
+      "colorClass": "bg-zinc-600",
+      "share": 50
+    }
+  ],
+  "spectrumIn": [
+    {
+      "label": "Hits",
+      "count": 23,
+      "colorClass": "bg-red-500",
+      "share": 50
+    },
+    {
+      "label": "Misses",
+      "count": 23,
+      "colorClass": "bg-zinc-600",
+      "share": 50
+    }
+  ]
+}

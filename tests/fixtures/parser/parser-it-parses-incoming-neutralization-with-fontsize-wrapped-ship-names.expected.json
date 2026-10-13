@@ -1,0 +1,17 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.14 19:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.14 20:02:50",
+      "damage": 3345,
+      "direction": "incoming",
+      "playerName": "Keepstar",
+      "corporation": null,
+      "shipName": "Keepstar",
+      "weapon": "Standup Energy Neutralization Burst Projector",
+      "quality": "Neutralized",
+      "type": "neutralization"
+    }
+  ]
+}

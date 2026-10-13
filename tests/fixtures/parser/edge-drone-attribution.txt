@@ -1,0 +1,25 @@
+------------------------------------------------------------
+  Gamelog
+  Listener: Test Pilot
+  Session Started: 2026.01.01 12:00:00
+------------------------------------------------------------
+[ 2026.01.01 12:00:01 ] (combat) <color=0xffcc0000><b>88</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Tom DaNanRen[.BOP](Cenotaph)</b><font size=10><color=0x77ffffff> - Hammerhead II - Penetrates
+[ 2026.01.01 12:00:02 ] (combat) <color=0xff00ffff><b>270</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Hammerhead II[.BOP](Hammerhead II)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+[ 2026.01.01 12:00:03 ] (combat) <color=0xffcc0000><b>90</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Pilot A[AAA](Rupture)</b><font size=10><color=0x77ffffff> - Warrior II - Hits
+[ 2026.01.01 12:00:04 ] (combat) <color=0xffcc0000><b>91</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Pilot B[BBB](Rupture)</b><font size=10><color=0x77ffffff> - Warrior II - Hits
+[ 2026.01.01 12:00:05 ] (combat) <color=0xff00ffff><b>120</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Warrior II[BBB](Warrior II)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+[ 2026.01.01 12:00:06 ] (combat) <color=0xffcc0000><b>92</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Pilot C[CCC](Rupture)</b><font size=10><color=0x77ffffff> - Valkyrie II - Hits
+[ 2026.01.01 12:00:07 ] (combat) <color=0xffcc0000><b>93</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Pilot D[CCC](Rupture)</b><font size=10><color=0x77ffffff> - Valkyrie II - Hits
+[ 2026.01.01 12:00:08 ] (combat) <color=0xff00ffff><b>121</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Valkyrie II[CCC](Valkyrie II)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+[ 2026.01.01 12:00:09 ] (combat) <color=0xffcc0000><b>94</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Lonely Pilot[LONE](Rifter)</b><font size=10><color=0x77ffffff> - Small Laser - Hits
+[ 2026.01.01 12:00:10 ] (combat) <color=0xff00ffff><b>122</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Acolyte II[LONE](Acolyte II)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+[ 2026.01.01 12:00:11 ] (combat) <color=0xffcc0000><b>95</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Pilot E[TWO](Rifter)</b><font size=10><color=0x77ffffff> - Small Laser - Hits
+[ 2026.01.01 12:00:12 ] (combat) <color=0xffcc0000><b>96</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Pilot F[TWO](Rifter)</b><font size=10><color=0x77ffffff> - Small Laser - Hits
+[ 2026.01.01 12:00:13 ] (combat) <color=0xff00ffff><b>123</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Hornet II[TWO](Hornet II)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+[ 2026.01.01 12:00:14 ] (combat) <color=0xffcc0000><b>97</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Pilot G[GGG](Rifter)</b><font size=10><color=0x77ffffff> - Hobgoblin II - Hits
+[ 2026.01.01 12:00:15 ] (combat) <color=0xff00ffff><b>124</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Hobgoblin II[HHH](Hobgoblin II)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+[ 2026.01.01 12:00:16 ] (combat) <color=0xff00ffff><b>125</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Hobgoblin II[](Hobgoblin II)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+[ 2026.01.01 12:00:17 ] (combat) <color=0xffccff66><b>50</b><color=0x77ffffff><font size=10> remote shield boosted by </font><b><color=0xffffffff>Infiltrator II[.BOP](Infiltrator II)</b><color=0x77ffffff><font size=10> - Remote Repair</font>
+[ 2026.01.01 12:00:18 ] (combat) <color=0xffe57f7f><b>30 GJ</b><color=0x77ffffff><font size=10> energy neutralized </font><b><color=0xffffffff><fontsize=12><color=0xFF2ecc71><b>Infiltrator II</b></color></fontsize></b><color=0x77ffffff><font size=10> - Small Energy Neutralizer</font>
+[ 2026.01.01 12:00:19 ] (combat) <color=0xff00ffff><b>126</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Ogre II[LATE](Ogre II)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits
+[ 2026.01.01 12:00:20 ] (combat) <color=0xffcc0000><b>98</b> <color=0x77ffffff><font size=10>from</font> <b><color=0xffffffff>Late Pilot[LATE](Myrmidon)</b><font size=10><color=0x77ffffff> - Ogre II - Hits

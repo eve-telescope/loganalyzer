@@ -1,0 +1,12 @@
+{
+  "path": "/logs/4ab348b4-b25a-4358-9643-6d411a7b9bcb/download",
+  "method": "GET",
+  "status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "headers": {
+    "cache-control": "no-cache, private",
+    "content-disposition": "attachment; filename=\"with space.txt\""
+  },
+  "sha256": "6ee972fe9f08fe4e0df61ba7aa81aeef300f1e8cdc84d9c831a568acb92b219c",
+  "length": 4492
+}

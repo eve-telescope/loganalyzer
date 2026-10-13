@@ -1,0 +1,144 @@
+{
+  "ogTitle": "Unknown — Combat Analysis",
+  "ogDescription": "0 damage dealt / 0 received — 0 DPS avg — 0s combat",
+  "selection": null,
+  "hiddenSeries": [],
+  "dpsOverTime": [],
+  "summary": {
+    "totalDamageDealt": 0,
+    "totalDamageReceived": 0,
+    "combatDurationSeconds": 0,
+    "dpsDealt": 0,
+    "dpsReceived": 0,
+    "totalOutgoingHits": 0,
+    "totalOutgoingMisses": 0,
+    "totalIncomingHits": 0,
+    "totalIncomingMisses": 0,
+    "totalLogiReceived": 0,
+    "totalLogiDealt": 0
+  },
+  "details": {
+    "qualityOut": {},
+    "qualityIn": {},
+    "biggestHitOut": null,
+    "biggestHitIn": null,
+    "uniqueTargets": 0,
+    "uniqueAttackers": 0,
+    "pilotsInvolved": 0,
+    "neutIn": 0,
+    "neutOut": 0,
+    "neutInEvents": 0,
+    "neutOutEvents": 0,
+    "logiInCycles": 0,
+    "logiOutCycles": 0
+  },
+  "peakDps": {
+    "dealt": 0,
+    "received": 0
+  },
+  "tankSupportRatio": "—",
+  "neutPressureIn": "—",
+  "neutPressureOut": "—",
+  "qualitySegmentsOut": [
+    {
+      "label": "Wrecks",
+      "count": 0
+    },
+    {
+      "label": "Smashes",
+      "count": 0
+    },
+    {
+      "label": "Penetrates",
+      "count": 0
+    },
+    {
+      "label": "Hits",
+      "count": 0
+    },
+    {
+      "label": "Glances Off",
+      "count": 0
+    },
+    {
+      "label": "Grazes",
+      "count": 0
+    },
+    {
+      "label": "Misses",
+      "count": 0
+    }
+  ],
+  "qualitySegmentsIn": [
+    {
+      "label": "Wrecks",
+      "count": 0
+    },
+    {
+      "label": "Smashes",
+      "count": 0
+    },
+    {
+      "label": "Penetrates",
+      "count": 0
+    },
+    {
+      "label": "Hits",
+      "count": 0
+    },
+    {
+      "label": "Glances Off",
+      "count": 0
+    },
+    {
+      "label": "Grazes",
+      "count": 0
+    },
+    {
+      "label": "Misses",
+      "count": 0
+    }
+  ],
+  "damageByTarget": {},
+  "damageByWeapon": {},
+  "incomingBySource": {},
+  "incomingByWeapon": {},
+  "outgoingTableRows": [],
+  "incomingTableRows": [],
+  "logiTableRows": [],
+  "damageByTargetItems": [],
+  "damageByWeaponItems": [],
+  "incomingBySourceItems": [],
+  "incomingByWeaponItems": [],
+  "selectionLabel": null,
+  "selectedPilot": null,
+  "engagement": {
+    "dealt": 0,
+    "received": 0,
+    "hitsOn": 0,
+    "missesOn": 0,
+    "hitsBy": 0,
+    "missesBy": 0,
+    "logiIn": 0,
+    "logiOut": 0,
+    "neutIn": 0,
+    "neutOut": 0,
+    "ship": null
+  },
+  "engagementLog": [],
+  "filteredEventCount": 0,
+  "durations": [
+    "0s",
+    "1s",
+    "59s",
+    "1m 0s",
+    "1m 1s",
+    "59m 59s",
+    "60m 0s",
+    "122m 2s"
+  ],
+  "relativeSessionStart": null,
+  "avatars": {},
+  "spectrumOut": [],
+  "spectrumIn": []
+}

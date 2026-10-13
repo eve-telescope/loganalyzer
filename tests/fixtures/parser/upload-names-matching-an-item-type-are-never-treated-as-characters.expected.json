@@ -1,0 +1,28 @@
+{
+  "listener": "Nicolas Kion",
+  "sessionStarted": "2026.02.12 09:41:44",
+  "events": [
+    {
+      "timestamp": "2026.02.12 09:42:00",
+      "damage": 120,
+      "direction": "outgoing",
+      "playerName": "Hammerhead II",
+      "corporation": null,
+      "shipName": null,
+      "weapon": "Light Neutron Blaster II",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.02.12 09:42:05",
+      "damage": 340,
+      "direction": "outgoing",
+      "playerName": "Aria Vex",
+      "corporation": "RAZR",
+      "shipName": "Drake",
+      "weapon": "Heavy Missile",
+      "quality": "Hits",
+      "type": "damage"
+    }
+  ]
+}

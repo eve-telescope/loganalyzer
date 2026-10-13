@@ -1,0 +1,5414 @@
+{
+  "ogTitle": "Nicolas Kion — Combat Analysis",
+  "ogDescription": "22,005 damage dealt / 14,445 received — 9 DPS avg — 39m 40s combat",
+  "selection": null,
+  "hiddenSeries": [],
+  "dpsOverTime": [
+    {
+      "datetime": "2026-02-12T09:42:44",
+      "label": "09:42:44",
+      "dpsDealt": 16,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:42:49",
+      "label": "09:42:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:42:54",
+      "label": "09:42:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:42:59",
+      "label": "09:42:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:04",
+      "label": "09:43:04",
+      "dpsDealt": 23.4,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:09",
+      "label": "09:43:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:14",
+      "label": "09:43:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:19",
+      "label": "09:43:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:24",
+      "label": "09:43:24",
+      "dpsDealt": 30.8,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:29",
+      "label": "09:43:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:34",
+      "label": "09:43:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:39",
+      "label": "09:43:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:44",
+      "label": "09:43:44",
+      "dpsDealt": 0,
+      "dpsReceived": 38.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:49",
+      "label": "09:43:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:54",
+      "label": "09:43:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:43:59",
+      "label": "09:43:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:04",
+      "label": "09:44:04",
+      "dpsDealt": 0,
+      "dpsReceived": 45.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:09",
+      "label": "09:44:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:14",
+      "label": "09:44:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:19",
+      "label": "09:44:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:24",
+      "label": "09:44:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 93,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:29",
+      "label": "09:44:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:34",
+      "label": "09:44:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:39",
+      "label": "09:44:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:44",
+      "label": "09:44:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 83.2,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:49",
+      "label": "09:44:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:54",
+      "label": "09:44:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:44:59",
+      "label": "09:44:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:04",
+      "label": "09:45:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:09",
+      "label": "09:45:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:14",
+      "label": "09:45:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:19",
+      "label": "09:45:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:24",
+      "label": "09:45:24",
+      "dpsDealt": 75.2,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:29",
+      "label": "09:45:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:34",
+      "label": "09:45:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:39",
+      "label": "09:45:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:44",
+      "label": "09:45:44",
+      "dpsDealt": 82.6,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:49",
+      "label": "09:45:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:54",
+      "label": "09:45:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:45:59",
+      "label": "09:45:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:04",
+      "label": "09:46:04",
+      "dpsDealt": 90,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:09",
+      "label": "09:46:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:14",
+      "label": "09:46:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:19",
+      "label": "09:46:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:24",
+      "label": "09:46:24",
+      "dpsDealt": 0,
+      "dpsReceived": 97.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:29",
+      "label": "09:46:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:34",
+      "label": "09:46:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:39",
+      "label": "09:46:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:44",
+      "label": "09:46:44",
+      "dpsDealt": 0,
+      "dpsReceived": 104.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:49",
+      "label": "09:46:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:54",
+      "label": "09:46:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:46:59",
+      "label": "09:46:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:04",
+      "label": "09:47:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 113.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:09",
+      "label": "09:47:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:14",
+      "label": "09:47:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:19",
+      "label": "09:47:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:24",
+      "label": "09:47:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 100.8,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:29",
+      "label": "09:47:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:34",
+      "label": "09:47:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:39",
+      "label": "09:47:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:44",
+      "label": "09:47:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:49",
+      "label": "09:47:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:54",
+      "label": "09:47:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:47:59",
+      "label": "09:47:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:04",
+      "label": "09:48:04",
+      "dpsDealt": 134.4,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:09",
+      "label": "09:48:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:14",
+      "label": "09:48:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:19",
+      "label": "09:48:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:24",
+      "label": "09:48:24",
+      "dpsDealt": 141.8,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:29",
+      "label": "09:48:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:34",
+      "label": "09:48:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:39",
+      "label": "09:48:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:44",
+      "label": "09:48:44",
+      "dpsDealt": 149.2,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:49",
+      "label": "09:48:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:54",
+      "label": "09:48:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:48:59",
+      "label": "09:48:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:04",
+      "label": "09:49:04",
+      "dpsDealt": 0,
+      "dpsReceived": 156.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:09",
+      "label": "09:49:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:14",
+      "label": "09:49:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:19",
+      "label": "09:49:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:24",
+      "label": "09:49:24",
+      "dpsDealt": 0,
+      "dpsReceived": 164,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:29",
+      "label": "09:49:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:34",
+      "label": "09:49:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:39",
+      "label": "09:49:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:44",
+      "label": "09:49:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 134.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:49",
+      "label": "09:49:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:54",
+      "label": "09:49:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:49:59",
+      "label": "09:49:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:04",
+      "label": "09:50:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 118.4,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:09",
+      "label": "09:50:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:14",
+      "label": "09:50:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:19",
+      "label": "09:50:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:24",
+      "label": "09:50:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:29",
+      "label": "09:50:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:34",
+      "label": "09:50:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:39",
+      "label": "09:50:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:44",
+      "label": "09:50:44",
+      "dpsDealt": 193.6,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:49",
+      "label": "09:50:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:54",
+      "label": "09:50:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:50:59",
+      "label": "09:50:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:04",
+      "label": "09:51:04",
+      "dpsDealt": 21,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:09",
+      "label": "09:51:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:14",
+      "label": "09:51:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:19",
+      "label": "09:51:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:24",
+      "label": "09:51:24",
+      "dpsDealt": 28.4,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:29",
+      "label": "09:51:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:34",
+      "label": "09:51:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:39",
+      "label": "09:51:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:44",
+      "label": "09:51:44",
+      "dpsDealt": 0,
+      "dpsReceived": 35.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:49",
+      "label": "09:51:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:54",
+      "label": "09:51:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:51:59",
+      "label": "09:51:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:04",
+      "label": "09:52:04",
+      "dpsDealt": 0,
+      "dpsReceived": 43.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:09",
+      "label": "09:52:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:14",
+      "label": "09:52:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:19",
+      "label": "09:52:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:24",
+      "label": "09:52:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 95.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:29",
+      "label": "09:52:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:34",
+      "label": "09:52:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:39",
+      "label": "09:52:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:44",
+      "label": "09:52:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 86,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:49",
+      "label": "09:52:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:54",
+      "label": "09:52:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:52:59",
+      "label": "09:52:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:04",
+      "label": "09:53:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:09",
+      "label": "09:53:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:14",
+      "label": "09:53:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:19",
+      "label": "09:53:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:24",
+      "label": "09:53:24",
+      "dpsDealt": 72.8,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:29",
+      "label": "09:53:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:34",
+      "label": "09:53:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:39",
+      "label": "09:53:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:44",
+      "label": "09:53:44",
+      "dpsDealt": 80.2,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:49",
+      "label": "09:53:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:54",
+      "label": "09:53:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:53:59",
+      "label": "09:53:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:04",
+      "label": "09:54:04",
+      "dpsDealt": 87.6,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:09",
+      "label": "09:54:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:14",
+      "label": "09:54:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:19",
+      "label": "09:54:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:24",
+      "label": "09:54:24",
+      "dpsDealt": 0,
+      "dpsReceived": 95,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:29",
+      "label": "09:54:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:34",
+      "label": "09:54:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:39",
+      "label": "09:54:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:44",
+      "label": "09:54:44",
+      "dpsDealt": 0,
+      "dpsReceived": 102.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:49",
+      "label": "09:54:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:54",
+      "label": "09:54:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:54:59",
+      "label": "09:54:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:04",
+      "label": "09:55:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 116.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:09",
+      "label": "09:55:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:14",
+      "label": "09:55:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:19",
+      "label": "09:55:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:24",
+      "label": "09:55:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 103.6,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:29",
+      "label": "09:55:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:34",
+      "label": "09:55:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:39",
+      "label": "09:55:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:44",
+      "label": "09:55:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:49",
+      "label": "09:55:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:54",
+      "label": "09:55:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:55:59",
+      "label": "09:55:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:04",
+      "label": "09:56:04",
+      "dpsDealt": 132,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:09",
+      "label": "09:56:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:14",
+      "label": "09:56:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:19",
+      "label": "09:56:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:24",
+      "label": "09:56:24",
+      "dpsDealt": 139.4,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:29",
+      "label": "09:56:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:34",
+      "label": "09:56:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:39",
+      "label": "09:56:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:44",
+      "label": "09:56:44",
+      "dpsDealt": 146.8,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:49",
+      "label": "09:56:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:54",
+      "label": "09:56:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:56:59",
+      "label": "09:56:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:04",
+      "label": "09:57:04",
+      "dpsDealt": 0,
+      "dpsReceived": 154.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:09",
+      "label": "09:57:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:14",
+      "label": "09:57:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:19",
+      "label": "09:57:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:24",
+      "label": "09:57:24",
+      "dpsDealt": 0,
+      "dpsReceived": 161.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:29",
+      "label": "09:57:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:34",
+      "label": "09:57:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:39",
+      "label": "09:57:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:44",
+      "label": "09:57:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 137,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:49",
+      "label": "09:57:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:54",
+      "label": "09:57:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:57:59",
+      "label": "09:57:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:04",
+      "label": "09:58:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 71.2,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:09",
+      "label": "09:58:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:14",
+      "label": "09:58:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:19",
+      "label": "09:58:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:24",
+      "label": "09:58:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:29",
+      "label": "09:58:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:34",
+      "label": "09:58:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:39",
+      "label": "09:58:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:44",
+      "label": "09:58:44",
+      "dpsDealt": 191.2,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:49",
+      "label": "09:58:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:54",
+      "label": "09:58:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:58:59",
+      "label": "09:58:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:04",
+      "label": "09:59:04",
+      "dpsDealt": 18.6,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:09",
+      "label": "09:59:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:14",
+      "label": "09:59:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:19",
+      "label": "09:59:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:24",
+      "label": "09:59:24",
+      "dpsDealt": 26,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:29",
+      "label": "09:59:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:34",
+      "label": "09:59:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:39",
+      "label": "09:59:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:44",
+      "label": "09:59:44",
+      "dpsDealt": 0,
+      "dpsReceived": 33.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:49",
+      "label": "09:59:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:54",
+      "label": "09:59:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T09:59:59",
+      "label": "09:59:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:04",
+      "label": "10:00:04",
+      "dpsDealt": 0,
+      "dpsReceived": 40.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:09",
+      "label": "10:00:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:14",
+      "label": "10:00:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:19",
+      "label": "10:00:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:24",
+      "label": "10:00:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 97.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:29",
+      "label": "10:00:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:34",
+      "label": "10:00:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:39",
+      "label": "10:00:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:44",
+      "label": "10:00:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 88.8,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:49",
+      "label": "10:00:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:54",
+      "label": "10:00:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:00:59",
+      "label": "10:00:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:04",
+      "label": "10:01:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:09",
+      "label": "10:01:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:14",
+      "label": "10:01:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:19",
+      "label": "10:01:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:24",
+      "label": "10:01:24",
+      "dpsDealt": 70.4,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:29",
+      "label": "10:01:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:34",
+      "label": "10:01:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:39",
+      "label": "10:01:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:44",
+      "label": "10:01:44",
+      "dpsDealt": 77.8,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:49",
+      "label": "10:01:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:54",
+      "label": "10:01:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:01:59",
+      "label": "10:01:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:04",
+      "label": "10:02:04",
+      "dpsDealt": 85.2,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:09",
+      "label": "10:02:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:14",
+      "label": "10:02:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:19",
+      "label": "10:02:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:24",
+      "label": "10:02:24",
+      "dpsDealt": 0,
+      "dpsReceived": 92.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:29",
+      "label": "10:02:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:34",
+      "label": "10:02:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:39",
+      "label": "10:02:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:44",
+      "label": "10:02:44",
+      "dpsDealt": 0,
+      "dpsReceived": 100,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:49",
+      "label": "10:02:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:54",
+      "label": "10:02:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:02:59",
+      "label": "10:02:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:04",
+      "label": "10:03:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 118.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:09",
+      "label": "10:03:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:14",
+      "label": "10:03:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:19",
+      "label": "10:03:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:24",
+      "label": "10:03:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 106.4,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:29",
+      "label": "10:03:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:34",
+      "label": "10:03:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:39",
+      "label": "10:03:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:44",
+      "label": "10:03:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:49",
+      "label": "10:03:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:54",
+      "label": "10:03:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:03:59",
+      "label": "10:03:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:04",
+      "label": "10:04:04",
+      "dpsDealt": 129.6,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:09",
+      "label": "10:04:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:14",
+      "label": "10:04:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:19",
+      "label": "10:04:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:24",
+      "label": "10:04:24",
+      "dpsDealt": 137,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:29",
+      "label": "10:04:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:34",
+      "label": "10:04:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:39",
+      "label": "10:04:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:44",
+      "label": "10:04:44",
+      "dpsDealt": 144.4,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:49",
+      "label": "10:04:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:54",
+      "label": "10:04:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:04:59",
+      "label": "10:04:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:04",
+      "label": "10:05:04",
+      "dpsDealt": 0,
+      "dpsReceived": 151.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:09",
+      "label": "10:05:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:14",
+      "label": "10:05:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:19",
+      "label": "10:05:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:24",
+      "label": "10:05:24",
+      "dpsDealt": 0,
+      "dpsReceived": 159.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:29",
+      "label": "10:05:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:34",
+      "label": "10:05:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:39",
+      "label": "10:05:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:44",
+      "label": "10:05:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 139.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:49",
+      "label": "10:05:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:54",
+      "label": "10:05:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:05:59",
+      "label": "10:05:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:04",
+      "label": "10:06:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 74,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:09",
+      "label": "10:06:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:14",
+      "label": "10:06:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:19",
+      "label": "10:06:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:24",
+      "label": "10:06:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:29",
+      "label": "10:06:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:34",
+      "label": "10:06:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:39",
+      "label": "10:06:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:44",
+      "label": "10:06:44",
+      "dpsDealt": 188.8,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:49",
+      "label": "10:06:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:54",
+      "label": "10:06:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:06:59",
+      "label": "10:06:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:04",
+      "label": "10:07:04",
+      "dpsDealt": 16.2,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:09",
+      "label": "10:07:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:14",
+      "label": "10:07:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:19",
+      "label": "10:07:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:24",
+      "label": "10:07:24",
+      "dpsDealt": 23.6,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:29",
+      "label": "10:07:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:34",
+      "label": "10:07:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:39",
+      "label": "10:07:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:44",
+      "label": "10:07:44",
+      "dpsDealt": 0,
+      "dpsReceived": 31,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:49",
+      "label": "10:07:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:54",
+      "label": "10:07:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:07:59",
+      "label": "10:07:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:04",
+      "label": "10:08:04",
+      "dpsDealt": 0,
+      "dpsReceived": 38.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:09",
+      "label": "10:08:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:14",
+      "label": "10:08:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:19",
+      "label": "10:08:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:24",
+      "label": "10:08:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 100.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:29",
+      "label": "10:08:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:34",
+      "label": "10:08:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:39",
+      "label": "10:08:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:44",
+      "label": "10:08:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 91.6,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:49",
+      "label": "10:08:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:54",
+      "label": "10:08:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:08:59",
+      "label": "10:08:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:04",
+      "label": "10:09:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:09",
+      "label": "10:09:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:14",
+      "label": "10:09:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:19",
+      "label": "10:09:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:24",
+      "label": "10:09:24",
+      "dpsDealt": 68,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:29",
+      "label": "10:09:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:34",
+      "label": "10:09:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:39",
+      "label": "10:09:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:44",
+      "label": "10:09:44",
+      "dpsDealt": 75.4,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:49",
+      "label": "10:09:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:54",
+      "label": "10:09:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:09:59",
+      "label": "10:09:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:04",
+      "label": "10:10:04",
+      "dpsDealt": 82.8,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:09",
+      "label": "10:10:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:14",
+      "label": "10:10:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:19",
+      "label": "10:10:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:24",
+      "label": "10:10:24",
+      "dpsDealt": 0,
+      "dpsReceived": 90.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:29",
+      "label": "10:10:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:34",
+      "label": "10:10:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:39",
+      "label": "10:10:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:44",
+      "label": "10:10:44",
+      "dpsDealt": 0,
+      "dpsReceived": 97.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:49",
+      "label": "10:10:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:54",
+      "label": "10:10:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:10:59",
+      "label": "10:10:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:04",
+      "label": "10:11:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 121,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:09",
+      "label": "10:11:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:14",
+      "label": "10:11:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:19",
+      "label": "10:11:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:24",
+      "label": "10:11:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 109.2,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:29",
+      "label": "10:11:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:34",
+      "label": "10:11:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:39",
+      "label": "10:11:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:44",
+      "label": "10:11:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:49",
+      "label": "10:11:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:54",
+      "label": "10:11:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:11:59",
+      "label": "10:11:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:04",
+      "label": "10:12:04",
+      "dpsDealt": 127.2,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:09",
+      "label": "10:12:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:14",
+      "label": "10:12:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:19",
+      "label": "10:12:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:24",
+      "label": "10:12:24",
+      "dpsDealt": 134.6,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:29",
+      "label": "10:12:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:34",
+      "label": "10:12:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:39",
+      "label": "10:12:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:44",
+      "label": "10:12:44",
+      "dpsDealt": 142,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:49",
+      "label": "10:12:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:54",
+      "label": "10:12:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:12:59",
+      "label": "10:12:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:04",
+      "label": "10:13:04",
+      "dpsDealt": 0,
+      "dpsReceived": 149.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:09",
+      "label": "10:13:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:14",
+      "label": "10:13:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:19",
+      "label": "10:13:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:24",
+      "label": "10:13:24",
+      "dpsDealt": 0,
+      "dpsReceived": 156.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:29",
+      "label": "10:13:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:34",
+      "label": "10:13:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:39",
+      "label": "10:13:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:44",
+      "label": "10:13:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 81.8,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:49",
+      "label": "10:13:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:54",
+      "label": "10:13:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:13:59",
+      "label": "10:13:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:04",
+      "label": "10:14:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 76.8,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:09",
+      "label": "10:14:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:14",
+      "label": "10:14:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:19",
+      "label": "10:14:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:24",
+      "label": "10:14:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:29",
+      "label": "10:14:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:34",
+      "label": "10:14:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:39",
+      "label": "10:14:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:44",
+      "label": "10:14:44",
+      "dpsDealt": 186.4,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:49",
+      "label": "10:14:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:54",
+      "label": "10:14:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:14:59",
+      "label": "10:14:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:04",
+      "label": "10:15:04",
+      "dpsDealt": 193.8,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:09",
+      "label": "10:15:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:14",
+      "label": "10:15:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:19",
+      "label": "10:15:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:24",
+      "label": "10:15:24",
+      "dpsDealt": 21.2,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:29",
+      "label": "10:15:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:34",
+      "label": "10:15:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:39",
+      "label": "10:15:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:44",
+      "label": "10:15:44",
+      "dpsDealt": 0,
+      "dpsReceived": 28.6,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:49",
+      "label": "10:15:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:54",
+      "label": "10:15:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:15:59",
+      "label": "10:15:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:04",
+      "label": "10:16:04",
+      "dpsDealt": 0,
+      "dpsReceived": 36,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:09",
+      "label": "10:16:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:14",
+      "label": "10:16:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:19",
+      "label": "10:16:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:24",
+      "label": "10:16:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 102.6,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:29",
+      "label": "10:16:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:34",
+      "label": "10:16:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:39",
+      "label": "10:16:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:44",
+      "label": "10:16:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 94.4,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:49",
+      "label": "10:16:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:54",
+      "label": "10:16:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:16:59",
+      "label": "10:16:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:04",
+      "label": "10:17:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:09",
+      "label": "10:17:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:14",
+      "label": "10:17:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:19",
+      "label": "10:17:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:24",
+      "label": "10:17:24",
+      "dpsDealt": 65.6,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:29",
+      "label": "10:17:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:34",
+      "label": "10:17:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:39",
+      "label": "10:17:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:44",
+      "label": "10:17:44",
+      "dpsDealt": 73,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:49",
+      "label": "10:17:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:54",
+      "label": "10:17:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:17:59",
+      "label": "10:17:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:04",
+      "label": "10:18:04",
+      "dpsDealt": 80.4,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:09",
+      "label": "10:18:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:14",
+      "label": "10:18:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:19",
+      "label": "10:18:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:24",
+      "label": "10:18:24",
+      "dpsDealt": 0,
+      "dpsReceived": 87.8,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:29",
+      "label": "10:18:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:34",
+      "label": "10:18:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:39",
+      "label": "10:18:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:44",
+      "label": "10:18:44",
+      "dpsDealt": 0,
+      "dpsReceived": 95.2,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:49",
+      "label": "10:18:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:54",
+      "label": "10:18:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:18:59",
+      "label": "10:18:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:04",
+      "label": "10:19:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 123.4,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:09",
+      "label": "10:19:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:14",
+      "label": "10:19:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:19",
+      "label": "10:19:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:24",
+      "label": "10:19:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 112,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:29",
+      "label": "10:19:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:34",
+      "label": "10:19:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:39",
+      "label": "10:19:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:44",
+      "label": "10:19:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:49",
+      "label": "10:19:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:54",
+      "label": "10:19:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:19:59",
+      "label": "10:19:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:04",
+      "label": "10:20:04",
+      "dpsDealt": 124.8,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:09",
+      "label": "10:20:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:14",
+      "label": "10:20:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:19",
+      "label": "10:20:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:24",
+      "label": "10:20:24",
+      "dpsDealt": 132.2,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:29",
+      "label": "10:20:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:34",
+      "label": "10:20:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:39",
+      "label": "10:20:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:44",
+      "label": "10:20:44",
+      "dpsDealt": 139.6,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:49",
+      "label": "10:20:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:54",
+      "label": "10:20:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:20:59",
+      "label": "10:20:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:04",
+      "label": "10:21:04",
+      "dpsDealt": 0,
+      "dpsReceived": 147,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:09",
+      "label": "10:21:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:14",
+      "label": "10:21:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:19",
+      "label": "10:21:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:24",
+      "label": "10:21:24",
+      "dpsDealt": 0,
+      "dpsReceived": 154.4,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:29",
+      "label": "10:21:29",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:34",
+      "label": "10:21:34",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:39",
+      "label": "10:21:39",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:44",
+      "label": "10:21:44",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 84.2,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:49",
+      "label": "10:21:49",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:54",
+      "label": "10:21:54",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:21:59",
+      "label": "10:21:59",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:22:04",
+      "label": "10:22:04",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 79.6,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:22:09",
+      "label": "10:22:09",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:22:14",
+      "label": "10:22:14",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:22:19",
+      "label": "10:22:19",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    },
+    {
+      "datetime": "2026-02-12T10:22:24",
+      "label": "10:22:24",
+      "dpsDealt": 0,
+      "dpsReceived": 0,
+      "logiReceived": 0,
+      "logiDealt": 0,
+      "neutIn": 0,
+      "neutOut": 0
+    }
+  ],
+  "summary": {
+    "totalDamageDealt": 22005,
+    "totalDamageReceived": 14445,
+    "combatDurationSeconds": 2380,
+    "dpsDealt": 9.25,
+    "dpsReceived": 6.07,
+    "totalOutgoingHits": 45,
+    "totalOutgoingMisses": 15,
+    "totalIncomingHits": 30,
+    "totalIncomingMisses": 0,
+    "totalLogiReceived": 8295,
+    "totalLogiDealt": 6980
+  },
+  "details": {
+    "qualityOut": {
+      "Hits": 10,
+      "Penetrates": 5,
+      "Glances Off": 10,
+      "Misses": 15,
+      "Grazes": 5,
+      "Smashes": 10,
+      "Wrecks": 5
+    },
+    "qualityIn": {
+      "Grazes": 5,
+      "Smashes": 5,
+      "Wrecks": 5,
+      "Hits": 5,
+      "Penetrates": 5,
+      "Glances Off": 5
+    },
+    "biggestHitOut": {
+      "damage": 969,
+      "weapon": "Scourge Fury Heavy Missile",
+      "pilot": "Korr Malan"
+    },
+    "biggestHitIn": {
+      "damage": 820,
+      "weapon": "Heavy Missile",
+      "pilot": "Aria Vex"
+    },
+    "uniqueTargets": 4,
+    "uniqueAttackers": 2,
+    "pilotsInvolved": 5,
+    "neutIn": 0,
+    "neutOut": 0,
+    "neutInEvents": 0,
+    "neutOutEvents": 0,
+    "logiInCycles": 15,
+    "logiOutCycles": 15
+  },
+  "peakDps": {
+    "dealt": 97,
+    "received": 82
+  },
+  "tankSupportRatio": 57.424714434060235,
+  "neutPressureIn": "—",
+  "neutPressureOut": "—",
+  "qualitySegmentsOut": [
+    {
+      "label": "Wrecks",
+      "count": 5
+    },
+    {
+      "label": "Smashes",
+      "count": 10
+    },
+    {
+      "label": "Penetrates",
+      "count": 5
+    },
+    {
+      "label": "Hits",
+      "count": 10
+    },
+    {
+      "label": "Glances Off",
+      "count": 10
+    },
+    {
+      "label": "Grazes",
+      "count": 5
+    },
+    {
+      "label": "Misses",
+      "count": 15
+    }
+  ],
+  "qualitySegmentsIn": [
+    {
+      "label": "Wrecks",
+      "count": 5
+    },
+    {
+      "label": "Smashes",
+      "count": 5
+    },
+    {
+      "label": "Penetrates",
+      "count": 5
+    },
+    {
+      "label": "Hits",
+      "count": 5
+    },
+    {
+      "label": "Glances Off",
+      "count": 5
+    },
+    {
+      "label": "Grazes",
+      "count": 5
+    },
+    {
+      "label": "Misses",
+      "count": 0
+    }
+  ],
+  "damageByTarget": {
+    "Aria Vex": {
+      "damage": 8880,
+      "hits": 15,
+      "misses": 0,
+      "ship": "Drake"
+    },
+    "Korr Malan": {
+      "damage": 6735,
+      "hits": 15,
+      "misses": 0,
+      "ship": "Hurricane"
+    },
+    "Selene Dur": {
+      "damage": 6390,
+      "hits": 15,
+      "misses": 0,
+      "ship": "Caracal"
+    },
+    "Tovak Rin": {
+      "damage": 0,
+      "hits": 0,
+      "misses": 15,
+      "ship": null
+    }
+  },
+  "damageByWeapon": {
+    "Heavy Missile": {
+      "damage": 8880,
+      "hits": 15
+    },
+    "Scourge Fury Heavy Missile": {
+      "damage": 6735,
+      "hits": 15
+    },
+    "720mm Howitzer Artillery II": {
+      "damage": 6390,
+      "hits": 15
+    },
+    "Hammerhead II": {
+      "damage": 0,
+      "hits": 0
+    }
+  },
+  "incomingBySource": {
+    "Aria Vex": {
+      "damage": 7500,
+      "hits": 15,
+      "misses": 0,
+      "ship": "Drake"
+    },
+    "Tovak Rin": {
+      "damage": 6945,
+      "hits": 15,
+      "misses": 0,
+      "ship": "Rupture"
+    }
+  },
+  "incomingByWeapon": {
+    "Heavy Missile": {
+      "damage": 7500,
+      "hits": 15
+    },
+    "Hammerhead II": {
+      "damage": 6945,
+      "hits": 15
+    }
+  },
+  "outgoingTableRows": [
+    {
+      "name": "Aria Vex",
+      "ship": "Drake",
+      "damage": 8880,
+      "dps": 4,
+      "hits": 15,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Korr Malan",
+      "ship": "Hurricane",
+      "damage": 6735,
+      "dps": 3,
+      "hits": 15,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Selene Dur",
+      "ship": "Caracal",
+      "damage": 6390,
+      "dps": 3,
+      "hits": 15,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Tovak Rin",
+      "ship": "-",
+      "damage": 0,
+      "dps": 0,
+      "hits": 0,
+      "misses": 15,
+      "hitRate": "0.0%"
+    }
+  ],
+  "incomingTableRows": [
+    {
+      "name": "Aria Vex",
+      "ship": "Drake",
+      "damage": 7500,
+      "dps": 3,
+      "hits": 15,
+      "misses": 0,
+      "hitRate": "100.0%"
+    },
+    {
+      "name": "Tovak Rin",
+      "ship": "Rupture",
+      "damage": 6945,
+      "dps": 3,
+      "hits": 15,
+      "misses": 0,
+      "hitRate": "100.0%"
+    }
+  ],
+  "logiTableRows": [
+    {
+      "name": "Logi Pilot",
+      "direction": "Received",
+      "ship": "Basilisk",
+      "module": "Large Remote Shield Booster",
+      "amount": 8295,
+      "count": 15
+    },
+    {
+      "name": "Selene Dur",
+      "direction": "Dealt",
+      "ship": "-",
+      "module": "Medium Remote Shield Booster",
+      "amount": 6980,
+      "count": 15
+    }
+  ],
+  "damageByTargetItems": [
+    {
+      "label": "Aria Vex (Drake)",
+      "value": 8880
+    },
+    {
+      "label": "Korr Malan (Hurricane)",
+      "value": 6735
+    },
+    {
+      "label": "Selene Dur (Caracal)",
+      "value": 6390
+    },
+    {
+      "label": "Tovak Rin",
+      "value": 0
+    }
+  ],
+  "damageByWeaponItems": [
+    {
+      "label": "Heavy Missile",
+      "value": 8880
+    },
+    {
+      "label": "Scourge Fury Heavy Missile",
+      "value": 6735
+    },
+    {
+      "label": "720mm Howitzer Artillery II",
+      "value": 6390
+    },
+    {
+      "label": "Hammerhead II",
+      "value": 0
+    }
+  ],
+  "incomingBySourceItems": [
+    {
+      "label": "Aria Vex (Drake)",
+      "value": 7500
+    },
+    {
+      "label": "Tovak Rin (Rupture)",
+      "value": 6945
+    }
+  ],
+  "incomingByWeaponItems": [
+    {
+      "label": "Heavy Missile",
+      "value": 7500
+    },
+    {
+      "label": "Hammerhead II",
+      "value": 6945
+    }
+  ],
+  "selectionLabel": null,
+  "selectedPilot": "Logi Pilot",
+  "engagement": {
+    "dealt": 0,
+    "received": 0,
+    "hitsOn": 0,
+    "missesOn": 0,
+    "hitsBy": 0,
+    "missesBy": 0,
+    "logiIn": 8295,
+    "logiOut": 0,
+    "neutIn": 0,
+    "neutOut": 0,
+    "ship": "Basilisk"
+  },
+  "engagementLog": [
+    {
+      "timestamp": "2026.02.12 09:44:24",
+      "damage": 465,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "09:44:24"
+    },
+    {
+      "timestamp": "2026.02.12 09:47:04",
+      "damage": 569,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "09:47:04"
+    },
+    {
+      "timestamp": "2026.02.12 09:49:44",
+      "damage": 673,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "09:49:44"
+    },
+    {
+      "timestamp": "2026.02.12 09:52:24",
+      "damage": 477,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "09:52:24"
+    },
+    {
+      "timestamp": "2026.02.12 09:55:04",
+      "damage": 581,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "09:55:04"
+    },
+    {
+      "timestamp": "2026.02.12 09:57:44",
+      "damage": 685,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "09:57:44"
+    },
+    {
+      "timestamp": "2026.02.12 10:00:24",
+      "damage": 489,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "10:00:24"
+    },
+    {
+      "timestamp": "2026.02.12 10:03:04",
+      "damage": 593,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "10:03:04"
+    },
+    {
+      "timestamp": "2026.02.12 10:05:44",
+      "damage": 697,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "10:05:44"
+    },
+    {
+      "timestamp": "2026.02.12 10:08:24",
+      "damage": 501,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "10:08:24"
+    },
+    {
+      "timestamp": "2026.02.12 10:11:04",
+      "damage": 605,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "10:11:04"
+    },
+    {
+      "timestamp": "2026.02.12 10:13:44",
+      "damage": 409,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "10:13:44"
+    },
+    {
+      "timestamp": "2026.02.12 10:16:24",
+      "damage": 513,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "10:16:24"
+    },
+    {
+      "timestamp": "2026.02.12 10:19:04",
+      "damage": 617,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "10:19:04"
+    },
+    {
+      "timestamp": "2026.02.12 10:21:44",
+      "damage": 421,
+      "direction": "incoming",
+      "playerName": "Logi Pilot",
+      "corporation": null,
+      "shipName": "Basilisk",
+      "weapon": "Large Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics",
+      "time": "10:21:44"
+    }
+  ],
+  "filteredEventCount": 120,
+  "durations": [
+    "0s",
+    "1s",
+    "59s",
+    "1m 0s",
+    "1m 1s",
+    "59m 59s",
+    "60m 0s",
+    "122m 2s"
+  ],
+  "relativeSessionStart": "8 months ago",
+  "avatars": {
+    "Aria Vex": {
+      "initials": "AV",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": "https://images.evetech.net/characters/93000001/portrait?size=64"
+    },
+    "Korr Malan": {
+      "initials": "KM",
+      "hue": "bg-neutral-700 text-neutral-200",
+      "portrait": "https://images.evetech.net/characters/93000002/portrait?size=64"
+    },
+    "Selene Dur": {
+      "initials": "SD",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": "https://images.evetech.net/characters/93000003/portrait?size=64"
+    },
+    "Tovak Rin": {
+      "initials": "TR",
+      "hue": "bg-stone-700 text-stone-200",
+      "portrait": "https://images.evetech.net/characters/93000004/portrait?size=64"
+    },
+    "Logi Pilot": {
+      "initials": "LP",
+      "hue": "bg-zinc-700 text-zinc-200",
+      "portrait": "https://images.evetech.net/characters/93000005/portrait?size=64"
+    }
+  },
+  "spectrumOut": [
+    {
+      "label": "Wrecks",
+      "count": 5,
+      "colorClass": "bg-cyan-200",
+      "share": 8.333333333333332
+    },
+    {
+      "label": "Smashes",
+      "count": 10,
+      "colorClass": "bg-cyan-300",
+      "share": 16.666666666666664
+    },
+    {
+      "label": "Penetrates",
+      "count": 5,
+      "colorClass": "bg-cyan-400",
+      "share": 8.333333333333332
+    },
+    {
+      "label": "Hits",
+      "count": 10,
+      "colorClass": "bg-cyan-500",
+      "share": 16.666666666666664
+    },
+    {
+      "label": "Glances Off",
+      "count": 10,
+      "colorClass": "bg-cyan-600",
+      "share": 16.666666666666664
+    },
+    {
+      "label": "Grazes",
+      "count": 5,
+      "colorClass": "bg-cyan-700",
+      "share": 8.333333333333332
+    },
+    {
+      "label": "Misses",
+      "count": 15,
+      "colorClass": "bg-zinc-600",
+      "share": 25
+    }
+  ],
+  "spectrumIn": [
+    {
+      "label": "Wrecks",
+      "count": 5,
+      "colorClass": "bg-red-200",
+      "share": 16.666666666666664
+    },
+    {
+      "label": "Smashes",
+      "count": 5,
+      "colorClass": "bg-red-300",
+      "share": 16.666666666666664
+    },
+    {
+      "label": "Penetrates",
+      "count": 5,
+      "colorClass": "bg-red-400",
+      "share": 16.666666666666664
+    },
+    {
+      "label": "Hits",
+      "count": 5,
+      "colorClass": "bg-red-500",
+      "share": 16.666666666666664
+    },
+    {
+      "label": "Glances Off",
+      "count": 5,
+      "colorClass": "bg-red-600",
+      "share": 16.666666666666664
+    },
+    {
+      "label": "Grazes",
+      "count": 5,
+      "colorClass": "bg-red-700",
+      "share": 16.666666666666664
+    }
+  ]
+}

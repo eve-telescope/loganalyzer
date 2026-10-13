@@ -1,0 +1,50 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:01",
+      "damage": 10,
+      "direction": "outgoing",
+      "playerName": "Pilot Zero",
+      "corporation": null,
+      "shipName": "Rifter",
+      "weapon": "Light Missile",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:02",
+      "damage": 11,
+      "direction": "outgoing",
+      "playerName": "Pilot Empty",
+      "corporation": null,
+      "shipName": "Rifter",
+      "weapon": "Light Missile",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:03",
+      "damage": 12,
+      "direction": "outgoing",
+      "playerName": "Pilot Space",
+      "corporation": null,
+      "shipName": "Rifter",
+      "weapon": "Light Missile",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:04",
+      "damage": 13,
+      "direction": "incoming",
+      "playerName": "Logi Zero",
+      "corporation": null,
+      "shipName": "Scythe",
+      "weapon": "Medium Remote Shield Booster",
+      "quality": "shield boosted",
+      "type": "logistics"
+    }
+  ]
+}

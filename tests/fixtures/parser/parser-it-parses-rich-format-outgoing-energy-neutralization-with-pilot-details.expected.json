@@ -1,0 +1,17 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.05.28 19:00:00",
+  "events": [
+    {
+      "timestamp": "2026.05.28 19:10:45",
+      "damage": 27,
+      "direction": "outgoing",
+      "playerName": "DarkOldMaker",
+      "corporation": "TLOS",
+      "shipName": "Huginn",
+      "weapon": "Heavy Abyssal Energy Neutralizer",
+      "quality": "Neutralized",
+      "type": "neutralization"
+    }
+  ]
+}

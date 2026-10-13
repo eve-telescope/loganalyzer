@@ -1,0 +1,11 @@
+{
+  "path": "/og-image.png",
+  "method": "GET",
+  "status": 200,
+  "content_type": "image/png",
+  "headers": {
+    "content-length": "42053"
+  },
+  "sha256": "18ffa352ac43d6e6d4d41cd82b1165d98b1fa04a6b0020d8d9ac19217c645916",
+  "length": 42053
+}

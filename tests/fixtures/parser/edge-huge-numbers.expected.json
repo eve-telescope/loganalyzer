@@ -1,0 +1,72 @@
+{
+  "listener": "Test Pilot",
+  "sessionStarted": "2026.01.01 12:00:00",
+  "events": [
+    {
+      "timestamp": "2026.01.01 12:00:01",
+      "damage": 4294967295,
+      "direction": "outgoing",
+      "playerName": "Big Pilot",
+      "corporation": "CORP",
+      "shipName": "Titan",
+      "weapon": "Doomsday",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:02",
+      "damage": 4294967296,
+      "direction": "outgoing",
+      "playerName": "Big Pilot",
+      "corporation": "CORP",
+      "shipName": "Titan",
+      "weapon": "Doomsday",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:03",
+      "damage": 9223372036854775807,
+      "direction": "outgoing",
+      "playerName": "Big Pilot",
+      "corporation": "CORP",
+      "shipName": "Titan",
+      "weapon": "Doomsday",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:04",
+      "damage": 9223372036854775807,
+      "direction": "incoming",
+      "playerName": "Big Pilot",
+      "corporation": "CORP",
+      "shipName": "Titan",
+      "weapon": "Doomsday",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:05",
+      "damage": 123,
+      "direction": "outgoing",
+      "playerName": "Big Pilot",
+      "corporation": "CORP",
+      "shipName": "Titan",
+      "weapon": "Doomsday",
+      "quality": "Hits",
+      "type": "damage"
+    },
+    {
+      "timestamp": "2026.01.01 12:00:06",
+      "damage": 9223372036854775807,
+      "direction": "outgoing",
+      "playerName": "Titan",
+      "corporation": null,
+      "shipName": "Titan",
+      "weapon": "Nosferatu",
+      "quality": "Drained",
+      "type": "neutralization"
+    }
+  ]
+}

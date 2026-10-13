@@ -1,0 +1,9 @@
+------------------------------------------------------------
+  Gamelog
+  Listener: Test Pilot
+  Session Started: 2026.01.01 12:00:00
+------------------------------------------------------------
+[ 2026.01.01 12:00:01 ] (combat) <color=0xffccff66><b>512</b><color=0x77ffffff><font size=10> remote shield boosted by </font><b><color=0xffffffff>Logi Pilot[CORP](Basilisk)</b><color=0x77ffffff><font size=10> - Large Remote Shield Booster</font></font></font>
+[ 2026.01.01 12:00:02 ] (combat) <color=0xffccff66><b>410</b><color=0x77ffffff><font size=10> remote shield boosted to </font><b><color=0xffffffff>Fleet Mate</b><color=0x77ffffff><font size=10> - Medium Remote Shield Booster</font> trailing</font>
+[ 2026.01.01 12:00:03 ] (combat) <color=0xff00ffff><b>500</b> <color=0x77ffffff><font size=10>to</font> <b><color=0xffffffff>Enemy Pilot[CORP](Drake)</b><font size=10><color=0x77ffffff> - Heavy Missile - Hits</font> - Smashes
+[ 2026.01.01 12:00:04 ] (combat) <b>12</b> stray <font size=10>to</font> <b><color=0xffffffff>X</b> - - Hits

@@ -1,0 +1,12 @@
+{
+  "path": "/logs/7c6f951f-195e-4f6c-bf53-3a1079c97aae/download",
+  "method": "HEAD",
+  "status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "headers": {
+    "cache-control": "no-cache, private",
+    "content-disposition": "attachment; filename=my-fight.txt"
+  },
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "length": 0
+}

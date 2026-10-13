@@ -1,0 +1,11 @@
+{
+  "path": "/site.webmanifest",
+  "method": "GET",
+  "status": 200,
+  "content_type": "application/manifest+json",
+  "headers": {
+    "content-length": "753"
+  },
+  "sha256": "4b95fceac9906d9eb8c3295892dc347b5b29f91f7734b57105e4d9537b9dddd3",
+  "length": 753
+}

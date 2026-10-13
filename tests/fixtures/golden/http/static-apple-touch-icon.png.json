@@ -1,0 +1,11 @@
+{
+  "path": "/apple-touch-icon.png",
+  "method": "GET",
+  "status": 200,
+  "content_type": "image/png",
+  "headers": {
+    "content-length": "7591"
+  },
+  "sha256": "0b9aac74dd5db66ada28a6386d42c87a8ebd74d147cd5022b3201431552e8c73",
+  "length": 7591
+}

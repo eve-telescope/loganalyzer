@@ -1,0 +1,12 @@
+{
+  "path": "/analyze",
+  "method": "GET",
+  "status": 405,
+  "content_type": "text/html; charset=utf-8",
+  "headers": {
+    "allow": "POST",
+    "cache-control": "no-cache, private"
+  },
+  "sha256": "2155d18adec13fec19324318c2223075a2eddbfdf4908407a6314fa6808a79a5",
+  "length": 1011
+}
