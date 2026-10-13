@@ -6,7 +6,8 @@ name: Release
 # CI's warm-cache job fills.
 on:
   push:
-    branches: [main]
+    # `rust` only until the rewrite is merged into main; drop it then.
+    branches: [main, rust]
     paths:
       - "src/**"
       - "migrations/**"
