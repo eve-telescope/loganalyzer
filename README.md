@@ -44,8 +44,7 @@ One origin serves both: Caddy (or the Vite dev proxy) sends `/api/*`,
 `/up`, `/analyze`, `/storage/*`, the raw log download and the
 regeneration (`/logs/*/download`, `/logs/*/regenerate`) and every request
 that is not a GET or HEAD to Axum, and page loads to SvelteKit.
-`frontend/proxy-paths.ts` and the two Caddyfiles in `deploy/` hold that
-list.
+`frontend/proxy-paths.ts` and `deploy/Caddyfile` hold that list.
 
 ## Getting started
 
@@ -90,21 +89,13 @@ value, and Playwright runs against the composed stack on port 5317.
 
 ## Deployment
 
-Production runs on a shared server whose Caddy and Postgres serve several
-sites. `compose.prod.yml` starts only the API and the frontend, from
-images tagged with the commit, on the server's external `web` network:
-
-```bash
-docker build -t loganalyzer-api:$TAG .
-docker build -t loganalyzer-frontend:$TAG frontend
-# in /opt/loganalyzer, with IMAGE_TAG=$TAG and DATABASE_URL in .env
-docker compose -f compose.prod.yml up -d
-```
-
-The raw logs live on the `combat-logs` volume. The API runs its
-migrations on startup (`migrate` applies them on its own and exits).
-`deploy/Caddyfile` is the production site block; the server's Caddy keeps
-a copy of it, so change both.
+Merging to main is the deploy: GitHub Actions builds the api, frontend
+and proxy images and pushes them to GHCR
+(`ghcr.io/eve-telescope/loganalyzer-*`), then Coolify redeploys
+`compose.prod.yml`. Only `loganalyzer-proxy` gets the domain; it routes
+with `deploy/Caddyfile`, the same file the local stack mounts. The api
+reaches the shared Postgres through `DATABASE_URL`, runs its migrations on
+startup and keeps the raw logs on the `loganalyzer_storage` volume.
 
 ## Layout
 
@@ -116,7 +107,7 @@ migrations/          the Postgres schema
 tests/integration/   the Rust suites, one binary
 tests/fixtures/      gamelogs, the ESI name table, recorded answers
 frontend/            the SvelteKit app and its Playwright suite (e2e/)
-deploy/              Caddyfiles for the local stack and production
+deploy/              the proxy image and its Caddyfile (local and production)
 scripts/             the parity report and the parser comparison
 ```
 

@@ -1,5 +1,5 @@
-// The shared-origin routing contract, mirrored by deploy/Caddyfile.dev and
-// deploy/Caddyfile: keep all three in sync when a path changes.
+// The shared-origin routing contract, mirrored by deploy/Caddyfile: keep
+// both in sync when a path changes.
 
 // Paths Axum owns outright: every method proxies to the API. `/api` the
 // page props and the health check, `/up` the health page, `/analyze` the

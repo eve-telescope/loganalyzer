@@ -72,8 +72,9 @@ written with escaped backslashes.
 - `src/server/` the router and the layers; `src/logs.rs` storing,
   regenerating and reading logs; `src/entities.rs` and `src/esi.rs` the
   name cache and the ESI client; `migrations/` the schema; `deploy/` the
-  Caddyfiles; `frontend/proxy-paths.ts` the routing contract, mirrored by
-  `deploy/Caddyfile.dev` and `deploy/Caddyfile`.
+  proxy image and its Caddyfile (the local stack mounts the same file);
+  `frontend/proxy-paths.ts` the routing contract, mirrored by
+  `deploy/Caddyfile`.
 - Development: `docker compose up -d postgres`, `cargo run` (API on
   `BIND_ADDR`, default 127.0.0.1:3000, see `.env.example`) and
   `npm run dev` in `frontend/`.
@@ -90,3 +91,6 @@ written with escaped backslashes.
 - Frontend: pages load their props from `/api/pages/<path>`
   (`#lib/server/api.ts`); the analysis math is `#lib/analysis.ts`, lifted
   from the Laravel page and pinned value by value.
+- Deploy: merge to main. GitHub Actions builds the three images
+  (`ghcr.io/eve-telescope/loganalyzer-{api,frontend,proxy}`) and pushes
+  them to GHCR, then Coolify redeploys `compose.prod.yml`.

@@ -1,9 +1,21 @@
-# The production site block for the shared Caddy. Same routing as
-# Caddyfile.dev: keep the path list in sync with frontend/proxy-paths.ts.
-# Backend paths, and every request that is not a GET or HEAD (the upload
-# and the regeneration), go to the api.
+# The shared origin, in production (the proxy image, deploy/Dockerfile,
+# behind Coolify's Traefik, which terminates TLS) and in the local stack
+# (docker-compose.yml, published on :5317). Backend paths, and every
+# request that is not a GET or HEAD (the upload and the regeneration), go
+# to the api, page GETs to the SvelteKit node server. Keep the path list
+# in sync with frontend/proxy-paths.ts.
+#
+# The upstreams default to the dev stack's service names; production sets
+# API_HOST and FRONTEND_HOST to its prefixed ones.
+{
+	# Traefik (or portal locally) in front: keep its X-Forwarded-*
+	# headers, so the api sees the client's address and https.
+	servers {
+		trusted_proxies static private_ranges
+	}
+}
 
-loganalyzer.eve-telescope.com {
+:80 {
 	encode zstd gzip
 	header {
 		X-Frame-Options SAMEORIGIN
@@ -19,12 +31,12 @@ loganalyzer.eve-telescope.com {
 	@axum {
 		path /api /api/* /up /up/* /analyze /analyze/* /storage /storage/* /logs/*/download /logs/*/regenerate
 	}
-	reverse_proxy @axum loganalyzer-api:3000
+	reverse_proxy @axum {$API_HOST:api}:3000
 
 	@mutation {
 		not method GET HEAD
 	}
-	reverse_proxy @mutation loganalyzer-api:3000
+	reverse_proxy @mutation {$API_HOST:api}:3000
 
-	reverse_proxy loganalyzer-frontend:3000
+	reverse_proxy {$FRONTEND_HOST:frontend}:3000
 }
